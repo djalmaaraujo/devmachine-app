@@ -1,0 +1,24 @@
+Sources/DevmachineCore/FileTree.swift
+  s_c1d531664a18a8::t_94aab013c6c80c 1-57
+Tests/DevmachineCoreTests/FileTreeParserTests.swift
+  s_c1d531664a18a8::t_85fc041dfceec1 22-23,25-29
+  s_c1d531664a18a8::t_d313b1a5173f7a 1-21,24,30-81
+Sources/DevmachineCore/RemoteCommands.swift
+  s_c1d531664a18a8::t_de5b3d9942d367 51-61
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "3b0b3b9de40fe2ad20900d7a6ac5ff0ae78b95ad",
+  "prompts": {},
+  "sessions": {
+    "s_c1d531664a18a8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "8904ff31-33a0-48f2-a610-30ec4274480f",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
