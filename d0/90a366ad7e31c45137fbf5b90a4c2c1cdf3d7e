@@ -1,0 +1,40 @@
+Tests/DevmachineCoreTests/ProcessRunnerTests.swift
+  s_c1d531664a18a8::t_4aab6c0b75038d 4-7
+  s_ccbfa4ed45ec2a::t_6bdc20aab06100 11,20
+Tests/DevmachineAppTests/AppModelTests.swift
+  s_c1d531664a18a8::t_d08f05823c0a6a 62,78,95,114
+Tests/DevmachineAppTests/RemoteServiceTests.swift
+  s_c1d531664a18a8::t_10c97e6f2d905c 24,34
+Tests/DevmachineCoreTests/RemoteCommandsTests.swift
+  s_c1d531664a18a8::t_e21adbec1cc1cf 5,13,19,26,33,46,52,63
+Tests/DevmachineCoreTests/SSHConfigParserTests.swift
+  s_c1d531664a18a8::t_23573883680719 5,28,33,38,43
+Tests/DevmachineCoreTests/SessionStoreTests.swift
+  s_c1d531664a18a8::t_fad32fcf27f95c 15,32
+Tests/DevmachineCoreTests/TmuxListParserTests.swift
+  s_c1d531664a18a8::t_88ac5c15bf0ac9 5,21
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "d090a366ad7e31c45137fbf5b90a4c2c1cdf3d7e",
+  "prompts": {},
+  "sessions": {
+    "s_c1d531664a18a8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "8904ff31-33a0-48f2-a610-30ec4274480f",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    },
+    "s_ccbfa4ed45ec2a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "agent-a94da4d297187aef0",
+        "model": "unknown"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
