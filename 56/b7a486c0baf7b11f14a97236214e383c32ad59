@@ -1,0 +1,21 @@
+Sources/DevmachineApp/Components/DMTabStrip.swift
+  s_c1d531664a18a8::t_8906d4239972f6 1-79
+Sources/DevmachineApp/MenuBarPanel.swift
+  s_c1d531664a18a8::t_52e1dac1065cd2 64-69
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "56b7a486c0baf7b11f14a97236214e383c32ad59",
+  "prompts": {},
+  "sessions": {
+    "s_c1d531664a18a8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "8904ff31-33a0-48f2-a610-30ec4274480f",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
