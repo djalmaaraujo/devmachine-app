@@ -1,0 +1,49 @@
+Tests/DevmachineAppTests/AppModelTests.swift
+  s_c1d531664a18a8::t_70baac7419d971 239-256
+Sources/DevmachineApp/FilesTab.swift
+  s_c1d531664a18a8::t_93d4eabbbb73fc 1-17
+Sources/DevmachineApp/GitStore.swift
+  s_c1d531664a18a8::t_ade0468faa224a 1-101
+Sources/DevmachineCore/GitSnapshot.swift
+  s_c1d531664a18a8::t_e65c6a355b8fe4 32-38
+Tests/DevmachineAppTests/GitStoreTests.swift
+  s_c1d531664a18a8::t_28b704a9b508d7 1-141
+Sources/DevmachineApp/Components/DMComponents.swift
+  s_c1d531664a18a8::t_fac90a5d9aff70 168
+  s_c1d531664a18a8::t_3d634fb0883625 132-154
+Sources/DevmachineApp/GitTab.swift
+  s_c1d531664a18a8::t_20b4007fb14558 1-31,33-267,269,272-274,276-280,282-292,303-310
+  s_c1d531664a18a8::t_9c565224b468ea 268,270-271,275,281,293-302
+  s_c1d531664a18a8::t_21d725ff3780b2 32
+Sources/DevmachineApp/RemoteService.swift
+  s_c1d531664a18a8::t_9eadc0e7300b0d 22-30
+Tests/DevmachineCoreTests/GitSnapshotParserTests.swift
+  s_c1d531664a18a8::t_39bf5c68478e13 150-160
+Sources/DevmachineApp/ContextStore.swift
+  s_c1d531664a18a8::t_c3ae0b41d2bb55 17-18
+Sources/DevmachineApp/ContextPanel.swift
+  s_c1d531664a18a8::t_516555b20d45e6 4-17,21,26-45,47-74,78-79,81-90,96,99-108,126,131
+Tests/DevmachineAppTests/GitTabTests.swift
+  s_c1d531664a18a8::t_fa6d073feb43b6 62,66,70-72
+  s_c1d531664a18a8::t_e3ed15e6aa886b 1-61,63-65,67-69,73-91
+Sources/DevmachineApp/AppModel.swift
+  s_c1d531664a18a8::t_0d3321b665736b 263-266
+  s_c1d531664a18a8::t_031f4043f2357f 408,411-412
+  s_c1d531664a18a8::t_ff0ddc11271024 67-73
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "a5c467db4a22bb64f2ad92dd21f4708c652ccba4",
+  "prompts": {},
+  "sessions": {
+    "s_c1d531664a18a8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "8904ff31-33a0-48f2-a610-30ec4274480f",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
