@@ -1,0 +1,23 @@
+Sources/DevmachineCore/RemoteCommands.swift
+  s_c1d531664a18a8::t_e0b4b3b4693580 39-50
+Tests/DevmachineCoreTests/GitSnapshotParserTests.swift
+  s_c1d531664a18a8::t_c42c1d430d0411 1-194
+Sources/DevmachineCore/GitSnapshot.swift
+  s_c1d531664a18a8::t_35ea00a52182ba 1-212
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "dfd92953e5098e984e12c6d7466683f41d74fc5c",
+  "prompts": {},
+  "sessions": {
+    "s_c1d531664a18a8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "8904ff31-33a0-48f2-a610-30ec4274480f",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
