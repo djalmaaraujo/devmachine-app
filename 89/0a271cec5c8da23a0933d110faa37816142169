@@ -1,0 +1,19 @@
+scripts/install.sh
+  s_c1d531664a18a8::t_be2f806894f701 8-17,19,23-30
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "890a271cec5c8da23a0933d110faa37816142169",
+  "prompts": {},
+  "sessions": {
+    "s_c1d531664a18a8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "8904ff31-33a0-48f2-a610-30ec4274480f",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
