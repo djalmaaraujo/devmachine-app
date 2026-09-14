@@ -1,0 +1,23 @@
+Sources/DevmachineApp/TerminalRegistry.swift
+  s_c1d531664a18a8::t_87b44f374eba39 109-112,115
+Sources/DevmachineCore/TerminalReplyFilter.swift
+  s_c1d531664a18a8::t_5bdb0739ab219a 3-9,15,25-27,29,40-52
+Tests/DevmachineCoreTests/TerminalReplyFilterTests.swift
+  s_c1d531664a18a8::t_ceb86f53984558 4,7-14,19,23-24,28-30
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "4bfb9df53ecdec3d395868e02c912fd9a4b49dc7",
+  "prompts": {},
+  "sessions": {
+    "s_c1d531664a18a8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "8904ff31-33a0-48f2-a610-30ec4274480f",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
