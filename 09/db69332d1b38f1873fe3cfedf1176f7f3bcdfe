@@ -1,0 +1,41 @@
+Sources/DevmachineApp/TerminalPaneView.swift
+  s_c1d531664a18a8::t_aabb0e0a189709 8
+Sources/DevmachineApp/TerminalRegistry.swift
+  s_c1d531664a18a8::t_646ca6fe134223 81
+Sources/DevmachineCore/CaddyAdd.swift
+  s_c1d531664a18a8::t_00971acca17598 83
+Tests/DevmachineCoreTests/CaddyAddTests.swift
+  s_c1d531664a18a8::t_db7cd6eacac736 159
+  s_c1d531664a18a8::t_a2c025b537e702 175,177
+Sources/DevmachineApp/ContentView.swift
+  s_c1d531664a18a8::t_cfee94a88a5d57 270
+  s_c1d531664a18a8::t_4c75ee8203d47e 256-257
+Sources/DevmachineApp/SidebarItem.swift
+  s_c1d531664a18a8::t_8c9b4219fe4a66 3
+Sources/DevmachineApp/AppModel.swift
+  s_c1d531664a18a8::t_1e0712844bbb0f 203-204,206
+Sources/DevmachineApp/SidebarView.swift
+  s_c1d531664a18a8::t_d3cb2ab00596d6 42-43,46
+Tests/DevmachineAppTests/AppModelTests.swift
+  s_c1d531664a18a8::t_e7cb2d4975e0d3 132
+Sources/DevmachineApp/Components/DMComponents.swift
+  s_c1d531664a18a8::t_2fe2ced1922c31 25
+CLAUDE.md
+  s_c1d531664a18a8::t_815f4a4573a2db 41
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "09db69332d1b38f1873fe3cfedf1176f7f3bcdfe",
+  "prompts": {},
+  "sessions": {
+    "s_c1d531664a18a8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "8904ff31-33a0-48f2-a610-30ec4274480f",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
