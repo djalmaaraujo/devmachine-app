@@ -1,0 +1,31 @@
+Sources/DevmachineApp/ImagePasteService.swift
+  s_0ae7705f65c186::t_f3f900322de058 1-60
+Sources/DevmachineApp/TerminalRegistry.swift
+  s_0ae7705f65c186::t_3fdb194bf82443 2,48-57,71-92,233-245
+Sources/DevmachineCore/CommandRunner.swift
+  s_0ae7705f65c186::t_e4157e8f6c4f61 5-9,15-20,42-47,50-55,68-69,76-85
+Sources/DevmachineCore/ImagePaste.swift
+  s_0ae7705f65c186::t_16d4271049266a 1-41
+Tests/DevmachineAppTests/ImagePasteServiceTests.swift
+  s_0ae7705f65c186::t_6984d3218a4f63 1-74
+Tests/DevmachineAppTests/TerminalKeyboardTests.swift
+  s_0ae7705f65c186::t_d36b13bce0f2cf 36-46
+Tests/DevmachineCoreTests/ImagePasteTests.swift
+  s_0ae7705f65c186::t_9bca8c90ff8bea 1-23
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "194b3703bec50cae3c81acbc43e1c48111765043",
+  "prompts": {},
+  "sessions": {
+    "s_0ae7705f65c186": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "0217c0f7-f63d-4c24-8e42-843807eda4de",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
