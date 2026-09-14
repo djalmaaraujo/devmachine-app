@@ -1,0 +1,22 @@
+README.md
+  s_c1d531664a18a8::t_e70e082f2dfb4e 44-46
+  s_c1d531664a18a8::t_f5cb3546291564 28
+scripts/package_app.sh
+  s_c1d531664a18a8::t_d30f34fb547b0e 12
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "285ad36df0ff8b8177395c30715ea1a86dfc0bd7",
+  "prompts": {},
+  "sessions": {
+    "s_c1d531664a18a8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "8904ff31-33a0-48f2-a610-30ec4274480f",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
