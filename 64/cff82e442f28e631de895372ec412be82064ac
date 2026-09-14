@@ -1,0 +1,23 @@
+CLAUDE.md
+  s_c1d531664a18a8::t_c6223b3a094225 105-110
+Sources/DevmachineApp/TerminalRegistry.swift
+  s_c1d531664a18a8::t_a5bc58e48d9dac 15,26-44,52,170-177
+Tests/DevmachineAppTests/TerminalKeyboardTests.swift
+  s_c1d531664a18a8::t_6c2f97f319abd9 1-17
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "64cff82e442f28e631de895372ec412be82064ac",
+  "prompts": {},
+  "sessions": {
+    "s_c1d531664a18a8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "8904ff31-33a0-48f2-a610-30ec4274480f",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
