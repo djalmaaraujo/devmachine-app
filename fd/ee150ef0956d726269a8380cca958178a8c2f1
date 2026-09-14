@@ -1,0 +1,109 @@
+.gitignore
+  s_c1d531664a18a8::t_ae2fb57a13da77 1-6
+CLAUDE.md
+  s_c1d531664a18a8::t_90f38a604ffa15 1-101
+Package.resolved
+  s_c1d531664a18a8::t_54e9c19191ee17 1-24
+Sources/ClaudeUsageKit/ClaudeUsageStore.swift
+  s_c1d531664a18a8::t_936014f414a54a 1-128
+Sources/ClaudeUsageKit/UsageStatsEngine.swift
+  s_c1d531664a18a8::t_e40d620faadcf1 1-203
+Sources/ClaudeUsageKit/Views/ClaudeUsagePanel.swift
+  s_c1d531664a18a8::t_77a3ed6e37b6bf 1-79
+Sources/ClaudeUsageKit/Views/UsagePalette.swift
+  s_c1d531664a18a8::t_92586113cb4e0c 1-11
+Sources/DevmachineApp/ContentView.swift
+  s_c1d531664a18a8::t_1ca8fa2c12f4e3 1-321
+Sources/DevmachineApp/ContextStore.swift
+  s_c1d531664a18a8::t_81041fb1c93518 1-68
+Sources/DevmachineApp/DevmachineApp.swift
+  s_c1d531664a18a8::t_44294adf81322f 1-76
+Sources/DevmachineApp/FloatingTerminalCard.swift
+  s_c1d531664a18a8::t_d030e2013cb761 1-26
+Sources/DevmachineApp/HomeView.swift
+  s_c1d531664a18a8::t_6f795bba918adf 1-144
+Sources/DevmachineApp/MenuBarPanel.swift
+  s_c1d531664a18a8::t_74b4d0440aa0b5 1-159
+Sources/DevmachineApp/PRStore.swift
+  s_c1d531664a18a8::t_8e999e457ea108 1-168
+Sources/DevmachineApp/SetupPage.swift
+  s_c1d531664a18a8::t_f9f56aa8b02fb2 1-204
+Sources/DevmachineApp/ShortcutsSection.swift
+  s_c1d531664a18a8::t_65ac65fabe671a 1-134
+Sources/DevmachineApp/SidebarView.swift
+  s_c1d531664a18a8::t_4bd9e36a62f6d4 1-262
+Sources/DevmachineApp/StatsView.swift
+  s_c1d531664a18a8::t_b8658be73888ee 1-261
+Sources/DevmachineApp/TerminalPaneView.swift
+  s_c1d531664a18a8::t_c1f6fa04930282 1-92
+Sources/DevmachineApp/WallpaperBackground.swift
+  s_c1d531664a18a8::t_4f99807b81a366 1-115
+Sources/DevmachineCore/LRUEviction.swift
+  s_c1d531664a18a8::t_a5a8d8ce467a68 1-10
+Sources/DevmachineCore/RemoteCommands.swift
+  s_c1d531664a18a8::t_92de697e96258d 1-76
+Tests/ClaudeUsageKitTests/ClaudeUsageStoreTests.swift
+  s_c1d531664a18a8::t_47f123673f5e77 1-171
+Tests/ClaudeUsageKitTests/UsageStatsEngineTests.swift
+  s_c1d531664a18a8::t_44f958387aabc8 1-203
+Tests/DevmachineAppTests/AppModelTests.swift
+  s_c1d531664a18a8::t_66ab7c0257548c 1-257
+Tests/DevmachineAppTests/ContextStoreTests.swift
+  s_c1d531664a18a8::t_03cc3fdb229249 1-105
+Tests/DevmachineAppTests/FileServiceTests.swift
+  s_c1d531664a18a8::t_ca2e804b8facd4 1-88
+Tests/DevmachineAppTests/MenuBarLabelTests.swift
+  s_c1d531664a18a8::t_e93190784b7ec5 1-23
+Tests/DevmachineAppTests/PRStoreTests.swift
+  s_c1d531664a18a8::t_dfc44170952d8f 1-207
+Tests/DevmachineAppTests/RemoteServiceTests.swift
+  s_c1d531664a18a8::t_ee43c2b542cbac 1-52
+Tests/DevmachineAppTests/SettingsStoreTests.swift
+  s_c1d531664a18a8::t_e3ef7efdcc05d9 1-50
+Tests/DevmachineAppTests/TestSupport.swift
+  s_c1d531664a18a8::t_d9d04b0836ecb9 1-50
+Tests/DevmachineCoreTests/AppSettingsTests.swift
+  s_c1d531664a18a8::t_b0095a95f542e4 1-157
+Tests/DevmachineCoreTests/CaddyfileParserTests.swift
+  s_c1d531664a18a8::t_504a849966af15 1-88
+Tests/DevmachineCoreTests/FileListParserTests.swift
+  s_c1d531664a18a8::t_cd801f59744fb1 1-42
+Tests/DevmachineCoreTests/LRUEvictionTests.swift
+  s_c1d531664a18a8::t_7fa36292df8df5 1-42
+Tests/DevmachineCoreTests/PRCoreTests.swift
+  s_c1d531664a18a8::t_6644540ac345cb 1-204
+Tests/DevmachineCoreTests/ProcessRunnerTests.swift
+  s_c1d531664a18a8::t_486aa93dfd05ca 1-29
+Tests/DevmachineCoreTests/RemoteCommandsTests.swift
+  s_c1d531664a18a8::t_8278e6b8483e28 1-98
+Tests/DevmachineCoreTests/SSHConfigParserTests.swift
+  s_c1d531664a18a8::t_16d15e02c0d1d5 1-70
+Tests/DevmachineCoreTests/SessionStoreTests.swift
+  s_c1d531664a18a8::t_20345edc3db220 1-43
+Tests/DevmachineCoreTests/StackGridTests.swift
+  s_c1d531664a18a8::t_cf54b1ef4713ab 1-94
+Tests/DevmachineCoreTests/StatsParserTests.swift
+  s_c1d531664a18a8::t_df6dc8556276ce 1-111
+Tests/DevmachineCoreTests/TmuxListParserTests.swift
+  s_c1d531664a18a8::t_646402ef93f3ba 1-25
+scripts/check-real-data.sh
+  s_c1d531664a18a8::t_15270e606fb630 1-19
+scripts/install.sh
+  s_c1d531664a18a8::t_292526fb3b077d 1-13
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "fdee150ef0956d726269a8380cca958178a8c2f1",
+  "prompts": {},
+  "sessions": {
+    "s_c1d531664a18a8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "8904ff31-33a0-48f2-a610-30ec4274480f",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
