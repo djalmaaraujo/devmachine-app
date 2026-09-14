@@ -1,0 +1,36 @@
+Sources/DevmachineApp/FilesTab.swift
+  s_c1d531664a18a8::t_baabef2eece8c5 206
+  s_c1d531664a18a8::t_8478ce1e6e83d7 118
+  s_c1d531664a18a8::t_f448309f7b00f1 2-25,28,31-36,39-117,119-122,125-129,134-205,207-247
+Sources/DevmachineApp/FilesStore.swift
+  s_c1d531664a18a8::t_7fd097725c65e6 71,74-77
+  s_c1d531664a18a8::t_3eeb6eb1fd2bdc 26,28,34-35
+  s_c1d531664a18a8::t_a22a592d75a362 36-37
+Sources/DevmachineApp/ContextPanel.swift
+  s_c1d531664a18a8::t_709450fb056186 22
+  s_c1d531664a18a8::t_882874b4d13c34 44
+Tests/DevmachineAppTests/FilesTabTests.swift
+  s_c1d531664a18a8::t_ab4d9c55bb948d 68-70,72-76
+  s_c1d531664a18a8::t_cb5c28c443b340 100-101
+  s_c1d531664a18a8::t_ebb0dbd4e066cb 1-67,71,77-99,102-117
+Sources/DevmachineApp/FilesView.swift
+  s_c1d531664a18a8::t_1791f20ca6b990 52
+Tests/DevmachineAppTests/FilesStoreTests.swift
+  s_c1d531664a18a8::t_942cfea807bc7e 1-48
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "8bdd59d2d5c381a876c921b14d7d043960438357",
+  "prompts": {},
+  "sessions": {
+    "s_c1d531664a18a8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "8904ff31-33a0-48f2-a610-30ec4274480f",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
