@@ -1,0 +1,25 @@
+CLAUDE.md
+  s_c1d531664a18a8::t_5173c63ddcea8c 95-101
+Sources/DevmachineApp/TerminalRegistry.swift
+  s_c1d531664a18a8::t_895f2521cc82fc 72,78
+Sources/DevmachineCore/RemoteCommands.swift
+  s_c1d531664a18a8::t_96c340ce8511a4 89-96,98
+Tests/DevmachineCoreTests/RemoteCommandsTests.swift
+  s_c1d531664a18a8::t_22fa4e2d83929d 98-103
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "b6349911c66b2498aa295762639a678a3c4fa673",
+  "prompts": {},
+  "sessions": {
+    "s_c1d531664a18a8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "8904ff31-33a0-48f2-a610-30ec4274480f",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
