@@ -1,0 +1,23 @@
+Sources/DevmachineApp/AppModel.swift
+  s_c1d531664a18a8::t_fa852b25f21d46 73-75,364-369,372-374,376-391,395-396,403,406,411-446
+Sources/DevmachineCore/SessionStore.swift
+  s_c1d531664a18a8::t_086e7a2d02b96c 11,16-19,30-46
+Tests/DevmachineCoreTests/SessionStoreTests.swift
+  s_c1d531664a18a8::t_80254e51a35e6e 6-7,14-18,50-71
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "7272f5838538057e6a0d6ccf6155dc245aeb7f37",
+  "prompts": {},
+  "sessions": {
+    "s_c1d531664a18a8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "8904ff31-33a0-48f2-a610-30ec4274480f",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
