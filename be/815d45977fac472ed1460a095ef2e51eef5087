@@ -1,0 +1,34 @@
+Tests/DevmachineAppTests/FileTreeStoreTests.swift
+  s_c1d531664a18a8::t_62ae353860d5f1 202
+  s_c1d531664a18a8::t_7c33db67eaa2f6 1-86,88-100,102-115,117-126,128-138,140-149,151-173,175-190,192-201,203-210,212-224,226-233,235-245,247-257
+  s_c1d531664a18a8::t_d518e9f506a82c 87
+  s_c1d531664a18a8::t_39e74211fa575d 101
+  s_c1d531664a18a8::t_ec062921537792 116
+  s_c1d531664a18a8::t_140071791329e7 127
+  s_c1d531664a18a8::t_2641b41b20f376 139
+  s_c1d531664a18a8::t_13af9a8b6c31d0 150
+  s_c1d531664a18a8::t_1ce943cedef2b1 174
+  s_c1d531664a18a8::t_d3a24f209e10d5 191
+  s_c1d531664a18a8::t_9b33ea0b54ed5f 211
+  s_c1d531664a18a8::t_17ca847378f7b8 225
+  s_c1d531664a18a8::t_2e8ffb5faa2025 234
+  s_c1d531664a18a8::t_13763bc5a997c1 246
+Sources/DevmachineApp/FileTreeStore.swift
+  s_c1d531664a18a8::t_aae47d248924b5 1-237
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "be815d45977fac472ed1460a095ef2e51eef5087",
+  "prompts": {},
+  "sessions": {
+    "s_c1d531664a18a8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "8904ff31-33a0-48f2-a610-30ec4274480f",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
