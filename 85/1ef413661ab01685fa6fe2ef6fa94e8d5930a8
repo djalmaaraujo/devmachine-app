@@ -1,0 +1,51 @@
+Sources/DevmachineApp/HomeView.swift
+  s_c1d531664a18a8::t_d744f05966958c 127,129
+Sources/DevmachineApp/AddSubdomainRunner.swift
+  s_c1d531664a18a8::t_06fd732cbb825f 202
+scripts/package_app.sh
+  s_c1d531664a18a8::t_77ec0b9717bee6 13
+  s_c1d531664a18a8::t_bd4ce2f036e816 17
+Sources/DevmachineApp/ContextPanel.swift
+  s_c1d531664a18a8::t_ccbc7528c754e8 295
+  s_c1d531664a18a8::t_c26563bafe771d 33
+  s_c1d531664a18a8::t_a03bf7e9d636f3 66
+  s_c1d531664a18a8::t_f1d658d536b46f 121
+  s_c1d531664a18a8::t_2fa7837716f0ae 52
+  s_c1d531664a18a8::t_6be3fe82ff1c51 279
+Sources/DevmachineApp/SidebarView.swift
+  s_c1d531664a18a8::t_ab8d159be1f6d5 131
+  s_c1d531664a18a8::t_9ac840e76feed5 118
+  s_c1d531664a18a8::t_722cea595668a9 234,238,241,244
+  s_c1d531664a18a8::t_b9ee92bbb71066 94
+Sources/DevmachineApp/ContentView.swift
+  s_c1d531664a18a8::t_9b7f5e04955868 80,87,92,95,102,107
+  s_c1d531664a18a8::t_0d7cf5089787ff 188
+  s_c1d531664a18a8::t_77051c8d1be920 290-291,294-295
+  s_c1d531664a18a8::t_bb7db4fc517964 310-311,314-315
+Sources/DevmachineApp/CommandPaletteView.swift
+  s_c1d531664a18a8::t_442e4e1181a9ae 26
+scripts/make_icon.swift
+  s_c1d531664a18a8::t_f39c310457be37 3-4
+Sources/DevmachineApp/Components/DMComponents.swift
+  s_c1d531664a18a8::t_507a83120f3c6e 219
+Sources/DevmachineApp/AppModel.swift
+  s_c1d531664a18a8::t_d9a3f1a65008cd 299
+  s_c1d531664a18a8::t_5375bcf8d5a23c 319
+  s_c1d531664a18a8::t_893cbf066ae684 268
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "851ef413661ab01685fa6fe2ef6fa94e8d5930a8",
+  "prompts": {},
+  "sessions": {
+    "s_c1d531664a18a8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "8904ff31-33a0-48f2-a610-30ec4274480f",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
