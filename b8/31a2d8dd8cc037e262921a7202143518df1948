@@ -1,0 +1,28 @@
+Tests/DevmachineAppTests/WallpaperStoreTests.swift
+  s_c1d531664a18a8::t_ed7b50e64dfd61 1
+  s_c1d531664a18a8::t_bc55a5aea75bc1 2-300
+Sources/DevmachineApp/WallpaperStore.swift
+  s_c1d531664a18a8::t_42c1cbc971215c 1-131
+Sources/DevmachineApp/WallpaperBackground.swift
+  s_c1d531664a18a8::t_d4f11b5308dcaa 5,18-30,55,63-77,81-84,91-141,143-146,148-163
+  s_c1d531664a18a8::t_bcd72c4bbe674d 56-61
+Sources/DevmachineApp/DevmachineApp.swift
+  s_c1d531664a18a8::t_700411e0999541 29
+  s_c1d531664a18a8::t_fdbf8943e72794 15
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "b831a2d8dd8cc037e262921a7202143518df1948",
+  "prompts": {},
+  "sessions": {
+    "s_c1d531664a18a8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "8904ff31-33a0-48f2-a610-30ec4274480f",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
