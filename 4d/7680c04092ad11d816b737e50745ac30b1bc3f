@@ -1,0 +1,71 @@
+Sources/DevmachineApp/AddSubdomainSheet.swift
+  s_0ae7705f65c186::t_5c926bdf32de6d 55,70,76,83,88,95
+Sources/DevmachineApp/CommandPaletteView.swift
+  s_0ae7705f65c186::t_91961551d90939 28,68,71,74
+Sources/DevmachineApp/Components/DMComponents.swift
+  s_0ae7705f65c186::t_06aa5eee770fe0 34,37,138,150,159,216,221,244,250,254
+Sources/DevmachineApp/Components/DMTabStrip.swift
+  s_0ae7705f65c186::t_fd5aefeccffd1d 50
+Sources/DevmachineApp/ContentView.swift
+  s_0ae7705f65c186::t_42062f547ec5e6 181,322,327
+Sources/DevmachineApp/ContextPanel.swift
+  s_0ae7705f65c186::t_af5f45db6c1b70 88,116,156,192,197,223,226,261,263,265,292,297,322,329
+Sources/DevmachineApp/DMFont.swift
+  s_0ae7705f65c186::t_beb05a27c1a04d 1-23
+Sources/DevmachineApp/DevmachineApp.swift
+  s_0ae7705f65c186::t_cc9d2d0138045d 2,30-34,74
+Sources/DevmachineApp/FilesTab.swift
+  s_0ae7705f65c186::t_e932f42104aad3 65,76,115,137,191,195,226
+Sources/DevmachineApp/FilesView.swift
+  s_0ae7705f65c186::t_a99787b16b11e4 23,56,83,97
+Sources/DevmachineApp/GitTab.swift
+  s_0ae7705f65c186::t_e871ae2f1d830b 51,69,72,82,94,135,144,222,227,264,272,279
+Sources/DevmachineApp/HomeView.swift
+  s_0ae7705f65c186::t_c4f490729c1093 29,33,36,83,88,95,110,113,133
+Sources/DevmachineApp/MenuBarPanel.swift
+  s_0ae7705f65c186::t_43542a512d8883 73,118
+Sources/DevmachineApp/PRRowView.swift
+  s_0ae7705f65c186::t_bb8b54761bd87c 72,75,81,99
+Sources/DevmachineApp/PRsView.swift
+  s_0ae7705f65c186::t_77b0fb3480ad36 72,86
+Sources/DevmachineApp/SetupPage.swift
+  s_0ae7705f65c186::t_71897d9e5334e6 19-21,29-32,65,68,118,154,159,164,171-218,222,241,249,293,371-373,416
+Sources/DevmachineApp/ShortcutsSection.swift
+  s_0ae7705f65c186::t_fd394eedc5c426 16,25,59,61,96,98
+Sources/DevmachineApp/ShortcutsSheet.swift
+  s_0ae7705f65c186::t_9bd702ed31ad6a 48,62,70,83
+Sources/DevmachineApp/SidebarView.swift
+  s_0ae7705f65c186::t_89c49044c28862 61,129,175,195,206,217,311
+Sources/DevmachineApp/StackGridView.swift
+  s_0ae7705f65c186::t_7e45c148618984 54,103
+Sources/DevmachineApp/StatsView.swift
+  s_0ae7705f65c186::t_199c26461aab49 33,40,84,98,110,149,161,172,187,195,208,222,238,252
+Sources/DevmachineApp/SubdomainsView.swift
+  s_0ae7705f65c186::t_ab44a84e2be73c 43,98,119,133,145,161,177,182,188
+Sources/DevmachineApp/TerminalPaneView.swift
+  s_0ae7705f65c186::t_20a91cc9c1ec7e 31-33,35,37-40
+Sources/DevmachineCore/AppSettings.swift
+  s_0ae7705f65c186::t_accb7ef4b6eb59 26-30,37-40,47-49,54,64-73
+Sources/DevmachineCore/Appearance.swift
+  s_0ae7705f65c186::t_a82ff5dc8731c2 1-36
+Tests/DevmachineAppTests/DMFontTests.swift
+  s_0ae7705f65c186::t_663dae747a0153 1-30
+Tests/DevmachineCoreTests/AppearanceTests.swift
+  s_0ae7705f65c186::t_6741180e614d46 1-44
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "4d7680c04092ad11d816b737e50745ac30b1bc3f",
+  "prompts": {},
+  "sessions": {
+    "s_0ae7705f65c186": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "0217c0f7-f63d-4c24-8e42-843807eda4de",
+        "model": "unknown"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
