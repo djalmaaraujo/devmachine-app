@@ -1,0 +1,21 @@
+Sources/DevmachineApp/Components/DMComponents.swift
+  s_0ae7705f65c186::t_c2d0abb427b7b4 184-190,192-204
+Tests/DevmachineAppTests/DMProgressBarTests.swift
+  s_0ae7705f65c186::t_ce9811120ae5eb 1-19
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "aa400ec66e3dea77de658228855e87ad307c269a",
+  "prompts": {},
+  "sessions": {
+    "s_0ae7705f65c186": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "0217c0f7-f63d-4c24-8e42-843807eda4de",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
