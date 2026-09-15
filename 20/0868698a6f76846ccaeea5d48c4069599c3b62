@@ -1,0 +1,19 @@
+Sources/DevmachineApp/Components/DMComponents.swift
+  s_0ae7705f65c186::t_4081a7a6bab670 252-253,258-261
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "200868698a6f76846ccaeea5d48c4069599c3b62",
+  "prompts": {},
+  "sessions": {
+    "s_0ae7705f65c186": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "0217c0f7-f63d-4c24-8e42-843807eda4de",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
