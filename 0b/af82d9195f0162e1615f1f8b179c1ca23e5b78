@@ -1,0 +1,23 @@
+Sources/DevmachineApp/SidebarView.swift
+  s_f14e75fe50cb76::t_ca1becdd2af861 8,236-238,272-273,308-310,316-320
+Sources/DevmachineApp/TerminalRegistry.swift
+  s_f14e75fe50cb76::t_e915285202cf50 10,85-101,149,354-364
+Sources/DevmachineApp/WorkingIndicator.swift
+  s_f14e75fe50cb76::t_02d0b5ddde3ff7 1-21
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "0baf82d9195f0162e1615f1f8b179c1ca23e5b78",
+  "prompts": {},
+  "sessions": {
+    "s_f14e75fe50cb76": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c2871421-cf35-4ee9-8cc5-376196e7af55",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
