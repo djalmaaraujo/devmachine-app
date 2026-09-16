@@ -1,0 +1,24 @@
+Sources/DevmachineApp/ContextPanel.swift
+  s_b6ab45b2a065b2::t_72a2a68e3cceff 331-336
+Sources/DevmachineApp/Theme.swift
+  s_b6ab45b2a065b2::t_72a2a68e3cceff 19-30
+Tests/DevmachineAppTests/ContextStateTests.swift
+  s_b6ab45b2a065b2::t_ad1c5c8511c9e0 1,121-125
+  s_b6ab45b2a065b2::t_3f0a40e4aac275 126
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "6e57101fde452bd369bf5d02c879e12b7675c6d9",
+  "prompts": {},
+  "sessions": {
+    "s_b6ab45b2a065b2": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "48008841-1ca2-40d3-aea9-a58be6246369",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
