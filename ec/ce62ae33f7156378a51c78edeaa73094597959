@@ -1,0 +1,31 @@
+Sources/DevmachineApp/ContextState.swift
+  s_b6ab45b2a065b2::t_36854da0c3636b 25-26,29,41-42,45-46,54-55
+Sources/DevmachineApp/ContextPanel.swift
+  s_b6ab45b2a065b2::t_a33d03060c5280 65-68,133,138-139,142-147,153-159,174,179-180,182-187,189-190
+Sources/DevmachineApp/TerminalPaneView.swift
+  s_f14e75fe50cb76::t_4df106625f0421 31,60-98
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "ecce62ae33f7156378a51c78edeaa73094597959",
+  "prompts": {},
+  "sessions": {
+    "s_b6ab45b2a065b2": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "48008841-1ca2-40d3-aea9-a58be6246369",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    },
+    "s_f14e75fe50cb76": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c2871421-cf35-4ee9-8cc5-376196e7af55",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
