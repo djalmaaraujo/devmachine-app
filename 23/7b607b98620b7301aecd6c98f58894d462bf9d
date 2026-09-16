@@ -1,0 +1,19 @@
+Tests/DevmachineAppTests/ContextStateTests.swift
+  s_b6ab45b2a065b2::t_1876f2f3f46c64 50-78
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "237b607b98620b7301aecd6c98f58894d462bf9d",
+  "prompts": {},
+  "sessions": {
+    "s_b6ab45b2a065b2": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "48008841-1ca2-40d3-aea9-a58be6246369",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
