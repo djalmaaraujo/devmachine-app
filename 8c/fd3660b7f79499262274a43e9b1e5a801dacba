@@ -1,0 +1,43 @@
+Package.resolved
+  s_f14e75fe50cb76::t_be7975956f836f 2,13-30,40-57
+Package.swift
+  s_f14e75fe50cb76::t_53b1b84567b846 16-18,28-30
+Sources/DevmachineApp/DevmachineApp.swift
+  s_f14e75fe50cb76::t_176bde7888d58e 17,37,77-78,82-91
+Sources/DevmachineApp/FileSearchPaletteView.swift
+  s_f14e75fe50cb76::t_6c61c0d3ffefa3 11-12,40-47,92,148-157
+Sources/DevmachineApp/FileViewerStore.swift
+  s_f14e75fe50cb76::t_25f27357ec34cf 1-65
+Sources/DevmachineApp/FileViewerView.swift
+  s_f14e75fe50cb76::t_96bed040b57d46 1-171
+Sources/DevmachineApp/FilesStore.swift
+  s_f14e75fe50cb76::t_46da6fe8e8805f 164-169
+Sources/DevmachineApp/FilesTab.swift
+  s_f14e75fe50cb76::t_98815a410e198b 32,102-103,152-158,191,220,223-226
+Sources/DevmachineApp/FilesView.swift
+  s_f14e75fe50cb76::t_2962be5ad01342 6-7,116-121,136,140-141
+Sources/DevmachineCore/FilePreview.swift
+  s_f14e75fe50cb76::t_29042aac73f6da 1-150
+Tests/DevmachineAppTests/FileViewerStoreTests.swift
+  s_f14e75fe50cb76::t_f4188e23721c05 1-100
+Tests/DevmachineAppTests/FilesTabTests.swift
+  s_f14e75fe50cb76::t_76d14a19ccd7f1 95
+Tests/DevmachineCoreTests/FilePreviewTests.swift
+  s_f14e75fe50cb76::t_8e3fe1362846d9 1-91
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "8cfd3660b7f79499262274a43e9b1e5a801dacba",
+  "prompts": {},
+  "sessions": {
+    "s_f14e75fe50cb76": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c2871421-cf35-4ee9-8cc5-376196e7af55",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
