@@ -1,0 +1,41 @@
+CLAUDE.md
+  s_f14e75fe50cb76::t_feca3d976e4477 154-160
+Sources/DevmachineApp/AppModel.swift
+  s_f14e75fe50cb76::t_d95ee580dc10fa 70-87
+Sources/DevmachineApp/CaddyService.swift
+  s_f14e75fe50cb76::t_40201e11c62900 15-20
+Sources/DevmachineApp/CaddyStore.swift
+  s_f14e75fe50cb76::t_689582a8b230b6 7-8,37-39,43
+Sources/DevmachineApp/StatsView.swift
+  s_f14e75fe50cb76::t_11c9f55fd56f44 10,137,216,233-247,261
+Sources/DevmachineApp/SubdomainsView.swift
+  s_f14e75fe50cb76::t_6d5da96cb673f8 7,152-162,166
+Sources/DevmachineCore/Ownership.swift
+  s_f14e75fe50cb76::t_4d359a501774d3 1-144
+Sources/DevmachineCore/RemoteCommands.swift
+  s_f14e75fe50cb76::t_c36707aafe22f6 13-29
+Sources/DevmachineCore/StatsParser.swift
+  s_f14e75fe50cb76::t_60d0e061bba117 7-10,97-100,142-143,147-149
+Tests/DevmachineAppTests/AppModelTests.swift
+  s_f14e75fe50cb76::t_ec7aab0a900cef 672-700
+Tests/DevmachineCoreTests/OwnershipTests.swift
+  s_f14e75fe50cb76::t_42eca9fe34ff86 1-101
+Tests/DevmachineCoreTests/StatsParserTests.swift
+  s_f14e75fe50cb76::t_2c3a4acbe5d6f2 108
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "2358c273e2e034b80b46c31878d028e3946ede05",
+  "prompts": {},
+  "sessions": {
+    "s_f14e75fe50cb76": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c2871421-cf35-4ee9-8cc5-376196e7af55",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
