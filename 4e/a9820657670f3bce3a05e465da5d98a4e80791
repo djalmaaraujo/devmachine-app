@@ -1,0 +1,19 @@
+CLAUDE.md
+  s_f14e75fe50cb76::t_d41eed5287c51d 142-164,214-218
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "4ea9820657670f3bce3a05e465da5d98a4e80791",
+  "prompts": {},
+  "sessions": {
+    "s_f14e75fe50cb76": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c2871421-cf35-4ee9-8cc5-376196e7af55",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
