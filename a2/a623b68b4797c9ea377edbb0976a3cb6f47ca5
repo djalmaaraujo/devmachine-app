@@ -1,0 +1,19 @@
+AGENTS.md
+  s_7404a3c1e68ce6::t_2241fcf3be73ca 1-3
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "a2a623b68b4797c9ea377edbb0976a3cb6f47ca5",
+  "prompts": {},
+  "sessions": {
+    "s_7404a3c1e68ce6": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c4f382cd-b9b6-44fb-8035-a6ffab98d91d",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
