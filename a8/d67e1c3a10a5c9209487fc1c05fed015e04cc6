@@ -1,0 +1,27 @@
+Sources/DevmachineApp/Harnesses/CodingHarnessAdapter.swift
+  s_c0bffc478e7aa7::t_5b4011e8fce49e 1-75
+Sources/DevmachineApp/Harnesses/HarnessRegistry.swift
+  s_c0bffc478e7aa7::t_88e81c3adbe3d2 1-18
+Sources/DevmachineApp/Harnesses/HarnessSettingsFacade.swift
+  s_c0bffc478e7aa7::t_3ca64d5a39d152 1-92
+Tests/DevmachineAppTests/HarnessRegistryTests.swift
+  s_c0bffc478e7aa7::t_363850011a96d1 1-36
+Tests/DevmachineAppTests/HarnessSettingsFacadeTests.swift
+  s_c0bffc478e7aa7::t_448cb94a9685d7 1-58
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "a8d67e1c3a10a5c9209487fc1c05fed015e04cc6",
+  "prompts": {},
+  "sessions": {
+    "s_c0bffc478e7aa7": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0ca03-8662-7402-827e-51dd0b5f81fc",
+        "model": "unknown"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
