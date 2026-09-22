@@ -1,0 +1,35 @@
+Tests/HarnessUsageKitTests/HarnessUsageStoreTests.swift
+  s_3c1e24ba9f2fdc::t_92ba00e8feb1fd 1-105
+Sources/HarnessUsageKit/ClaudeUsageStore.swift
+  s_8b6465bd758852::t_8e0b795be10d44 1
+Sources/HarnessUsageKit/HarnessUsageProvider.swift
+  s_8b6465bd758852::t_2744aea8e56397 1-55
+Sources/HarnessUsageKit/HarnessUsageStore.swift
+  s_8b6465bd758852::t_3c8d5450308649 1-135
+Sources/HarnessUsageKit/UsageProviders.swift
+  s_8b6465bd758852::t_1a61530179bee0 49,83
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "292f2b1fcd0e58c8bab22327831959c672a245a2",
+  "prompts": {},
+  "sessions": {
+    "s_3c1e24ba9f2fdc": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "01a0c9d6-7e1f-7860-966a-4959d525c844",
+        "model": "unknown"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    },
+    "s_8b6465bd758852": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0c978-8a72-7241-9c82-6ebf916e6e48",
+        "model": "unknown"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
