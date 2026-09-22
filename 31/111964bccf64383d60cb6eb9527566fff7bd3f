@@ -1,0 +1,23 @@
+Sources/DevmachineApp/Harnesses/SessionHarnessFacade.swift
+  s_a8eae66052ed7a::t_e1107028929e7c 60-66
+Sources/DevmachineCore/SessionStore.swift
+  s_a8eae66052ed7a::t_9e77b01e74c58a 12
+Tests/DevmachineCoreTests/SessionStoreTests.swift
+  s_a8eae66052ed7a::t_8ad3094b095b11 56-73,77-80,88-91,99-103
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "31111964bccf64383d60cb6eb9527566fff7bd3f",
+  "prompts": {},
+  "sessions": {
+    "s_a8eae66052ed7a": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0ca13-6f15-7ca1-a353-057de30667db",
+        "model": "unknown"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
