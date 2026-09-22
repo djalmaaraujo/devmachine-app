@@ -1,0 +1,23 @@
+Sources/DevmachineApp/Harnesses/HarnessSettingsFacade.swift
+  s_8b6465bd758852::t_a461063e99b529 3-9,87-94
+Sources/HarnessUsageKit/HarnessUsageStore.swift
+  s_8b6465bd758852::t_f24395444afc1f 30,60-66
+Tests/DevmachineAppTests/UsageLayoutTests.swift
+  s_8b6465bd758852::t_d3ce3aaa6bc363 1-19
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "75e841d84e28fc49a859c540e143bc356d2fb6f7",
+  "prompts": {},
+  "sessions": {
+    "s_8b6465bd758852": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0c978-8a72-7241-9c82-6ebf916e6e48",
+        "model": "unknown"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
