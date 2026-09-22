@@ -1,0 +1,21 @@
+Sources/DevmachineApp/Harnesses/CodingHarnessAdapter.swift
+  s_c0bffc478e7aa7::t_ace998f5136266 28,30-33,35-45,51-59,61,65-72
+Tests/DevmachineAppTests/HarnessLocatorTests.swift
+  s_c0bffc478e7aa7::t_31ad3ae5767304 1-60
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "6dd7f2040589ded3653bb2c006fe3131e685e7b2",
+  "prompts": {},
+  "sessions": {
+    "s_c0bffc478e7aa7": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0ca03-8662-7402-827e-51dd0b5f81fc",
+        "model": "unknown"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
