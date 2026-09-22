@@ -1,0 +1,31 @@
+Tests/DevmachineAppTests/ContextStoreTests.swift
+  s_aae2bbce0aabed::t_9fa73ce67bece6 69-86,88-89
+  s_aae2bbce0aabed::t_9fe376b8b59b62 87
+Tests/DevmachineCoreTests/PRCoreTests.swift
+  s_aae2bbce0aabed::t_f62ea39a44a7f8 259-320
+Sources/DevmachineCore/PRCore.swift
+  s_aae2bbce0aabed::t_6474761ffe12f0 271-272,276-306
+  s_aae2bbce0aabed::t_71b98afc759889 273-275
+Tests/DevmachineAppTests/ContextStateTests.swift
+  s_aae2bbce0aabed::t_9fe376b8b59b62 54-55,71
+  s_aae2bbce0aabed::t_a0cb0ae7881737 42-53,56-70,72-73
+Sources/DevmachineApp/ContextState.swift
+  s_aae2bbce0aabed::t_b3935a66a17c9b 47-50,63
+  s_aae2bbce0aabed::t_b066bf86468874 9,13
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "57377083a1e0bd839f8bb3b3a3c9bf1ab0257bd9",
+  "prompts": {},
+  "sessions": {
+    "s_aae2bbce0aabed": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "9870068b-13f9-4d0c-ba19-38af59552dbb",
+        "model": "claude-opus-5"
+      },
+      "human_author": null
+    }
+  }
+}
