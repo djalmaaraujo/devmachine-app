@@ -1,0 +1,21 @@
+CLAUDE.md
+  s_8b6465bd758852::t_05cea12dfb01ea 5,58-60,62-67,117,204,209-221
+README.md
+  s_8b6465bd758852::t_568538f656b9cc 5-6,30-34
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "c47387eaaa1476c45a3ebe806d7429a7068c6c0d",
+  "prompts": {},
+  "sessions": {
+    "s_8b6465bd758852": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0c978-8a72-7241-9c82-6ebf916e6e48",
+        "model": "unknown"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
