@@ -1,0 +1,23 @@
+Sources/DevmachineCore/AppSettings.swift
+  s_1a32949a530003::t_be57495ee66b48 66-99,113-117,130-142,148-149,175-237
+Sources/DevmachineCore/CodingHarness.swift
+  s_1a32949a530003::t_184749045d00db 1-17
+Tests/DevmachineCoreTests/AppSettingsTests.swift
+  s_1a32949a530003::t_38bb7eaea6397b 223-296
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "0d4a2bf8debb51f4f9bb4828257c84042f750e26",
+  "prompts": {},
+  "sessions": {
+    "s_1a32949a530003": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0c9fe-5805-7f01-a5e9-a36a56b927d4",
+        "model": "unknown"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
