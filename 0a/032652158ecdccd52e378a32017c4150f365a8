@@ -1,0 +1,31 @@
+Sources/DevmachineApp/MenuBarPanel.swift
+  s_3c1e24ba9f2fdc::t_7b7d25df481c4e 86
+Sources/HarnessUsageKit/Views/HarnessUsagePanel.swift
+  s_3c1e24ba9f2fdc::t_881124fab4da61 3-47,49-50,52-96,100,102,104-107,109,111,118,122,127-151
+Sources/HarnessUsageKit/Views/UsageBarsView.swift
+  s_3c1e24ba9f2fdc::t_d4965a119a977c 5,7,9-13,19,27,49
+Sources/HarnessUsageKit/Views/UsageDailyChartView.swift
+  s_3c1e24ba9f2fdc::t_233349b01883d8 6,8,10-14,42
+Sources/HarnessUsageKit/Views/UsageHeaderView.swift
+  s_3c1e24ba9f2fdc::t_117e20fce0f573 4-5,9-11,26-30
+Sources/HarnessUsageKit/Views/UsageSummaryView.swift
+  s_3c1e24ba9f2fdc::t_5795273365875f 1-24
+Tests/HarnessUsageKitTests/HarnessUsagePresentationTests.swift
+  s_3c1e24ba9f2fdc::t_0fa53551d3df84 1-38
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "0a032652158ecdccd52e378a32017c4150f365a8",
+  "prompts": {},
+  "sessions": {
+    "s_3c1e24ba9f2fdc": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "01a0c9d6-7e1f-7860-966a-4959d525c844",
+        "model": "unknown"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
