@@ -1,0 +1,21 @@
+docs/superpowers/plans/2026-09-22-generic-harness-foundation.md
+  s_8b6465bd758852::t_994e70a0da814e 1-423
+docs/superpowers/plans/2026-09-22-generic-harness-usage.md
+  s_8b6465bd758852::t_0705b540e61741 1-291
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "358213c72ec9b342d60717959295ba1fc84e6eb4",
+  "prompts": {},
+  "sessions": {
+    "s_8b6465bd758852": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0c978-8a72-7241-9c82-6ebf916e6e48",
+        "model": "unknown"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
