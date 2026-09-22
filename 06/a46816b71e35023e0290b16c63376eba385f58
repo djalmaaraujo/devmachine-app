@@ -1,0 +1,30 @@
+Tests/DevmachineAppTests/ContextStoreTests.swift
+  s_aae2bbce0aabed::t_9fa73ce67bece6 69-90
+Sources/DevmachineApp/ContextPanel.swift
+  s_aae2bbce0aabed::t_b066bf86468874 99
+Tests/DevmachineCoreTests/PRCoreTests.swift
+  s_aae2bbce0aabed::t_f62ea39a44a7f8 259-320
+Sources/DevmachineCore/PRCore.swift
+  s_aae2bbce0aabed::t_6474761ffe12f0 271-307
+Tests/DevmachineAppTests/ContextStateTests.swift
+  s_aae2bbce0aabed::t_a0cb0ae7881737 42-73
+Sources/DevmachineApp/ContextState.swift
+  s_aae2bbce0aabed::t_b066bf86468874 9,13,27-28
+  s_aae2bbce0aabed::t_a5f94a5777a65f 29
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "06a46816b71e35023e0290b16c63376eba385f58",
+  "prompts": {},
+  "sessions": {
+    "s_aae2bbce0aabed": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "9870068b-13f9-4d0c-ba19-38af59552dbb",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
