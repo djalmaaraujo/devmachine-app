@@ -1,0 +1,43 @@
+Sources/DevmachineApp/DevmachineApp.swift
+  s_07e4c8d6f10023::t_8c641a4e71d750 52
+Sources/DevmachineApp/Harnesses/CodingHarnessAdapter.swift
+  s_07e4c8d6f10023::t_4411187f9e6844 100-102
+Sources/DevmachineApp/HomeView.swift
+  s_07e4c8d6f10023::t_42fe9431ab4d58 49-55,59-60
+Sources/DevmachineApp/MenuBarPanel.swift
+  s_07e4c8d6f10023::t_4085db02abde46 38-43,55-57,60,127-128
+Sources/DevmachineApp/SetupPage.swift
+  s_07e4c8d6f10023::t_91107f221a257b 440-447
+Sources/HarnessUsageKit/Codex/CodexAppServerTransport.swift
+  s_07e4c8d6f10023::t_7d8408a05a3005 2,28-34,36,39,43,46,48,52-57,60-78,80-84,88-122,127-138,140-150,152,158-159,163,165-180,182,184-187,189-207,209,211-224,226-231,233-255
+Sources/HarnessUsageKit/Codex/CodexUsageProvider.swift
+  s_07e4c8d6f10023::t_bfbe04e7083431 6,8-11,13,26-27,31,54-57,90-115
+Sources/HarnessUsageKit/HarnessUsageProvider.swift
+  s_07e4c8d6f10023::t_a2feb07792178e 42-44,46-50,52-53,57-62,64-93
+Sources/HarnessUsageKit/HarnessUsageStore.swift
+  s_07e4c8d6f10023::t_be79e609dc7b9d 33,56,63-64,111,117
+Tests/HarnessUsageKitTests/ClaudeUsageProviderTests.swift
+  s_07e4c8d6f10023::t_c8f2ea4350f430 1-63
+Tests/HarnessUsageKitTests/CodexAppServerTransportTests.swift
+  s_07e4c8d6f10023::t_3bdc006416f988 2,5-19,21-32,36-38,40,45-47,52-57,60-61,63,67-68,74-76,78-121,124-138
+Tests/HarnessUsageKitTests/CodexUsageProviderTests.swift
+  s_07e4c8d6f10023::t_8b06da8edd0658 35-36,44,46-49,73-98
+Tests/HarnessUsageKitTests/HarnessUsageStoreTests.swift
+  s_07e4c8d6f10023::t_188691988373ad 105-120
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "13db1a5de9fbf7fecf413fd18230a9bec40f298c",
+  "prompts": {},
+  "sessions": {
+    "s_07e4c8d6f10023": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "01a0ca46-215a-7e61-b354-b4d67d4c064b",
+        "model": "unknown"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
