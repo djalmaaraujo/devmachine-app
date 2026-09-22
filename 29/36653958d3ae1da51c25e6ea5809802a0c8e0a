@@ -1,0 +1,27 @@
+Sources/DevmachineApp/AppModel.swift
+  s_3c1e24ba9f2fdc::t_c8f63870aaabcd 19,24,125-145,686,696
+Sources/DevmachineApp/CommandPaletteView.swift
+  s_3c1e24ba9f2fdc::t_059227f198c0e8 67-79
+Sources/DevmachineApp/HomeView.swift
+  s_3c1e24ba9f2fdc::t_623312779206bc 10,12-13,129
+Sources/DevmachineApp/SidebarView.swift
+  s_3c1e24ba9f2fdc::t_6ce9be1505b110 212,254,291-298,305-314
+Tests/DevmachineAppTests/AppModelTests.swift
+  s_3c1e24ba9f2fdc::t_be5897b9e126f7 179-231
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "2936653958d3ae1da51c25e6ea5809802a0c8e0a",
+  "prompts": {},
+  "sessions": {
+    "s_3c1e24ba9f2fdc": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "01a0c9d6-7e1f-7860-966a-4959d525c844",
+        "model": "unknown"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
