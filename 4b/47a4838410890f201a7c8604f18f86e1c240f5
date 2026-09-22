@@ -1,0 +1,33 @@
+Package.swift
+  s_8b6465bd758852::t_c832468ff4b418 12,22,27,38-39
+Sources/DevmachineApp/DevmachineApp.swift
+  s_8b6465bd758852::t_d0adf1faa93b34 4
+Sources/DevmachineApp/HomeView.swift
+  s_8b6465bd758852::t_ceb06b13679577 3
+Sources/DevmachineApp/MenuBarPanel.swift
+  s_8b6465bd758852::t_a151d6f222d01e 3
+Tests/HarnessUsageKitTests/ClaudeUsageStoreTests.swift
+  s_8b6465bd758852::t_31c7432212ddd4 2
+Tests/HarnessUsageKitTests/UsageFormatTests.swift
+  s_8b6465bd758852::t_7bcefd1ea85724 2
+Tests/HarnessUsageKitTests/UsageParserTests.swift
+  s_8b6465bd758852::t_d4372ff394073a 2
+Tests/HarnessUsageKitTests/UsageStatsEngineTests.swift
+  s_8b6465bd758852::t_e17536b13c0444 2
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "4b47a4838410890f201a7c8604f18f86e1c240f5",
+  "prompts": {},
+  "sessions": {
+    "s_8b6465bd758852": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0c978-8a72-7241-9c82-6ebf916e6e48",
+        "model": "unknown"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
