@@ -1,0 +1,27 @@
+Sources/HarnessUsageKit/Codex/CodexAppServerTransport.swift
+  s_8b6465bd758852::t_1542b1e2b480f4 1-152
+Sources/HarnessUsageKit/Codex/CodexUsageModels.swift
+  s_8b6465bd758852::t_31899f789a0fe2 1-94
+Sources/HarnessUsageKit/Codex/CodexUsageProvider.swift
+  s_8b6465bd758852::t_9e3463522f9eb3 1-90
+Tests/HarnessUsageKitTests/CodexAppServerTransportTests.swift
+  s_8b6465bd758852::t_8aa59115712a55 1-60
+Tests/HarnessUsageKitTests/CodexUsageProviderTests.swift
+  s_8b6465bd758852::t_7a3445fe26e070 1-68
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "05a3b72c4505c2357416717474d5282133823c75",
+  "prompts": {},
+  "sessions": {
+    "s_8b6465bd758852": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0c978-8a72-7241-9c82-6ebf916e6e48",
+        "model": "unknown"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
