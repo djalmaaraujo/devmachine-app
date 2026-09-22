@@ -1,0 +1,19 @@
+docs/superpowers/specs/2026-09-22-generic-coding-harnesses-design.md
+  s_8e473005a6d6a6::t_8bc4a3acd96b50 1-167
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "9ff924f0e7866f5794a1deb8a935825de904bd16",
+  "prompts": {},
+  "sessions": {
+    "s_8e473005a6d6a6": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "01a0c97f-c0c1-7910-9caf-6717f3541147",
+        "model": "unknown"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
