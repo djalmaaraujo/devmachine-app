@@ -1,0 +1,23 @@
+Tests/DevmachineAppTests/AppModelTests.swift
+  s_a8eae66052ed7a::t_53a81a696f1492 48-102,117-242,267,284-285,300,428,832,851,863,868,871,873
+Tests/DevmachineCoreTests/ProcessListTests.swift
+  s_a8eae66052ed7a::t_3cd6b15c8a8bf3 24-31,34,40-43,48-60
+Tests/DevmachineCoreTests/TmuxListParserTests.swift
+  s_a8eae66052ed7a::t_e231d2751bfa7a 5-10,12-13,16-19,22-27,31-58,60-61
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "0c8b773fe6f435a2b74d24429b26d47cd7b60790",
+  "prompts": {},
+  "sessions": {
+    "s_a8eae66052ed7a": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0ca13-6f15-7ca1-a353-057de30667db",
+        "model": "unknown"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
