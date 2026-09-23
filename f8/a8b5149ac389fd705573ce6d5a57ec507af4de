@@ -1,0 +1,21 @@
+Sources/HarnessUsageKit/Views/UsageDailyChartView.swift
+  s_8b6465bd758852::t_e11cf977375e9f 18-21,81-83
+Tests/HarnessUsageKitTests/UsageDailyChartTests.swift
+  s_8b6465bd758852::t_6b51a360318c42 5-8
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "f8a8b5149ac389fd705573ce6d5a57ec507af4de",
+  "prompts": {},
+  "sessions": {
+    "s_8b6465bd758852": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0c978-8a72-7241-9c82-6ebf916e6e48",
+        "model": "unknown"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
