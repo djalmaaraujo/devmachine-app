@@ -1,0 +1,43 @@
+Sources/DevmachineApp/AppModel.swift
+  s_3c1e24ba9f2fdc::t_01124bf0a71870 354,418,433-436,449,540-619,959-964,975,977-984
+Sources/DevmachineCore/RemoteCommands.swift
+  s_3c1e24ba9f2fdc::t_ac135630a7bd55 48-51
+Sources/DevmachineCore/TmuxSession.swift
+  s_3c1e24ba9f2fdc::t_13af0b9a01e63b 1-2,45-54
+Tests/DevmachineAppTests/AppModelTests.swift
+  s_3c1e24ba9f2fdc::t_709a6dbef9eeac 360-476
+Tests/DevmachineCoreTests/RemoteCommandsTests.swift
+  s_3c1e24ba9f2fdc::t_f4671045e99711 33-38
+Tests/DevmachineCoreTests/SessionNameTests.swift
+  s_3c1e24ba9f2fdc::t_5b26ace7a1f6d2 29-39
+Sources/DevmachineApp/ContentView.swift
+  s_8b6465bd758852::t_576b78004a7fea 72-74,424-485
+Sources/DevmachineApp/DevmachineApp.swift
+  s_8b6465bd758852::t_9a9cd7e5ce8765 62-66
+Sources/DevmachineApp/ShortcutsSheet.swift
+  s_8b6465bd758852::t_8a3bc1c8c95f25 26
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "4f35de8cbf522f8ea8623c8ad5125bcc9b48e63a",
+  "prompts": {},
+  "sessions": {
+    "s_3c1e24ba9f2fdc": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "01a0c9d6-7e1f-7860-966a-4959d525c844",
+        "model": "unknown"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    },
+    "s_8b6465bd758852": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0c978-8a72-7241-9c82-6ebf916e6e48",
+        "model": "unknown"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
