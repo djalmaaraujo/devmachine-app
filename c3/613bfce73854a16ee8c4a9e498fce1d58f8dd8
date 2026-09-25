@@ -1,0 +1,19 @@
+docs/superpowers/specs/2026-09-25-sidebar-ordering-design.md
+  s_3c1e24ba9f2fdc::t_8bdf93f5dabff1 1-72
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "c3613bfce73854a16ee8c4a9e498fce1d58f8dd8",
+  "prompts": {},
+  "sessions": {
+    "s_3c1e24ba9f2fdc": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "01a0c9d6-7e1f-7860-966a-4959d525c844",
+        "model": "unknown"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
