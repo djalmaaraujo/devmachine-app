@@ -1,0 +1,20 @@
+Sources/DevmachineApp/CaddyService.swift
+  h_627c059af4ab3a 5,8-9,14-22
+Sources/DevmachineApp/SubdomainsView.swift
+  h_627c059af4ab3a 157
+Sources/DevmachineCore/CaddyfileParser.swift
+  h_627c059af4ab3a 7,9,13
+Tests/DevmachineAppTests/CaddyServiceTests.swift
+  h_627c059af4ab3a 1-36
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "7a420b01ac8b1b56b33a9e5580ceae95b4724a8e",
+  "prompts": {},
+  "humans": {
+    "h_627c059af4ab3a": {
+      "author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
