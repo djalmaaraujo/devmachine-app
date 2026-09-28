@@ -1,0 +1,30 @@
+Tests/DevmachineAppTests/DMComponentsRenderTests.swift
+  s_a0e8127fe22cbf::t_2cbc9db317d927 72-85
+Sources/DevmachineApp/StatsView.swift
+  s_a0e8127fe22cbf::t_26d3c66eb3bf61 75,79,83
+Sources/DevmachineApp/Components/DMStatus.swift
+  s_a0e8127fe22cbf::t_cd30a08a338e87 1-54,56-90
+  s_a0e8127fe22cbf::t_785355b290143c 55
+Sources/DevmachineApp/SubdomainsView.swift
+  s_a0e8127fe22cbf::t_26d3c66eb3bf61 86,92,96,100
+Sources/DevmachineApp/PRsView.swift
+  s_a0e8127fe22cbf::t_26d3c66eb3bf61 60-61,63-67
+Sources/DevmachineApp/FilesView.swift
+  s_a0e8127fe22cbf::t_26d3c66eb3bf61 66-67,69-71
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "dd12ef25f04f3f5809b37120387051dc42e777b4",
+  "prompts": {},
+  "sessions": {
+    "s_a0e8127fe22cbf": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "5464d26e-1ae4-4f23-94c4-fce15a6a538c",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
