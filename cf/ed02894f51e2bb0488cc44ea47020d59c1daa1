@@ -1,0 +1,35 @@
+Sources/DevmachineApp/Theme.swift
+  s_a0e8127fe22cbf::t_41125754a5e116 18-20
+Sources/DevmachineApp/Components/DMComponents.swift
+  s_a0e8127fe22cbf::t_c3a2c6d3453b98 7-9,12-13,238,278
+Tests/DevmachineAppTests/DMComponentsRenderTests.swift
+  s_a0e8127fe22cbf::t_06064d356735db 1-75
+Sources/DevmachineApp/Components/DMButtons.swift
+  s_a0e8127fe22cbf::t_3556242a87ae44 5-6
+  s_a0e8127fe22cbf::t_e036cfe7096149 1-4,7-121
+Sources/DevmachineApp/Components/DMFields.swift
+  s_a0e8127fe22cbf::t_e036cfe7096149 1-69
+Sources/DevmachineApp/Components/DMTokens.swift
+  s_a0e8127fe22cbf::t_3556242a87ae44 24
+  s_a0e8127fe22cbf::t_41125754a5e116 1-23,25
+Sources/DevmachineApp/Components/DMTabStrip.swift
+  s_a0e8127fe22cbf::t_c3a2c6d3453b98 12,76
+Sources/DevmachineApp/Components/DMSurfaces.swift
+  s_a0e8127fe22cbf::t_e036cfe7096149 1-68
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "cfed02894f51e2bb0488cc44ea47020d59c1daa1",
+  "prompts": {},
+  "sessions": {
+    "s_a0e8127fe22cbf": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "5464d26e-1ae4-4f23-94c4-fce15a6a538c",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
