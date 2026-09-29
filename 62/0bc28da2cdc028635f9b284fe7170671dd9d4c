@@ -1,0 +1,20 @@
+docs/RELEASING.md
+  s_a0cbf6c120c4f8::t_69774291a1b86e 3-7,14-19,23-36,38-43,45-46,49,51-53,55-87,93-123,125,127-128,131-150,152-153,155-158,162-163,169-180,182-185,188-190
+  s_a0cbf6c120c4f8::t_74fa6e95f82ed7 37,44,47-48,50,54,88-92,124,126,129-130,151,154,181
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "620bc28da2cdc028635f9b284fe7170671dd9d4c",
+  "prompts": {},
+  "sessions": {
+    "s_a0cbf6c120c4f8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "f7d54e1b-857f-44e4-a7a9-0ca76ea55bb2",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
