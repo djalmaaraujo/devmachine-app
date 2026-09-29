@@ -5,6 +5,7 @@ Sources/DevmachineCore/Subdomains.swift
   s_a0cbf6c120c4f8::t_07ec53834c65ac 177-218
 Sources/DevmachineApp/PackageGate.swift
   s_a0cbf6c120c4f8::t_4283c88d331ff8 38-46,48,50-54
+  s_a0cbf6c120c4f8::t_789cdaae8b93cf 47,49
 Sources/DevmachineApp/AppModel.swift
   s_a0cbf6c120c4f8::t_2aba0c2b5c5690 373-376
   s_a0cbf6c120c4f8::t_649202edb71f32 1275-1280
@@ -15,6 +16,7 @@ Sources/DevmachineApp/ContextPanel.swift
   s_a0cbf6c120c4f8::t_226a3d63332395 36,38
 Sources/DevmachineApp/CaddyService.swift
   s_a0cbf6c120c4f8::t_a7d4356d2fc0a4 4-12,22-34,36-55,66,69-72
+  s_a0cbf6c120c4f8::t_4d1e1cbd6056ec 61-63
 Sources/DevmachineApp/SubdomainsView.swift
   s_a0cbf6c120c4f8::t_f41ffe8df1b01e 326-327
   s_a0cbf6c120c4f8::t_8efb2e8803862b 161-169,172,174-175
