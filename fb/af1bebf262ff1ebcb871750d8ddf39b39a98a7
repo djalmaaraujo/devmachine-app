@@ -1,0 +1,73 @@
+Sources/DevmachineApp/SetupPage.swift
+  s_a0cbf6c120c4f8::t_e0fb4d06e65121 126-132
+Tests/DevmachineAppTests/DemoSnapshotsTests.swift
+  s_a0cbf6c120c4f8::t_505abfc2281e98 47,49,57,69
+  s_a0cbf6c120c4f8::t_56498c3c995765 1-6,8-11,13-46,48,50-56,58-68,70-84
+  s_a0cbf6c120c4f8::t_9579cde5a6bdc0 7,12
+Sources/DevmachineApp/QuickPublishState.swift
+  s_a0cbf6c120c4f8::t_5aca819963f666 13-17
+Sources/DevmachineApp/DemoData.swift
+  s_a0cbf6c120c4f8::t_bd778b1a6fc628 143-148,154-156
+  s_a0cbf6c120c4f8::t_881cfec12d7001 257-262
+  s_a0cbf6c120c4f8::t_49edb1498c452b 151-152
+  s_a0cbf6c120c4f8::t_110b40de84dcb9 267
+  s_a0cbf6c120c4f8::t_bbfcd56037006c 26-27
+  s_a0cbf6c120c4f8::t_b7adf6f68dadb9 24-25
+  s_a0cbf6c120c4f8::t_3825782c13aff8 49-52,54,56-57,59-60,63-65,68-72,74-76,82,84,86,88-89,92,104-106,108-109,119-120,122-123,130-134
+  s_a0cbf6c120c4f8::t_9d4af8a086d437 332-381
+  s_a0cbf6c120c4f8::t_4bbc9308e30dff 149-150,153
+Sources/DevmachineApp/DemoMode.swift
+  s_a0cbf6c120c4f8::t_c0e963d287d5e0 25-39
+Sources/DevmachineApp/SubdomainsView.swift
+  s_a0cbf6c120c4f8::t_e2ece74738524a 30,34-38
+  s_10b4ff069ee395::t_27bfbb5c967790 39
+Sources/DevmachineApp/Services/DevmachineServices.swift
+  s_a0cbf6c120c4f8::t_623bb1fec2ba61 9
+Sources/DevmachineApp/ContentView.swift
+  s_a0cbf6c120c4f8::t_e54600ff127cdb 27-30
+  s_a0cbf6c120c4f8::t_ff38465018f95f 263-265
+Sources/DevmachineApp/OnboardingPage.swift
+  s_a0cbf6c120c4f8::t_37caa636d009f4 15-19
+  s_a0cbf6c120c4f8::t_5131f171ba7d7d 290-293
+Sources/DevmachineApp/DevmachineApp.swift
+  s_a0cbf6c120c4f8::t_2839c10ffd4aa5 58-63
+Sources/DevmachineApp/DemoSnapshots.swift
+  s_a0cbf6c120c4f8::t_61662fcbd8264e 256-257,259-287
+  s_a0cbf6c120c4f8::t_78f4e71aa5b9b2 87-90
+  s_a0cbf6c120c4f8::t_3930215516a81c 91,93
+  s_a0cbf6c120c4f8::t_422cff6cf9c262 183,193
+  s_a0cbf6c120c4f8::t_f00a8b3fd6c0f9 148-153
+  s_a0cbf6c120c4f8::t_318960c0603a0c 1-86,95-107,110,117-135,144-147,154-168,170-182,184-192,194-221,230-238,247-255,258,288-289
+  s_a0cbf6c120c4f8::t_e04c5bbdcad5b3 109
+  s_a0cbf6c120c4f8::t_609be63e5c194d 111
+  s_a0cbf6c120c4f8::t_5955c595006563 136-143,169
+  s_a0cbf6c120c4f8::t_1edc783a40648c 227,229,239-242,244-246
+  s_a0cbf6c120c4f8::t_4b1d4ead1d70fe 222-226,228,243
+  s_a0cbf6c120c4f8::t_56ebe8dfa60736 108
+  s_a0cbf6c120c4f8::t_c87e8616634866 92,94
+  s_a0cbf6c120c4f8::t_e2438a069a44d3 112-116
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "fbaf1bebf262ff1ebcb871750d8ddf39b39a98a7",
+  "prompts": {},
+  "sessions": {
+    "s_10b4ff069ee395": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b76fff91-f1bf-45d9-9df1-dfe4f1872b87",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    },
+    "s_a0cbf6c120c4f8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "f7d54e1b-857f-44e4-a7a9-0ca76ea55bb2",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
