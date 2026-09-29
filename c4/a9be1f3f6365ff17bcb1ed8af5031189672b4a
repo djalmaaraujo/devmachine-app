@@ -4,6 +4,7 @@ Sources/DevmachineApp/TerminalRegistry.swift
   s_a0cbf6c120c4f8::t_d347cb429466cc 131-139
 Sources/DevmachineApp/ContentView.swift
   s_a0cbf6c120c4f8::t_608e6befe3983d 16-19,21
+  s_a0cbf6c120c4f8::t_edaf564a4a2071 25
 Sources/DevmachineApp/OnboardingPage.swift
   s_a0cbf6c120c4f8::t_0874d624d8fcd9 1-313
 Sources/DevmachineApp/OnboardingRunner.swift
