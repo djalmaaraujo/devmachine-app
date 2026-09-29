@@ -1,0 +1,39 @@
+Tests/DevmachineAppTests/OnboardingModelTests.swift
+  s_a0cbf6c120c4f8::t_a94298e8f1693a 177
+  s_a0cbf6c120c4f8::t_0ba9a3eab3bd33 236
+  s_a0cbf6c120c4f8::t_b9d2d67e26aae2 1-34,44-46,49,51-53,62-63,71-73,84-88,90-96,100-104,108-113,123-130,132-133,135-138,144-146,148-151,157-159,173,179,181-184,203-235,237-276,278-297,299-300,306,309,312-316,319-320
+  s_a0cbf6c120c4f8::t_c33418df4b79ff 277
+  s_a0cbf6c120c4f8::t_baaad6977c685a 35-43,47-48,50,54-61,64-70,74-83,89,97-99,105-107,114-122,131,134,139-143,147,152-156,160-172,174-176,178,180,185-202,298,301-305,307-308,310-311,317-318
+Sources/DevmachineApp/TerminalRegistry.swift
+  s_a0cbf6c120c4f8::t_d347cb429466cc 131-139
+Sources/DevmachineApp/OnboardingRunner.swift
+  s_a0cbf6c120c4f8::t_e866c3e5f1ee9b 1-109
+Sources/DevmachineApp/ContentView.swift
+  s_a0cbf6c120c4f8::t_5bd7cac6c24b8e 25
+  s_a0cbf6c120c4f8::t_608e6befe3983d 16-19,21
+Sources/DevmachineApp/OnboardingModel.swift
+  s_a0cbf6c120c4f8::t_0459a386661303 122,127-129,133,135,148,152,159-161,167
+  s_a0cbf6c120c4f8::t_32c0b2d95e701f 1-5,10-12,15-20,23-121,123-126,130-132,134,136-147,149-151,162-166,168-187,193-200,207-210,214-217,220-244
+  s_a0cbf6c120c4f8::t_8a30b2c87279dd 6-9,13-14,21-22
+  s_a0cbf6c120c4f8::t_44b456b26d8a46 153-158
+  s_a0cbf6c120c4f8::t_83761b482a1677 188-192,201-206,211-213,218-219
+Sources/DevmachineApp/OnboardingPage.swift
+  s_a0cbf6c120c4f8::t_0874d624d8fcd9 1-50,59-321
+  s_a0cbf6c120c4f8::t_ac299af4a0b5cc 51-58
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "53230bc60d647c0f786279ca5a335ef2d0f29290",
+  "prompts": {},
+  "sessions": {
+    "s_a0cbf6c120c4f8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "f7d54e1b-857f-44e4-a7a9-0ca76ea55bb2",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
