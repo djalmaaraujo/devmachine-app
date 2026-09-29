@@ -1,0 +1,14 @@
+packaging/devmachine-app.rb.template
+  h_627c059af4ab3a 10
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "7ec25c1669ee5a97373bf9501bbe0f82d878a1fc",
+  "prompts": {},
+  "humans": {
+    "h_627c059af4ab3a": {
+      "author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
