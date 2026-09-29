@@ -1,0 +1,27 @@
+.github/workflows/release.yml
+  s_a0cbf6c120c4f8::t_00b3b01be5bc3b 31
+  s_a0cbf6c120c4f8::t_963589b5fd706e 130-131,133,141-147,153-154,162-175,177-203
+  s_a0cbf6c120c4f8::t_7c364af881a893 19-30,32-39,41,47
+docs/RELEASING.md
+  s_a0cbf6c120c4f8::t_cd540ef5766bb5 165-176
+  s_a0cbf6c120c4f8::t_10e5d5499d56c9 45-79
+  s_a0cbf6c120c4f8::t_48be28a889613e 110-114
+  s_a0cbf6c120c4f8::t_6aa46ce7517882 193-201
+  s_a0cbf6c120c4f8::t_922141b3dd021a 227-239
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "b0e1d069b8928e9403b82739a41a627d35d02dd1",
+  "prompts": {},
+  "sessions": {
+    "s_a0cbf6c120c4f8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "f7d54e1b-857f-44e4-a7a9-0ca76ea55bb2",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
