@@ -1,0 +1,77 @@
+Tests/DevmachineAppTests/CaddyServiceTests.swift
+  s_a0cbf6c120c4f8::t_4341915f4df6f8 15-27,29-54,60,62-96,99,103
+Sources/DevmachineCore/Subdomains.swift
+  s_a0cbf6c120c4f8::t_ab4ef536561af5 1-176,219-227
+  s_a0cbf6c120c4f8::t_07ec53834c65ac 177-218
+Sources/DevmachineApp/PackageGate.swift
+  s_a0cbf6c120c4f8::t_4283c88d331ff8 38-46,48,50-54
+Sources/DevmachineApp/AppModel.swift
+  s_a0cbf6c120c4f8::t_2aba0c2b5c5690 373-376
+  s_a0cbf6c120c4f8::t_649202edb71f32 1275-1280
+Sources/DevmachineApp/ContextPanel.swift
+  s_a0cbf6c120c4f8::t_809bda26cac352 46
+  s_a0cbf6c120c4f8::t_9309f18066ec44 85-87
+  s_a0cbf6c120c4f8::t_b132d8ebe3cf0c 111-122
+  s_a0cbf6c120c4f8::t_226a3d63332395 36,38
+Sources/DevmachineApp/CaddyService.swift
+  s_a0cbf6c120c4f8::t_a7d4356d2fc0a4 4-12,22-34,36-55,66,69-72
+Sources/DevmachineApp/SubdomainsView.swift
+  s_a0cbf6c120c4f8::t_f41ffe8df1b01e 326-327
+  s_a0cbf6c120c4f8::t_8efb2e8803862b 161-169,172,174-175
+  s_a0cbf6c120c4f8::t_1a8ab2896ed0e4 214-217
+  s_a0cbf6c120c4f8::t_d7db7a1a7c5f8d 235-245
+  s_a0cbf6c120c4f8::t_285e867d19cb71 5-23,29-32,38-40,45,59-75,79,84-89,92,95,97-104,109-118,120-159,170-171,173,180-186,188-189,192-196,199-213,218-232,248-249,252-324,329-331,335-382,384-385,388,390-403,405,407-410,413-424
+Tests/DevmachineCoreTests/SubdomainsTests.swift
+  s_a0cbf6c120c4f8::t_852b2d0127252c 1-115,157-175
+  s_a0cbf6c120c4f8::t_678a61c68ab61c 116-156
+Sources/DevmachineApp/SidebarView.swift
+  s_a0cbf6c120c4f8::t_d6abd9ea002041 44
+  s_a0cbf6c120c4f8::t_771ece4b5fcd10 51-54
+  s_a0cbf6c120c4f8::t_5a53be1a3729ae 155
+  s_a0cbf6c120c4f8::t_e0ecf70162b08a 9-10
+  s_a0cbf6c120c4f8::t_9cd4708bbe936f 153-154,156-157
+Tests/DevmachineAppTests/GitTabTests.swift
+  s_a0cbf6c120c4f8::t_cd2d2b19526414 77-79,83
+Tests/DevmachineAppTests/SubdomainsViewRenderTests.swift
+  s_a0cbf6c120c4f8::t_352b761b98b810 33-63
+  s_a0cbf6c120c4f8::t_66f392bfd70843 3,5-13
+  s_a0cbf6c120c4f8::t_d881c13860f844 1-2,4,14-32,64
+Tests/DevmachineAppTests/DevmachineCLITests.swift
+  s_a0cbf6c120c4f8::t_deca04b30597ac 83-116
+  s_a0cbf6c120c4f8::t_11705255fbd516 74,79
+Sources/DevmachineApp/AddSubdomainSheet.swift
+  s_a0cbf6c120c4f8::t_54b4f044e8ecb3 23-30,32-41
+  s_a0cbf6c120c4f8::t_ee9b58ee3681aa 180-197
+  s_a0cbf6c120c4f8::t_73267ca91e3441 150-152
+  s_a0cbf6c120c4f8::t_d1ab0ad1c065a8 66-69,71-73
+Sources/DevmachineApp/QuickPublishState.swift
+  s_a0cbf6c120c4f8::t_dae6f427f0e3d4 1-39
+Tests/DevmachineAppTests/PackageGateTests.swift
+  s_a0cbf6c120c4f8::t_11008bf4cbf511 79-125
+Sources/DevmachineApp/PublishSuggestionsService.swift
+  s_a0cbf6c120c4f8::t_2ff4c6380b5662 1-42
+Sources/DevmachineApp/DevmachineCLI.swift
+  s_a0cbf6c120c4f8::t_2cf5a90d2b6cbe 4-20
+  s_a0cbf6c120c4f8::t_6cc2f1f4499be7 207,214-227,231-232,234-239,243-244,246-249
+  s_a0cbf6c120c4f8::t_86bc8f287cb0fa 228-230,233,240-242,245
+Sources/DevmachineApp/CaddyStore.swift
+  s_a0cbf6c120c4f8::t_1ef064f934f6ac 6-7,13-25,29-31,40-42,53,55-56,64-111,148-173
+Tests/DevmachineAppTests/AddSubdomainSheetTests.swift
+  s_a0cbf6c120c4f8::t_1d88a1410cad07 25-54
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "71874910d4cbf9f96e1fcad58edc8aac3428566c",
+  "prompts": {},
+  "sessions": {
+    "s_a0cbf6c120c4f8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "f7d54e1b-857f-44e4-a7a9-0ca76ea55bb2",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
