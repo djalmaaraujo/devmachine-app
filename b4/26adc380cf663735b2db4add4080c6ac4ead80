@@ -1,0 +1,77 @@
+Tests/DevmachineCoreTests/ContextPlanFileTests.swift
+  s_a0cbf6c120c4f8::t_500b6469d2f751 1-38,40-46
+  s_a0cbf6c120c4f8::t_9af8fd5135706e 39
+Tests/DevmachineCoreTests/ContextGitHubResolverTests.swift
+  s_a0cbf6c120c4f8::t_8f0ff0a952c50c 1-83
+Sources/DevmachineCore/Context/ContextHarnessDetection.swift
+  s_a0cbf6c120c4f8::t_178773244f94f4 6-21,24-25,27-45,48-54,58-60
+  s_a0cbf6c120c4f8::t_411e8af3bb7fdf 1-5,22-23,26,46-47,55-57,61-70
+Sources/DevmachineCore/Context/ContextGitHubConfig.swift
+  s_a0cbf6c120c4f8::t_2965593b2a2d7f 1-32
+Sources/DevmachineCore/Context/ContextRefExtraction.swift
+  s_a0cbf6c120c4f8::t_b830d723129397 73,78
+  s_a0cbf6c120c4f8::t_944e6bedd20742 1-72,74-77,79-104,106-108,110-261
+  s_a0cbf6c120c4f8::t_f3e6ea53714266 105,109
+Sources/DevmachineCore/Context/ContextHarnessPass.swift
+  s_a0cbf6c120c4f8::t_eabd7078bffc3c 1-37
+Tests/DevmachineAppTests/DevmachineServicesTests.swift
+  s_a0cbf6c120c4f8::t_75b545e74a500b 141-145,150-164,167,169
+Tests/DevmachineCoreTests/ContextHarnessDetectionTests.swift
+  s_a0cbf6c120c4f8::t_12673267b2316b 1-51
+Sources/DevmachineCore/Context/PiHarness.swift
+  s_a0cbf6c120c4f8::t_f6ea539436acb4 1-106
+Tests/DevmachineCoreTests/NativeContextEngineTests.swift
+  s_a0cbf6c120c4f8::t_915bf5a92559c2 1-99
+Sources/DevmachineCore/Context/CodexHarness.swift
+  s_a0cbf6c120c4f8::t_3c286fe2b8a881 14-17,21-29
+  s_a0cbf6c120c4f8::t_fd78819672d897 1-13,18-20,30-128
+Sources/DevmachineCore/Context/ContextGitHubResolver.swift
+  s_a0cbf6c120c4f8::t_bb7c28b2f98499 1-289
+Sources/DevmachineApp/Harnesses/ContextFacade.swift
+  s_a0cbf6c120c4f8::t_3cf76cbe1474a7 8-11
+Sources/DevmachineApp/Services/ContextSource.swift
+  s_a0cbf6c120c4f8::t_5a4bba6a874221 55,59-60,64,70-75,81-83
+  s_a0cbf6c120c4f8::t_cea12a4f12949b 77-80
+Tests/DevmachineCoreTests/PiHarnessTests.swift
+  s_a0cbf6c120c4f8::t_43d0b3e3272d77 1-81
+Sources/DevmachineCore/Context/NativeContextEngine.swift
+  s_a0cbf6c120c4f8::t_03b46483f66b0c 1-8,10-11,13-17,20-24,26-31,35-46,48-115
+  s_a0cbf6c120c4f8::t_06b587fc92eaf7 12,18-19,25,32-34
+  s_a0cbf6c120c4f8::t_cb6315b65059fc 47
+  s_a0cbf6c120c4f8::t_84632293eab44e 9
+Sources/DevmachineCore/Context/ContextPlanFile.swift
+  s_a0cbf6c120c4f8::t_e6a097d2528d99 1-50
+Tests/DevmachineCoreTests/ContextRefExtractionTests.swift
+  s_a0cbf6c120c4f8::t_36368125739127 1-131
+Tests/DevmachineCoreTests/ClaudeHarnessTests.swift
+  s_a0cbf6c120c4f8::t_ebedcdfc42c5aa 1-192
+Sources/DevmachineCore/Context/ClaudeHarness.swift
+  s_a0cbf6c120c4f8::t_59f64303173871 1-7,9-221
+  s_a0cbf6c120c4f8::t_2f782324de9728 8
+Sources/DevmachineCore/CodingHarness.swift
+  s_a0cbf6c120c4f8::t_29362873ea4de9 12
+Sources/DevmachineCore/Context/ContextEngineResult.swift
+  s_a0cbf6c120c4f8::t_4df2a62cc96148 1-109
+Tests/DevmachineCoreTests/CodexHarnessTests.swift
+  s_a0cbf6c120c4f8::t_5478b57db1dd45 69
+  s_a0cbf6c120c4f8::t_266a6454ee7ea6 1-68,70-86
+Sources/DevmachineCore/Context/ContextTranscriptFile.swift
+  s_a0cbf6c120c4f8::t_924f9811c0e022 1-40,43,49-50
+  s_a0cbf6c120c4f8::t_980f4724410a12 41-42,44-48
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "b426adc380cf663735b2db4add4080c6ac4ead80",
+  "prompts": {},
+  "sessions": {
+    "s_a0cbf6c120c4f8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "f7d54e1b-857f-44e4-a7a9-0ca76ea55bb2",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
