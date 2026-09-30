@@ -1,0 +1,41 @@
+CLAUDE.md
+  s_a0cbf6c120c4f8::t_c12f43ef2b4335 283-288
+Sources/DevmachineApp/ContentView.swift
+  s_a0cbf6c120c4f8::t_83cbc0c269bbb0 11,35
+Sources/DevmachineApp/DemoData.swift
+  s_a0cbf6c120c4f8::t_91ec73cfc10bc2 275-277,294,299-306
+Sources/DevmachineApp/DemoSnapshots.swift
+  s_a0cbf6c120c4f8::t_7bde1a6d4348bf 67
+Sources/DevmachineApp/HomeView.swift
+  s_a0cbf6c120c4f8::t_8c9687efb699cc 23,61,77,79-81,83,86,94,123-149
+Sources/DevmachineApp/MachineStatsCard.swift
+  s_a0cbf6c120c4f8::t_f29beae194d24b 1-130
+Sources/DevmachineApp/StatsStore.swift
+  s_a0cbf6c120c4f8::t_d918b3d3d0664b 2,24-28,53-57,63,65-66,70-78,83-86,90-93,96,98,106-107,109,119-123,125,128-134,138-139,141,144,146-147,151-166,171,174-201,203-213,216-242,244-246,249-256,260-267,273,276,288-299,306-322,325,331,333,335
+Sources/DevmachineApp/StatsView.swift
+  s_a0cbf6c120c4f8::t_dc72f053ffe8e5 34-35,52-57,163,256,268,297,328,391-403
+Tests/DevmachineAppTests/DemoModeTests.swift
+  s_a0cbf6c120c4f8::t_dc5e0ea2f3c6b2 109-110
+Tests/DevmachineAppTests/DemoSnapshotsTests.swift
+  s_a0cbf6c120c4f8::t_5fcd1be19d5b21 59,74-75,78-84
+Tests/DevmachineAppTests/MachineCardSummaryTests.swift
+  s_a0cbf6c120c4f8::t_d09b54b671aeb2 1-30
+Tests/DevmachineAppTests/StatsStoreTests.swift
+  s_a0cbf6c120c4f8::t_8c6a9aadbefa5a 14-16,36,41-44,57-82,115-120,127-129,131-132,135-143,148,150-158,167,180,196,218,228,236,238,262,265,270,272,284,303,316,328,339,352,363-595
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "e4c1b4601c19d107868e9134065ac796363ce2ab",
+  "prompts": {},
+  "sessions": {
+    "s_a0cbf6c120c4f8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "f7d54e1b-857f-44e4-a7a9-0ca76ea55bb2",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
