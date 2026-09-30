@@ -1,0 +1,109 @@
+CLAUDE.md
+  s_a0cbf6c120c4f8::t_40c2d9baef7c45 368-384
+README.md
+  s_a0cbf6c120c4f8::t_d36f1d0f1c0a2e 43-86
+Sources/DevmachineApp/CommandPaletteView.swift
+  s_a0cbf6c120c4f8::t_9a355dad798f4f 13,35,49,121-123
+Sources/DevmachineApp/ContentView.swift
+  s_a0cbf6c120c4f8::t_a8159c77ba6664 12,68-71,79,92-94
+Sources/DevmachineApp/DevmachineApp.swift
+  s_a0cbf6c120c4f8::t_25fccfda40bace 24,81-82,116-122
+Sources/DevmachineApp/DevmachineCLI.swift
+  s_a0cbf6c120c4f8::t_92e4a45e801610 317-322
+Sources/DevmachineApp/Palette/CommandRegistry.swift
+  s_a0cbf6c120c4f8::t_f6e8164f90b370 138-149
+Sources/DevmachineApp/Palette/PaletteCommand.swift
+  s_a0cbf6c120c4f8::t_9661749f077058 57,70,89
+Sources/DevmachineApp/Palette/PaletteDispatcher.swift
+  s_a0cbf6c120c4f8::t_cf5b4f84e30c5b 27-33,58,110-112
+Sources/DevmachineApp/SetupPage.swift
+  s_a0cbf6c120c4f8::t_dc60a0a51ecd65 8,18,30,42,267
+Sources/DevmachineApp/Updates/UpdateController.swift
+  s_a0cbf6c120c4f8::t_3b92e8e8e0ad40 1-303
+Sources/DevmachineApp/Updates/UpdateSystem.swift
+  s_a0cbf6c120c4f8::t_12c351e325b77a 1-363
+Sources/DevmachineApp/Updates/UpdateViews.swift
+  s_a0cbf6c120c4f8::t_613c08d2379b1b 1-371
+Sources/DevmachineCore/Updates/AppInstallMethod.swift
+  s_a0cbf6c120c4f8::t_e7e2b3ecf5efe9 1-43
+Sources/DevmachineCore/Updates/BundleSwapper.swift
+  s_a0cbf6c120c4f8::t_c2ef03043ff153 1-64
+Sources/DevmachineCore/Updates/CLIUpdateAdvice.swift
+  s_a0cbf6c120c4f8::t_c653c3ff1b4128 1-54
+Sources/DevmachineCore/Updates/DiskImage.swift
+  s_a0cbf6c120c4f8::t_83b32c5daad195 1-35
+Sources/DevmachineCore/Updates/GitHubRelease.swift
+  s_a0cbf6c120c4f8::t_81b350284d7dae 1-103
+Sources/DevmachineCore/Updates/ReleaseDigest.swift
+  s_a0cbf6c120c4f8::t_ad96797369f0dd 1-27
+Sources/DevmachineCore/Updates/ReleaseFeed.swift
+  s_a0cbf6c120c4f8::t_07c7d5b4f99737 1-90
+Sources/DevmachineCore/Updates/SemanticVersion.swift
+  s_a0cbf6c120c4f8::t_14940864451dfc 1-73
+Sources/DevmachineCore/Updates/UpdateBundleVerifier.swift
+  s_a0cbf6c120c4f8::t_818f0685581a3f 1-54
+Sources/DevmachineCore/Updates/UpdateInstallError.swift
+  s_a0cbf6c120c4f8::t_108b0d0900d5ef 1-47
+Sources/DevmachineCore/Updates/UpdatePolicy.swift
+  s_a0cbf6c120c4f8::t_ac6e2a4c015a80 1-46
+Sources/DevmachineCore/Updates/UpdatePreferences.swift
+  s_a0cbf6c120c4f8::t_a94c298753015b 1-33
+Tests/DevmachineAppTests/CommandRegistryTests.swift
+  s_a0cbf6c120c4f8::t_12fd96ead5b362 179-197
+Tests/DevmachineAppTests/DevmachineCLITests.swift
+  s_a0cbf6c120c4f8::t_79eabce46c398f 49-62
+Tests/DevmachineAppTests/PaletteDispatcherTests.swift
+  s_a0cbf6c120c4f8::t_ecc2d5f24b9469 50-55,64,77,82,207-212
+Tests/DevmachineAppTests/ProcessHomebrewUpgraderTests.swift
+  s_a0cbf6c120c4f8::t_97fbb73e63b157 1-49
+Tests/DevmachineAppTests/UpdateControllerTests.swift
+  s_a0cbf6c120c4f8::t_0668c9a9d06005 1-325
+Tests/DevmachineAppTests/UpdateDialogContentTests.swift
+  s_a0cbf6c120c4f8::t_cdb2eee69a8b4f 1-36
+Tests/DevmachineAppTests/UpdateInstallerEndToEndTests.swift
+  s_a0cbf6c120c4f8::t_fcd6b1b735090a 1-68
+Tests/DevmachineAppTests/UpdateViewsRenderTests.swift
+  s_a0cbf6c120c4f8::t_ebb60c989d8b25 1-78
+Tests/DevmachineCoreTests/Updates/AppInstallMethodTests.swift
+  s_a0cbf6c120c4f8::t_55afce227347ac 1-78
+Tests/DevmachineCoreTests/Updates/BundleSwapperTests.swift
+  s_a0cbf6c120c4f8::t_25915950bfc6a9 1-104
+Tests/DevmachineCoreTests/Updates/CLIUpdateAdviceTests.swift
+  s_a0cbf6c120c4f8::t_2a247767c1637b 1-41
+Tests/DevmachineCoreTests/Updates/DiskImageTests.swift
+  s_a0cbf6c120c4f8::t_698ceac861ad93 1-32
+Tests/DevmachineCoreTests/Updates/GitHubReleaseTests.swift
+  s_a0cbf6c120c4f8::t_1b4f9acd5ff40d 1-59
+Tests/DevmachineCoreTests/Updates/RelaunchCommandTests.swift
+  s_a0cbf6c120c4f8::t_c0e05d13fd7962 1-22
+Tests/DevmachineCoreTests/Updates/ReleaseDigestTests.swift
+  s_a0cbf6c120c4f8::t_5c04c0a0479931 1-53
+Tests/DevmachineCoreTests/Updates/ReleaseFeedTests.swift
+  s_a0cbf6c120c4f8::t_be83de0b188251 1-95
+Tests/DevmachineCoreTests/Updates/SemanticVersionTests.swift
+  s_a0cbf6c120c4f8::t_2e77b25e2fb77b 1-52
+Tests/DevmachineCoreTests/Updates/UpdateBundleVerifierTests.swift
+  s_a0cbf6c120c4f8::t_c35b3acfc8404c 1-114
+Tests/DevmachineCoreTests/Updates/UpdatePolicyTests.swift
+  s_a0cbf6c120c4f8::t_5e0181e9fcbc16 1-47
+Tests/DevmachineCoreTests/Updates/UpdatePreferencesTests.swift
+  s_a0cbf6c120c4f8::t_68454099712f67 1-40
+Tests/DevmachineCoreTests/Updates/UpdateScheduleTests.swift
+  s_a0cbf6c120c4f8::t_d2607405f2f347 1-36
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "3a490179cfbe8b001c8818f9894857d4d57a4d9e",
+  "prompts": {},
+  "sessions": {
+    "s_a0cbf6c120c4f8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "f7d54e1b-857f-44e4-a7a9-0ca76ea55bb2",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
