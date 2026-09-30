@@ -1,0 +1,25 @@
+.github/workflows/release.yml
+  s_a0cbf6c120c4f8::t_ee5efe59872140 67-74
+Resources/Devmachine.entitlements
+  s_a0cbf6c120c4f8::t_d5d0755caa72b5 19-21
+scripts/fetch_mosh.sh
+  s_a0cbf6c120c4f8::t_c120099c54f2c0 1-109
+scripts/package_app.sh
+  s_a0cbf6c120c4f8::t_c3a6f4d4d40a41 49-56,69,71
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "f65fedb26d0e69873a3697d65beb58ad158b1805",
+  "prompts": {},
+  "sessions": {
+    "s_a0cbf6c120c4f8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "f7d54e1b-857f-44e4-a7a9-0ca76ea55bb2",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
