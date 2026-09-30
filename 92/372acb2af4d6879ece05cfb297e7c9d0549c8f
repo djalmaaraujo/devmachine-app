@@ -1,0 +1,27 @@
+Sources/DevmachineApp/FilesView.swift
+  s_a0cbf6c120c4f8::t_6e64f071f65baa 14
+Sources/DevmachineApp/MenuBarPanel.swift
+  s_a0cbf6c120c4f8::t_8031f0ec6e2d49 72
+Sources/DevmachineApp/SetupPage.swift
+  s_a0cbf6c120c4f8::t_0faa4b3a38501f 159-163,414,678
+Sources/HarnessUsageKit/Views/HarnessUsagePanel.swift
+  s_a0cbf6c120c4f8::t_ff041f5d2a5181 167
+Sources/HarnessUsageKit/Views/UsageCardSkeleton.swift
+  s_a0cbf6c120c4f8::t_1543061aa5bde6 38
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "92372acb2af4d6879ece05cfb297e7c9d0549c8f",
+  "prompts": {},
+  "sessions": {
+    "s_a0cbf6c120c4f8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "f7d54e1b-857f-44e4-a7a9-0ca76ea55bb2",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
