@@ -1,0 +1,35 @@
+CLAUDE.md
+  s_a0cbf6c120c4f8::t_316ad36c935ed7 265-285
+Sources/DevmachineApp/SelectingTerminalView.swift
+  s_a0cbf6c120c4f8::t_d27b7a3b672d3d 1-208
+Sources/DevmachineApp/SetupPage.swift
+  s_a0cbf6c120c4f8::t_76319cb3375ef6 106,128,678,683-697,926
+Sources/DevmachineApp/TerminalRegistry.swift
+  s_a0cbf6c120c4f8::t_3987fb134d90c3 210,715,719
+Sources/DevmachineCore/AppSettings.swift
+  s_a0cbf6c120c4f8::t_2436ae17494dba 67-69,128,149,170,200,253
+Sources/DevmachineCore/TerminalSelection.swift
+  s_a0cbf6c120c4f8::t_f5c46cb316c978 1-66
+Tests/DevmachineAppTests/SelectingTerminalViewTests.swift
+  s_a0cbf6c120c4f8::t_c8050a77a07d45 6-153,155-175,179,185-188,191-192,194-197,199-200,203-205,207-210
+Tests/DevmachineCoreTests/AppSettingsTests.swift
+  s_a0cbf6c120c4f8::t_d6deb759a1924b 413-431
+Tests/DevmachineCoreTests/TerminalSelectionTests.swift
+  s_a0cbf6c120c4f8::t_b331286fd36d6c 1-81
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "58a84f5c2115b81053647be3facd91cb97341cc0",
+  "prompts": {},
+  "sessions": {
+    "s_a0cbf6c120c4f8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "f7d54e1b-857f-44e4-a7a9-0ca76ea55bb2",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
