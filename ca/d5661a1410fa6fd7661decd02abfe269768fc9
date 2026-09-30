@@ -1,0 +1,47 @@
+CLAUDE.md
+  s_a0cbf6c120c4f8::t_7b022bc9f89176 127-130
+Sources/DevmachineApp/Components/DMComponents.swift
+  s_a0cbf6c120c4f8::t_f50bffae262031 25-27,43-45
+Sources/DevmachineApp/Components/DMKindLabel.swift
+  s_a0cbf6c120c4f8::t_7a97ffcbdbbca5 1-21
+Sources/DevmachineApp/Components/DMPRState.swift
+  s_a0cbf6c120c4f8::t_f43cc7eeb195ef 1-38
+Sources/DevmachineApp/ContextPanel.swift
+  s_a0cbf6c120c4f8::t_1257e76b0b601f 307-308,385
+Sources/DevmachineApp/DemoData.swift
+  s_a0cbf6c120c4f8::t_e8292d71c9647b 484-495,500-501
+Sources/DevmachineApp/PRRowView.swift
+  s_a0cbf6c120c4f8::t_499eab91bfc3d5 45,50
+Sources/DevmachineApp/SubdomainsView.swift
+  s_a0cbf6c120c4f8::t_a0de2e3a902927 515
+Sources/DevmachineApp/Theme.swift
+  s_a0cbf6c120c4f8::t_f63f08aeb50a1d 11-14
+Sources/DevmachineCore/Contrast.swift
+  s_a0cbf6c120c4f8::t_c5c90ee7c35220 1-30
+Sources/DevmachineCore/PRCore.swift
+  s_a0cbf6c120c4f8::t_c61e20ce1b8e9a 67-101
+Tests/DevmachineAppTests/DMComponentsRenderTests.swift
+  s_a0cbf6c120c4f8::t_817c92dc9d1b42 3,67-77
+Tests/DevmachineAppTests/DemoScreensTests.swift
+  s_a0cbf6c120c4f8::t_7b41cba0410042 74-79
+Tests/DevmachineAppTests/PRStateStyleTests.swift
+  s_a0cbf6c120c4f8::t_a1d4c9d3ed5ad1 1-57
+Tests/DevmachineCoreTests/PRStateKindTests.swift
+  s_a0cbf6c120c4f8::t_c22249858a92f1 1-53
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "cad5661a1410fa6fd7661decd02abfe269768fc9",
+  "prompts": {},
+  "sessions": {
+    "s_a0cbf6c120c4f8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "f7d54e1b-857f-44e4-a7a9-0ca76ea55bb2",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
