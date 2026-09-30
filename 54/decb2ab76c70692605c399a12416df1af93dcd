@@ -1,0 +1,23 @@
+Sources/DevmachineApp/Components/DMSkeleton.swift
+  s_a0cbf6c120c4f8::t_3e0562b6ab89d3 1-151
+Sources/DevmachineApp/Theme.swift
+  s_a0cbf6c120c4f8::t_e9b5bce0994c28 20
+Tests/DevmachineAppTests/DMComponentsRenderTests.swift
+  s_a0cbf6c120c4f8::t_a49dad281e8bdb 75-81
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "54decb2ab76c70692605c399a12416df1af93dcd",
+  "prompts": {},
+  "sessions": {
+    "s_a0cbf6c120c4f8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "f7d54e1b-857f-44e4-a7a9-0ca76ea55bb2",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
