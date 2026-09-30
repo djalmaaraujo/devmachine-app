@@ -1,0 +1,41 @@
+Sources/DevmachineApp/AppModel.swift
+  s_a0cbf6c120c4f8::t_bbeb8bd6146a3b 399-400
+Sources/DevmachineApp/CommandPaletteView.swift
+  s_a0cbf6c120c4f8::t_5a30247d9761dc 31
+Sources/DevmachineApp/ContentView.swift
+  s_a0cbf6c120c4f8::t_5d463946bb116c 160-170
+Sources/DevmachineApp/DevmachineApp.swift
+  s_a0cbf6c120c4f8::t_9c95493fda758b 85-90,96-97
+Sources/DevmachineApp/EndSession.swift
+  s_a0cbf6c120c4f8::t_916c5e6c103fee 1-107
+Sources/DevmachineApp/Palette/CommandRegistry.swift
+  s_a0cbf6c120c4f8::t_9659b21c982c25 73-79
+Sources/DevmachineApp/Palette/PaletteCommand.swift
+  s_a0cbf6c120c4f8::t_d20fe41e291296 45,84
+Sources/DevmachineApp/Palette/PaletteDispatcher.swift
+  s_a0cbf6c120c4f8::t_b9408a856ef704 90
+Sources/DevmachineApp/ShortcutsSheet.swift
+  s_a0cbf6c120c4f8::t_555656ffa2d1ec 28
+Tests/DevmachineAppTests/CommandRegistryTests.swift
+  s_a0cbf6c120c4f8::t_f84be9f7e53277 135-144
+Tests/DevmachineAppTests/EndSessionTests.swift
+  s_a0cbf6c120c4f8::t_e00ecfd331fe54 1-144
+Tests/DevmachineAppTests/PaletteDispatcherTests.swift
+  s_a0cbf6c120c4f8::t_9ba2a723507a81 90-95
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "7f995f899412c4c99f50d2a39fe19c39f5e31998",
+  "prompts": {},
+  "sessions": {
+    "s_a0cbf6c120c4f8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "f7d54e1b-857f-44e4-a7a9-0ca76ea55bb2",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
