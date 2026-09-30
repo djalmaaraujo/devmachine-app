@@ -1,0 +1,51 @@
+CLAUDE.md
+  s_a0cbf6c120c4f8::t_0fe31b59516378 188,298-322,366
+README.md
+  s_a0cbf6c120c4f8::t_fba0fd7e1f7381 19-20,43-67
+Sources/DevmachineApp/Components/DMErrorState.swift
+  s_a0cbf6c120c4f8::t_6958feb8c61705 35,38-41,44,94
+Sources/DevmachineApp/ContentView.swift
+  s_a0cbf6c120c4f8::t_bf5f8ce5b3c72a 355
+Sources/DevmachineApp/ContextPanel.swift
+  s_a0cbf6c120c4f8::t_d03426ae2bdab7 176-178
+Sources/DevmachineApp/DevmachineCLI.swift
+  s_a0cbf6c120c4f8::t_599396f0cec27f 485
+Sources/DevmachineApp/RemoteTransportStore.swift
+  s_a0cbf6c120c4f8::t_ae3c369072c6b8 1-104
+Sources/DevmachineApp/SetupPage.swift
+  s_a0cbf6c120c4f8::t_8e6fb2a4ec6f13 105,126,676-701,907
+Sources/DevmachineApp/StackGridView.swift
+  s_a0cbf6c120c4f8::t_70d413d84b4034 59,71
+Sources/DevmachineApp/TerminalRegistry.swift
+  s_a0cbf6c120c4f8::t_1a85b8412095a4 35-55,370-371,419,447-654,674,758-761
+Sources/DevmachineApp/TerminalTransportOverlay.swift
+  s_a0cbf6c120c4f8::t_61ca434dc53ee7 1-81
+Sources/DevmachineCore/AppSettings.swift
+  s_a0cbf6c120c4f8::t_f691e368005775 64-66,124,144,164,192-193,245
+Sources/DevmachineCore/CommandRunner.swift
+  s_a0cbf6c120c4f8::t_bf40c24627187d 90
+Sources/DevmachineCore/Mosh.swift
+  s_a0cbf6c120c4f8::t_8ef6bcc3e27d79 1-446
+Tests/DevmachineAppTests/RemoteTransportStoreTests.swift
+  s_a0cbf6c120c4f8::t_d87f7d91ccae45 1-70
+Tests/DevmachineCoreTests/MoshTests.swift
+  s_a0cbf6c120c4f8::t_db0c651e201cce 1-418
+Tests/DevmachineCoreTests/ProcessRunnerTests.swift
+  s_a0cbf6c120c4f8::t_9769204650a163 38-44
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "7997eb20045af7c9c6e8fe33eacf57505ce66c29",
+  "prompts": {},
+  "sessions": {
+    "s_a0cbf6c120c4f8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "f7d54e1b-857f-44e4-a7a9-0ca76ea55bb2",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
