@@ -1,0 +1,53 @@
+Sources/DevmachineApp/ContentView.swift
+  s_a0cbf6c120c4f8::t_ca5d96f0a8ca87 99
+Sources/DevmachineApp/CustomCommandSheet.swift
+  s_a0cbf6c120c4f8::t_1ffa96bbbb7544 10,34-36
+Sources/DevmachineApp/DemoData.swift
+  s_a0cbf6c120c4f8::t_c8513f94114135 294,297-311
+Sources/DevmachineApp/DemoSnapshots.swift
+  s_a0cbf6c120c4f8::t_87f4aa1e1f5c34 59,130-132,166-168
+Sources/DevmachineApp/Harnesses/HarnessSettingsFacade.swift
+  s_a0cbf6c120c4f8::t_fc6adb3aaedc7f 31-32,85-92
+Sources/DevmachineApp/RecentCommandStore.swift
+  s_a0cbf6c120c4f8::t_fd311c8bff2f61 4-6,17-18,48-64
+Sources/DevmachineApp/SettingsStore.swift
+  s_a0cbf6c120c4f8::t_60f9b131b7768a 68,72-76,101
+Sources/DevmachineApp/SetupPage.swift
+  s_a0cbf6c120c4f8::t_0d397bb1407b9d 51-52,60-61,65,71-75,84,455,461,472-473,486-489,503-504,507-515,517-577,919
+Sources/DevmachineApp/SidebarView.swift
+  s_a0cbf6c120c4f8::t_38c3ac682f51bb 9,161-163,173-185,189
+Sources/DevmachineCore/AppSettings.swift
+  s_a0cbf6c120c4f8::t_3cf7bf76463e4b 247-253
+Sources/DevmachineCore/CodingHarness.swift
+  s_a0cbf6c120c4f8::t_5a7705e825d6f5 18-20
+Tests/DevmachineAppTests/AppModelTests.swift
+  s_a0cbf6c120c4f8::t_84ded4d1437448 1429-1492
+Tests/DevmachineAppTests/DemoModeTests.swift
+  s_a0cbf6c120c4f8::t_6769d52853aa31 112-129
+Tests/DevmachineAppTests/DemoSnapshotsTests.swift
+  s_a0cbf6c120c4f8::t_f6bb65faec1f6b 77-80
+Tests/DevmachineAppTests/HarnessSettingsFacadeTests.swift
+  s_a0cbf6c120c4f8::t_6e4eb2c09ea0db 58-70
+Tests/DevmachineAppTests/RecentCommandStoreTests.swift
+  s_a0cbf6c120c4f8::t_902cc5e2892978 51-94
+Tests/DevmachineAppTests/SetupPageRenderTests.swift
+  s_a0cbf6c120c4f8::t_40dcaefa633676 35-36
+Tests/DevmachineCoreTests/SessionDefaultCustomCommandTests.swift
+  s_a0cbf6c120c4f8::t_a020cb2d6d3b42 1-102
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "8fca20c6d1cdea0831329787fccf01dc0e45f4ff",
+  "prompts": {},
+  "sessions": {
+    "s_a0cbf6c120c4f8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "f7d54e1b-857f-44e4-a7a9-0ca76ea55bb2",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
