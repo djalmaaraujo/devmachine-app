@@ -1,0 +1,67 @@
+CLAUDE.md
+  s_a0cbf6c120c4f8::t_2d252d50e4c150 49-60
+Sources/DevmachineApp/AppModel.swift
+  s_a0cbf6c120c4f8::t_369e9c64ca3d42 409-414,1044-1050,1055-1090
+Sources/DevmachineApp/CaddyStore.swift
+  s_a0cbf6c120c4f8::t_bf5dbe6f8178ed 140-149
+Sources/DevmachineApp/CommandPaletteView.swift
+  s_a0cbf6c120c4f8::t_98d27fb4996e1d 2,6-14,19-50,54-55,58,60,68-79,84,86,90,93-97,99,101,105,107-131,133,137,145-148,152-154,156,158-161
+Sources/DevmachineApp/ContentView.swift
+  s_a0cbf6c120c4f8::t_62226b18dadb9a 15,80-85
+Sources/DevmachineApp/DemoData.swift
+  s_a0cbf6c120c4f8::t_0cc7a50f242f69 332-333
+Sources/DevmachineApp/DemoSnapshots.swift
+  s_a0cbf6c120c4f8::t_630d22000f8889 26-29,82,164,181,209-211
+Sources/DevmachineApp/DevmachineApp.swift
+  s_a0cbf6c120c4f8::t_5d4744b35875da 23,78,124
+Sources/DevmachineApp/Palette/CommandRegistry.swift
+  s_a0cbf6c120c4f8::t_b8d95b30b386a6 1-240
+Sources/DevmachineApp/Palette/PaletteCommand.swift
+  s_a0cbf6c120c4f8::t_ed145c8742efd4 1-91
+Sources/DevmachineApp/Palette/PaletteDispatcher.swift
+  s_a0cbf6c120c4f8::t_bfa943ba005898 1-145
+Sources/DevmachineApp/Palette/PaletteRanker.swift
+  s_a0cbf6c120c4f8::t_1efdca8d29189b 1-65
+Sources/DevmachineApp/Palette/PaletteRecentsStore.swift
+  s_a0cbf6c120c4f8::t_e0572ce162bd2e 1-30
+Sources/DevmachineApp/SetupPage.swift
+  s_a0cbf6c120c4f8::t_478ed08cac614c 153-163
+Sources/DevmachineApp/ShortcutsSheet.swift
+  s_a0cbf6c120c4f8::t_5ec03a9ad8fc30 22
+Sources/DevmachineApp/SidebarView.swift
+  s_a0cbf6c120c4f8::t_3c17e39e323c55 167
+Sources/DevmachineApp/SubdomainsView.swift
+  s_a0cbf6c120c4f8::t_4cf409efc9f522 58,60,319-324
+Sources/DevmachineApp/TerminalRegistry.swift
+  s_a0cbf6c120c4f8::t_423976957044af 88,158,160-162,167,183,185-186
+Tests/DevmachineAppTests/CaddyStoreTests.swift
+  s_a0cbf6c120c4f8::t_9c0b9940fd2a1f 73-96
+Tests/DevmachineAppTests/CommandRegistryTests.swift
+  s_a0cbf6c120c4f8::t_b393269f381177 1-169
+Tests/DevmachineAppTests/DemoSnapshotsTests.swift
+  s_a0cbf6c120c4f8::t_764d5f652ed1ae 13,61,75-85
+Tests/DevmachineAppTests/ImagePasteServiceTests.swift
+  s_a0cbf6c120c4f8::t_7f0322d98ec1b4 90-97
+Tests/DevmachineAppTests/PaletteDispatcherTests.swift
+  s_a0cbf6c120c4f8::t_da9f9a55bcb9b5 1-193
+Tests/DevmachineAppTests/PaletteRankerTests.swift
+  s_a0cbf6c120c4f8::t_bc537e16a2b432 1-89
+Tests/DevmachineAppTests/PaletteRecentsStoreTests.swift
+  s_a0cbf6c120c4f8::t_92004e7a760806 1-22
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "88dba08f8a223f13eb712f1637f5aa74a24e383c",
+  "prompts": {},
+  "sessions": {
+    "s_a0cbf6c120c4f8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "f7d54e1b-857f-44e4-a7a9-0ca76ea55bb2",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
