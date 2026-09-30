@@ -1,0 +1,45 @@
+CLAUDE.md
+  s_a0cbf6c120c4f8::t_974891c4ad7f98 411-421
+Sources/DevmachineApp/DevmachineApp.swift
+  s_a0cbf6c120c4f8::t_5d7656555dfc22 82-87
+Sources/DevmachineApp/Updates/RelaunchRehearsal.swift
+  s_a0cbf6c120c4f8::t_83d03739c13d58 1-76
+Sources/DevmachineApp/Updates/UpdateController.swift
+  s_a0cbf6c120c4f8::t_9fda1bf31944f4 38,45,64-65,87-89,197-198,221-230,278-280,282,284-304
+Sources/DevmachineApp/Updates/UpdateSystem.swift
+  s_a0cbf6c120c4f8::t_9549abb90c875d 317-336,338-342,356-360,377
+Sources/DevmachineApp/Updates/UpdateViews.swift
+  s_a0cbf6c120c4f8::t_5a6e28e8a6f7b7 19-23,74-91,107-108,115-117,186-195,347-353,387-391
+Sources/DevmachineCore/Updates/DetachedProcess.swift
+  s_a0cbf6c120c4f8::t_0640473d929dce 1-46
+Sources/DevmachineCore/Updates/DiskImage.swift
+  s_a0cbf6c120c4f8::t_aa8a228a98d15c 21-25,30-32,34-36,38
+Tests/DevmachineAppTests/AppRelauncherTests.swift
+  s_a0cbf6c120c4f8::t_e76544984eb6ba 1-55
+Tests/DevmachineAppTests/UpdateControllerTests.swift
+  s_a0cbf6c120c4f8::t_af014e8b4b4fff 67-69,79-80,92,105-112,267-336
+Tests/DevmachineAppTests/UpdateDialogContentTests.swift
+  s_a0cbf6c120c4f8::t_234cbba0c1b647 36-41
+Tests/DevmachineAppTests/UpdateViewsRenderTests.swift
+  s_a0cbf6c120c4f8::t_0663c99f562976 33-35,47,80-96
+Tests/DevmachineCoreTests/Updates/DetachedProcessTests.swift
+  s_a0cbf6c120c4f8::t_b1738c8b50b492 1-52
+Tests/DevmachineCoreTests/Updates/RelaunchCommandTests.swift
+  s_a0cbf6c120c4f8::t_1a655b706420f6 5-16,19,24,32-79
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "6d54d3237406f1be3297b842ac53d00c0349457c",
+  "prompts": {},
+  "sessions": {
+    "s_a0cbf6c120c4f8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "f7d54e1b-857f-44e4-a7a9-0ca76ea55bb2",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
