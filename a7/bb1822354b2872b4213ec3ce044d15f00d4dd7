@@ -1,0 +1,39 @@
+Sources/DevmachineApp/DemoData.swift
+  s_a0cbf6c120c4f8::t_19b46389794540 340,362,369,401-403,405
+Sources/DevmachineApp/DemoSnapshots.swift
+  s_a0cbf6c120c4f8::t_7ecb72c86d19f2 31-33,44-71,186-187,201,274-277,352,357-359
+Sources/DevmachineApp/DevmachineApp.swift
+  s_a0cbf6c120c4f8::t_44784f67855f8d 26
+Sources/DevmachineApp/MenuBarPanel.swift
+  s_a0cbf6c120c4f8::t_c3ed5a0c59656f 53,55,57,77
+Sources/DevmachineApp/SetupPage.swift
+  s_a0cbf6c120c4f8::t_7f1dcae0b73497 780-788,790
+Sources/DevmachineApp/SnapshotChrome.swift
+  s_a0cbf6c120c4f8::t_92232c025034f8 1-85
+Sources/DevmachineApp/WallpaperBackground.swift
+  s_a0cbf6c120c4f8::t_8007a5e73e00b9 80-82,103-105,113-115,130,140-230
+Tests/DevmachineAppTests/DemoScreensTests.swift
+  s_a0cbf6c120c4f8::t_a08a99a065f7c2 24-39
+Tests/DevmachineAppTests/DemoSnapshotsTests.swift
+  s_a0cbf6c120c4f8::t_bdea71059144e3 133-155
+Tests/DevmachineAppTests/SnapshotChromeTests.swift
+  s_a0cbf6c120c4f8::t_7dc3f159fbdf1d 1-64
+Tests/DevmachineAppTests/WallpaperStoreTests.swift
+  s_a0cbf6c120c4f8::t_caaf92870568fd 267-286
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "a7bb1822354b2872b4213ec3ce044d15f00d4dd7",
+  "prompts": {},
+  "sessions": {
+    "s_a0cbf6c120c4f8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "f7d54e1b-857f-44e4-a7a9-0ca76ea55bb2",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
