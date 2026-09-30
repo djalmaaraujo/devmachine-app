@@ -1,0 +1,57 @@
+CLAUDE.md
+  s_a0cbf6c120c4f8::t_c75962ceaff977 257-262,305
+Sources/DevmachineApp/AppModel.swift
+  s_a0cbf6c120c4f8::t_f0a705f8e69571 144,153,329-330,333,337
+Sources/DevmachineApp/ContentView.swift
+  s_a0cbf6c120c4f8::t_fd82e400aa9dd3 329,334
+Sources/DevmachineApp/FileUploadService.swift
+  s_a0cbf6c120c4f8::t_2214df66507b21 4-6,8-9,11,15-27,29,32,38-39,41,46-47,49,54-63,66,68-73
+Sources/DevmachineApp/Harnesses/CodingHarnessAdapter.swift
+  s_a0cbf6c120c4f8::t_d7ad9fe9c04d36 21,129,152
+Sources/DevmachineApp/Harnesses/SessionHarnessFacade.swift
+  s_a0cbf6c120c4f8::t_5d7e8e53229b35 60-61
+Sources/DevmachineApp/Palette/CommandRegistry.swift
+  s_a0cbf6c120c4f8::t_e9abc5d98176b8 70
+Sources/DevmachineApp/Palette/PaletteDispatcher.swift
+  s_a0cbf6c120c4f8::t_8e51908d70b1c3 135,137-138
+Sources/DevmachineApp/PaneUploadStore.swift
+  s_a0cbf6c120c4f8::t_138cf61040c5eb 1-186
+Sources/DevmachineApp/StackGridView.swift
+  s_a0cbf6c120c4f8::t_04d55791cad2d2 69
+Sources/DevmachineApp/TerminalPaneView.swift
+  s_a0cbf6c120c4f8::t_af2ff9bd189ffb 150-203
+Sources/DevmachineApp/TerminalRegistry.swift
+  s_a0cbf6c120c4f8::t_05e4319f8597a9 87-88,158-168,172,174-175,197
+Sources/DevmachineApp/TerminalUploadOverlay.swift
+  s_a0cbf6c120c4f8::t_9e1ade041cab0b 1-158
+Sources/DevmachineCore/CommandRunner.swift
+  s_a0cbf6c120c4f8::t_d97d0acd6978af 15-18,38-50
+Sources/DevmachineCore/FileUpload.swift
+  s_a0cbf6c120c4f8::t_602a26841e4c3c 3,10,13-21,23-27,29-31,34-50,54-93,97-180
+Tests/DevmachineAppTests/AppModelTests.swift
+  s_a0cbf6c120c4f8::t_64e56eb5d75138 968,974,978,986
+Tests/DevmachineAppTests/FileUploadServiceTests.swift
+  s_a0cbf6c120c4f8::t_17bb2c8e92b6d4 6-16,20-21,24-25,27-33,37-40,51-53,55,59,61-64,67-69,72-113,121-130,138,142-145,147-148,150-151,155,157-160
+Tests/DevmachineAppTests/HarnessRegistryTests.swift
+  s_a0cbf6c120c4f8::t_87f20a76100fd7 26,36,39,42,44,46-48
+Tests/DevmachineAppTests/PaneUploadStoreTests.swift
+  s_a0cbf6c120c4f8::t_4833ce98f68d59 2,5-29,32-49,52-60,63-113
+Tests/DevmachineCoreTests/FileUploadTests.swift
+  s_a0cbf6c120c4f8::t_6bfd1f52b0a8f0 1-149
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "7202032eeabd4f5120217e81ad2328b92840ca29",
+  "prompts": {},
+  "sessions": {
+    "s_a0cbf6c120c4f8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "f7d54e1b-857f-44e4-a7a9-0ca76ea55bb2",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
