@@ -1,0 +1,23 @@
+Sources/DevmachineCore/TerminalSelection.swift
+  s_a0cbf6c120c4f8::t_f34558878fba24 1
+docs/RELEASING.md
+  s_a0cbf6c120c4f8::t_26a0ad58a1dfcf 134-139,146
+scripts/preflight.sh
+  s_a0cbf6c120c4f8::t_b7c999dfd7939d 1-8
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "7841c67d2fad45a09429637f2583b03e8ee06bce",
+  "prompts": {},
+  "sessions": {
+    "s_a0cbf6c120c4f8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "f7d54e1b-857f-44e4-a7a9-0ca76ea55bb2",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
