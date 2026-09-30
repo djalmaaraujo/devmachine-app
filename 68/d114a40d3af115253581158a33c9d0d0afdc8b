@@ -1,0 +1,21 @@
+Sources/DevmachineApp/HomeView.swift
+  s_a0cbf6c120c4f8::t_628fb605e5f2ca 36,38-39,47,51,54-55,57,59,116,120,123-125,133,170
+Tests/DevmachineAppTests/HomeLayoutTests.swift
+  s_a0cbf6c120c4f8::t_e458e6250e07a2 5,9,11,15,19,21,31,34,38,47,51
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "68d114a40d3af115253581158a33c9d0d0afdc8b",
+  "prompts": {},
+  "sessions": {
+    "s_a0cbf6c120c4f8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "f7d54e1b-857f-44e4-a7a9-0ca76ea55bb2",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
