@@ -1,0 +1,85 @@
+CLAUDE.md
+  s_a0cbf6c120c4f8::t_893490e7aa8f67 99-115
+Sources/DevmachineApp/AddSubdomainSheet.swift
+  s_a0cbf6c120c4f8::t_539617b6507c7c 162-163
+Sources/DevmachineApp/Components/DMButton.swift
+  s_a0cbf6c120c4f8::t_3600fbe3ad967c 1-267
+Sources/DevmachineApp/Components/DMButtons.swift
+  s_a0cbf6c120c4f8::t_40e11fe314bc50 86-87,90,100-103
+Sources/DevmachineApp/Components/DMErrorState.swift
+  s_a0cbf6c120c4f8::t_1c111df7124fce 1-143
+Sources/DevmachineApp/Components/DMStatus.swift
+  s_a0cbf6c120c4f8::t_b9c249c64a7057 4,39-41
+Sources/DevmachineApp/ContentView.swift
+  s_a0cbf6c120c4f8::t_c7f6afad53013d 373-374,403-404,433,439-440,474,484-485
+Sources/DevmachineApp/ContextPanel.swift
+  s_a0cbf6c120c4f8::t_0dadf917cd30fc 114
+Sources/DevmachineApp/CustomCommandSheet.swift
+  s_a0cbf6c120c4f8::t_47910e3c2f75e5 44,46
+Sources/DevmachineApp/DemoData.swift
+  s_a0cbf6c120c4f8::t_9f9148266db683 380-400,528,534,538-550
+Sources/DevmachineApp/FileSearchPaletteView.swift
+  s_a0cbf6c120c4f8::t_a60f21756a7ef4 110
+Sources/DevmachineApp/FilesView.swift
+  s_a0cbf6c120c4f8::t_c98beb0bbf39e1 66-68
+Sources/DevmachineApp/HealthCheckView.swift
+  s_a0cbf6c120c4f8::t_cc8af1b299af29 53-54,132-134
+Sources/DevmachineApp/HomeView.swift
+  s_a0cbf6c120c4f8::t_ff33b8f820ad76 193-196
+Sources/DevmachineApp/MachineStatsCard.swift
+  s_a0cbf6c120c4f8::t_fba94f211dce01 80
+Sources/DevmachineApp/MenuBarPanel.swift
+  s_a0cbf6c120c4f8::t_4c2d0b30af24f2 122-125,158
+Sources/DevmachineApp/OnboardingPage.swift
+  s_a0cbf6c120c4f8::t_b526fb9f8c5126 108,130,158,229,264,315-316
+Sources/DevmachineApp/PRsView.swift
+  s_a0cbf6c120c4f8::t_78cd984e87682a 61-63
+Sources/DevmachineApp/SetupPage.swift
+  s_a0cbf6c120c4f8::t_8fec63597701c1 286,289,308,489
+Sources/DevmachineApp/ShortcutsSection.swift
+  s_a0cbf6c120c4f8::t_a1429c7003343f 99
+Sources/DevmachineApp/ShortcutsSheet.swift
+  s_a0cbf6c120c4f8::t_761c99998f2f8e 57
+Sources/DevmachineApp/StatsView.swift
+  s_a0cbf6c120c4f8::t_53096d45bdf2cf 140-142
+Sources/DevmachineApp/SubdomainsView.swift
+  s_a0cbf6c120c4f8::t_614ec314e91a45 118,207-208,460-461,550,556-558
+Sources/DevmachineCore/FailureCause.swift
+  s_a0cbf6c120c4f8::t_71b93b04c5f09e 1-40
+Sources/HarnessUsageKit/HarnessUsageError.swift
+  s_a0cbf6c120c4f8::t_597a8cee6e8a9d 1-144
+Sources/HarnessUsageKit/HarnessUsageStore.swift
+  s_a0cbf6c120c4f8::t_173aebd76f4e83 8,16,23,116,134,136-137
+Sources/HarnessUsageKit/Views/HarnessUsagePanel.swift
+  s_a0cbf6c120c4f8::t_b12eb61871eab9 22-35,91,140-144
+Tests/DevmachineAppTests/DMButtonTests.swift
+  s_a0cbf6c120c4f8::t_36bcb0191068e0 1-86
+Tests/DevmachineAppTests/DMComponentsRenderTests.swift
+  s_a0cbf6c120c4f8::t_d7854059297d83 11,53,96-100,116-148
+Tests/DevmachineAppTests/DMErrorStateTests.swift
+  s_a0cbf6c120c4f8::t_000273b1e4523d 1-67
+Tests/DevmachineAppTests/DemoScreensTests.swift
+  s_a0cbf6c120c4f8::t_77806167c37425 94-111
+Tests/DevmachineCoreTests/FailureCauseTests.swift
+  s_a0cbf6c120c4f8::t_4f5eb5c03ab872 1-22
+Tests/HarnessUsageKitTests/HarnessUsageErrorTests.swift
+  s_a0cbf6c120c4f8::t_1ed160330899f4 1-88
+Tests/HarnessUsageKitTests/HarnessUsagePresentationTests.swift
+  s_a0cbf6c120c4f8::t_d8ad219b184a6a 30-31
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "5809b404f0e3f7ca98e2babce77f9a3023117439",
+  "prompts": {},
+  "sessions": {
+    "s_a0cbf6c120c4f8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "f7d54e1b-857f-44e4-a7a9-0ca76ea55bb2",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
