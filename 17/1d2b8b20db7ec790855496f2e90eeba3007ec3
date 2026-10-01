@@ -1,0 +1,43 @@
+Sources/DevmachineApp/ContentView.swift
+  s_a0cbf6c120c4f8::t_fc4b3373815f94 86
+Sources/DevmachineApp/ContextPanel.swift
+  s_a0cbf6c120c4f8::t_61263633285293 69-75,95
+Sources/DevmachineApp/DemoSnapshots.swift
+  s_a0cbf6c120c4f8::t_ed4eba5fadcb7d 206-213,242,333-336,505-551
+Sources/DevmachineApp/DevmachineCLI.swift
+  s_a0cbf6c120c4f8::t_4e9ab530a81170 147,155-156,221-248
+Sources/DevmachineApp/FileTransferStore.swift
+  s_a0cbf6c120c4f8::t_49290e53eb28e0 1-223
+Sources/DevmachineApp/FileTreeDrag.swift
+  s_a0cbf6c120c4f8::t_35b03968fec55c 1-77
+Sources/DevmachineApp/FilesTab.swift
+  s_a0cbf6c120c4f8::t_226fe003c936fc 3,32-35,42,94-96,188,196-197,204-271,343,354,356-364,366,404-411,413,432,444-463
+Sources/DevmachineApp/TransferNoticeCard.swift
+  s_a0cbf6c120c4f8::t_94b2a8a0d3be86 1-61
+Sources/DevmachineCore/FileTransfer.swift
+  s_a0cbf6c120c4f8::t_01ee8f6db0dfdf 1-101
+Tests/DevmachineAppTests/DevmachineCLITests.swift
+  s_a0cbf6c120c4f8::t_bdca1036329595 446-505
+Tests/DevmachineAppTests/FileTransferStoreTests.swift
+  s_a0cbf6c120c4f8::t_e51c788ade2904 1-192
+Tests/DevmachineAppTests/FileTransferVMTests.swift
+  s_a0cbf6c120c4f8::t_041b5e32418481 1-69
+Tests/DevmachineCoreTests/FileTransferTests.swift
+  s_a0cbf6c120c4f8::t_3f3b81443bf086 1-85
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "171d2b8b20db7ec790855496f2e90eeba3007ec3",
+  "prompts": {},
+  "sessions": {
+    "s_a0cbf6c120c4f8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "f7d54e1b-857f-44e4-a7a9-0ca76ea55bb2",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
