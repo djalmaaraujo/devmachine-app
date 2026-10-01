@@ -1,9 +1,12 @@
 Sources/DevmachineApp/ContextPanel.swift
   s_a0cbf6c120c4f8::t_3ae7913f8a3c92 129-130
+  s_a0cbf6c120c4f8::t_b55ad66ae852b3 129-130
 Sources/DevmachineApp/PublishJobCard.swift
   s_a0cbf6c120c4f8::t_b6c260f510557c 9,62
+  s_a0cbf6c120c4f8::t_8059fc5079799d 9,62
 Tests/DevmachineAppTests/DMComponentsFitTests.swift
   s_a0cbf6c120c4f8::t_2902634a897ed1 133-141
+  s_a0cbf6c120c4f8::t_c498b92e0b38d0 133-141
 ---
 {
   "schema_version": "authorship/3.0.0",
