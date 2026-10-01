@@ -1,23 +1,33 @@
 Sources/DevmachineApp/AddSubdomainSheet.swift
   s_a0cbf6c120c4f8::t_68b80714183d12 48-58,79-81,88-89,92-94,169-179,198
+  s_a0cbf6c120c4f8::t_6e9430a8f21b7c 48-58,79-81,88-89,92-94,170-179,198
 Sources/DevmachineApp/ContentView.swift
   s_a0cbf6c120c4f8::t_d382925a62f5af 100
+  s_a0cbf6c120c4f8::t_d4c38050409f49 100
 Sources/DevmachineApp/ContextPanel.swift
   s_a0cbf6c120c4f8::t_1f46c8e6ce42d9 42,49-53,135
+  s_a0cbf6c120c4f8::t_54cfeb6b288815 42,49-53,135
 Sources/DevmachineApp/DemoData.swift
   s_a0cbf6c120c4f8::t_e2b5b9d57ab94d 593
+  s_a0cbf6c120c4f8::t_9a17980c260beb 593
 Sources/DevmachineApp/QuickPublishState.swift
   s_a0cbf6c120c4f8::t_5686b0f8b81434 4-7,11-13,15-25,27-29,33-54,70-73
+  s_a0cbf6c120c4f8::t_adec9b1c70b3f5 4-7,11-13,15-25,27-29,33-54,70-73
 Sources/DevmachineApp/StatsStore.swift
   s_a0cbf6c120c4f8::t_7ce3f30ab0c1f4 79,186-210,286-288
+  s_a0cbf6c120c4f8::t_15e99e8797c3f5 79,186-210,286-288
 Sources/DevmachineApp/WorkspaceMachineData.swift
   s_a0cbf6c120c4f8::t_c68f078b61529d 4-9,12-84,88-92
+  s_a0cbf6c120c4f8::t_bba6e6773e1a73 4-9,12-84,88-92
 Tests/DevmachineAppTests/AddSubdomainSheetTests.swift
   s_a0cbf6c120c4f8::t_43a5fc4f6b829a 90-119
+  s_a0cbf6c120c4f8::t_060d1cc51eaea1 90-119
 Tests/DevmachineAppTests/QuickPublishLocalFirstTests.swift
   s_a0cbf6c120c4f8::t_de3950b80a25c9 5-9,11-135,137
+  s_a0cbf6c120c4f8::t_89840e0fd42ba5 5-9,11-135,137
 Tests/DevmachineAppTests/StatsStoreTests.swift
   s_a0cbf6c120c4f8::t_bd03609e4982c9 161-209
+  s_a0cbf6c120c4f8::t_b428caee7b54d3 161-209
 ---
 {
   "schema_version": "authorship/3.0.0",
