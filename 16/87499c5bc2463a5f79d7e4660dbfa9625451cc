@@ -1,0 +1,23 @@
+Sources/DevmachineApp/PreviewSidebarTab.swift
+  s_a0cbf6c120c4f8::t_51f27f558972e5 138-141,221
+Sources/DevmachineApp/PreviewTargetsStore.swift
+  s_a0cbf6c120c4f8::t_6a854470ffedc6 4-5,11,15-19,32-34,37,46-47,50-51,53,55-59,64-65,80,86-97,100,103-104,106,111-183
+Tests/DevmachineAppTests/PreviewTargetsServiceTests.swift
+  s_a0cbf6c120c4f8::t_ad50c83df5d048 22-39,41-61,64-71,73,75,77-79,82-86,88-89,91-94,97-100,102,105-112,114,116-135
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "1687499c5bc2463a5f79d7e4660dbfa9625451cc",
+  "prompts": {},
+  "sessions": {
+    "s_a0cbf6c120c4f8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "f7d54e1b-857f-44e4-a7a9-0ca76ea55bb2",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
