@@ -1,0 +1,23 @@
+Sources/DevmachineApp/ContextPanel.swift
+  s_a0cbf6c120c4f8::t_b55ad66ae852b3 129-130
+Sources/DevmachineApp/PublishJobCard.swift
+  s_a0cbf6c120c4f8::t_8059fc5079799d 9,62
+Tests/DevmachineAppTests/DMComponentsFitTests.swift
+  s_a0cbf6c120c4f8::t_c498b92e0b38d0 133-141
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "bd5fc594e9e7c4eefca1b47562e94fb22d9badac",
+  "prompts": {},
+  "sessions": {
+    "s_a0cbf6c120c4f8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "f7d54e1b-857f-44e4-a7a9-0ca76ea55bb2",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
