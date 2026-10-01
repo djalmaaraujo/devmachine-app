@@ -1,15 +1,21 @@
 CLAUDE.md
   s_a0cbf6c120c4f8::t_8e0b4bb19c3aea 124-127,398-399,483-513
+  s_a0cbf6c120c4f8::t_9555f58c9764e0 124-127,398-399,483-513
 Sources/DevmachineApp/PublishJobCard.swift
   s_a0cbf6c120c4f8::t_52b29793bd979c 67,69
+  s_a0cbf6c120c4f8::t_1ac304dc9360b1 67,69
 Sources/DevmachineCore/LocalFirst/DataCache.swift
   s_a0cbf6c120c4f8::t_d1d88bfb685dd9 19-21,23,26,153,199-204,218-221,237,270,275,330,334-338,341-344
+  s_a0cbf6c120c4f8::t_8ff883730b26d1 19-21,23,26,153,199-204,218-221,237,270,275,330,334-338,341-344
 Tests/DevmachineAppTests/DMComponentsRenderTests.swift
   s_a0cbf6c120c4f8::t_be35dbfe926c37 99-105
+  s_a0cbf6c120c4f8::t_96ac2a750c8878 99-105
 Tests/DevmachineAppTests/PublishFeedbackRenderTests.swift
   s_a0cbf6c120c4f8::t_2e926e91f5be3d 1-99
+  s_a0cbf6c120c4f8::t_44093aea8c9dde 1-99
 Tests/DevmachineCoreTests/DataCacheTests.swift
   s_a0cbf6c120c4f8::t_f77ba18cb0e0c0 245-277
+  s_a0cbf6c120c4f8::t_a8a47328a7ef23 245-277
 ---
 {
   "schema_version": "authorship/3.0.0",
