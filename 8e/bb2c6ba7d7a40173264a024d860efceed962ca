@@ -1,15 +1,21 @@
 Sources/DevmachineCore/LocalFirst/DataCache.swift
   s_a0cbf6c120c4f8::t_4d5958c684a53a 1-344
+  s_a0cbf6c120c4f8::t_b191992c404ac1 1-344
 Sources/DevmachineCore/LocalFirst/StableList.swift
   s_a0cbf6c120c4f8::t_a019ebf3c032b3 1-35
+  s_a0cbf6c120c4f8::t_510e13a0d70654 1-35
 Sources/DevmachineCore/PublishProgress.swift
   s_a0cbf6c120c4f8::t_5488a8ab1f2322 1-195
+  s_a0cbf6c120c4f8::t_a8e36a551f54e8 1-195
 Tests/DevmachineCoreTests/DataCacheTests.swift
   s_a0cbf6c120c4f8::t_09de1e18755b77 1-294
+  s_a0cbf6c120c4f8::t_b185fb1bdc1875 1-294
 Tests/DevmachineCoreTests/PublishProgressTests.swift
   s_a0cbf6c120c4f8::t_587322c0d5c098 1-130
+  s_a0cbf6c120c4f8::t_edd3c4c557dc42 1-130
 Tests/DevmachineCoreTests/StableListTests.swift
   s_a0cbf6c120c4f8::t_ad2705b1f9b5f4 1-63
+  s_a0cbf6c120c4f8::t_a3aa2a6197ad06 1-63
 ---
 {
   "schema_version": "authorship/3.0.0",
