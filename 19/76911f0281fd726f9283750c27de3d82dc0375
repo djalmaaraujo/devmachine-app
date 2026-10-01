@@ -1,0 +1,29 @@
+CLAUDE.md
+  s_a0cbf6c120c4f8::t_9555f58c9764e0 116-119,380-381,465-495
+Sources/DevmachineApp/PublishJobCard.swift
+  s_a0cbf6c120c4f8::t_1ac304dc9360b1 67,69
+Sources/DevmachineCore/LocalFirst/DataCache.swift
+  s_a0cbf6c120c4f8::t_8ff883730b26d1 19-21,23,26,153,199-204,218-221,237,270,275,330,334-338,341-344
+Tests/DevmachineAppTests/DMComponentsRenderTests.swift
+  s_a0cbf6c120c4f8::t_96ac2a750c8878 99-105
+Tests/DevmachineAppTests/PublishFeedbackRenderTests.swift
+  s_a0cbf6c120c4f8::t_44093aea8c9dde 1-99
+Tests/DevmachineCoreTests/DataCacheTests.swift
+  s_a0cbf6c120c4f8::t_a8a47328a7ef23 245-277
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "1976911f0281fd726f9283750c27de3d82dc0375",
+  "prompts": {},
+  "sessions": {
+    "s_a0cbf6c120c4f8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "f7d54e1b-857f-44e4-a7a9-0ca76ea55bb2",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
