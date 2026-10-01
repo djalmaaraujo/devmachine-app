@@ -1,0 +1,64 @@
+Tests/DevmachineAppTests/DMMetricsTests.swift
+  s_a0cbf6c120c4f8::t_a05fd74b630a24 1-109
+Sources/DevmachineApp/Components/DMMetrics.swift
+  s_a0cbf6c120c4f8::t_b8ee96a08e1b24 1-179
+Tests/DevmachineAppTests/DMFitCheck.swift
+  s_a0cbf6c120c4f8::t_9c6ba03d354b24 1-91
+  s_a0cbf6c120c4f8::t_1b2540ce0d53e9 92
+Tests/DevmachineAppTests/DMFixedPointsGuardTests.swift
+  s_a0cbf6c120c4f8::t_5b8479e2787ec3 1-65
+Tests/DevmachineAppTests/DMComponentsFitTests.swift
+  s_a0cbf6c120c4f8::t_1e3d5a30c179d3 1-149
+Sources/DevmachineApp/Components/DMButton.swift
+  s_a0cbf6c120c4f8::t_c8d48673608a5b 23-26,30-31,33-34,36-37,40-48,144,148,168,188
+Sources/DevmachineApp/Components/DMButtons.swift
+  s_a0cbf6c120c4f8::t_d65ef619f88cab 5,23,26,30-31,98,104-106
+Sources/DevmachineApp/Components/DMCommandBlock.swift
+  s_a0cbf6c120c4f8::t_0c0abe5fce910c 8,20,30,33-34
+Sources/DevmachineApp/Components/DMComponents.swift
+  s_a0cbf6c120c4f8::t_cb903a16567a40 4,11,14,20,26,33,41,45,54,61-62,64,97,103,117,119,125,128-129,136,142,161,201,207,209,216-217,223,231,244,247,253,261,264,276-277,286,289-290,296,313-317,319
+Sources/DevmachineApp/Components/DMErrorState.swift
+  s_a0cbf6c120c4f8::t_871b53fd8703e8 50,59-60,62,64,80-81,89,123-124,128,133,137
+Sources/DevmachineApp/Components/DMFields.swift
+  s_a0cbf6c120c4f8::t_be8222bad1445b 4,16,19,27,62-70,72,74-75
+Sources/DevmachineApp/Components/DMKindLabel.swift
+  s_a0cbf6c120c4f8::t_da50de55d510ce 11,18-19
+Sources/DevmachineApp/Components/DMPRState.swift
+  s_a0cbf6c120c4f8::t_eede4e4522d588 30,36
+Sources/DevmachineApp/Components/DMSkeleton.swift
+  s_a0cbf6c120c4f8::t_3f0bff4d540c15 25-26,38,45,48,53,68,80,90,96,103,109,113
+Sources/DevmachineApp/Components/DMStatus.swift
+  s_a0cbf6c120c4f8::t_4e7e88dcf3832b 16,20,28,33,35,60,63,75
+Sources/DevmachineApp/Components/DMSurfaces.swift
+  s_a0cbf6c120c4f8::t_d05363d6f45af4 13,18-19,30-45,52,58-59,69,75-76
+Sources/DevmachineApp/Components/DMTabStrip.swift
+  s_a0cbf6c120c4f8::t_a4eff23d2f70a4 5,17,22,25,35,62,70-71,73
+Sources/DevmachineApp/Components/DMTokens.swift
+  s_a0cbf6c120c4f8::t_6ec733299d0e9d 26-80
+Sources/DevmachineApp/Components/FlowLayout.swift
+  s_a0cbf6c120c4f8::t_c0443bf2cb0fea 4-5,7-8,26-28
+Sources/DevmachineApp/DemoSnapshots.swift
+  s_a0cbf6c120c4f8::t_ea05c21760f697 504
+Sources/DevmachineApp/DevmachineApp.swift
+  s_a0cbf6c120c4f8::t_59d45b719edc50 44-47,63,167,177
+Sources/DevmachineApp/Updates/UpdateViews.swift
+  s_a0cbf6c120c4f8::t_caaf5fb338e2b4 97,101-102,107,127-128,130,135-137,142,146,150,158,160
+Tests/DevmachineAppTests/UpdateViewsRenderTests.swift
+  s_a0cbf6c120c4f8::t_f8c56ff188792a 103,105-106,109,113,117-124,126-131,139
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "f1d91d57a3ce003574f9421301b93d7787abb545",
+  "prompts": {},
+  "sessions": {
+    "s_a0cbf6c120c4f8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "f7d54e1b-857f-44e4-a7a9-0ca76ea55bb2",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
