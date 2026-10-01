@@ -1,0 +1,51 @@
+Sources/DevmachineApp/HostKeyViews.swift
+  s_0e026f8493f787::t_bd9aec84ad6d2c 1-219
+  s_0e026f8493f787::t_1a07a34390fc46 220-225
+Tests/DevmachineAppTests/HostKeyStoreTests.swift
+  s_0e026f8493f787::t_0f70ad4788d94d 1-121
+Tests/DevmachineCoreTests/HostKeyTrustTests.swift
+  s_0e026f8493f787::t_ca547bc1bef0eb 1-122
+  s_0e026f8493f787::t_f774fb9f2ac736 123-124
+Sources/DevmachineApp/HostKeyStore.swift
+  s_0e026f8493f787::t_85a58ea342a289 1-129
+CLAUDE.md
+  s_0e026f8493f787::t_12658c2cb83b49 559-575
+Sources/DevmachineApp/AppModel.swift
+  s_0e026f8493f787::t_0ba2be6f949665 1535-1543
+Sources/DevmachineApp/AppPage.swift
+  s_0e026f8493f787::t_104d3d0e2bd0bf 6-7
+Sources/DevmachineApp/ContentView.swift
+  s_0e026f8493f787::t_ab7eae9a6584ba 314
+Sources/DevmachineApp/DevmachineApp.swift
+  s_0e026f8493f787::t_ed76a6db324a18 78-81
+Sources/DevmachineApp/SessionProblem.swift
+  s_0e026f8493f787::t_e28522d4c2f895 11,26,33-37,67-71
+Sources/DevmachineApp/SidebarView.swift
+  s_0e026f8493f787::t_e942f80171c4f9 52-57,63,91-102
+Sources/DevmachineCore/FailureCause.swift
+  s_0e026f8493f787::t_5d4c65016106d2 12,17-19,56
+Sources/DevmachineCore/HostKey/HostKeyTrust.swift
+  s_0e026f8493f787::t_7c065d6c6140b2 1-99
+Sources/DevmachineCore/SessionStore.swift
+  s_0e026f8493f787::t_97f51196d1e50c 43-45,49
+Tests/DevmachineAppTests/AppModelTests.swift
+  s_0e026f8493f787::t_653cf611f70144 1025-1045,1644-1654
+Tests/DevmachineAppTests/HostKeyPageRenderTests.swift
+  s_0e026f8493f787::t_563a987480a767 1-75
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "bbacc9fcdd8cc0897f66f32ad378dce180aae849",
+  "prompts": {},
+  "sessions": {
+    "s_0e026f8493f787": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "abc53a4a-3463-4496-9b3f-215a72f0f6e2",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
