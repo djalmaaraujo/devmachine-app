@@ -1,0 +1,21 @@
+Sources/DevmachineApp/PreviewWebView.swift
+  s_a0cbf6c120c4f8::t_db897d8ca2cf7f 114-118
+Tests/DevmachineAppTests/PreviewPageTests.swift
+  s_a0cbf6c120c4f8::t_926275459a4fbc 65-69
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "5398b959e89b8e002c861137905264ecbd544188",
+  "prompts": {},
+  "sessions": {
+    "s_a0cbf6c120c4f8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "f7d54e1b-857f-44e4-a7a9-0ca76ea55bb2",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
