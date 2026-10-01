@@ -1,0 +1,35 @@
+Sources/DevmachineApp/AppModel.swift
+  s_a0cbf6c120c4f8::t_0393d469a522e6 449,506-507,509,518,1343,1359-1369,1469
+Sources/DevmachineApp/ContextPanel.swift
+  s_a0cbf6c120c4f8::t_0df2654e6f6d85 127-131
+Sources/DevmachineApp/ContextStore.swift
+  s_a0cbf6c120c4f8::t_47a32a3fa0f30e 27-29,31,39,41,57-64,113,120,128-136,153-155
+Sources/DevmachineApp/DevmachineApp.swift
+  s_a0cbf6c120c4f8::t_12eab146eda05d 9
+Sources/DevmachineCore/LocalFirst/DataCache.swift
+  s_a0cbf6c120c4f8::t_68efa32cfe02a8 151-154,297-298,301-303,341
+Tests/DevmachineAppTests/AppModelTests.swift
+  s_a0cbf6c120c4f8::t_1235fdef06aabe 1041-1057
+Tests/DevmachineAppTests/ContextStoreTests.swift
+  s_a0cbf6c120c4f8::t_034292803285d3 32-68
+Tests/DevmachineAppTests/DevmachineServicesTests.swift
+  s_a0cbf6c120c4f8::t_28e1b82908d4c4 80,84,89-93
+Tests/DevmachineCoreTests/DataCacheTests.swift
+  s_a0cbf6c120c4f8::t_45b47a313b02b1 75-92
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "0483a05dd2d3fea94a8ee009be3193555a6a7b1e",
+  "prompts": {},
+  "sessions": {
+    "s_a0cbf6c120c4f8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "f7d54e1b-857f-44e4-a7a9-0ca76ea55bb2",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
