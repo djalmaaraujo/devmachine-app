@@ -1,0 +1,41 @@
+CLAUDE.md
+  s_b040951662cf49::t_45414f324d0c42 68-72
+README.md
+  s_b040951662cf49::t_50684e2353ec89 43-48
+Sources/DevmachineApp/MenuBarPanel.swift
+  s_b040951662cf49::t_6c6ecc0109ed36 149-151
+Sources/DevmachineApp/Palette/CommandRegistry.swift
+  s_b040951662cf49::t_4af16f9897810c 141-144
+Sources/DevmachineApp/Palette/PaletteCommand.swift
+  s_b040951662cf49::t_040aa887a3ee96 61
+Sources/DevmachineApp/Palette/PaletteDispatcher.swift
+  s_b040951662cf49::t_5b6d1ad2a7f280 42,125,156-159
+Sources/DevmachineApp/ScreenColorPicker.swift
+  s_b040951662cf49::t_4dff8a87b0d89b 1-30
+Sources/DevmachineCore/ScreenColor.swift
+  s_b040951662cf49::t_d02db6a3fa7baa 1-12
+Tests/DevmachineAppTests/CommandRegistryTests.swift
+  s_b040951662cf49::t_c72e60127300d1 186-195
+Tests/DevmachineAppTests/PaletteDispatcherTests.swift
+  s_b040951662cf49::t_6abcb3d7b6cf3c 48-51,207-212
+Tests/DevmachineAppTests/PreviewPaletteTests.swift
+  s_b040951662cf49::t_b0909b29107e8c 49
+Tests/DevmachineCoreTests/ScreenColorTests.swift
+  s_b040951662cf49::t_ee47e5c80f2270 1-21
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "8cb184657770ad741e2de2701fc519a72453af05",
+  "prompts": {},
+  "sessions": {
+    "s_b040951662cf49": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "f4e3d292-63fb-49a6-b181-1db1a3a0bccb",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
