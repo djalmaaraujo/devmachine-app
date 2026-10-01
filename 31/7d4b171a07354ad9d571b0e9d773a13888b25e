@@ -1,0 +1,39 @@
+README.md
+  s_a0cbf6c120c4f8::t_8a24bdd84c56be 103-108
+Sources/DevmachineApp/DemoSnapshots.swift
+  s_a0cbf6c120c4f8::t_c52aba6f515ca7 184-194,258,359-361,611-622
+Sources/DevmachineApp/Updates/DemoCLIUpdate.swift
+  s_a0cbf6c120c4f8::t_74b1b5515e0678 1-113
+Sources/DevmachineApp/Updates/UpdateController.swift
+  s_a0cbf6c120c4f8::t_25b0b8071fca83 26-55,93,100-101,112-113,217-269,323,408,411
+Sources/DevmachineApp/Updates/UpdateSystem.swift
+  s_a0cbf6c120c4f8::t_4adea034c8b95a 242,250-279,308,402
+Sources/DevmachineApp/Updates/UpdateViews.swift
+  s_a0cbf6c120c4f8::t_1cad40cefc19e7 6-24,62-72,83,94,289,315,441-445,449-488
+Sources/DevmachineCore/Updates/CLISelfUpdate.swift
+  s_a0cbf6c120c4f8::t_0939f4b8d1bf14 1-47
+Tests/DevmachineAppTests/ProcessHomebrewUpgraderTests.swift
+  s_a0cbf6c120c4f8::t_04fb3f17473c4b 49-68
+Tests/DevmachineAppTests/UpdateControllerTests.swift
+  s_a0cbf6c120c4f8::t_42cd32be7e478d 53-79,97-102,113-114,125,135,138,238-317
+Tests/DevmachineAppTests/UpdateDialogContentTests.swift
+  s_a0cbf6c120c4f8::t_6caf7e2db29714 42-50
+Tests/DevmachineCoreTests/Updates/CLISelfUpdateTests.swift
+  s_a0cbf6c120c4f8::t_d23d32217fae64 1-40
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "317d4b171a07354ad9d571b0e9d773a13888b25e",
+  "prompts": {},
+  "sessions": {
+    "s_a0cbf6c120c4f8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "f7d54e1b-857f-44e4-a7a9-0ca76ea55bb2",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
