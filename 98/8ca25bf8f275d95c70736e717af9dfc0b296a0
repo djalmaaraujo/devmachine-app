@@ -1,0 +1,31 @@
+CLAUDE.md
+  s_a0cbf6c120c4f8::t_ffe9c7fa702448 463-465
+Sources/DevmachineApp/AppModel.swift
+  s_a0cbf6c120c4f8::t_4d99de1bc41702 1146,1150
+Sources/DevmachineApp/ContentView.swift
+  s_a0cbf6c120c4f8::t_d5214131b99606 83
+Sources/DevmachineApp/DemoPreviewBrowserCheck.swift
+  s_a0cbf6c120c4f8::t_094f3a5ace3ef8 101-102
+Sources/DevmachineApp/FileTransferStore.swift
+  s_a0cbf6c120c4f8::t_95bbba8a2bad15 151
+Sources/DevmachineApp/PreviewDownloads.swift
+  s_a0cbf6c120c4f8::t_fdc7d431a07ed3 20,64,79,81-87
+Sources/DevmachineCore/PreviewBrowsing.swift
+  s_a0cbf6c120c4f8::t_a2a5831a0046fd 57,59-60
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "988ca25bf8f275d95c70736e717af9dfc0b296a0",
+  "prompts": {},
+  "sessions": {
+    "s_a0cbf6c120c4f8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "f7d54e1b-857f-44e4-a7a9-0ca76ea55bb2",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
