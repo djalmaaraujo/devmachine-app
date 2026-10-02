@@ -1,0 +1,41 @@
+CLAUDE.md
+  s_e501c321413d86::t_d7cb2de57cf4d7 129-133,914,918-920
+Sources/DevmachineApp/Components/DMErrorState.swift
+  s_e501c321413d86::t_8989a8e119f144 13-14,16-19,24,28-30,57,101-102,105-107,164-176
+Sources/DevmachineApp/DemoAddMachine.swift
+  s_e501c321413d86::t_6ec8b344c8d9c8 31-32,35-38,61-67
+Sources/DevmachineApp/DemoSnapshots.swift
+  s_e501c321413d86::t_16aa36e1fe8338 313,315-321
+Sources/DevmachineApp/DevmachineApp.swift
+  s_e501c321413d86::t_587f05d2c8c0f4 65
+Sources/DevmachineApp/MachineStatsCard.swift
+  s_e501c321413d86::t_3cb1043b85cca7 84
+Sources/DevmachineApp/StatsStore.swift
+  s_e501c321413d86::t_e9b805271d15c0 364-369
+Sources/DevmachineApp/StatsView.swift
+  s_e501c321413d86::t_11b91940fa7ea6 18,136-140
+Sources/DevmachineCore/FailureCause.swift
+  s_e501c321413d86::t_c4b0f0eb9be204 13,18-23,65-66,69-71
+Tests/DevmachineAppTests/DMErrorStateTests.swift
+  s_e501c321413d86::t_9c11dc900500bd 5,18-28
+Tests/DevmachineAppTests/DemoSnapshotsTests.swift
+  s_e501c321413d86::t_4ed5f591b53868 198-201
+Tests/DevmachineCoreTests/FailureCauseTests.swift
+  s_e501c321413d86::t_ceb8667a1caf82 48-60
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "65598f4495c89dd6c23ff3f8a2efe5cf6f0a9f6f",
+  "prompts": {},
+  "sessions": {
+    "s_e501c321413d86": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c1c8a0b3-c0c2-4808-a1ec-80e4f419df68",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
