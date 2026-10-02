@@ -1,0 +1,93 @@
+Sources/DevmachineApp/Harnesses/ContextFacade.swift
+  s_bd193e2d2e6bb0::t_67c47e7c38da34 6-9,12,17
+Sources/DevmachineCore/Context/ContextHarnessReader.swift
+  s_bd193e2d2e6bb0::t_fb6873cda4566f 1-145
+  s_bd193e2d2e6bb0::t_5d6d6a68a79926 146-152
+Sources/DevmachineCore/Context/ClineHarness.swift
+  s_bd193e2d2e6bb0::t_bb62713d51f2aa 1-133
+Sources/DevmachineApp/Services/ContextSource.swift
+  s_bd193e2d2e6bb0::t_ad99497b5540f7 77-78
+  s_bd193e2d2e6bb0::t_dd38c2b7a3958f 6-13
+  s_bd193e2d2e6bb0::t_646e5d8116801a 52
+  s_bd193e2d2e6bb0::t_a9cd844a4a8646 60-63
+Tests/DevmachineCoreTests/ContextHarnessDetectionTests.swift
+  s_bd193e2d2e6bb0::t_2b60da4ff40b84 41-92
+  s_ae4b0d8153b190::t_fde8858c31b515 7
+Tests/DevmachineCoreTests/ContextHarnessReadersTests.swift
+  s_bd193e2d2e6bb0::t_a1edb091714589 1-203
+Sources/DevmachineCore/Context/AntigravityHarness.swift
+  s_bd193e2d2e6bb0::t_0014c537d6558f 1-104
+Tests/DevmachineCoreTests/ContextFixtureHome.swift
+  s_bd193e2d2e6bb0::t_6747fd4aa86517 1-19
+Sources/DevmachineCore/Context/OpencodeHarness.swift
+  s_bd193e2d2e6bb0::t_e96a7d97f2b746 53
+  s_bd193e2d2e6bb0::t_8aff844f2b5bff 90-91
+  s_bd193e2d2e6bb0::t_ef615427a0ff40 1-52,54-78,80-89,92-103
+  s_bd193e2d2e6bb0::t_35459926ab7f9c 79
+Sources/DevmachineCore/Context/ContextSQLite.swift
+  s_bd193e2d2e6bb0::t_b74a88c0f2b622 1-69
+Sources/DevmachineCore/Context/KimiHarness.swift
+  s_bd193e2d2e6bb0::t_ce082499f1f72d 53-55
+  s_bd193e2d2e6bb0::t_ebd0fe4f75d1de 94
+  s_bd193e2d2e6bb0::t_a94d780bdc7a90 1-30,32-35,38,40-52,56-69,73,75-93,95-178
+  s_bd193e2d2e6bb0::t_6d9c2f746d0b2d 31,36-37,39
+  s_bd193e2d2e6bb0::t_daea1178b88800 70-72,74
+Sources/DevmachineCore/Context/ContextHarnessDetection.swift
+  s_bd193e2d2e6bb0::t_65b54152db2289 3-6,9-10,13-19,21,24-26,28-29,31-42
+Sources/DevmachineCore/CodingHarness.swift
+  s_bd193e2d2e6bb0::t_e7bfa61b5c9dd9 13-16
+Sources/DevmachineCore/Context/ContextTranscriptFile.swift
+  s_bd193e2d2e6bb0::t_d69a640bf5388a 8-10,12,15
+Sources/DevmachineCore/Context/NativeContextEngine.swift
+  s_bd193e2d2e6bb0::t_c673066a8510b0 13,15-16,22-23,30,33-34,36-37,41-44,54,58
+Tests/DevmachineAppTests/ContextStoreTests.swift
+  s_bd193e2d2e6bb0::t_fde50454b494b2 158
+Tests/DevmachineAppTests/DevmachineServicesTests.swift
+  s_bd193e2d2e6bb0::t_0351ab90261054 156-157,165,237,243-283
+Tests/DevmachineCoreTests/NativeContextEngineTests.swift
+  s_bd193e2d2e6bb0::t_8a1d211c7924ee 12
+Tests/DevmachineCoreTests/TmuxListParserTests.swift
+  s_bd193e2d2e6bb0::t_97941b67f512bc 31-54
+Tests/Fixtures/Context/antigravity/.gemini/antigravity-cli/brain/3f2a9c1e-7b4d-4e8a-9c21-5d6e7f8a9b0c/.system_generated/logs/transcript.jsonl
+  s_bd193e2d2e6bb0::t_8e3be54ed4f041 1-5
+Tests/Fixtures/Context/antigravity/.gemini/antigravity-cli/brain/3f2a9c1e-7b4d-4e8a-9c21-5d6e7f8a9b0c/.system_generated/logs/transcript_full.jsonl
+  s_bd193e2d2e6bb0::t_2b24e411970d5a 1-5
+Tests/Fixtures/Context/antigravity/.gemini/antigravity-cli/history.jsonl
+  s_bd193e2d2e6bb0::t_adedd5ca8bdd62 1-2
+Tests/Fixtures/Context/cline/.cline/data/sessions/1790863200000_k3x9q/1790863200000_k3x9q.json
+  s_bd193e2d2e6bb0::t_4fbaef254d93c2 1-25
+Tests/Fixtures/Context/cline/.cline/data/sessions/1790863200000_k3x9q/1790863200000_k3x9q.messages.json
+  s_bd193e2d2e6bb0::t_b75feb7c82cf36 1-99
+Tests/Fixtures/Context/kimi/.kimi-code/session_index.jsonl
+  s_bd193e2d2e6bb0::t_1c770f2cc5e76a 1
+Tests/Fixtures/Context/kimi/.kimi-code/sessions/wd_widgets_7b506ce63f89/session_3f6c1a52-8d1e-4b7a-9c2e-5a1b7d9e0f42/agents/main/wire.jsonl
+  s_bd193e2d2e6bb0::t_74d21701a91e22 1-23
+Tests/Fixtures/Context/kimi/.kimi-code/sessions/wd_widgets_7b506ce63f89/session_3f6c1a52-8d1e-4b7a-9c2e-5a1b7d9e0f42/state.json
+  s_bd193e2d2e6bb0::t_de4c853872a3d5 1
+Tests/Fixtures/Context/kimi/.kimi-code/workspaces.json
+  s_bd193e2d2e6bb0::t_2f7f23af7e44e3 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "6433850a4e57ebc673df138ffa4bb2fbd12fffab",
+  "prompts": {},
+  "sessions": {
+    "s_ae4b0d8153b190": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "agent-a2a1e7279af252e9e",
+        "model": "unknown"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    },
+    "s_bd193e2d2e6bb0": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "12d751aa-cf31-4b28-ba1c-670b2a613d1c",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
