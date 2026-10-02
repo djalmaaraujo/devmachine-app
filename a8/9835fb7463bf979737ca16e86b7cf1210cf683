@@ -1,0 +1,22 @@
+Sources/DevmachineCore/Context/ClineHarness.swift
+  s_bd193e2d2e6bb0::t_013650aeeefeb1 84,86-89
+Sources/DevmachineCore/Context/AntigravityHarness.swift
+  s_bd193e2d2e6bb0::t_29c4f60a4cbd77 27-30,34-35,37,42-49
+  s_bd193e2d2e6bb0::t_4d0b7ce45a4c87 50-51
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "a89835fb7463bf979737ca16e86b7cf1210cf683",
+  "prompts": {},
+  "sessions": {
+    "s_bd193e2d2e6bb0": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "12d751aa-cf31-4b28-ba1c-670b2a613d1c",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
