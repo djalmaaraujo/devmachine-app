@@ -1,0 +1,45 @@
+CLAUDE.md
+  s_b040951662cf49::t_f0acfebc148b1c 664-680
+Sources/DevmachineApp/AddSubdomainSheet.swift
+  s_b040951662cf49::t_8d75245ec812a0 16-22,33-37,71-102,123,132,137,152-154,182-185,252-256,264,272-300
+Sources/DevmachineApp/CaddyService.swift
+  s_b040951662cf49::t_d1cf37189ad69a 110-111
+Sources/DevmachineApp/CaddyStore.swift
+  s_b040951662cf49::t_7326c9bbdf2c30 31,36,81-83,152-154,157-168,224,267-272,456-457,501-502,542-544
+Sources/DevmachineApp/DemoData.swift
+  s_b040951662cf49::t_b80b77134220ea 215-220
+Sources/DevmachineApp/DemoSnapshots.swift
+  s_b040951662cf49::t_2cd814acb5f851 65,199-203,285,367-369,534,537,541,543
+Sources/DevmachineApp/DevmachineCLI.swift
+  s_b040951662cf49::t_ecb74e721978a1 281-283,286-288
+Sources/DevmachineApp/SubdomainsView.swift
+  s_b040951662cf49::t_f384f07c4ac41c 71-72
+Sources/DevmachineCore/PublishProgress.swift
+  s_b040951662cf49::t_c403989c0f158a 26-28,143,158-171,208
+Tests/DevmachineAppTests/AddSubdomainSheetTests.swift
+  s_b040951662cf49::t_f6f6359eb5b2d3 121-179
+Tests/DevmachineAppTests/CaddyServiceTests.swift
+  s_b040951662cf49::t_685bb36d9d293f 94-95
+Tests/DevmachineAppTests/DevmachineCLITests.swift
+  s_b040951662cf49::t_30103b6c6bfab5 78-89
+Tests/DevmachineAppTests/SubdomainsMachinesTests.swift
+  s_b040951662cf49::t_0b52b3f06cd86e 67-96
+Tests/DevmachineCoreTests/PublishProgressTests.swift
+  s_b040951662cf49::t_7969c673738db3 130-157
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "c74206cbd6599d84a4becb982f37e4f16cb6d4e8",
+  "prompts": {},
+  "sessions": {
+    "s_b040951662cf49": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "f4e3d292-63fb-49a6-b181-1db1a3a0bccb",
+        "model": "unknown"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
