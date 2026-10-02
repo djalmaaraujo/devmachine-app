@@ -1,0 +1,57 @@
+Sources/DevmachineApp/CLIAutoDetect.swift
+  s_b040951662cf49::t_4bfcbcba06c708 15-25
+Sources/DevmachineApp/OnboardingRunner.swift
+  s_b040951662cf49::t_0fc27f5a7d7940 4-5,7-14,18-19,21-26,29-32,34-41,44-47,49,51-54,57-60,63-67,69-72,75-80,82-88,91-112,116-124,128-131,134-145
+  s_b040951662cf49::t_f20319781c5a2b 27
+  s_b040951662cf49::t_224145f3e0cba1 15-17
+Sources/DevmachineApp/OnboardingPage.swift
+  s_b040951662cf49::t_27141b6f6d09ae 4-7,11-17,22-23,25-28,31-32,38,40,47-49,51,53-59,61-75,79,83,86-87,90-91,96-114,120-123,127-149,156-158,161,163,165-167,169-171,173-179,182-183,188,197-198,202,205-210,239-307,312-320,323-328,331,335
+  s_b040951662cf49::t_67ef86fd37f750 336-338
+Tests/DevmachineAppTests/OnboardingFlowTests.swift
+  s_b040951662cf49::t_88d7c62d186731 1-286
+Sources/DevmachineApp/ContentView.swift
+  s_b040951662cf49::t_684266e01956ea 23-30
+Sources/DevmachineApp/DemoSetupFlow.swift
+  s_b040951662cf49::t_86f6df2975e847 1-48
+Sources/DevmachineApp/DemoSnapshots.swift
+  s_b040951662cf49::t_f3fd15f906b233 451
+  s_b040951662cf49::t_28d1e0b5f30c81 737-739
+  s_b040951662cf49::t_8dad21f8c99a95 30-33,199-213,305,379-380,385-391,485-494,559-561,695-696
+Sources/DevmachineApp/OnboardingFlow.swift
+  s_b040951662cf49::t_688b689e8ab929 1-241
+Tests/DevmachineAppTests/OnboardingRunnerTests.swift
+  s_b040951662cf49::t_01cf8aa5c07039 1-191
+CLAUDE.md
+  s_b040951662cf49::t_3c05dac02dcce2 560-582,584-587
+  s_b040951662cf49::t_61d978f195d7cf 583
+Sources/DevmachineApp/AppModel.swift
+  s_b040951662cf49::t_141f898c377cdf 1336
+  s_b040951662cf49::t_c856f77a4c3438 1302,1311,1341,1348,1355,1362,1373,1437-1440
+  s_b040951662cf49::t_f07c32928f9e7f 374-376,462,509-511,532,1299-1301,1303-1310,1312-1316,1323-1327,1332-1335,1337-1340,1342-1347,1349-1354,1356-1361,1363-1372,1374,1382,1412-1413,1453,1455
+Sources/DevmachineApp/DemoData.swift
+  s_b040951662cf49::t_fa380de83bb7f9 134-182,244
+Sources/DevmachineApp/OnboardingModel.swift
+  s_b040951662cf49::t_4c9f7f6693fa39 95-97,99,105-106,161,199,202-208
+Sources/DevmachineApp/TerminalRegistry.swift
+  s_b040951662cf49::t_d303ebf3b5fcab 38-40,155-162,376-377,424-434,446,458,694-698
+Tests/DevmachineAppTests/CLIAutoDetectTests.swift
+  s_b040951662cf49::t_fa4d1117e139f5 109-139
+Tests/DevmachineAppTests/CLIGateTests.swift
+  s_b040951662cf49::t_21b29e94b6658d 5-9,14-19,22-28,33,38-39,44-45,48-51,53-55,57-58,60-67,69-86,89-96,98,100-134,136-146
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "46e78e94c6e328fe760918b33d00f729448049b5",
+  "prompts": {},
+  "sessions": {
+    "s_b040951662cf49": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "f4e3d292-63fb-49a6-b181-1db1a3a0bccb",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
