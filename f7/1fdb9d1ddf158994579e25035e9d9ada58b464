@@ -1,0 +1,30 @@
+Sources/DevmachineCore/TmuxListParser.swift
+  s_bd193e2d2e6bb0::t_65ce28475e0b45 5,7-11,17-33,43-47,49-53,65-80
+  s_bd193e2d2e6bb0::t_85a1c972dbf0d1 81-83
+CLAUDE.md
+  s_bd193e2d2e6bb0::t_5ebd5cd5160211 388,512-517,554-566
+Sources/DevmachineCore/RemoteCommands.swift
+  s_bd193e2d2e6bb0::t_abc54f972245e7 5,60-64,67-68,70
+Tests/DevmachineCoreTests/RemoteCommandsTests.swift
+  s_bd193e2d2e6bb0::t_8087afd4521b58 18-27
+Tests/DevmachineCoreTests/SessionStoreTests.swift
+  s_bd193e2d2e6bb0::t_85aa72c3eac68e 44-74
+Tests/DevmachineCoreTests/TmuxListParserTests.swift
+  s_bd193e2d2e6bb0::t_d7aa9285988292 55-126
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "f71fdb9d1ddf158994579e25035e9d9ada58b464",
+  "prompts": {},
+  "sessions": {
+    "s_bd193e2d2e6bb0": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "12d751aa-cf31-4b28-ba1c-670b2a613d1c",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
