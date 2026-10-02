@@ -1,0 +1,139 @@
+Sources/DevmachineApp/DemoMachines.swift
+  s_b040951662cf49::t_beee6e9d306411 57-59,61-65,67-74
+  s_b040951662cf49::t_9b1520b4568028 60
+  s_b040951662cf49::t_ae4f8c149e7155 66
+  s_b040951662cf49::t_642a3cfc172ea0 1-55,75
+  s_b040951662cf49::t_577ec33e481f72 56
+Sources/DevmachineApp/Palette/CommandRegistry.swift
+  s_b040951662cf49::t_dd5ce91dc812c7 64-66
+  s_b040951662cf49::t_841c9a673ebc72 63
+Sources/DevmachineApp/TerminalRegistry.swift
+  s_b040951662cf49::t_26e36b59754ae4 161-165
+Sources/DevmachineApp/AddMachinePage.swift
+  s_b040951662cf49::t_ef7be037b7f17e 203-204
+  s_b040951662cf49::t_7391293e31f9cc 264
+  s_b040951662cf49::t_0cc6c476a0f9ca 409
+  s_b040951662cf49::t_c27a77084c8e0f 1-173,175-202,205-263,265-310,312-317,319-408,410-516,518-519,521-526
+  s_b040951662cf49::t_88ebd2002e9663 174,311,318,517,520
+Tests/DevmachineCoreTests/Machines/MachineDraftTests.swift
+  s_b040951662cf49::t_5ab76fe6cde6ff 74-81
+  s_b040951662cf49::t_16c88c623a53c3 13
+  s_b040951662cf49::t_2a0ac57cc932a2 1-12,14-73,82-113
+Sources/DevmachineApp/DevmachineCLI.swift
+  s_b040951662cf49::t_8627a8ef709b49 415-422
+  s_b040951662cf49::t_26a16482f7f689 156-158,161,165,169-170,180-181,187-188
+Tests/DevmachineCoreTests/AppSettingsTests.swift
+  s_b040951662cf49::t_9d49b55ce8975d 81
+  s_b040951662cf49::t_685f7317cb2bb9 95,97-113
+  s_b040951662cf49::t_1d43a2750d6e35 72
+Sources/DevmachineApp/SidebarView.swift
+  s_b040951662cf49::t_a29ddbcc4b27e3 34
+  s_b040951662cf49::t_50153100b760e0 14
+  s_b040951662cf49::t_7f5a0961e6967a 40-44
+Sources/DevmachineCore/Machines/MachinePlan.swift
+  s_b040951662cf49::t_d200b77f011e8f 1-76,84-86,89,91-100,103,114,138-140,147-150,165-177
+  s_b040951662cf49::t_a8ce09082fd913 77-83,87-88,90
+  s_b040951662cf49::t_db4703425104b4 141-146,151-164
+  s_b040951662cf49::t_5415fe6cd61ad7 101-102,104-113,115-137
+Sources/DevmachineApp/DemoData.swift
+  s_b040951662cf49::t_0dac88bf9b6da0 195
+Sources/DevmachineApp/DemoSnapshots.swift
+  s_b040951662cf49::t_f8ca51efd1af7e 286-288
+  s_b040951662cf49::t_0bb69d14e9f5a3 429-434
+Sources/DevmachineApp/AddMachineModel.swift
+  s_b040951662cf49::t_c2dcaf655681bb 1-76
+Sources/DevmachineCore/Machines/MachineDraft.swift
+  s_b040951662cf49::t_e4a97d26f29f40 44-45
+  s_b040951662cf49::t_ae69bd70edaa16 1-43,46-54,58-102,104-108,111,118-130
+  s_b040951662cf49::t_4ab4d301a1d90c 109-110,112-117
+  s_b040951662cf49::t_a371fdcabe0528 55-57
+  s_b040951662cf49::t_db20bda65180d9 103
+Sources/DevmachineApp/AddMachineSidebarButton.swift
+  s_b040951662cf49::t_716ffe165559e1 1-22
+Sources/DevmachineApp/MachinesStore.swift
+  s_b040951662cf49::t_fb850feefb7042 1-94,100-128,130-134
+  s_b040951662cf49::t_6f840596a58731 95-99
+  s_b040951662cf49::t_00caf2d47e7a7b 129
+Tests/DevmachineCoreTests/Machines/MachinePlanTests.swift
+  s_b040951662cf49::t_3ee05d93be44a5 115,117-119,121-123,126-127
+  s_b040951662cf49::t_c9d2e9d707f894 120
+  s_b040951662cf49::t_f98e3f7e2f555d 1-11,13-19,21-58,72-114,116,124-125,128-135
+  s_b040951662cf49::t_e188c8edb7fde9 12
+  s_b040951662cf49::t_6cb361ca1f0dcf 20
+  s_b040951662cf49::t_b81f645fcb85d2 59-71
+Tests/DevmachineCoreTests/Machines/MachineWizardTests.swift
+  s_b040951662cf49::t_b8c4e5dd9215d1 13
+  s_b040951662cf49::t_b1ae9a807fc2df 80-87
+  s_b040951662cf49::t_07f88cb53a62d6 1-12,14-79,88-154
+Sources/DevmachineApp/MachineStepRunner.swift
+  s_b040951662cf49::t_e15f9b8e0e183b 1-23,25-150,152-168,170
+  s_b040951662cf49::t_2ca3d3281e92b5 24
+  s_b040951662cf49::t_3990147612c7de 169
+  s_b040951662cf49::t_82b57c08abab6a 151
+Sources/DevmachineApp/MachinesSettingsView.swift
+  s_b040951662cf49::t_7fd61ce8785e33 1-138
+Sources/DevmachineApp/DemoAddMachine.swift
+  s_b040951662cf49::t_8995b5b089d4c1 23-24
+  s_b040951662cf49::t_d0e8bd757a78a7 97
+  s_b040951662cf49::t_4694079085e712 67-73
+  s_b040951662cf49::t_f78f2e33d145d1 1-10,25-66,74-96,98-122
+  s_b040951662cf49::t_355fac28acbfbf 11-22
+Sources/DevmachineCore/AppSettings.swift
+  s_b040951662cf49::t_ea07c6ef0ebc97 344,347,350
+  s_b040951662cf49::t_570532454a1a6f 367-369,373
+  s_b040951662cf49::t_de144a78056e10 337-338,342-343
+Sources/DevmachineCore/Machines/MachineWizard.swift
+  s_b040951662cf49::t_2c5753f0e91433 1-62,70-112,120-162
+  s_b040951662cf49::t_b1dbaddb8298cd 63-69
+  s_b040951662cf49::t_d49736f37acdf9 113-119
+Tests/DevmachineAppTests/DMComponentsRenderTests.swift
+  s_b040951662cf49::t_bc75cf313cafaa 79-86
+Sources/DevmachineApp/AppPage.swift
+  s_b040951662cf49::t_4744b2f3924401 8-9
+Sources/DevmachineApp/Components/DMChoiceCard.swift
+  s_b040951662cf49::t_210ab1f18a6f30 1-67
+Tests/DevmachineAppTests/DMComponentsFitTests.swift
+  s_b040951662cf49::t_759bdbae37a51c 54-58
+CLAUDE.md
+  s_b040951662cf49::t_cfe4af134b7f11 696-725
+Sources/DevmachineApp/DevmachineApp.swift
+  s_b040951662cf49::t_55f811a7fcefe1 73
+Sources/DevmachineApp/ContentView.swift
+  s_b040951662cf49::t_90e3fdd39b3247 315
+Sources/DevmachineApp/SetupPage.swift
+  s_b040951662cf49::t_c9792aac56a0c6 8,13
+  s_b040951662cf49::t_5922d8eb881485 27
+  s_b040951662cf49::t_f2d9ee89bf3587 41
+  s_b040951662cf49::t_0c5d722f6d8015 148,152-154,156-157
+  s_b040951662cf49::t_9aa83940064172 280
+  s_92bb525d33fb4e::t_bc28c8a4bba1d0 350,359
+Tests/DevmachineAppTests/AddMachineTests.swift
+  s_b040951662cf49::t_162bca467f7516 1-49,51-317
+  s_b040951662cf49::t_45bcb8c92be25b 50
+Sources/DevmachineCore/FileUpload.swift
+  s_b040951662cf49::t_7d6717efc1b39a 178
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "4994de9d1aa6697b63fc013408b49da8e1a1c6a3",
+  "prompts": {},
+  "sessions": {
+    "s_92bb525d33fb4e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "agent-a65f07a670888c0f6",
+        "model": "unknown"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    },
+    "s_b040951662cf49": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "f4e3d292-63fb-49a6-b181-1db1a3a0bccb",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
