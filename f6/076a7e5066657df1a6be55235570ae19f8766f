@@ -1,0 +1,81 @@
+CLAUDE.md
+  s_b040951662cf49::t_75d10440029ef2 596-597,765-797
+Sources/DevmachineApp/AddMachineModel.swift
+  s_b040951662cf49::t_5f3dc1a3628a2b 1-76
+Sources/DevmachineApp/AddMachinePage.swift
+  s_b040951662cf49::t_b67e847eb46d05 1-526
+Sources/DevmachineApp/AddMachineSidebarButton.swift
+  s_b040951662cf49::t_bacdbc27d92862 1-22
+Sources/DevmachineApp/AppPage.swift
+  s_b040951662cf49::t_489eadf70b8c8b 8-9
+Sources/DevmachineApp/Components/DMChoiceCard.swift
+  s_b040951662cf49::t_a90cb63d95edfd 1-67
+Sources/DevmachineApp/ContentView.swift
+  s_b040951662cf49::t_3b745e93943e98 315
+Sources/DevmachineApp/DemoAddMachine.swift
+  s_b040951662cf49::t_b5d9d9cc669206 1-122
+Sources/DevmachineApp/DemoData.swift
+  s_b040951662cf49::t_79b71dd0b35a20 245
+Sources/DevmachineApp/DemoMachines.swift
+  s_b040951662cf49::t_2e3ca733780708 1-75
+Sources/DevmachineApp/DemoSnapshots.swift
+  s_b040951662cf49::t_fb44aa0a46f7fb 317-319,471-476
+Sources/DevmachineApp/DevmachineApp.swift
+  s_b040951662cf49::t_d93ba5980ee490 74
+Sources/DevmachineApp/DevmachineCLI.swift
+  s_b040951662cf49::t_8a00fa46e69b9d 148-149,157,162,169,183,206-207,472-479
+Sources/DevmachineApp/MachineStepRunner.swift
+  s_b040951662cf49::t_d6e5eb3b0f33b7 1-170
+Sources/DevmachineApp/MachinesSettingsView.swift
+  s_b040951662cf49::t_d676b8fe8b6d71 1-138
+Sources/DevmachineApp/MachinesStore.swift
+  s_b040951662cf49::t_dbbe9dfc9521af 1-134
+Sources/DevmachineApp/Palette/CommandRegistry.swift
+  s_b040951662cf49::t_8b11f9a5f3f722 63-66
+Sources/DevmachineApp/SetupPage.swift
+  s_b040951662cf49::t_abda2c218a3724 8,13,27,41,151,155-157,164-165,293,357,362
+Sources/DevmachineApp/SidebarView.swift
+  s_b040951662cf49::t_93906e0d2ae05d 14,34,40-44
+Sources/DevmachineApp/TerminalRegistry.swift
+  s_b040951662cf49::t_5fb71ae3529f47 175-179
+Sources/DevmachineCore/AppSettings.swift
+  s_b040951662cf49::t_7cf3f78340345d 342-343,347-349,360,365,379-381,385
+Sources/DevmachineCore/FileUpload.swift
+  s_b040951662cf49::t_72b7f9e98ce5ab 178
+Sources/DevmachineCore/Machines/MachineDraft.swift
+  s_b040951662cf49::t_d16812bc867660 1-130
+Sources/DevmachineCore/Machines/MachinePlan.swift
+  s_b040951662cf49::t_26b9f0470babaa 1-177
+Sources/DevmachineCore/Machines/MachineWizard.swift
+  s_b040951662cf49::t_e824b78db7bca7 1-162
+Tests/DevmachineAppTests/AddMachineTests.swift
+  s_b040951662cf49::t_4f3ee6ac024cc0 1-317
+Tests/DevmachineAppTests/DMComponentsFitTests.swift
+  s_b040951662cf49::t_779d9d737a25cb 54-58
+Tests/DevmachineAppTests/DMComponentsRenderTests.swift
+  s_b040951662cf49::t_95531d343131c9 79-86
+Tests/DevmachineCoreTests/AppSettingsTests.swift
+  s_b040951662cf49::t_1118b8f6c625be 72,81,95,97-113
+Tests/DevmachineCoreTests/Machines/MachineDraftTests.swift
+  s_b040951662cf49::t_b31a2c185b040d 1-113
+Tests/DevmachineCoreTests/Machines/MachinePlanTests.swift
+  s_b040951662cf49::t_74ffd90e0c4ab4 1-135
+Tests/DevmachineCoreTests/Machines/MachineWizardTests.swift
+  s_b040951662cf49::t_bfbbee9efde552 1-154
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "f6076a7e5066657df1a6be55235570ae19f8766f",
+  "prompts": {},
+  "sessions": {
+    "s_b040951662cf49": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "f4e3d292-63fb-49a6-b181-1db1a3a0bccb",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
