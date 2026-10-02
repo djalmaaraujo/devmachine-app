@@ -1,0 +1,52 @@
+Sources/DevmachineApp/SidebarView.swift
+  s_bd193e2d2e6bb0::t_0897a7e28978d5 381-383
+Sources/DevmachineApp/Harnesses/HarnessIconLibrary.swift
+  s_bd193e2d2e6bb0::t_af4bc0d108fad8 11-14,18-23,26,32-36,40,42-49,52-54,60-63
+Sources/DevmachineApp/DemoSnapshots.swift
+  s_bd193e2d2e6bb0::t_3d7b276a416a50 496-497
+  s_bd193e2d2e6bb0::t_fd5190d09e48a5 181-186
+CLAUDE.md
+  s_bd193e2d2e6bb0::t_a5edf3128bade8 538-548,551
+Resources/HarnessIcons/LICENSE-lobe-icons.txt
+  s_bd193e2d2e6bb0::t_49d73a833f1eff 1-15
+Resources/HarnessIcons/LICENSE-orca.txt
+  s_bd193e2d2e6bb0::t_f343bb656d90ee 1-3,5-8
+Resources/HarnessIcons/antigravity-color.svg
+  s_bd193e2d2e6bb0::t_d9485d74d07686 1
+Resources/HarnessIcons/antigravity.svg
+  s_bd193e2d2e6bb0::t_f6c1871b49cf49 1
+Resources/HarnessIcons/claude-color.svg
+  s_bd193e2d2e6bb0::t_660e49ccc92ae5 1
+Resources/HarnessIcons/claude.svg
+  s_bd193e2d2e6bb0::t_96fda4adfbe403 1
+Resources/HarnessIcons/codex-color.svg
+  s_bd193e2d2e6bb0::t_c2d4ffac569cb9 1
+Resources/HarnessIcons/kimi-color.svg
+  s_bd193e2d2e6bb0::t_8af8efab69a12e 1
+Sources/DevmachineApp/SetupPage.swift
+  s_bd193e2d2e6bb0::t_043023fee1b037 115,143,811-825,1100
+Sources/DevmachineCore/AppSettings.swift
+  s_bd193e2d2e6bb0::t_45905b538aba76 103-105,169,193,215,247,303
+Sources/DevmachineCore/CodingHarness.swift
+  s_bd193e2d2e6bb0::t_1fbb9ac7f20166 19-32
+Tests/DevmachineAppTests/HarnessIconTests.swift
+  s_bd193e2d2e6bb0::t_f530ed89d46b36 15-17,25-29,34-60,62-63,66,68-69,74,76,83,87,90,92-104,106-107,111
+Tests/DevmachineCoreTests/AppSettingsTests.swift
+  s_bd193e2d2e6bb0::t_04c3148fae6a27 538-570
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "e4b79591df6264f4f6debc5a8f01e0da2a1a116d",
+  "prompts": {},
+  "sessions": {
+    "s_bd193e2d2e6bb0": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "12d751aa-cf31-4b28-ba1c-670b2a613d1c",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
