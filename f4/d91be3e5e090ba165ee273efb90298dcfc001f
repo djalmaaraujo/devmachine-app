@@ -1,0 +1,34 @@
+Tests/DevmachineCoreTests/LocalShellTests.swift
+  s_22c0db1d6b6dad::t_c19352e3f1a2f1 1-118
+Sources/DevmachineCore/LocalShell.swift
+  s_22c0db1d6b6dad::t_91ead383015bf7 1-154
+Tests/DevmachineAppTests/ShellIntegrationTerminalTests.swift
+  s_22c0db1d6b6dad::t_d5d9f13e50a5c2 1-24
+Tests/DevmachineCoreTests/ShellIntegrationShellTests.swift
+  s_22c0db1d6b6dad::t_552b18b6c64b8d 1-117
+  s_22c0db1d6b6dad::t_05e1b7b4521f7f 118-124
+CLAUDE.md
+  s_22c0db1d6b6dad::t_64d687659c1535 370-383
+Sources/DevmachineApp/TerminalRegistry.swift
+  s_22c0db1d6b6dad::t_0ab80839f76864 424,427-430,439-441,774-792
+Sources/DevmachineCore/Zmx.swift
+  s_22c0db1d6b6dad::t_07cca30a7bd4fd 37-41,61-65,67,70
+Tests/DevmachineCoreTests/ZmxTests.swift
+  s_22c0db1d6b6dad::t_afb7d3b624b08a 26-28,32-38
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "f4d91be3e5e090ba165ee273efb90298dcfc001f",
+  "prompts": {},
+  "sessions": {
+    "s_22c0db1d6b6dad": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "5502cddc-8893-4de4-99df-139701669111",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
