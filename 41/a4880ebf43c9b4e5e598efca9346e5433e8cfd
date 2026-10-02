@@ -1,0 +1,31 @@
+Sources/DevmachineApp/DemoMachineReady.swift
+  s_b040951662cf49::t_d3206f98f652a8 12
+Sources/DevmachineApp/DemoSnapshots.swift
+  s_b040951662cf49::t_3e8d695d7ab6f8 663,665-667,671,673
+Sources/DevmachineApp/OnboardingModel.swift
+  s_b040951662cf49::t_e13fe7c0bd5b88 4-7,107-116,127-129,139,169,175-181,184,188,231-248,250-253,256-259
+Sources/DevmachineApp/OnboardingPage.swift
+  s_b040951662cf49::t_4797931c962595 16-18,20,24,29-30,35,45-46,48,57-63,71,107,109,111-122,125,129-131,134-136,143-149,152,161,163-164,167,178,196-215,219-221
+Sources/DevmachineApp/OnboardingRunner.swift
+  s_b040951662cf49::t_6120ee7d9345dd 51-62,74,81,84,86,91,94-95,97-98,106-111
+Sources/DevmachineApp/TerminalRegistry.swift
+  s_b040951662cf49::t_0d2cc28d0a5889 161-167,436-437,449-450
+Tests/DevmachineAppTests/OnboardingModelTests.swift
+  s_b040951662cf49::t_885e869e0a5aa2 36,40,47,49,52,90,92-94,101-102,109-111,246-274,277-278,280,282-345,347,349-355
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "41a4880ebf43c9b4e5e598efca9346e5433e8cfd",
+  "prompts": {},
+  "sessions": {
+    "s_b040951662cf49": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "f4e3d292-63fb-49a6-b181-1db1a3a0bccb",
+        "model": "unknown"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
