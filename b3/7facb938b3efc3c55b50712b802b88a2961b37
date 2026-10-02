@@ -1,0 +1,30 @@
+Tests/DevmachineAppTests/TerminalReturnTests.swift
+  s_b040951662cf49::t_8145262137283c 1-75
+CLAUDE.md
+  s_b040951662cf49::t_d2ef74dda01b09 251-262
+Tests/DevmachineCoreTests/RemoteCommandsTests.swift
+  s_b040951662cf49::t_cfbaa3a52533a2 238,240-265
+Sources/DevmachineCore/RemoteCommands.swift
+  s_b040951662cf49::t_1fd6cb423615db 104-106,108-125
+Sources/DevmachineApp/TerminalRegistry.swift
+  s_b040951662cf49::t_85fbc22f10e110 380
+  s_b040951662cf49::t_9849702d3a3481 322
+  s_b040951662cf49::t_13f14997dcf749 302-321,323-354
+  s_b040951662cf49::t_e17c647f7af122 64-73
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "b37facb938b3efc3c55b50712b802b88a2961b37",
+  "prompts": {},
+  "sessions": {
+    "s_b040951662cf49": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "f4e3d292-63fb-49a6-b181-1db1a3a0bccb",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
