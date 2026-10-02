@@ -1,0 +1,51 @@
+CLAUDE.md
+  s_b040951662cf49::t_59cd059aa6d7f1 737-763
+Sources/DevmachineApp/CaddyService.swift
+  s_b040951662cf49::t_2a7d0726305ff5 102-115
+Sources/DevmachineApp/CaddyStore.swift
+  s_b040951662cf49::t_4fa23709c0632c 93-95,115,119,124-135,279,325,408,414,419,424,431,434,444,450-464
+Sources/DevmachineApp/DNSProviderSetupCard.swift
+  s_b040951662cf49::t_ca931489b4b649 1-372
+Sources/DevmachineApp/DNSSetupStore.swift
+  s_b040951662cf49::t_9b292bb611f620 1-291
+Sources/DevmachineApp/DemoDNSSetup.swift
+  s_b040951662cf49::t_ab00b7fd150e7b 1-79
+Sources/DevmachineApp/DemoData.swift
+  s_b040951662cf49::t_ce1b02ae3c1d44 300-335
+Sources/DevmachineApp/DemoSnapshots.swift
+  s_b040951662cf49::t_5af158f25d5fc4 235-244,316,442-444,523-524
+Sources/DevmachineApp/DevmachineCLI.swift
+  s_b040951662cf49::t_6af7173cd975a5 5,147-152,155,159-162,166-169,179-196,373,395-432
+Sources/DevmachineApp/MachineData.swift
+  s_b040951662cf49::t_e3cbd07b2be108 24
+Sources/DevmachineApp/SubdomainsView.swift
+  s_b040951662cf49::t_3d7d66ff4ebd56 52-54
+Sources/DevmachineCore/DNSProviderSetup.swift
+  s_b040951662cf49::t_52e573ee0b25b8 1-218
+Tests/DevmachineAppTests/CaddyServiceTests.swift
+  s_b040951662cf49::t_bdd5ffd377847b 209
+Tests/DevmachineAppTests/DNSProviderSetupCardTests.swift
+  s_b040951662cf49::t_7dd711cab5d783 1-80
+Tests/DevmachineAppTests/DNSSetupStoreTests.swift
+  s_b040951662cf49::t_a8d6f7db87a185 1-333
+Tests/DevmachineAppTests/DevmachineCLITests.swift
+  s_b040951662cf49::t_838c38d5e7d8e9 35-52,155-156,161-251
+Tests/DevmachineCoreTests/DNSProviderSetupTests.swift
+  s_b040951662cf49::t_ea50922e94a780 1-192
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "e9587b70c5d336b8b27aebbaa4d416b1e4465fee",
+  "prompts": {},
+  "sessions": {
+    "s_b040951662cf49": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "f4e3d292-63fb-49a6-b181-1db1a3a0bccb",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
