@@ -1,0 +1,58 @@
+CLAUDE.md
+  s_bd193e2d2e6bb0::t_593fa39bf5f24f 521-522
+  s_bd193e2d2e6bb0::t_5a548674574492 537-539,542-556
+Resources/HarnessIcons/LICENSE-lobe-icons.txt
+  s_bd193e2d2e6bb0::t_a22aea0f4fa5bd 1-28
+Sources/DevmachineApp/Harnesses/HarnessRegistry.swift
+  s_bd193e2d2e6bb0::t_ae66c93430c6df 14-18,21-26
+README.md
+  s_bd193e2d2e6bb0::t_0c65b0a164702e 39
+  s_bd193e2d2e6bb0::t_dababe169f5e8a 32-37
+  s_bd193e2d2e6bb0::t_5d782da5ee5ec8 38
+Sources/DevmachineApp/Harnesses/CodingHarnessAdapter.swift
+  s_bd193e2d2e6bb0::t_03f5204355c865 110-111
+  s_bd193e2d2e6bb0::t_7326205a0294f6 162-201
+  s_bd193e2d2e6bb0::t_10a592c75fb81f 202
+Tests/DevmachineAppTests/HarnessRegistryTests.swift
+  s_bd193e2d2e6bb0::t_ac0bebec8ef16e 46,75-93
+  s_bd193e2d2e6bb0::t_122886d5f8f246 43-45
+  s_bd193e2d2e6bb0::t_d9870470447c3f 47-49,72-74
+  s_bd193e2d2e6bb0::t_8e30b098e9f553 94-95
+  s_ae4b0d8153b190::t_8ab2bdd363e331 9,39-42,50-71
+Resources/HarnessIcons/antigravity.svg
+  s_bd193e2d2e6bb0::t_5e5a517ac4cc49 1
+Resources/HarnessIcons/cline.svg
+  s_bd193e2d2e6bb0::t_754ab36a088601 1
+Resources/HarnessIcons/kimi.svg
+  s_bd193e2d2e6bb0::t_a75575ad107cba 1
+Resources/HarnessIcons/opencode.svg
+  s_bd193e2d2e6bb0::t_82f1d6f44dca7e 1
+Tests/DevmachineAppTests/AppModelTests.swift
+  s_bd193e2d2e6bb0::t_9f0c38cbc42d4a 171
+Tests/DevmachineAppTests/HarnessIconTests.swift
+  s_bd193e2d2e6bb0::t_dc2f3482751a77 67,71-78
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "54e5906149f313e0c4e3e4de14f68d77b789f21b",
+  "prompts": {},
+  "sessions": {
+    "s_ae4b0d8153b190": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "agent-a2a1e7279af252e9e",
+        "model": "unknown"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    },
+    "s_bd193e2d2e6bb0": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "12d751aa-cf31-4b28-ba1c-670b2a613d1c",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
