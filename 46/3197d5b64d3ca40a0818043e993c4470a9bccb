@@ -1,0 +1,25 @@
+Sources/DevmachineApp/AddMachineModel.swift
+  s_e501c321413d86::t_4295ab8891297b 273-274
+Sources/DevmachineApp/Components/DMReportBugButton.swift
+  s_e501c321413d86::t_27e0ec9753cdae 27-29,36-39
+Sources/DevmachineCore/BugReport.swift
+  s_e501c321413d86::t_dcddd024e1ed4c 18-19,21-24,29-30,124-136
+Tests/DevmachineCoreTests/BugReportTests.swift
+  s_e501c321413d86::t_8d1822a9190ae6 62-85
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "463197d5b64d3ca40a0818043e993c4470a9bccb",
+  "prompts": {},
+  "sessions": {
+    "s_e501c321413d86": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c1c8a0b3-c0c2-4808-a1ec-80e4f419df68",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
