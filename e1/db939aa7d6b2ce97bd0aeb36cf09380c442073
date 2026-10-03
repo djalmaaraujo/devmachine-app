@@ -1,0 +1,34 @@
+Sources/DevmachineApp/Packages/PackageRow.swift
+  s_7b40aac9100bc9::t_b3f084288a4c6b 1-109
+Sources/DevmachineApp/Packages/PackagesSettingsView.swift
+  s_7b40aac9100bc9::t_18a88c6bd4b88d 1-220
+  s_7b40aac9100bc9::t_53cf44ca808fdf 221-225
+Sources/DevmachineApp/Components/DMButtons.swift
+  s_7b40aac9100bc9::t_cd1c5e8aac3b69 89-90,92-93,95,101,110,115-119,124
+Sources/DevmachineApp/Packages/PackagesStore.swift
+  s_7b40aac9100bc9::t_d1e052e4ee7a34 56-57
+Sources/DevmachineApp/SetupPage.swift
+  s_7b40aac9100bc9::t_570dd8bf8db534 8,15,30,45,314
+Tests/DevmachineAppTests/CommandRegistryTests.swift
+  s_7b40aac9100bc9::t_2a93b18d1b7c77 88-93
+Tests/DevmachineAppTests/PackagesPageRenderTests.swift
+  s_7b40aac9100bc9::t_549dad5e46211d 1-102
+Tests/DevmachineAppTests/PaletteDispatcherTests.swift
+  s_7b40aac9100bc9::t_70d3e799212f90 145-150
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "e1db939aa7d6b2ce97bd0aeb36cf09380c442073",
+  "prompts": {},
+  "sessions": {
+    "s_7b40aac9100bc9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "5edfe73e-58ee-43f3-9d33-00e5c0955157",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
