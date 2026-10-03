@@ -1,0 +1,23 @@
+Sources/DevmachineCore/Packages/PackageStatus.swift
+  s_7b40aac9100bc9::t_8687f1bbe8042a 67-70
+Tests/DevmachineCoreTests/Packages/PackageSelectionTests.swift
+  s_7b40aac9100bc9::t_437f5a40c94d5f 52-56
+Tests/DevmachineCoreTests/Packages/PackageStatusTests.swift
+  s_7b40aac9100bc9::t_950864c9b026a9 70-76
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "34d65fa73016def50b4219cc264bd508db85f879",
+  "prompts": {},
+  "sessions": {
+    "s_7b40aac9100bc9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "5edfe73e-58ee-43f3-9d33-00e5c0955157",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
