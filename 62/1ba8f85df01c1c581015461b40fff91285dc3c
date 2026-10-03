@@ -1,0 +1,41 @@
+CLAUDE.md
+  s_e501c321413d86::t_1deaa4ef9d7d66 927-935
+Sources/DevmachineApp/AddMachineModel.swift
+  s_e501c321413d86::t_b1a0ad3f606c4f 14-15,38-39,56,59,88,99-107,218-220,233-235
+Sources/DevmachineApp/AddMachinePage.swift
+  s_e501c321413d86::t_0715f7228bc2a8 197,258-312,539-541,766-768
+Sources/DevmachineApp/DemoAddMachine.swift
+  s_e501c321413d86::t_83a3bb2dc8a626 33-36,54,113-116
+Sources/DevmachineApp/DemoMachines.swift
+  s_e501c321413d86::t_1d54f2e86a6892 65-77
+Sources/DevmachineApp/DemoSetupFlow.swift
+  s_e501c321413d86::t_4c288e206c6a02 39-40
+Sources/DevmachineCore/Machines/LocalMachineSize.swift
+  s_e501c321413d86::t_ec9077551c82eb 1-89
+Sources/DevmachineCore/Machines/MachineDraft.swift
+  s_e501c321413d86::t_0019ddac80501d 26,73-74
+Sources/DevmachineCore/Machines/MachinePlan.swift
+  s_e501c321413d86::t_33325f4a020f5e 155-157
+Sources/DevmachineCore/Machines/MachineWizard.swift
+  s_e501c321413d86::t_57dabe48725d0b 32-34,38,40,58-60,119-123,126
+Tests/DevmachineAppTests/AddMachineTests.swift
+  s_e501c321413d86::t_32f0f561015b7d 340-361
+Tests/DevmachineCoreTests/Machines/LocalMachineSizeTests.swift
+  s_e501c321413d86::t_59ca3f87859cdb 1-86
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "621ba8f85df01c1c581015461b40fff91285dc3c",
+  "prompts": {},
+  "sessions": {
+    "s_e501c321413d86": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c1c8a0b3-c0c2-4808-a1ec-80e4f419df68",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
