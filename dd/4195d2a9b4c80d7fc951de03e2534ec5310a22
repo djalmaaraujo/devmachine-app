@@ -1,0 +1,37 @@
+CLAUDE.md
+  s_e501c321413d86::t_1cbd8319213aff 915
+Sources/DevmachineCore/Machines/MachineDraft.swift
+  s_e501c321413d86::t_4067cf9b3c5e8e 164-165,167-168
+Sources/DevmachineCore/Machines/MachinePlan.swift
+  s_e501c321413d86::t_9ee093c92d91d3 16-18
+Sources/DevmachineCore/Machines/MachineWizard.swift
+  s_e501c321413d86::t_8fe35018600be8 181-183,186-187,195,208-211,215-218,224-225
+Sources/DevmachineCore/Readiness/PackagesLock.swift
+  s_e501c321413d86::t_ff9616a24c0f99 19-20,22,25,39-40,43-44,58,64,70,78-79,81,85-86
+Sources/DevmachineCore/Workspaces/WorkspaceCatalog.swift
+  s_e501c321413d86::t_4a11fc7da121b6 1-148
+Sources/DevmachineCore/Workspaces/WorkspaceFlow.swift
+  s_e501c321413d86::t_264c62dd37ecc5 1-208
+Sources/DevmachineCore/Workspaces/WorkspaceName.swift
+  s_e501c321413d86::t_ffcde09bb28173 1-38
+Sources/DevmachineCore/Workspaces/WorkspacePlan.swift
+  s_e501c321413d86::t_684b0b2d87c86b 1-118
+Tests/DevmachineCoreTests/Workspaces/WorkspacePlanTests.swift
+  s_e501c321413d86::t_deaa5ca23a6e51 1-337
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "dd4195d2a9b4c80d7fc951de03e2534ec5310a22",
+  "prompts": {},
+  "sessions": {
+    "s_e501c321413d86": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c1c8a0b3-c0c2-4808-a1ec-80e4f419df68",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
