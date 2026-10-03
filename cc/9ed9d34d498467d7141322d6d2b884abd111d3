@@ -1,0 +1,47 @@
+CLAUDE.md
+  s_bd193e2d2e6bb0::t_5a5bd417edddb6 516-526
+Sources/DevmachineApp/AppModel.swift
+  s_bd193e2d2e6bb0::t_0ca8370c4bad56 662-663
+Sources/DevmachineApp/CommandPaletteView.swift
+  s_bd193e2d2e6bb0::t_c00ac34d925451 26-28
+Sources/DevmachineApp/DemoData.swift
+  s_bd193e2d2e6bb0::t_6d7253f6ff09ea 541-545,795-802
+Sources/DevmachineApp/DevmachineApp.swift
+  s_bd193e2d2e6bb0::t_8513addd86f2c7 31
+Sources/DevmachineApp/Harnesses/HarnessSettingsFacade.swift
+  s_bd193e2d2e6bb0::t_fca1e6382e19e5 15-55,102-104,106-108,110-140,151,153-155,179
+Sources/DevmachineApp/Palette/CommandRegistry.swift
+  s_bd193e2d2e6bb0::t_d15d164bbbeb9a 190-191
+Sources/DevmachineApp/Palette/PaletteCommand.swift
+  s_bd193e2d2e6bb0::t_ed00f6b67b8a50 84,86-88
+Sources/DevmachineApp/SettingsStore.swift
+  s_bd193e2d2e6bb0::t_01e60732c096b2 21-22
+Sources/DevmachineApp/SetupPage.swift
+  s_bd193e2d2e6bb0::t_1bb3f67da49b12 123-125,216-220,574-578,593-595,606,653,657-658,670,673,733-747
+Sources/DevmachineApp/SidebarView.swift
+  s_bd193e2d2e6bb0::t_ee39530678fd3b 236-238
+Tests/DevmachineAppTests/AppModelTests.swift
+  s_bd193e2d2e6bb0::t_5f1f0c5a7db7b6 48-55,353,371-393,476
+Tests/DevmachineAppTests/CommandRegistryTests.swift
+  s_bd193e2d2e6bb0::t_e334803f505b15 46-57
+Tests/DevmachineAppTests/HarnessSettingsFacadeTests.swift
+  s_bd193e2d2e6bb0::t_8335fa4bf593ef 14-31,45-46,49-93,95-105,124
+Tests/DevmachineAppTests/SetupPageTests.swift
+  s_bd193e2d2e6bb0::t_ccda92e011e15a 39,57-71
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "cc9ed9d34d498467d7141322d6d2b884abd111d3",
+  "prompts": {},
+  "sessions": {
+    "s_bd193e2d2e6bb0": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "12d751aa-cf31-4b28-ba1c-670b2a613d1c",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
