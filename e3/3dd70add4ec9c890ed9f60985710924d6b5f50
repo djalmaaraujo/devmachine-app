@@ -1,0 +1,49 @@
+Sources/DevmachineApp/AppModel.swift
+  s_7b40aac9100bc9::t_3b870db3ebaeb7 47-49
+Sources/DevmachineApp/CaddyStore.swift
+  s_7b40aac9100bc9::t_fde330f53e7586 126
+Sources/DevmachineApp/DNSSetupStore.swift
+  s_7b40aac9100bc9::t_661184a2019d7e 37,44,272
+Sources/DevmachineApp/DemoDNSSetup.swift
+  s_7b40aac9100bc9::t_667d92e4b2ab02 6
+Sources/DevmachineApp/DemoMachineReady.swift
+  s_7b40aac9100bc9::t_4ec45f141fb0c3 39
+Sources/DevmachineApp/DevmachineApp.swift
+  s_7b40aac9100bc9::t_578acdf3e6c4f4 56
+Sources/DevmachineApp/Jobs/JobOutputBuffer.swift
+  s_7b40aac9100bc9::t_a2a904b3db7a8e 1-37
+Sources/DevmachineApp/Jobs/MachineJobCenter.swift
+  s_7b40aac9100bc9::t_40a8db20695ea1 1-256
+Sources/DevmachineApp/Jobs/MachineJobRunning.swift
+  s_7b40aac9100bc9::t_85055115822132 1-22
+Sources/DevmachineApp/MachineReadiness.swift
+  s_7b40aac9100bc9::t_5966eadda5134d 89,104,119,308
+Tests/DevmachineAppTests/DNSSetupStoreTests.swift
+  s_7b40aac9100bc9::t_870c6327a6875e 100
+Tests/DevmachineAppTests/DemoRefusalTests.swift
+  s_7b40aac9100bc9::t_a020d9fb5ea7f6 61
+Tests/DevmachineAppTests/JobOutputBufferTests.swift
+  s_7b40aac9100bc9::t_993f18ad8b31b4 1-22
+Tests/DevmachineAppTests/MachineJobCenterTests.swift
+  s_7b40aac9100bc9::t_89ce48810d1cde 1-180
+Tests/DevmachineAppTests/MachinePrepareEndToEndTests.swift
+  s_7b40aac9100bc9::t_e36c1faec9d9fc 27
+Tests/DevmachineAppTests/MachineReadinessTests.swift
+  s_7b40aac9100bc9::t_b54253abed3b23 95,466
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "e33dd70add4ec9c890ed9f60985710924d6b5f50",
+  "prompts": {},
+  "sessions": {
+    "s_7b40aac9100bc9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "5edfe73e-58ee-43f3-9d33-00e5c0955157",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
