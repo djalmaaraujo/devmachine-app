@@ -1,0 +1,41 @@
+Sources/DevmachineCore/Packages/PackageAvailability.swift
+  s_7b40aac9100bc9::t_f2e48956141ee1 1-39
+Sources/DevmachineCore/Packages/PackageEntry.swift
+  s_7b40aac9100bc9::t_e9f849745c8759 1-34
+Sources/DevmachineCore/Packages/PackageFilter.swift
+  s_7b40aac9100bc9::t_eb4fb89b16882d 1-55
+Sources/DevmachineCore/Packages/PackageSelection.swift
+  s_7b40aac9100bc9::t_65356ca167eeee 1-59
+Sources/DevmachineCore/Packages/PackageStatus.swift
+  s_7b40aac9100bc9::t_1d4557369f87e5 1-69
+Sources/DevmachineCore/Packages/PackageTarget.swift
+  s_7b40aac9100bc9::t_3b3e4b8bd92482 1-39
+Sources/DevmachineCore/Readiness/PackagesLock.swift
+  s_7b40aac9100bc9::t_f837dd3bbd741a 19,21,24,37-43,45,49-50,64,68,71-73,79,87-88,90,94
+Tests/DevmachineCoreTests/MachineReadinessTests.swift
+  s_7b40aac9100bc9::t_6e5c795c3d7df6 48-67
+Tests/DevmachineCoreTests/Packages/PackageAvailabilityTests.swift
+  s_7b40aac9100bc9::t_516033d4bee5e3 1-51
+Tests/DevmachineCoreTests/Packages/PackageFilterTests.swift
+  s_7b40aac9100bc9::t_fcf9c83b312629 1-48
+Tests/DevmachineCoreTests/Packages/PackageSelectionTests.swift
+  s_7b40aac9100bc9::t_906b8fe8508f1e 1-52
+Tests/DevmachineCoreTests/Packages/PackageStatusTests.swift
+  s_7b40aac9100bc9::t_8360ab4d0c0cb4 1-70
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "cec8de69988d025133087ba3f3e6d4f972496369",
+  "prompts": {},
+  "sessions": {
+    "s_7b40aac9100bc9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "5edfe73e-58ee-43f3-9d33-00e5c0955157",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
