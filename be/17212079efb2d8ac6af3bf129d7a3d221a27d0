@@ -1,0 +1,45 @@
+CLAUDE.md
+  s_e501c321413d86::t_551a57443725e9 533-547,1058-1061
+Sources/DevmachineApp/DemoMachines.swift
+  s_e501c321413d86::t_73e21ae0368d7a 54-56
+Sources/DevmachineApp/DemoWorkspaces.swift
+  s_e501c321413d86::t_7d7d5c6b673ea8 25-27,30-33,47-49,57,59
+Sources/DevmachineApp/Harnesses/CodingHarnessAdapter.swift
+  s_e501c321413d86::t_f5d9bdc93b2081 13-16,130-131,146-147,181-184,187,193-194,197,202,207,212
+Sources/DevmachineApp/Harnesses/HarnessSettingsFacade.swift
+  s_e501c321413d86::t_94cf223084ede9 147-163
+Sources/DevmachineApp/MachinesStore.swift
+  s_e501c321413d86::t_ea6e54bcaa25f6 116-122
+Sources/DevmachineApp/SetupPage.swift
+  s_e501c321413d86::t_ebc05aa920b4ba 96,312,565-585,590-591,594-598,600-605,616-618
+Sources/DevmachineApp/WorkspacesPage.swift
+  s_e501c321413d86::t_dd71f9710992fb 176,213-216,223-224,280,292,328,335-336,388-391,406,409,423-428,439-458
+Sources/DevmachineApp/WorkspacesStore.swift
+  s_e501c321413d86::t_5f09e370877b50 68,78-81,88,114-115,118-123
+Sources/DevmachineCore/Workspaces/WorkspaceCatalog.swift
+  s_e501c321413d86::t_ecc81617ece01e 78-81,83-84,86,89,133-161
+Tests/DevmachineAppTests/DemoSnapshotsTests.swift
+  s_e501c321413d86::t_c9d1fcc8b8f535 193-194
+Tests/DevmachineAppTests/HarnessSettingsFacadeTests.swift
+  s_e501c321413d86::t_b4255693b0dcf0 45-69
+Tests/DevmachineAppTests/WorkspacesStoreTests.swift
+  s_e501c321413d86::t_7ea61edcf511cc 38,57,67-68,79-82,106-131
+Tests/DevmachineCoreTests/Workspaces/WorkspacePlanTests.swift
+  s_e501c321413d86::t_fed022af9a9f6f 338-384
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "be17212079efb2d8ac6af3bf129d7a3d221a27d0",
+  "prompts": {},
+  "sessions": {
+    "s_e501c321413d86": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c1c8a0b3-c0c2-4808-a1ec-80e4f419df68",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
