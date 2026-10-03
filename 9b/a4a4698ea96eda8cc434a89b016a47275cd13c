@@ -1,0 +1,61 @@
+Sources/DevmachineApp/ContentView.swift
+  s_e501c321413d86::t_995fb014cc9155 313
+Sources/DevmachineApp/MachineStepRunner.swift
+  s_e501c321413d86::t_bb531567c1f2b5 112-113,117
+Sources/DevmachineApp/Palette/CommandRegistry.swift
+  s_e501c321413d86::t_3f879b3796c7fc 25,64-70
+Sources/DevmachineApp/WorkspacesStore.swift
+  s_e501c321413d86::t_d4e27ccf48fef7 1-250
+Tests/DevmachineAppTests/CommandRegistryTests.swift
+  s_e501c321413d86::t_3e9b8b01d077cf 70-79
+Sources/DevmachineApp/AppModel.swift
+  s_e501c321413d86::t_097d8683896905 417-418,1103-1109
+Sources/DevmachineApp/DevmachineCLI.swift
+  s_e501c321413d86::t_a05cda7d65c1aa 25-38,234-236,479-493
+Sources/DevmachineApp/Palette/PaletteCommand.swift
+  s_e501c321413d86::t_3aefd9dc59809d 38
+Sources/DevmachineApp/SetupPage.swift
+  s_e501c321413d86::t_7f5cd559b200b5 509-526
+Tests/DevmachineAppTests/DemoSnapshotsTests.swift
+  s_e501c321413d86::t_bd3b22abcea346 189-196
+Tests/DevmachineAppTests/DevmachineCLITests.swift
+  s_e501c321413d86::t_c9855fde1b4b28 117-143
+Sources/DevmachineApp/DemoMachines.swift
+  s_e501c321413d86::t_dbd5af7b846e93 37-55,58-81
+Sources/DevmachineApp/DemoSnapshots.swift
+  s_e501c321413d86::t_e20ae638c0119c 344,503-506
+Sources/DevmachineApp/AddMachinePage.swift
+  s_e501c321413d86::t_88eab89fd106f6 797
+Tests/DevmachineAppTests/PaletteDispatcherTests.swift
+  s_e501c321413d86::t_5b06e5d7197f65 134-139
+Sources/DevmachineApp/SidebarView.swift
+  s_e501c321413d86::t_bcacaa8afd1ede 161-166,174
+CLAUDE.md
+  s_e501c321413d86::t_370cd8e1126fb2 1002-1046
+Sources/DevmachineApp/DemoWorkspaces.swift
+  s_e501c321413d86::t_e05e56d88a6b00 1-128
+Tests/DevmachineAppTests/WorkspacesStoreTests.swift
+  s_e501c321413d86::t_0df485142b61d3 1-260
+Sources/DevmachineApp/AppPage.swift
+  s_e501c321413d86::t_7c74a9f9921f6b 10-12
+Sources/DevmachineApp/WorkspacesPage.swift
+  s_e501c321413d86::t_e367bbc15eeac0 1-741
+Sources/DevmachineApp/Palette/PaletteDispatcher.swift
+  s_e501c321413d86::t_a4869f84f26f66 104
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "9ba4a4698ea96eda8cc434a89b016a47275cd13c",
+  "prompts": {},
+  "sessions": {
+    "s_e501c321413d86": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c1c8a0b3-c0c2-4808-a1ec-80e4f419df68",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
