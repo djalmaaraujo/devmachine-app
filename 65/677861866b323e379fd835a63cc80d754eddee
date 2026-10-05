@@ -1,0 +1,46 @@
+Sources/DevmachineApp/Packages/PackagesSettingsView.swift
+  s_e501c321413d86::t_b0cff47e878677 2,5-7,9-14,16-17,20-22,25-36,38-63,67-77,80,84-85,97,100-108,111-112,132-141,143,149,154-155,160-163,174-186,193-319,332-374,376-403,406-408,410-418,420-423,428,431,439-442,452-457,459,465
+  s_e501c321413d86::t_028022d511495f 466-467,470-471
+Sources/DevmachineApp/Packages/PackageRow.swift
+  s_e501c321413d86::t_3029fe0c0561c8 4-6,9,11-13,18-21,53-61,66-67,70-77,80-84,88-119,123-150
+Sources/DevmachineApp/AppModel.swift
+  s_e501c321413d86::t_30dd4bfc14b46e 665-674
+Sources/DevmachineApp/Components/DMDropdown.swift
+  s_e501c321413d86::t_13d0bf8a7ce611 1-86
+Sources/DevmachineApp/Packages/DemoPackages.swift
+  s_e501c321413d86::t_09f8c1c1f74545 39,41-45,71-73,75-77
+Sources/DevmachineApp/Packages/PackagesStore.swift
+  s_e501c321413d86::t_80983a5a942a76 121-124,130,133,135-152,154,157,162-167
+Sources/DevmachineCore/Packages/PackageBatch.swift
+  s_e501c321413d86::t_28dfa75fd4bca1 1-88
+Tests/DevmachineAppTests/DMComponentsFitTests.swift
+  s_e501c321413d86::t_c82b4b280ec5ad 58-60
+Tests/DevmachineAppTests/DMComponentsRenderTests.swift
+  s_e501c321413d86::t_37115d5e011b0d 67-68
+Tests/DevmachineAppTests/DemoSnapshotsTests.swift
+  s_e501c321413d86::t_c0549277d79231 265,267-276
+Tests/DevmachineAppTests/PackagesPageLogicTests.swift
+  s_e501c321413d86::t_e38db7e611309f 9,18-25,28-32,35-40,43-52,55-61,64-69,72-75,78-84,87-94,97-101
+Tests/DevmachineAppTests/PackagesPageRenderTests.swift
+  s_e501c321413d86::t_3f805b31161936 37,43-45,62-65
+Tests/DevmachineAppTests/PackagesStoreTests.swift
+  s_e501c321413d86::t_553e609427426a 35,54,80,92
+Tests/DevmachineCoreTests/Packages/PackageBatchTests.swift
+  s_e501c321413d86::t_15368415c1d0f6 1-57
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "65677861866b323e379fd835a63cc80d754eddee",
+  "prompts": {},
+  "sessions": {
+    "s_e501c321413d86": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c1c8a0b3-c0c2-4808-a1ec-80e4f419df68",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
