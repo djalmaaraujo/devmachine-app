@@ -1,0 +1,21 @@
+Sources/DevmachineApp/CaddyStore.swift
+  s_e501c321413d86::t_076391843a6389 266-272,283,293,303,314,330,333,335
+Tests/DevmachineAppTests/CaddyStoreTests.swift
+  s_e501c321413d86::t_6aa1089fc123cf 9-15,38-39,117-128
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "4378783077b61c9c08f03b3d39dc00f8e48b5fb1",
+  "prompts": {},
+  "sessions": {
+    "s_e501c321413d86": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c1c8a0b3-c0c2-4808-a1ec-80e4f419df68",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
