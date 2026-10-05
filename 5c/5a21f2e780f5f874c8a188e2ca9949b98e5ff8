@@ -1,0 +1,23 @@
+Sources/DevmachineCore/Workspace.swift
+  s_e501c321413d86::t_7be53bb4e650a0 51-55
+Sources/DevmachineCore/Workspaces/WorkspaceSettingsList.swift
+  s_e501c321413d86::t_acb826712a2ffc 1-74
+Tests/DevmachineCoreTests/Workspaces/WorkspaceSettingsListTests.swift
+  s_e501c321413d86::t_025883bb7a5c7a 1-74
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "5c5a21f2e780f5f874c8a188e2ca9949b98e5ff8",
+  "prompts": {},
+  "sessions": {
+    "s_e501c321413d86": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c1c8a0b3-c0c2-4808-a1ec-80e4f419df68",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
