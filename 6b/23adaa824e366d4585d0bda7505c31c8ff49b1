@@ -1,0 +1,33 @@
+Sources/DevmachineApp/Machines/NetworkMapWallpaper.swift
+  s_e501c321413d86::t_cfdf3d47ddded8 1-38
+Sources/DevmachineApp/SetupPage.swift
+  s_e501c321413d86::t_a742b56112fc1c 97-98,1054,1060-1068,1126-1143,1160-1161,1169,1187,1193
+Sources/DevmachineApp/WallpaperBackground.swift
+  s_e501c321413d86::t_332fc975f6b038 40,51-61,64-69,97-98
+Sources/DevmachineCore/WallpaperLibrary.swift
+  s_e501c321413d86::t_c30bce9e7883be 101-102,109,121-122,139-140
+Tests/DevmachineAppTests/SetupPageTests.swift
+  s_e501c321413d86::t_5e3d0b884dd89b 140-144,168
+Tests/DevmachineAppTests/WallpaperStoreTests.swift
+  s_e501c321413d86::t_824a6470860574 244-265,386-404
+Tests/DevmachineCoreTests/AppSettingsTests.swift
+  s_e501c321413d86::t_d34416d383118f 189-195
+Tests/DevmachineCoreTests/WallpaperLibraryTests.swift
+  s_e501c321413d86::t_7776c0adf241ef 147,170-192
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "6b23adaa824e366d4585d0bda7505c31c8ff49b1",
+  "prompts": {},
+  "sessions": {
+    "s_e501c321413d86": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c1c8a0b3-c0c2-4808-a1ec-80e4f419df68",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
