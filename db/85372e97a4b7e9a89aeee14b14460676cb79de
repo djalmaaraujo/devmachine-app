@@ -1,0 +1,51 @@
+Sources/DevmachineApp/Components/DMPictureChoice.swift
+  s_e501c321413d86::t_8e6fb20e25fa9c 1-72
+Sources/DevmachineApp/DemoMapWallpaper.swift
+  s_e501c321413d86::t_f038d97b285dc1 6-11,20-26,29-37,42,46,49-50,54,58
+Sources/DevmachineApp/HomeView.swift
+  s_e501c321413d86::t_fc483ae8b82dfb 134-148,150
+Sources/DevmachineApp/Machines/NetworkMapView.swift
+  s_e501c321413d86::t_86a89a3e89de6c 83-85,89,132,134-139
+Sources/DevmachineApp/SetupPage.swift
+  s_e501c321413d86::t_f9c01775f98217 101-105,1003,1006-1007,1010-1018,1027-1116,1120-1125,1133,1141-1146,1157,1181-1182,1191,1195,1202,1295-1352
+Sources/DevmachineApp/WallpaperBackground.swift
+  s_e501c321413d86::t_89e0913578f3e2 27-28,70,72
+Sources/DevmachineApp/WallpaperStore.swift
+  s_e501c321413d86::t_c7a630c78d6d50 74
+Sources/DevmachineCore/Machines/NetworkMapBackdrop.swift
+  s_e501c321413d86::t_c05d048e3cf3e5 48-68,86-91,95-96,101,157-173
+Sources/DevmachineCore/WallpaperLibrary.swift
+  s_e501c321413d86::t_ad7f39dea96d55 62,97-104,110,113,130-132,149,151-189
+Tests/DevmachineAppTests/DMComponentsFitTests.swift
+  s_e501c321413d86::t_60842ac76a3d3f 73-80
+Tests/DevmachineAppTests/DMComponentsRenderTests.swift
+  s_e501c321413d86::t_c435cca5957e8b 96-102
+Tests/DevmachineAppTests/DemoSnapshotsTests.swift
+  s_e501c321413d86::t_1f9400d8d1b2ca 198,201-202,204-206
+Tests/DevmachineAppTests/SetupPageTests.swift
+  s_e501c321413d86::t_22c6440e1509c7 134-137,152-153,156-162
+Tests/DevmachineAppTests/WallpaperStoreTests.swift
+  s_e501c321413d86::t_31f016b699dd60 119,257,260,394-398,402
+Tests/DevmachineCoreTests/AppSettingsTests.swift
+  s_e501c321413d86::t_d4ba296f16b800 191,193
+Tests/DevmachineCoreTests/Machines/NetworkMapBackdropTests.swift
+  s_e501c321413d86::t_2a77d5f30283aa 217-278
+Tests/DevmachineCoreTests/WallpaperLibraryTests.swift
+  s_e501c321413d86::t_36336b23063d16 99,147-149,172-180,183-190,212-263
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "db85372e97a4b7e9a89aeee14b14460676cb79de",
+  "prompts": {},
+  "sessions": {
+    "s_e501c321413d86": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c1c8a0b3-c0c2-4808-a1ec-80e4f419df68",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
