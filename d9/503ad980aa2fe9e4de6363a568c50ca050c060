@@ -1,0 +1,19 @@
+Sources/DevmachineCore/Machines/NetworkMapGeometry.swift
+  s_e501c321413d86::t_a2728ee8b0ac78 115,117,119-122,161,165,226
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "d9503ad980aa2fe9e4de6363a568c50ca050c060",
+  "prompts": {},
+  "sessions": {
+    "s_e501c321413d86": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c1c8a0b3-c0c2-4808-a1ec-80e4f419df68",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
