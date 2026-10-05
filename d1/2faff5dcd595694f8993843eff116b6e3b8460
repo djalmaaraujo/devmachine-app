@@ -1,0 +1,24 @@
+Sources/DevmachineApp/DemoMapWallpaper.swift
+  s_e501c321413d86::t_206532b824b201 1-37
+  s_e501c321413d86::t_2bf03eb5385f0c 38-52
+Sources/DevmachineApp/DemoSnapshots.swift
+  s_e501c321413d86::t_163b290644fb8e 374,549-553
+Tests/DevmachineAppTests/DemoSnapshotsTests.swift
+  s_e501c321413d86::t_adf4705075d757 198-203
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "d12faff5dcd595694f8993843eff116b6e3b8460",
+  "prompts": {},
+  "sessions": {
+    "s_e501c321413d86": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c1c8a0b3-c0c2-4808-a1ec-80e4f419df68",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
