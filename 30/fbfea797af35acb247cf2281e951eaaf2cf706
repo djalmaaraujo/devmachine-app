@@ -1,0 +1,19 @@
+README.md
+  s_e1219ff26cf34b::t_58871ee21855b3 45-54
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "30fbfea797af35acb247cf2281e951eaaf2cf706",
+  "prompts": {},
+  "sessions": {
+    "s_e1219ff26cf34b": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "e84950a2-49c3-4760-9997-0737a7d627ff",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
