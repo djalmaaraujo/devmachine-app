@@ -1,0 +1,23 @@
+Tests/DevmachineCoreTests/Workspaces/WorkspacePlanTests.swift
+  s_e501c321413d86::t_1f91564b72d240 281,285,290,292,294-306,308
+Sources/DevmachineCore/Workspaces/WorkspaceFlow.swift
+  s_e501c321413d86::t_5742507877a820 61,73-75,197-198,200-202,204
+Tests/DevmachineAppTests/WorkspacesStoreTests.swift
+  s_e501c321413d86::t_77019ee0a8e049 249
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "58db697050775b05eefd1f5e5271bcdb749050b2",
+  "prompts": {},
+  "sessions": {
+    "s_e501c321413d86": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c1c8a0b3-c0c2-4808-a1ec-80e4f419df68",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
