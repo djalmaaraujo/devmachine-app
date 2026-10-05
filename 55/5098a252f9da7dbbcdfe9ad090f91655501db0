@@ -1,0 +1,23 @@
+Sources/DevmachineApp/Components/MachineJobToast.swift
+  s_e501c321413d86::t_7957321c0c1cc8 132-133
+Sources/DevmachineCore/Jobs/JobProgressLine.swift
+  s_e501c321413d86::t_946a5ea6b0360e 1-27
+Tests/DevmachineCoreTests/Jobs/JobProgressLineTests.swift
+  s_e501c321413d86::t_bbcf538cd9ab2d 1-34
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "555098a252f9da7dbbcdfe9ad090f91655501db0",
+  "prompts": {},
+  "sessions": {
+    "s_e501c321413d86": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c1c8a0b3-c0c2-4808-a1ec-80e4f419df68",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
