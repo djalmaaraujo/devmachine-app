@@ -1,0 +1,29 @@
+Sources/DevmachineApp/DemoMapWallpaper.swift
+  s_e501c321413d86::t_409534036daf96 10-11,28-29,48
+Sources/DevmachineApp/HomeView.swift
+  s_e501c321413d86::t_f28d5a8ec3d36b 38-40,64-69,185-199
+Sources/DevmachineCore/HomeClockPlacement.swift
+  s_e501c321413d86::t_33fe3e172d54a6 1-10
+Tests/DevmachineAppTests/DemoSnapshotsTests.swift
+  s_e501c321413d86::t_fde94cf8b7b62f 202
+Tests/DevmachineAppTests/HomeLayoutTests.swift
+  s_e501c321413d86::t_aed84189cd5aea 62-110
+Tests/DevmachineCoreTests/HomeClockPlacementTests.swift
+  s_e501c321413d86::t_fc13730102ea0a 1-15
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "b88a8be7f32b3a680d10fa90fcb9cebd0c7f35d3",
+  "prompts": {},
+  "sessions": {
+    "s_e501c321413d86": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c1c8a0b3-c0c2-4808-a1ec-80e4f419df68",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
