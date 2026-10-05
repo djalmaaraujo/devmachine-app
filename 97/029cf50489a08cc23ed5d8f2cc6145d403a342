@@ -1,0 +1,28 @@
+Sources/DevmachineApp/Packages/DemoPackages.swift
+  s_7b40aac9100bc9::t_2cc643b3163473 1-165
+  s_7b40aac9100bc9::t_762a5c414578f3 166
+CLAUDE.md
+  s_7b40aac9100bc9::t_316b50a4dd6fc2 214-215,1017-1048
+Sources/DevmachineApp/DemoSnapshots.swift
+  s_7b40aac9100bc9::t_2d59cbfb7a0672 33-35,76,265-275,356,470-471,490,525-528,599-601
+Sources/DevmachineApp/SetupPage.swift
+  s_7b40aac9100bc9::t_d864e8e75e87d5 306
+Tests/DevmachineAppTests/DemoSnapshotsTests.swift
+  s_7b40aac9100bc9::t_8836613a90b3e7 257-297
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "97029cf50489a08cc23ed5d8f2cc6145d403a342",
+  "prompts": {},
+  "sessions": {
+    "s_7b40aac9100bc9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "5edfe73e-58ee-43f3-9d33-00e5c0955157",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}

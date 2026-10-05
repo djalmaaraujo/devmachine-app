@@ -1,0 +1,35 @@
+Sources/DevmachineCore/Jobs/JobFailure.swift
+  s_7b40aac9100bc9::t_c62696f99fc6db 1-10
+Sources/DevmachineCore/Jobs/JobLog.swift
+  s_7b40aac9100bc9::t_f7ba3693d3327a 1-27
+Sources/DevmachineCore/Jobs/SyncRequest.swift
+  s_7b40aac9100bc9::t_ee486b4c8e036f 1-40
+Sources/DevmachineCore/Jobs/SyncSummary.swift
+  s_7b40aac9100bc9::t_8f8d3e097dba1c 1-32
+Sources/DevmachineCore/Readiness/MachineReadiness.swift
+  s_7b40aac9100bc9::t_ce0a2e83d6ef89 133
+Tests/DevmachineCoreTests/Jobs/JobFailureTests.swift
+  s_7b40aac9100bc9::t_a5c23a3f4e2ba1 1-13
+Tests/DevmachineCoreTests/Jobs/JobLogTests.swift
+  s_7b40aac9100bc9::t_3f64204934c614 1-27
+Tests/DevmachineCoreTests/Jobs/SyncRequestTests.swift
+  s_7b40aac9100bc9::t_3211dc4c16992c 1-43
+Tests/DevmachineCoreTests/Jobs/SyncSummaryTests.swift
+  s_7b40aac9100bc9::t_c69fcec4550e44 1-22
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "c2981f550bc9b6d923ff0bb1d5429a75da9c707b",
+  "prompts": {},
+  "sessions": {
+    "s_7b40aac9100bc9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "5edfe73e-58ee-43f3-9d33-00e5c0955157",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
