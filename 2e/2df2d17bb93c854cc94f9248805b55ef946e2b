@@ -1,0 +1,31 @@
+Sources/DevmachineCore/Machines/NetworkMap.swift
+  s_e501c321413d86::t_0ca6ba8ddd219f 1-209
+  s_e501c321413d86::t_f0e17ee6bceceb 210-213
+Tests/DevmachineCoreTests/Machines/NetworkMapTests.swift
+  s_e501c321413d86::t_0ea5879cea34db 1-202
+  s_e501c321413d86::t_97db0acfacb1bf 203-211
+Sources/DevmachineApp/Machines/NetworkMapView.swift
+  s_e501c321413d86::t_49db09672f036c 1-336
+  s_e501c321413d86::t_94d54a808156fa 337-357
+Sources/DevmachineCore/Machines/NetworkMapGeometry.swift
+  s_e501c321413d86::t_7a1a0d447ffb14 1-249
+  s_e501c321413d86::t_c87765ad110527 250-253
+Tests/DevmachineAppTests/NetworkMapSourceTests.swift
+  s_e501c321413d86::t_972eac20c5d4fd 1-38
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "2e2df2d17bb93c854cc94f9248805b55ef946e2b",
+  "prompts": {},
+  "sessions": {
+    "s_e501c321413d86": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c1c8a0b3-c0c2-4808-a1ec-80e4f419df68",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
