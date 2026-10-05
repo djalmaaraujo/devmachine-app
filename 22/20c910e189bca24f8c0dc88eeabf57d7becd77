@@ -1,0 +1,45 @@
+Sources/DevmachineApp/Machines/MachineSettingsRow.swift
+  s_e501c321413d86::t_e28d61493d45f9 1-378
+Sources/DevmachineApp/MachinesSettingsView.swift
+  s_e501c321413d86::t_1458b3054f50e9 4-6,10,12-13,15-16,33-37,48-60,64-65,74-77,93-103,109-134,137-142,144-147,150-168,171-207
+Sources/DevmachineApp/Machines/MachineDetailsStore.swift
+  s_e501c321413d86::t_b4280d0caf9d10 1-146
+Sources/DevmachineApp/DemoMachinesMap.swift
+  s_e501c321413d86::t_1a363e35060e44 1-193
+Sources/DevmachineApp/AppModel.swift
+  s_e501c321413d86::t_a0f633e4a50b5d 424-425,1104-1109
+Sources/DevmachineApp/DemoMachines.swift
+  s_e501c321413d86::t_e76e7c9b6e1132 195-223
+Sources/DevmachineApp/DemoSnapshots.swift
+  s_e501c321413d86::t_247289c3c63992 37-39,79,373,492-493,513,544-547
+Sources/DevmachineApp/DevmachineCLI.swift
+  s_e501c321413d86::t_f144d5a146a050 558-579
+Sources/DevmachineApp/Jobs/MachineJobRunning.swift
+  s_e501c321413d86::t_275050e6ed33c1 20-22
+Sources/DevmachineApp/Machines/MachineLocationField.swift
+  s_e501c321413d86::t_04dd0c085b8d01 29
+Sources/DevmachineApp/SetupPage.swift
+  s_e501c321413d86::t_5f73058978d28a 189-190,219,223-228,308
+Sources/DevmachineCore/Machines/MachineReports.swift
+  s_e501c321413d86::t_73ac774a31f7f3 1-107
+Tests/DevmachineAppTests/MachineDetailsStoreTests.swift
+  s_e501c321413d86::t_44dbbdc4ea185f 1-108
+Tests/DevmachineCoreTests/Machines/MachineReportsTests.swift
+  s_e501c321413d86::t_e71b95a5947407 1-63
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "2220c910e189bca24f8c0dc88eeabf57d7becd77",
+  "prompts": {},
+  "sessions": {
+    "s_e501c321413d86": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c1c8a0b3-c0c2-4808-a1ec-80e4f419df68",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
