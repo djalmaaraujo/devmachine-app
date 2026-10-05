@@ -1,0 +1,23 @@
+Sources/DevmachineCore/Machines/NetworkMapBackdrop.swift
+  s_e501c321413d86::t_0547b3b03cdffc 67-69,83-84,96-98,101-113,143-156,193-200
+Sources/DevmachineCore/Machines/NetworkMapGeometry.swift
+  s_e501c321413d86::t_2fa602bfe6d423 137-144,189-214,233-237,242-247,310-446
+Tests/DevmachineCoreTests/Machines/NetworkMapSpreadTests.swift
+  s_e501c321413d86::t_debccad692dde1 1-261
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "b20da60ae4a1dfe32d50472d408d3eb456b9e18f",
+  "prompts": {},
+  "sessions": {
+    "s_e501c321413d86": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c1c8a0b3-c0c2-4808-a1ec-80e4f419df68",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
