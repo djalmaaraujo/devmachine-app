@@ -1,0 +1,27 @@
+Sources/DevmachineApp/ContentView.swift
+  s_e501c321413d86::t_444280d24d97da 21,36-42,45,307-308
+Sources/DevmachineApp/HomeView.swift
+  s_e501c321413d86::t_4472efb26d5510 80-81,93,130-132,148-156,196,228
+Sources/DevmachineApp/SettingsStore.swift
+  s_e501c321413d86::t_9aa0f8f2a64f6d 45-48,50-56
+Sources/DevmachineCore/FloatingButtonClearance.swift
+  s_e501c321413d86::t_aba0f816ba47f8 1-15
+Tests/DevmachineCoreTests/FloatingButtonClearanceTests.swift
+  s_e501c321413d86::t_a89fcb69506703 1-39
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "57dd0dbe860d9e0ab91b5a27009493ed6c33dfaa",
+  "prompts": {},
+  "sessions": {
+    "s_e501c321413d86": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c1c8a0b3-c0c2-4808-a1ec-80e4f419df68",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
