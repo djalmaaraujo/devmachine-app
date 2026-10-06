@@ -1,0 +1,139 @@
+Sources/DevmachineApp/DevmachineCLI.swift
+  s_87d72b62cfc5a1::t_de8c21322ab86b 542-562
+Sources/DevmachineApp/FileTreeStore.swift
+  s_87d72b62cfc5a1::t_39e11c8f9f144f 230
+  s_87d72b62cfc5a1::t_87689910867f0f 205
+Sources/DevmachineCore/SessionStore.swift
+  s_87d72b62cfc5a1::t_981f7964c564bd 5,7,9
+  s_87d72b62cfc5a1::t_5b0a2331585656 18-19
+  s_87d72b62cfc5a1::t_a58837fb031897 35
+Sources/DevmachineCore/Workspaces/WorkspaceCatalog.swift
+  s_87d72b62cfc5a1::t_8c647e718181de 101-103
+  s_7048fe707f2e5a::t_cd5fa15f6e6fc4 97
+Sources/DevmachineApp/Packages/PackagesSettingsView.swift
+  s_87d72b62cfc5a1::t_94a7b8ebc4d220 191
+  s_87d72b62cfc5a1::t_f6fbb7f73f85cd 437-438,444-445
+  s_87d72b62cfc5a1::t_4424a8420e9d8f 400
+  s_87d72b62cfc5a1::t_a4a424c27c3acc 147
+  s_87d72b62cfc5a1::t_f0b497e9f7b6bf 471-473,475-478
+  s_7048fe707f2e5a::t_c6080c36c25501 207
+Tests/DevmachineCoreTests/RemoteCommandsTests.swift
+  s_87d72b62cfc5a1::t_02d53acc92262b 278-328
+Tests/DevmachineCoreTests/WorktreeOwnershipTests.swift
+  s_87d72b62cfc5a1::t_28d836842b5ba3 276-281
+  s_87d72b62cfc5a1::t_c7baa2be649408 243-275,282-325
+Sources/DevmachineCore/WorktreeAdminRemoval.swift
+  s_87d72b62cfc5a1::t_c475b8aa2bedef 62-64,66
+  s_87d72b62cfc5a1::t_0beeaf4b8155e8 5-6
+  s_87d72b62cfc5a1::t_3689df8612050a 79-88,92-93,96-120,122,125,128-129
+  s_87d72b62cfc5a1::t_6a47bc8252f461 135
+  s_87d72b62cfc5a1::t_927cbb338eb24f 144,147
+  s_87d72b62cfc5a1::t_cb0bc45027a63f 46-47
+  s_87d72b62cfc5a1::t_c439f01188a501 13-15,17,20
+  s_87d72b62cfc5a1::t_49b84073336f73 171-176
+Sources/DevmachineCore/RemoteCommands.swift
+  s_87d72b62cfc5a1::t_c786921967bbc2 3-11,13-20,22,24,29-37,40,43,46
+  s_87d72b62cfc5a1::t_e7d7ec69d8e5bc 283-301
+  s_87d72b62cfc5a1::t_ebcc6da709b26a 12,21,23,25-28,38-39,41-42,44-45,47-49
+Sources/DevmachineApp/Packages/PackageRow.swift
+  s_87d72b62cfc5a1::t_f5c8976fa6bd6c 12-14,24-26,31,35-38
+Tests/DevmachineCoreTests/OwnershipTests.swift
+  s_87d72b62cfc5a1::t_1fba6f2f1a66ef 13-18
+Sources/DevmachineApp/GitStore.swift
+  s_87d72b62cfc5a1::t_d84bb491aa1c0c 20-21
+  s_87d72b62cfc5a1::t_106408b69e9afa 56-57
+  s_87d72b62cfc5a1::t_751fd48fcc81f8 246
+  s_87d72b62cfc5a1::t_78e6af8f526b29 301-302
+Sources/DevmachineApp/WorkspacesStore.swift
+  s_87d72b62cfc5a1::t_cfecd527ce28cb 123-133
+Sources/DevmachineCore/Mosh.swift
+  s_87d72b62cfc5a1::t_eda825f4f52e79 61,63-64
+  s_87d72b62cfc5a1::t_4d7d4c8d2653c1 48-50
+  s_87d72b62cfc5a1::t_0cbc9dfcc18533 62
+  s_87d72b62cfc5a1::t_30e424ccdd294a 65
+Sources/DevmachineCore/Machines/MachineWizard.swift
+  s_87d72b62cfc5a1::t_971d8867f684a0 251-252
+Sources/DevmachineCore/Packages/PackageBatch.swift
+  s_87d72b62cfc5a1::t_fa2b5b12158a27 73-76
+  s_7048fe707f2e5a::t_0ddddaec369883 41-42,53-54,70-71,87-91
+Sources/DevmachineCore/Ownership.swift
+  s_87d72b62cfc5a1::t_8c8de089e0d77f 7-12
+Sources/DevmachineApp/RemoteService.swift
+  s_87d72b62cfc5a1::t_e63e0dc4a77bf1 18,27,31-36
+  s_87d72b62cfc5a1::t_094eb50a8852e3 37
+Sources/DevmachineApp/Machines/MachineSettingsRow.swift
+  s_87d72b62cfc5a1::t_a7ea9d6e7f6e09 142-160
+  s_87d72b62cfc5a1::t_35cbcc75b1ff2c 40
+  s_87d72b62cfc5a1::t_2cfe16a460e383 141
+Sources/DevmachineApp/TerminalRegistry.swift
+  s_87d72b62cfc5a1::t_4e7cd2a02cd024 741-743
+  s_87d72b62cfc5a1::t_a34b41b5c9a188 412
+  s_87d72b62cfc5a1::t_a7850c86940196 432
+Sources/DevmachineApp/MachineReadiness.swift
+  s_87d72b62cfc5a1::t_0e24eec42d4e0e 74
+  s_87d72b62cfc5a1::t_44dd3539c0c5b2 16-26
+Sources/DevmachineApp/CommandTarget.swift
+  s_87d72b62cfc5a1::t_dcd2de8bdb67ff 18-25
+Sources/DevmachineApp/WorktreeRemovalSheet.swift
+  s_87d72b62cfc5a1::t_1d039fc9e912bb 313-314
+Tests/DevmachineAppTests/MachineSystemTests.swift
+  s_87d72b62cfc5a1::t_d482f699df9676 21-25
+  s_87d72b62cfc5a1::t_859241848203b0 1-20,26-146
+Sources/DevmachineApp/Packages/PackagesStore.swift
+  s_87d72b62cfc5a1::t_de2c5ed2841453 47-48,50-54
+  s_87d72b62cfc5a1::t_9bcb56b7eab196 12-15,20-26
+  s_87d72b62cfc5a1::t_fd7fb6d78005a6 27
+Sources/DevmachineApp/AppModel.swift
+  s_87d72b62cfc5a1::t_161553477a2fd6 714-724,728-731
+  s_87d72b62cfc5a1::t_12a03f2a65f7d3 725-727
+Sources/DevmachineCore/Machines/MachineObserved.swift
+  s_87d72b62cfc5a1::t_ab8bfc31004210 1-185
+Sources/DevmachineApp/MachinesStore.swift
+  s_87d72b62cfc5a1::t_8c35a7bad4de18 59-64
+  s_87d72b62cfc5a1::t_ba8dcc58a562e5 84-86,92
+  s_87d72b62cfc5a1::t_8fb24140524d53 15-16,20-24
+  s_87d72b62cfc5a1::t_7995aa75092aac 25
+Tests/DevmachineCoreTests/Packages/PackageBatchTests.swift
+  s_87d72b62cfc5a1::t_54c47ce90cc5b8 58-83
+Tests/DevmachineCoreTests/Machines/MachineObservedTests.swift
+  s_87d72b62cfc5a1::t_f6003c1376f5ae 1-108
+Sources/DevmachineApp/Packages/DemoPackages.swift
+  s_87d72b62cfc5a1::t_fe08a717eb4c8c 126-129
+  s_87d72b62cfc5a1::t_f6918fa39ec3d1 123-125
+  s_87d72b62cfc5a1::t_71f3a17d7bd4ad 130-132
+  s_7048fe707f2e5a::t_dc4788dad61f8f 19,25,40,122,133-139,181,185
+Sources/DevmachineApp/DemoMachines.swift
+  s_87d72b62cfc5a1::t_ba7e97758f962e 108-110,113-114
+Sources/DevmachineApp/DemoSnapshots.swift
+  s_87d72b62cfc5a1::t_9d62f81de9a1a9 313
+Sources/DevmachineCore/Packages/PackageAvailability.swift
+  s_87d72b62cfc5a1::t_85deb83c5cef4a 7-8,17,23-29,33-35,38,44-49
+Tests/DevmachineAppTests/DemoSnapshotsTests.swift
+  s_87d72b62cfc5a1::t_f7193c0b134c77 321,323
+Tests/DevmachineCoreTests/Packages/PackageAvailabilityTests.swift
+  s_87d72b62cfc5a1::t_1a4cf4522a2e95 28,33-72
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "f0975371b9df54346a50b149cc90b579a4d1e966",
+  "prompts": {},
+  "sessions": {
+    "s_7048fe707f2e5a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "agent-ae4aa927be8d54fe4",
+        "model": "unknown"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    },
+    "s_87d72b62cfc5a1": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "5e69ca1d-9900-4500-8ba7-104b479b47eb",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
