@@ -1,0 +1,47 @@
+CLAUDE.md
+  s_4ffa27d7c91191::t_48c57b0020ff1f 613-616,619-624
+README.md
+  s_4ffa27d7c91191::t_c0cd4f79d65810 37
+Resources/HarnessIcons/LICENSE-herdr.txt
+  s_4ffa27d7c91191::t_ea79d603a90859 1-8
+Resources/HarnessIcons/herdr-color.svg
+  s_4ffa27d7c91191::t_6e0e39ef26a4f5 1
+Resources/HarnessIcons/herdr.svg
+  s_4ffa27d7c91191::t_e88554aa0f0472 1
+Sources/DevmachineApp/DemoData.swift
+  s_4ffa27d7c91191::t_0d10adeeff674e 43
+Sources/DevmachineApp/Harnesses/CodingHarnessAdapter.swift
+  s_4ffa27d7c91191::t_aa863b49428ee1 212-216
+Sources/DevmachineApp/Harnesses/HarnessIconLibrary.swift
+  s_4ffa27d7c91191::t_0347ca665b13e5 82-83,87,94,101
+Sources/DevmachineApp/Harnesses/HarnessRegistry.swift
+  s_4ffa27d7c91191::t_f36d114c85d7ad 26-27
+Sources/DevmachineApp/SidebarView.swift
+  s_4ffa27d7c91191::t_4d37d9262a890a 397,419-420,424,437-442
+Sources/DevmachineCore/CodingHarness.swift
+  s_4ffa27d7c91191::t_a31448bb14659a 17
+Tests/DevmachineAppTests/HarnessIconTests.swift
+  s_4ffa27d7c91191::t_e5da6ff21fd1a1 103,109,124,133,149,153,157
+Tests/DevmachineAppTests/HarnessRegistryTests.swift
+  s_4ffa27d7c91191::t_7ef3b0fe29d00f 9,46,95-108
+Tests/DevmachineAppTests/HarnessSettingsFacadeTests.swift
+  s_4ffa27d7c91191::t_500544852784a1 49
+Tests/DevmachineAppTests/OnboardingDemoTests.swift
+  s_4ffa27d7c91191::t_afce7770a0af19 46,49-50
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "e9de66d21bcd54799a9f3b2ed27c1db4fe27463b",
+  "prompts": {},
+  "sessions": {
+    "s_4ffa27d7c91191": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "4cf709e8-0fd8-4478-84ea-de39bd9eccb8",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
