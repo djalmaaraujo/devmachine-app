@@ -192,6 +192,7 @@ enum DemoSnapshots {
         Screen(id: "operator-general", fileName: "201-operator-general.png", settleNanoseconds: 500_000_000),
         Screen(id: "operator-general-off", fileName: "202-operator-general-off.png", settleNanoseconds: 500_000_000),
         Screen(id: "operator-harnesses", fileName: "203-operator-harnesses.png", settleNanoseconds: 500_000_000),
+        Screen(id: "operator-chooser-again", fileName: "204-operator-chooser-again.png", settleNanoseconds: 700_000_000),
     ]
 
     /// The harness icon walk (`DEVMACHINE_DEMO_WALK=harness-icons`): acme's
@@ -606,9 +607,10 @@ enum DemoSnapshots {
             model.clickSession(SessionRef(alias: "globex-devmachine", name: "claude"))
             model.contextTab = .context
         case "operator":
-            model.clickLocalSession(operatorSelection)
+            model.selection = operatorSelection
             model.contextTab = .context
-        case "operator-chooser", "operator-general", "operator-general-off", "operator-harnesses":
+        case "operator-chooser", "operator-general", "operator-general-off", "operator-harnesses",
+             "operator-chooser-again":
             prepareOperator(screen.id, model: model, settingsStore: environment.settingsStore)
         case "subdomains-sites":
             subdomainsInitialTab = .sites
@@ -692,12 +694,12 @@ enum DemoSnapshots {
 
     private static func prepareOperator(_ id: String, model: AppModel, settingsStore: SettingsStore) {
         guard var settings = settingsStore.settings else { return }
-        settings.operatorProgram = id == "operator-harnesses" ? .harness(.codex) : nil
+        settings.operatorProgram = ["operator-harnesses", "operator-chooser-again"].contains(id) ? .harness(.codex) : nil
         settings.operatorSessionEnabled = id != "operator-general-off"
         settingsStore.settings = settings
         model.settings = settings
         switch id {
-        case "operator-chooser":
+        case "operator-chooser", "operator-chooser-again":
             model.clickLocalSession(operatorSelection)
         case "operator-harnesses":
             setupInitialSection = .harnesses

@@ -6,6 +6,6 @@ enum AppPage: Hashable {
     case stack([SessionRef])
     /// The Add machine wizard.
     case addMachine
-    /// The Operator's first open: which installed harness to start it in.
-    case operatorChooser([HarnessID])
+    /// Starting the Operator: which installed harness to run, `last` selected.
+    case operatorChooser([HarnessID], last: SessionLaunchChoice?)
 }

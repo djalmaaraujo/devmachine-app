@@ -1,10 +1,12 @@
 import SwiftUI
 import DevmachineCore
 
-/// The Operator's first open: one card per coding harness on this Mac and a
-/// plain terminal. The pick starts the session and becomes its program.
+/// Starting the Operator: one card per coding harness on this Mac and a
+/// plain terminal, the last pick selected. The pick starts the session and
+/// becomes its program.
 struct OperatorChooserPage: View {
     let harnesses: [HarnessID]
+    var last: SessionLaunchChoice?
     @EnvironmentObject private var model: AppModel
     @EnvironmentObject private var settingsStore: SettingsStore
     @Environment(\.harnessSettingsFacade) private var facade
@@ -17,7 +19,7 @@ struct OperatorChooserPage: View {
                     Text(verbatim: "Open the Operator session with")
                         .font(.dm(17, weight: .semibold))
                         .foregroundStyle(Color.dmRowText)
-                    Text(verbatim: Self.subtitle)
+                    Text(verbatim: last == nil ? Self.subtitle : Self.laterSubtitle)
                         .font(.dm(12))
                         .foregroundStyle(Color.dmMuted)
                         .fixedSize(horizontal: false, vertical: true)
@@ -48,6 +50,8 @@ struct OperatorChooserPage: View {
 
     static let subtitle = "Your workshop for devmachine itself: a session in your configuration folder. "
         + "Pick a coding agent you have on this Mac and it starts by explaining what you can do here."
+    static let laterSubtitle = "Your workshop for devmachine itself: a session in your configuration folder. "
+        + "Your last pick is selected."
 
     private var options: [HarnessLaunchOption] {
         Self.options(for: harnesses, facade: facade)
@@ -64,8 +68,9 @@ struct OperatorChooserPage: View {
         option.choice == .terminal ? "Terminal only" : option.title
     }
 
-    static func detail(for choice: SessionLaunchChoice) -> String {
+    static func detail(for choice: SessionLaunchChoice, firstPick: Bool) -> String {
         guard case let .harness(id) = choice else { return "A plain shell in the configuration folder." }
+        guard firstPick else { return "Starts in the configuration folder." }
         return HarnessPrompt.positional.contains(id)
             ? "Starts by asking: \u{201C}\(HarnessPrompt.operatorIntro)\u{201D}"
             : "Starts in the configuration folder; ask it what you can do here."
@@ -73,7 +78,8 @@ struct OperatorChooserPage: View {
 
     private func card(_ option: HarnessLaunchOption) -> some View {
         DMPictureChoice(
-            title: Self.title(for: option), detail: Self.detail(for: option.choice), selected: false, pictureHeight: 96,
+            title: Self.title(for: option), detail: Self.detail(for: option.choice, firstPick: last == nil),
+            selected: option.choice == last, pictureHeight: 96,
             action: { model.chooseOperatorProgram(option.choice) }
         ) {
             picture(option)

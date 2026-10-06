@@ -5,19 +5,21 @@ final class OperatorLaunchTests: XCTestCase {
     func testTheFirstOpenOffersEveryInstalledHarnessInOrder() {
         XCTAssertEqual(
             OperatorLaunch.plan(isRunning: false, saved: nil, installed: [.claude, .codex, .pi]),
-            .choose([.claude, .codex, .pi]))
+            .choose([.claude, .codex, .pi], last: nil))
     }
 
     func testWithNoHarnessInstalledItOpensTheTerminalWithoutAsking() {
         XCTAssertEqual(OperatorLaunch.plan(isRunning: false, saved: nil, installed: []), .start(.terminal))
+        XCTAssertEqual(OperatorLaunch.plan(isRunning: false, saved: .terminal, installed: []), .start(.terminal))
     }
 
-    func testAChoiceAlreadyMadeStartsStraightAway() {
+    func testAnEndedSessionAsksAgainWithTheLastPickSelected() {
         XCTAssertEqual(
-            OperatorLaunch.plan(isRunning: false, saved: .harness(.codex), installed: [.claude, .codex]),
-            .start(.harness(.codex)))
+            OperatorLaunch.plan(isRunning: false, saved: .harness(.pi), installed: [.claude, .pi]),
+            .choose([.claude, .pi], last: .harness(.pi)))
         XCTAssertEqual(
-            OperatorLaunch.plan(isRunning: false, saved: .terminal, installed: [.claude]), .start(.terminal))
+            OperatorLaunch.plan(isRunning: false, saved: .terminal, installed: [.claude]),
+            .choose([.claude], last: .terminal))
     }
 
     func testARunningSessionIsShownAndNothingIsTyped() {

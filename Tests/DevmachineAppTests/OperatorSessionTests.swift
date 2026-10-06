@@ -95,9 +95,13 @@ final class OperatorSessionTests: XCTestCase {
 
     func testACardSaysWhetherTheHarnessStartsWithTheQuestion() {
         XCTAssertEqual(
-            OperatorChooserPage.detail(for: .harness(.claude)),
+            OperatorChooserPage.detail(for: .harness(.claude), firstPick: true),
             "Starts by asking: \u{201C}Explain to me what I can do here.\u{201D}")
-        XCTAssertFalse(OperatorChooserPage.detail(for: .harness(.pi)).contains("Starts by asking"))
+        XCTAssertFalse(OperatorChooserPage.detail(for: .harness(.pi), firstPick: true).contains("Starts by asking"))
+    }
+
+    func testAfterTheFirstPickNoCardPromisesTheQuestion() {
+        XCTAssertFalse(OperatorChooserPage.detail(for: .harness(.claude), firstPick: false).contains("Starts by asking"))
     }
 
     func testAChosenHarnessWhoseCLIIsGoneStartsAPlainShell() {
@@ -134,8 +138,37 @@ final class OperatorSessionTests: XCTestCase {
         model.clickLocalSession(operatorItem)
 
         try await waitUntil { model.activePage != nil }
-        XCTAssertEqual(model.activePage, .operatorChooser([.claude, .codex]))
+        XCTAssertEqual(model.activePage, .operatorChooser([.claude, .codex], last: nil))
         XCTAssertNil(model.selection)
+    }
+
+    // MARK: Later opens
+
+    func testReopeningAfterTheSessionEndedAsksAgainWithTheLastPickSelected() async throws {
+        let sender = RecordingSender()
+        let model = model(installed: ["claude", "pi"], sender: sender)
+        model.settings = settings(operatorProgram: .harness(.pi))
+
+        model.clickLocalSession(operatorItem)
+
+        try await waitUntil { model.activePage != nil }
+        XCTAssertEqual(model.activePage, .operatorChooser([.claude, .pi], last: .harness(.pi)))
+        XCTAssertNil(model.selection)
+        try await Task.sleep(nanoseconds: 300_000_000)
+        XCTAssertTrue(sender.sent.isEmpty)
+    }
+
+    func testALaterPickStartsTheHarnessWithoutTheQuestion() async throws {
+        let sender = RecordingSender()
+        let model = model(installed: ["claude", "pi"], listing: operatorListing, sender: sender)
+        let store = settingsStore(settings(operatorProgram: .harness(.pi)))
+        model.settings = store.settings
+
+        model.chooseOperatorProgram(.harness(.claude), in: store)
+
+        XCTAssertEqual(store.settings?.operatorProgram, .harness(.claude))
+        try await waitUntil { sender.sent.count == 1 }
+        XCTAssertEqual(sender.sent.first?.command, "claude")
     }
 
     func testPickingAHarnessRemembersItAndStartsItWithTheQuestion() async throws {
@@ -198,7 +231,7 @@ final class OperatorSessionTests: XCTestCase {
         XCTAssertEqual(
             DemoSnapshots.walk(environment: ["DEVMACHINE_DEMO_WALK": "operator"]).map(\.fileName),
             ["200-operator-chooser.png", "201-operator-general.png", "202-operator-general-off.png",
-             "203-operator-harnesses.png"])
+             "203-operator-harnesses.png", "204-operator-chooser-again.png"])
     }
 
     // MARK: Enable switch

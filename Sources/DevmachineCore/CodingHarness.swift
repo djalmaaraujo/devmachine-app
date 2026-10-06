@@ -30,7 +30,7 @@ public enum HarnessIconStyle: String, Codable, Sendable, CaseIterable {
     }
 }
 
-public enum SessionLaunchChoice: Codable, Equatable, Sendable {
+public enum SessionLaunchChoice: Codable, Hashable, Sendable {
     case terminal
     case harness(HarnessID)
     /// A command typed by hand, run as the session's first line the same way

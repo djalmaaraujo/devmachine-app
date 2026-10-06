@@ -647,18 +647,21 @@ Rules:
   `AppModel.openOperatorSession`, which decides with `OperatorLaunch.plan`
   (Core): a shell the multiplexer already holds (`zmx ls`) or a pane already
   started is only shown, never typed into.
-- **The first open asks** (`AppSettings.operatorProgram == nil`): a central
-  page (`AppPage.operatorChooser`, `OperatorChooserPage`) with one
+- **Every start asks**, not only the first: once the shell has exited
+  (`exit` inside it), the next open shows a central page
+  (`AppPage.operatorChooser`, `OperatorChooserPage`) with one
   `DMPictureChoice` per harness whose CLI is on this Mac
   (`HarnessSettingsFacade.installedHarnesses`, turned on or not: the point is
   finding out what you have) and "Terminal only". The pick is saved as
-  `operatorProgram` and starts the session; Claude Code and Codex get
-  `HarnessPrompt.operatorIntro` as their positional first message
-  (`SessionStartup.asking`, shared with Packages' "New package"), any other
-  harness starts plain. Later opens start the saved program without the
-  question; Settings → Harnesses → Session defaults → Operator session
-  changes it (every installed harness offered). A saved harness whose CLI is
-  gone starts a plain shell.
+  `operatorProgram` and starts the session; the next chooser shows it
+  selected (`last`). Settings → Harnesses → Session defaults → Operator
+  session changes that selection. A saved harness whose CLI is gone is
+  offered as "Terminal only".
+- **Only the first pick** (`operatorProgram == nil`) asks the harness what
+  the folder is for: Claude Code and Codex get `HarnessPrompt.operatorIntro`
+  as their positional first message (`SessionStartup.asking`, shared with
+  Packages' "New package"), any other harness starts plain. Later picks start
+  the program plain; asking the same question on every start is noise.
 - **No harness installed: the terminal opens and nothing is saved**, so the
   chooser shows once one is installed. Settings written before this decode
   as not chosen, so an existing Mac sees the chooser once too.
@@ -670,9 +673,10 @@ Rules:
   never killed: turning it on again shows the same session.
 - Demo walk `DEVMACHINE_DEMO_WALK=operator`: `200` the chooser over the demo
   Mac's CLIs, `201`/`202` General with the switch on and off (the sidebar
-  without the row), `203` the Operator's program in Settings → Harnesses.
-  The default walk's demo settings have Claude chosen, so `18-operator` still
-  opens the terminal.
+  without the row), `203` the Operator's program in Settings → Harnesses, `204` the chooser
+  again with Codex as the last pick.
+  `18-operator` selects the Operator directly: through the click it would
+  show the chooser.
 
 ## Performance rules (learned from a 2 GB footprint)
 - Poll only while a view is visible (`onAppear`/`onDisappear` begin/end, refcount),

@@ -167,8 +167,8 @@ final class AppModel: ObservableObject {
     private var operatorLaunchInFlight = false
 
     /// Every way into the Operator comes here (sidebar, ⌘K). A shell the
-    /// multiplexer already holds is only shown. Otherwise the first open asks
-    /// which installed harness to start, and later opens start the answer.
+    /// multiplexer already holds is only shown. Otherwise it asks which
+    /// installed harness to start, the last answer selected.
     func openOperatorSession() {
         guard !operatorLaunchInFlight,
               let session = localSessions.first(where: { $0.handle == Workspace.operatorSession })
@@ -207,18 +207,19 @@ final class AppModel: ObservableObject {
         switch plan {
         case .attach:
             selection = item
-        case let .choose(harnesses):
+        case let .choose(harnesses, last):
             selection = nil
-            activePage = .operatorChooser(harnesses)
+            activePage = .operatorChooser(harnesses, last: last)
         case let .start(choice):
             selection = item
             startOperator(item, startup: .program(choice))
         }
     }
 
-    /// The chooser's answer becomes the Operator's program, and this first
-    /// start asks the harness what the folder is for.
+    /// The chooser's answer becomes the Operator's program. Only the first
+    /// pick asks the harness what the folder is for.
     func chooseOperatorProgram(_ choice: SessionLaunchChoice, in store: SettingsStore = .shared) {
+        let firstPick = (store.settings ?? settings)?.operatorProgram == nil
         if var current = store.settings {
             current.operatorProgram = choice
             store.settings = current
@@ -227,6 +228,10 @@ final class AppModel: ObservableObject {
         guard let session = localSessions.first(where: { $0.handle == Workspace.operatorSession }) else { return }
         let item = SidebarItem.localSession(name: session.handle, path: session.path)
         selection = item
+        guard firstPick else {
+            startOperator(item, startup: .program(choice))
+            return
+        }
         startOperator(item, startup: .asking(
             HarnessPrompt.operatorIntro, with: choice, command: harnessSettingsFacade.startupCommand(for: choice)))
     }
