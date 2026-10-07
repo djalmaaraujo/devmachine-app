@@ -1,0 +1,39 @@
+Sources/DevmachineApp/Widgets/Stack/ContextSectionWidgets.swift
+  s_c1c985d7f57ab9::t_b06beb73d3045d 5-23
+  s_c1c985d7f57ab9::t_8228c8b6483c20 30-31,36-37,39
+  s_c1c985d7f57ab9::t_cbda7328f0ee66 49,54-55
+Sources/DevmachineApp/Widgets/Stack/StackRowModel.swift
+  s_c1c985d7f57ab9::t_5d35330212f086 87-93
+CLAUDE.md
+  s_c1c985d7f57ab9::t_d0c37ea3e47cc1 1011-1018
+Sources/DevmachineApp/Widgets/Stack/PublishPortWidgetView.swift
+  s_c1c985d7f57ab9::t_b412529f5e745d 17-18
+Sources/DevmachineApp/Widgets/Stack/StackAppWidgetView.swift
+  s_c1c985d7f57ab9::t_a5c81e631967c5 8,16-20,24
+Sources/DevmachineApp/Widgets/Stack/StackBoardController.swift
+  s_c1c985d7f57ab9::t_3338bd0b8808d4 259-269
+Sources/DevmachineApp/Widgets/Stack/StackBoardView.swift
+  s_c1c985d7f57ab9::t_1132db6b7ad9a0 197-198,217
+Sources/DevmachineApp/Widgets/Stack/StackHeaderControls.swift
+  s_c1c985d7f57ab9::t_2ada4669aeeb80 10,132-148
+Tests/DevmachineAppTests/StackBoardControllerTests.swift
+  s_c1c985d7f57ab9::t_2e157bf6e23136 272-280
+Tests/DevmachineAppTests/StackRowModelTests.swift
+  s_c1c985d7f57ab9::t_d6420f44e84343 188-219
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "87237289333539a3375bdca0bde5c7908b83c6ab",
+  "prompts": {},
+  "sessions": {
+    "s_c1c985d7f57ab9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b5256304-4a81-480d-a568-f8cf11d8ddcc",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
