@@ -1,0 +1,22 @@
+Tests/DevmachineCoreTests/Widgets/OutputParserTests.swift
+  s_c1c985d7f57ab9::t_987b53ae8c86f6 1-99
+Sources/DevmachineCore/Widgets/OutputParser.swift
+  s_c1c985d7f57ab9::t_330a1aa7364184 98-99
+  s_c1c985d7f57ab9::t_133db1c43f3453 3-4,6-8,11,17-97,100-123
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "55800291d1166b4c819494c0cffb784a2f1fc63c",
+  "prompts": {},
+  "sessions": {
+    "s_c1c985d7f57ab9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b5256304-4a81-480d-a568-f8cf11d8ddcc",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
