@@ -1,0 +1,23 @@
+Sources/DevmachineCore/Widgets/BoardCodec.swift
+  s_c1c985d7f57ab9::t_d41a7fe7e3f476 356
+Sources/DevmachineCore/Widgets/InlineWidgetForm.swift
+  s_c1c985d7f57ab9::t_7f081e206b8d44 152,223,248,259-263
+Tests/DevmachineCoreTests/Widgets/InlineWidgetFormTests.swift
+  s_c1c985d7f57ab9::t_08c492bcadd2b9 160-227
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "2b39aaee934931f13cc707d897b120d9f907b457",
+  "prompts": {},
+  "sessions": {
+    "s_c1c985d7f57ab9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b5256304-4a81-480d-a568-f8cf11d8ddcc",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
