@@ -1,0 +1,25 @@
+Sources/DevmachineCore/Widgets/WidgetRuntime.swift
+  s_c1c985d7f57ab9::t_121dd1d158310e 1-59
+Tests/HarnessUsageKitTests/HarnessUsageStoreTests.swift
+  s_c1c985d7f57ab9::t_1dcd739f5a30bc 155-167
+Tests/DevmachineCoreTests/Widgets/WidgetRuntimeTests.swift
+  s_c1c985d7f57ab9::t_2574fb9fbe5bdc 1-58
+Sources/HarnessUsageKit/HarnessUsageStore.swift
+  s_c1c985d7f57ab9::t_a5a23b626af420 98-102
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "bb87c83294f2bd17531668ca08011871224802f9",
+  "prompts": {},
+  "sessions": {
+    "s_c1c985d7f57ab9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b5256304-4a81-480d-a568-f8cf11d8ddcc",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
