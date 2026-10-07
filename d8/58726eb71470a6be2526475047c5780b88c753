@@ -1,0 +1,28 @@
+Tests/DevmachineAppTests/MachinesFilterTests.swift
+  s_c1c985d7f57ab9::t_c6eb4c55bbc705 1-38
+Sources/DevmachineApp/Widgets/HomeCanvasView.swift
+  s_c1c985d7f57ab9::t_3f5987f7bdc851 183
+  s_c1c985d7f57ab9::t_8cd58781922f3d 364
+Sources/DevmachineApp/Widgets/AppWidgetProviders.swift
+  s_c1c985d7f57ab9::t_e51b4f92433381 19
+Sources/DevmachineApp/Widgets/AppWidgetViews.swift
+  s_c1c985d7f57ab9::t_a78e402ba9e62d 68-86,96,104-105,107,126,130,190,197-198,349,351
+Sources/DevmachineApp/Widgets/DemoWidgets.swift
+  s_c1c985d7f57ab9::t_8137cdfd9956e2 18-25
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "d858726eb71470a6be2526475047c5780b88c753",
+  "prompts": {},
+  "sessions": {
+    "s_c1c985d7f57ab9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b5256304-4a81-480d-a568-f8cf11d8ddcc",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
