@@ -1,0 +1,21 @@
+Tests/DevmachineCoreTests/Widgets/SourceScheduleTests.swift
+  s_c1c985d7f57ab9::t_5601bdae1a5934 44-50
+Sources/DevmachineCore/Widgets/SourceSchedule.swift
+  s_c1c985d7f57ab9::t_758217436fe4ef 3,61-63,72,86,98,104
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "6f4b5bf821c3ef162c24ea6a6a448f86b064ea2b",
+  "prompts": {},
+  "sessions": {
+    "s_c1c985d7f57ab9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b5256304-4a81-480d-a568-f8cf11d8ddcc",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
