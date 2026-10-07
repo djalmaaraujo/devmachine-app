@@ -4,6 +4,7 @@ Sources/DevmachineApp/SetupPage.swift
   s_c1c985d7f57ab9::t_affe68ba1cdf62 126-127
   s_c1c985d7f57ab9::t_a531e2c6f3b566 456-484,491-498
   s_c1c985d7f57ab9::t_becef6559512a8 426
+  s_c1c985d7f57ab9::t_427af6ab39b9a4 485-490
 Sources/DevmachineCore/Widgets/StackBoardCopy.swift
   s_c1c985d7f57ab9::t_f5e88347eb5bbe 1-2,5-29
 ---
