@@ -1,0 +1,23 @@
+Sources/DevmachineApp/WorktreeRemovalSheet.swift
+  s_5ccc211ae481bf::t_8f3a9d9c392ad7 314-315
+Sources/DevmachineCore/WorktreeAdminRemoval.swift
+  s_5ccc211ae481bf::t_0894a0cac9168e 143-148
+Tests/DevmachineCoreTests/WorktreeOwnershipTests.swift
+  s_5ccc211ae481bf::t_c80b49cb4c8ebc 183-192
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "2f03fa90072d26c76d61269160d37a800afc8336",
+  "prompts": {},
+  "sessions": {
+    "s_5ccc211ae481bf": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "570a9526-d48d-41cd-8528-3a3200e0855a",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
