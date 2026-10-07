@@ -1,0 +1,23 @@
+Sources/DevmachineApp/Widgets/TextWidgetViews.swift
+  s_c1c985d7f57ab9::t_ec29461ed499c2 66-88,95,101
+Sources/DevmachineCore/Widgets/ANSIText.swift
+  s_c1c985d7f57ab9::t_d0a47c2f261360 146,161-163,166,169
+Tests/DevmachineAppTests/SourceWidgetLayoutTests.swift
+  s_c1c985d7f57ab9::t_e43da31ae86434 219-232
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "1ae0e4ba9cc254fc435bd5d4c476b4391ece3f19",
+  "prompts": {},
+  "sessions": {
+    "s_c1c985d7f57ab9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b5256304-4a81-480d-a568-f8cf11d8ddcc",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
