@@ -2,7 +2,7 @@ import AppKit
 import SwiftUI
 import DevmachineCore
 
-/// A session ⌘W offers to end: what the dialog names and where it runs.
+/// A session ⌘W or the sidebar offers to end: what the dialog names and where it runs.
 struct SessionEndRequest: Equatable {
     let item: SidebarItem
     let name: String
@@ -35,8 +35,14 @@ extension AppModel {
     @discardableResult
     func requestEndSession() -> Bool {
         guard let item = endableSession else { return false }
-        pendingEndSession = SessionEndRequest(item: item, name: endName(item), place: endPlace(item))
+        askToEndSession(item)
         return true
+    }
+
+    /// The Operator session is not removable, so it is never asked about.
+    func askToEndSession(_ item: SidebarItem) {
+        if case let .localSession(handle, _) = item, handle == Workspace.operatorSession { return }
+        pendingEndSession = SessionEndRequest(item: item, name: endName(item), place: endPlace(item))
     }
 
     func confirmEndSession() {

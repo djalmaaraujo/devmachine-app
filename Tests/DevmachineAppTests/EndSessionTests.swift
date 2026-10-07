@@ -61,6 +61,15 @@ final class EndSessionTests: XCTestCase {
         XCTAssertEqual(model.pendingEndSession?.place, "This Mac")
     }
 
+    func testDeletingAnUnselectedRemoteSessionAsksWithTheSameRequest() {
+        model.clickSession(SessionRef(alias: acme.alias, name: "api"))
+
+        model.askToEndSession(.session(alias: acme.alias, name: "dash"))
+
+        XCTAssertEqual(model.pendingEndSession, SessionEndRequest(
+            item: .session(alias: acme.alias, name: "dash"), name: "dash", place: "acme"))
+    }
+
     func testAFocusedPreviewTabClosesInsteadOfEndingTheSession() {
         model.clickSession(SessionRef(alias: acme.alias, name: "dash"))
         let tab = UUID()

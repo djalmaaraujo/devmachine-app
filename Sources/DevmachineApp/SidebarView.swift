@@ -327,7 +327,7 @@ struct SidebarView: View {
                 }
                 if s.handle != Workspace.operatorSession {
                     Button("Remove", role: .destructive) {
-                        model.askToRemoveLocalSession(handle: s.handle)
+                        model.askToEndSession(.localSession(name: s.handle, path: s.path))
                     }
                 }
             }
@@ -386,7 +386,7 @@ struct SidebarView: View {
                     model.pendingRename = (alias: alias, old: s.name)
                 }
                 Button("Delete", role: .destructive) {
-                    model.pendingDelete = (alias: alias, name: s.name)
+                    model.askToEndSession(.session(alias: alias, name: s.name))
                 }
             }
         }

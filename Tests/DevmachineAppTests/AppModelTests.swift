@@ -1017,22 +1017,23 @@ final class AppModelTests: XCTestCase {
         let model = AppModel(store: SessionStore(runner: BlockingRunner(output: "")))
         model.addLocalSession(path: "/Users/alice/dev/acme")
 
-        model.askToRemoveLocalSession(handle: "acme")
+        model.askToEndSession(.localSession(name: "acme", path: "/Users/alice/dev/acme"))
 
-        XCTAssertEqual(model.pendingLocalDelete?.handle, "acme")
+        XCTAssertEqual(model.pendingEndSession, SessionEndRequest(
+            item: .localSession(name: "acme", path: "/Users/alice/dev/acme"), name: "acme", place: "This Mac"))
         XCTAssertEqual(model.localSessions.map(\.handle), ["Operator", "acme"])
 
-        model.removeLocalSession(handle: "acme")
+        model.confirmEndSession()
 
-        XCTAssertNil(model.pendingLocalDelete)
+        XCTAssertNil(model.pendingEndSession)
         XCTAssertEqual(model.localSessions.map(\.handle), ["Operator"])
     }
 
     @MainActor
     func testTheOperatorSessionIsNeverOfferedForRemoval() {
         let model = AppModel(store: SessionStore(runner: BlockingRunner(output: "")))
-        model.askToRemoveLocalSession(handle: Workspace.operatorSession)
-        XCTAssertNil(model.pendingLocalDelete)
+        model.askToEndSession(.localSession(name: Workspace.operatorSession, path: "/Users/alice/dev/ops"))
+        XCTAssertNil(model.pendingEndSession)
     }
 
     @MainActor

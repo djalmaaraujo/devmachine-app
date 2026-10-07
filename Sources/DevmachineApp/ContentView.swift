@@ -172,36 +172,6 @@ struct ContentView: View {
                     .environmentObject(model)
             }
         }
-        .confirmationDialog(
-            "Delete session \(model.pendingDelete?.name ?? "")? This kills its tmux session.",
-            isPresented: Binding(
-                get: { model.pendingDelete != nil },
-                set: { if !$0 { model.pendingDelete = nil } }
-            ),
-            titleVisibility: .visible
-        ) {
-            Button("Delete", role: .destructive) {
-                if let pending = model.pendingDelete {
-                    model.deleteSession(alias: pending.alias, name: pending.name)
-                }
-            }
-            Button("Cancel", role: .cancel) { model.pendingDelete = nil }
-        }
-        .confirmationDialog(
-            "Remove \(model.pendingLocalDelete?.name ?? "")? This ends the shell it holds.",
-            isPresented: Binding(
-                get: { model.pendingLocalDelete != nil },
-                set: { if !$0 { model.pendingLocalDelete = nil } }
-            ),
-            titleVisibility: .visible
-        ) {
-            Button("Remove", role: .destructive) {
-                if let pending = model.pendingLocalDelete {
-                    model.removeLocalSession(handle: pending.handle)
-                }
-            }
-            Button("Cancel", role: .cancel) { model.pendingLocalDelete = nil }
-        }
         .sheet(isPresented: Binding(
             get: { model.pendingEndSession != nil },
             set: { if !$0 { model.cancelEndSession() } }
