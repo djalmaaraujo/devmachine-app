@@ -1,0 +1,32 @@
+Sources/DevmachineApp/Widgets/WidgetChromeView.swift
+  s_c1c985d7f57ab9::t_78261651cd2e8d 50-51
+  s_c1c985d7f57ab9::t_d0062d7662ee41 153-158
+Sources/DevmachineApp/Widgets/WidgetApprovalCard.swift
+  s_c1c985d7f57ab9::t_8ffc18a2705f2c 92,94
+  s_c1c985d7f57ab9::t_dd1aba28df0083 1-68,70-91,93,95-133
+  s_c1c985d7f57ab9::t_e4cc634b4d00c2 69
+Sources/DevmachineApp/Widgets/HomeBoardController.swift
+  s_c1c985d7f57ab9::t_75174f83baf82c 39,47-48,54-63,231,236-249
+Sources/DevmachineApp/Widgets/HomeCanvasView.swift
+  s_c1c985d7f57ab9::t_6d02abf0e9d65b 62,65-68,172,231,259,261-263,336,338,342-351
+Tests/DevmachineAppTests/HomeBoardControllerTests.swift
+  s_c1c985d7f57ab9::t_42543c351a39dd 34-98
+Tests/DevmachineAppTests/SourceWidgetLayoutTests.swift
+  s_c1c985d7f57ab9::t_ad39f6138f7ad5 201-233
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "077cb48ca07ca99b16c76291a5d176cf2c314b01",
+  "prompts": {},
+  "sessions": {
+    "s_c1c985d7f57ab9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b5256304-4a81-480d-a568-f8cf11d8ddcc",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
