@@ -1,0 +1,21 @@
+Sources/DevmachineCore/Widgets/InlineWidgetForm.swift
+  s_c1c985d7f57ab9::t_00e80b162b3104 1-286
+Tests/DevmachineCoreTests/Widgets/InlineWidgetFormTests.swift
+  s_c1c985d7f57ab9::t_6808f6591fef7e 1-160
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "0045f11b2252fd273875cb57fdab16ca254548d4",
+  "prompts": {},
+  "sessions": {
+    "s_c1c985d7f57ab9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b5256304-4a81-480d-a568-f8cf11d8ddcc",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
