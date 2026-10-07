@@ -1,0 +1,31 @@
+Sources/DevmachineApp/ContentView.swift
+  s_c1c985d7f57ab9::t_0f50c48110b367 110
+  s_c1c985d7f57ab9::t_48f00e207bf734 86-89
+  s_c1c985d7f57ab9::t_eb352de4676cb7 21
+  s_c1c985d7f57ab9::t_69c5c92fed34a1 117
+Tests/DevmachineAppTests/WidgetCompatibilityStoreTests.swift
+  s_c1c985d7f57ab9::t_d2ea3901f37e5a 1-105,120-126
+  s_c1c985d7f57ab9::t_8e8924d07e7aec 106-119
+Sources/DevmachineApp/Widgets/WidgetCompatibilityStore.swift
+  s_c1c985d7f57ab9::t_50ba945810acf7 1-77
+Sources/DevmachineApp/Widgets/WidgetCompatBanner.swift
+  s_c1c985d7f57ab9::t_dd362636de6cbb 1-33
+Sources/DevmachineApp/Updates/UpdateViews.swift
+  s_c1c985d7f57ab9::t_cd13eff67bfa43 109
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "972a826d36bcc2946aa5a5cf7551ce635752932f",
+  "prompts": {},
+  "sessions": {
+    "s_c1c985d7f57ab9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b5256304-4a81-480d-a568-f8cf11d8ddcc",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
