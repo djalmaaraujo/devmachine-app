@@ -1,0 +1,46 @@
+Sources/DevmachineApp/Widgets/WidgetGalleryView.swift
+  s_c1c985d7f57ab9::t_2015acd025578a 1-74
+  s_c1c985d7f57ab9::t_33bdbd1300faa1 75-77
+Sources/DevmachineApp/AppModel.swift
+  s_c1c985d7f57ab9::t_484f7f99d847b9 575,1340-1345
+Sources/DevmachineApp/Palette/CommandRegistry.swift
+  s_c1c985d7f57ab9::t_0639f22c6d79af 113-116
+Sources/DevmachineApp/Palette/PaletteCommand.swift
+  s_c1c985d7f57ab9::t_4fc38841bf13b7 46
+Sources/DevmachineApp/Palette/PaletteDispatcher.swift
+  s_c1c985d7f57ab9::t_a62017d3b3dea9 108
+Sources/DevmachineApp/Widgets/DemoWidgets.swift
+  s_c1c985d7f57ab9::t_9d7a84840f3a39 22-26
+Sources/DevmachineApp/Widgets/HomeBoardController.swift
+  s_c1c985d7f57ab9::t_bb640bd5480051 189-192
+Sources/DevmachineApp/Widgets/HomeCanvasView.swift
+  s_c1c985d7f57ab9::t_807e961e015363 15,18,50-56,66-86,343-375
+Sources/DevmachineCore/Widgets/HomeBoardCopy.swift
+  s_c1c985d7f57ab9::t_eee2ab08402a92 10-13
+Sources/DevmachineCore/Widgets/WidgetResolution.swift
+  s_c1c985d7f57ab9::t_d92ba058ef897b 156-173
+Tests/DevmachineAppTests/CommandRegistryTests.swift
+  s_c1c985d7f57ab9::t_b5b5024f3bde1f 236-241
+Tests/DevmachineAppTests/HomeBoardControllerTests.swift
+  s_c1c985d7f57ab9::t_717990c0a6be3c 192-207
+Tests/DevmachineCoreTests/Widgets/HomeBoardCopyTests.swift
+  s_c1c985d7f57ab9::t_de0a7cf431a41a 14-18
+Tests/DevmachineCoreTests/Widgets/WidgetCatalogTests.swift
+  s_c1c985d7f57ab9::t_f7f2c9212ad321 165-177
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "479441ebc90852cc6cd5c687ec0f57915fb9458e",
+  "prompts": {},
+  "sessions": {
+    "s_c1c985d7f57ab9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b5256304-4a81-480d-a568-f8cf11d8ddcc",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
