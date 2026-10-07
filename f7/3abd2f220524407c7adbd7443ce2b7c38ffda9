@@ -1,0 +1,45 @@
+Tests/DevmachineCoreTests/Widgets/WidgetSourceReaderTests.swift
+  s_c1c985d7f57ab9::t_66a00c04a8aad9 206-218,220,223
+  s_c1c985d7f57ab9::t_78accdf4d0cd8b 180-187,189-190,199-205,219,221-222,224-229
+  s_c1c985d7f57ab9::t_07c1784718131f 188,191-198
+Sources/DevmachineCore/Widgets/WidgetTemplates.swift
+  s_c1c985d7f57ab9::t_ed67b3046c3bef 127
+  s_c1c985d7f57ab9::t_55ee0a59e04f98 97
+  s_c1c985d7f57ab9::t_eef8a97d28994d 125-126
+  s_c1c985d7f57ab9::t_098a50fac8acf6 153-154
+  s_c1c985d7f57ab9::t_df81b682c69652 25-81,83-84,89-96,98-106
+  s_c1c985d7f57ab9::t_3e49a8cbcd88fa 82,85-88
+  s_c1c985d7f57ab9::t_b820a349c619a4 107,111
+Sources/DevmachineCore/Widgets/ArgvBuilder.swift
+  s_c1c985d7f57ab9::t_e2a94988ce46bd 77-82
+  s_c1c985d7f57ab9::t_6e61e955f0379d 70-72
+  s_c1c985d7f57ab9::t_6596ab7f103f19 53-60
+  s_c1c985d7f57ab9::t_40f856541810d8 117,122
+  s_c1c985d7f57ab9::t_f62c6f27bea742 85-86
+Sources/DevmachineCore/Widgets/WidgetSourceReader.swift
+  s_c1c985d7f57ab9::t_1624dbb175fa05 203
+  s_c1c985d7f57ab9::t_edb10c981a45e7 238-254
+  s_c1c985d7f57ab9::t_6a1343bf841a4f 201-202,204
+Tests/DevmachineCoreTests/Widgets/ArgvBuilderTests.swift
+  s_c1c985d7f57ab9::t_491e6ae1e0a421 130-133,137-162,202-219
+  s_c1c985d7f57ab9::t_331c6cabdec6f1 255-259
+  s_c1c985d7f57ab9::t_cda7ac4002fbf8 101-103
+  s_c1c985d7f57ab9::t_ad165bb36802f5 163-201
+  s_c1c985d7f57ab9::t_8ffa87f4077f4e 15-16,25,33-34,43,45,50,53,59,62,67,69,73,80-81,89,99,107,110,115,119,220-221,224,228,232,235,239,246,250
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "f73abd2f220524407c7adbd7443ce2b7c38ffda9",
+  "prompts": {},
+  "sessions": {
+    "s_c1c985d7f57ab9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b5256304-4a81-480d-a568-f8cf11d8ddcc",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
