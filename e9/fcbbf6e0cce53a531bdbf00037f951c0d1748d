@@ -1,0 +1,21 @@
+Sources/DevmachineApp/Widgets/HomeCanvasView.swift
+  s_c1c985d7f57ab9::t_48a3e42c0f35d6 10-17,229
+Tests/DevmachineAppTests/HomeBoardControllerTests.swift
+  s_c1c985d7f57ab9::t_bd83c0ccce0232 88-96
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "e9fcbbf6e0cce53a531bdbf00037f951c0d1748d",
+  "prompts": {},
+  "sessions": {
+    "s_c1c985d7f57ab9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b5256304-4a81-480d-a568-f8cf11d8ddcc",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
