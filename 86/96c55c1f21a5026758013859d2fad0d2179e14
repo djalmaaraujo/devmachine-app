@@ -1,0 +1,28 @@
+Tests/DevmachineAppTests/MenuBarLabelTests.swift
+  s_c1c985d7f57ab9::t_7bf5ff36d5fc9b 24-70
+Sources/DevmachineApp/DevmachineApp.swift
+  s_c1c985d7f57ab9::t_db42c87d379ef6 29-32
+  s_c1c985d7f57ab9::t_9d02ea4a84c474 62-64
+  s_c1c985d7f57ab9::t_969d9f04a6f4cf 229,231,235
+  s_c1c985d7f57ab9::t_19cf1d231d1cdf 10
+  s_c1c985d7f57ab9::t_2f516a2ce8523c 15
+  s_c1c985d7f57ab9::t_06848fca3a39e8 48
+Sources/DevmachineApp/Widgets/Menubar/MenuBarLabelView.swift
+  s_c1c985d7f57ab9::t_a0aca73e85e7df 1-62
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "8696c55c1f21a5026758013859d2fad0d2179e14",
+  "prompts": {},
+  "sessions": {
+    "s_c1c985d7f57ab9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b5256304-4a81-480d-a568-f8cf11d8ddcc",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
