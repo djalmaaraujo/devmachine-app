@@ -1,0 +1,36 @@
+Sources/DevmachineCore/Widgets/WidgetPlacement.swift
+  s_c1c985d7f57ab9::t_7f0c286a6a2604 82-106,110,117,119-134
+  s_c1c985d7f57ab9::t_6d575bd4b9a5ea 155
+Tests/DevmachineAppTests/HomeBoardControllerTests.swift
+  s_c1c985d7f57ab9::t_59f9e8e9373cbe 175-188
+Sources/DevmachineCore/Widgets/StackLayout.swift
+  s_c1c985d7f57ab9::t_ad8c409818bc24 76-77
+Sources/DevmachineApp/Widgets/HomeBoardController.swift
+  s_c1c985d7f57ab9::t_2bfa9e93c5a543 224
+  s_c1c985d7f57ab9::t_c40011d3cf4f92 260
+Sources/DevmachineCore/Widgets/StackResolution.swift
+  s_c1c985d7f57ab9::t_e6dce7833f89ba 109
+  s_c1c985d7f57ab9::t_40f86fb0bd196c 60-61,63
+  s_c1c985d7f57ab9::t_f97caec59671f4 103
+  s_c1c985d7f57ab9::t_2e7bca37d9904a 127
+Tests/DevmachineCoreTests/Widgets/StackResolutionTests.swift
+  s_c1c985d7f57ab9::t_27d2c882cf91c5 124,130-131
+Tests/DevmachineCoreTests/Widgets/WidgetPlacementTests.swift
+  s_c1c985d7f57ab9::t_86de4e381a69ac 44,127-141
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "a2d5f3604ab701cbd0f6df6ee8dda3427ae9ba83",
+  "prompts": {},
+  "sessions": {
+    "s_c1c985d7f57ab9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b5256304-4a81-480d-a568-f8cf11d8ddcc",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
