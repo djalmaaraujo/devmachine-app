@@ -1,0 +1,25 @@
+Sources/DevmachineCore/Widgets/Runners/PackageProviderRunner.swift
+  s_c1c985d7f57ab9::t_fb4093a9ad37af 1-46
+Sources/DevmachineCore/Widgets/ArgvBuilder.swift
+  s_c1c985d7f57ab9::t_55c74bca425710 116-117,127-131
+Tests/DevmachineCoreTests/Widgets/ArgvBuilderTests.swift
+  s_c1c985d7f57ab9::t_591ab50309bc83 375-377
+Tests/DevmachineCoreTests/Widgets/PackageProviderRunnerTests.swift
+  s_c1c985d7f57ab9::t_b1576a377797b4 1-139
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "548b79f6497f3c95756228cbb33086027da05b53",
+  "prompts": {},
+  "sessions": {
+    "s_c1c985d7f57ab9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b5256304-4a81-480d-a568-f8cf11d8ddcc",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
