@@ -1,0 +1,24 @@
+Tests/DevmachineAppTests/SessionDeleteTests.swift
+  s_c1c985d7f57ab9::t_f0201d6db2813a 1-201
+  s_c1c985d7f57ab9::t_08f8b7503d4e9c 202-208
+Sources/DevmachineApp/AppModel.swift
+  s_c1c985d7f57ab9::t_25625bb70ee5e8 784-801,1458,1460-1464,1467,1469-1476,1481-1510,1520-1521,1523,1526-1528,1530-1536,1538-1543,1554,1564-1566,1568-1572,1574,1608,1943,1959-1965,1976,1981-1985,1991-1992
+Sources/DevmachineCore/SessionStore.swift
+  s_c1c985d7f57ab9::t_ea942ee2d8d563 36-44
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "7d113e72c843958f20cf4b35dd40173a2f1eb140",
+  "prompts": {},
+  "sessions": {
+    "s_c1c985d7f57ab9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b5256304-4a81-480d-a568-f8cf11d8ddcc",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
