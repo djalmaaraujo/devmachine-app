@@ -1,0 +1,22 @@
+Tests/DevmachineAppTests/StackBoardLiveTests.swift
+  s_c1c985d7f57ab9::t_38a02621af99d6 65-71
+  s_c1c985d7f57ab9::t_10c750776416b5 1-64,72-113
+CLAUDE.md
+  s_c1c985d7f57ab9::t_acdfccc32658b2 865,867-868,964-1055
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "48709c06dbb0a003c0800ee717ceea22173e595a",
+  "prompts": {},
+  "sessions": {
+    "s_c1c985d7f57ab9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b5256304-4a81-480d-a568-f8cf11d8ddcc",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
