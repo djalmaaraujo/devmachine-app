@@ -1,0 +1,19 @@
+Tests/DevmachineAppTests/WidgetEditLiveTests.swift
+  s_c1c985d7f57ab9::t_fa99d9323798ea 2,8-9,33-39,43-48,99,119-142
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "77a7426364c7ae61bb9d6611e2c7f2bfecaee190",
+  "prompts": {},
+  "sessions": {
+    "s_c1c985d7f57ab9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b5256304-4a81-480d-a568-f8cf11d8ddcc",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
