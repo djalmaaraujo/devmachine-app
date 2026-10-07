@@ -1,0 +1,31 @@
+Sources/DevmachineApp/Widgets/Edit/WidgetEditorView.swift
+  s_c1c985d7f57ab9::t_bc1cbe061726cb 61,109,127,147,153,167,211-212
+Sources/DevmachineCore/Widgets/EntryOverrides.swift
+  s_c1c985d7f57ab9::t_3e3712b9641f17 47-51
+Sources/DevmachineCore/Widgets/InlineBasicsForm.swift
+  s_c1c985d7f57ab9::t_c8b1396b12328d 22-32
+Sources/DevmachineCore/Widgets/InlineWidgetForm.swift
+  s_c1c985d7f57ab9::t_1459fbea1fb2d6 176-187,356,358-364
+Sources/DevmachineCore/Widgets/TypedEntryForm.swift
+  s_c1c985d7f57ab9::t_218c1ac32d6137 40-49
+Tests/DevmachineCoreTests/Widgets/InlineWidgetFormTests.swift
+  s_c1c985d7f57ab9::t_d99f04321f8655 318-342
+Tests/DevmachineCoreTests/Widgets/TypedEntryFormTests.swift
+  s_c1c985d7f57ab9::t_f2e4af74a27fae 177-199
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "1b92319a113c6ed7bfc08e1f077ce5a634c3191c",
+  "prompts": {},
+  "sessions": {
+    "s_c1c985d7f57ab9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b5256304-4a81-480d-a568-f8cf11d8ddcc",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
