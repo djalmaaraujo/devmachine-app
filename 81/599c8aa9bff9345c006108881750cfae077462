@@ -1,0 +1,36 @@
+Sources/DevmachineApp/Widgets/DemoWidgets.swift
+  s_c1c985d7f57ab9::t_03bcb9952a7473 21,24
+Tests/DevmachineCoreTests/Widgets/DefaultHomeBoardTests.swift
+  s_c1c985d7f57ab9::t_cdbcd34ea9acee 1-74
+Tests/DevmachineAppTests/HomeBoardControllerTests.swift
+  s_c1c985d7f57ab9::t_fb68ed5636f25d 186-200
+  s_c1c985d7f57ab9::t_b96085180818b5 27,203,263,350,369,386,431,468
+Sources/DevmachineApp/DevmachineApp.swift
+  s_c1c985d7f57ab9::t_71497656f38bb4 40
+Sources/DevmachineApp/Widgets/HomeBoardController.swift
+  s_c1c985d7f57ab9::t_9d597320a5ab4c 29,101,152-155,158-161
+Sources/DevmachineCore/Widgets/WidgetPlacement.swift
+  s_c1c985d7f57ab9::t_c1740d94e94837 3-4,7-12,14-19,21-23,26,29-32,34-36,38-42
+Tests/DevmachineCoreTests/Widgets/BoardFileWatcherTests.swift
+  s_c1c985d7f57ab9::t_9cecb070b8714d 34,46,58
+Tests/DevmachineCoreTests/Widgets/BoardStoreTests.swift
+  s_c1c985d7f57ab9::t_34c232127f1176 44,70-71,78,82,168,206-207
+Tests/DevmachineCoreTests/Widgets/WidgetPlacementTests.swift
+  s_c1c985d7f57ab9::t_ebe8cdc99cfcc7 55
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "81599c8aa9bff9345c006108881750cfae077462",
+  "prompts": {},
+  "sessions": {
+    "s_c1c985d7f57ab9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b5256304-4a81-480d-a568-f8cf11d8ddcc",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
