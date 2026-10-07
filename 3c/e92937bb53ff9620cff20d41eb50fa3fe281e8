@@ -1,0 +1,23 @@
+Sources/DevmachineCore/Widgets/MenubarLabel.swift
+  s_c1c985d7f57ab9::t_77c76870193bdc 12-13
+  s_c1c985d7f57ab9::t_a29ca258d8da59 1-11,14-132
+Tests/DevmachineCoreTests/Widgets/MenubarLabelModelTests.swift
+  s_c1c985d7f57ab9::t_1de28b7bdda0db 38-39
+  s_c1c985d7f57ab9::t_96af07a412e2b4 1-37,40-116
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "3ce92937bb53ff9620cff20d41eb50fa3fe281e8",
+  "prompts": {},
+  "sessions": {
+    "s_c1c985d7f57ab9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b5256304-4a81-480d-a568-f8cf11d8ddcc",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
