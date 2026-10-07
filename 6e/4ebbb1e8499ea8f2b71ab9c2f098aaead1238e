@@ -1,15 +1,33 @@
 Sources/DevmachineCore/Widgets/Board.swift
   s_c1c985d7f57ab9::t_9186669f0e6cb0 64-88,99,103,112,115-116
+  s_c1c985d7f57ab9::t_fc7f0e91e2e38b 64-88,99,103,112,115-116
 Sources/DevmachineCore/Widgets/BoardCodec.swift
   s_c1c985d7f57ab9::t_136ea3608d2813 9-11,52-53,55,64-66,78-80,82-96,124-178,299-312,327-330
+  s_c1c985d7f57ab9::t_4877362ac45361 9-11,52,64,66,78-80,82-83,85-96,124-128,131-141,145-146,148-153,156-178,299-312,327-330
+  s_c1c985d7f57ab9::t_0b648dee3d0195 53,55,65,84,129-130,142-144,147,154-155
 Sources/DevmachineCore/Widgets/YAMLScalarStyle.swift
   s_c1c985d7f57ab9::t_65f1623741fe5c 66,141-148,152
+  s_c1c985d7f57ab9::t_a65bd4763d59dd 148,152
+  s_c1c985d7f57ab9::t_32fc848bfdecff 66,141-147
 Sources/DevmachineCore/Widgets/YAMLTree.swift
   s_c1c985d7f57ab9::t_40e4dd330a7f04 1-263
+  s_c1c985d7f57ab9::t_3860710fd57604 1-26,63-67,69-70,73,75-87,89-92,99-105,107-109,112-122,124-178
+  s_c1c985d7f57ab9::t_6f26e7999dd0e2 182-201
+  s_c1c985d7f57ab9::t_f3b449a2f5fafc 40,47,93-95,98
+  s_c1c985d7f57ab9::t_a250d3de8e5b83 51,60-61,202-263
+  s_c1c985d7f57ab9::t_c65c75a545a19d 27-39,41-46,48-50,52-59,62,68,71-72,74,88,96-97,106,110-111,123,179-181
 Tests/DevmachineCoreTests/Widgets/BoardCodecTests.swift
   s_c1c985d7f57ab9::t_dfea1acb124c98 274-420,424-431,433-461,463-506
+  s_c1c985d7f57ab9::t_626e2aa48b2b8d 419-420,424-431,433-440
+  s_c1c985d7f57ab9::t_ecb769523dea2a 274-396,415-418,441-461,463-506
+  s_c1c985d7f57ab9::t_43c70cc46a8819 397-414
 Tests/DevmachineCoreTests/Widgets/YAMLTreeTests.swift
   s_c1c985d7f57ab9::t_ccdfe1ea41b504 1-100
+  s_c1c985d7f57ab9::t_3361c75479c19d 1-6,8-44,100
+  s_c1c985d7f57ab9::t_6257297fb8a119 45-55
+  s_c1c985d7f57ab9::t_a7076438d18b08 7
+  s_c1c985d7f57ab9::t_6570f97724e6eb 70-80,98
+  s_c1c985d7f57ab9::t_cb0b0bb8e8e7a1 56-69,81-97,99
 ---
 {
   "schema_version": "authorship/3.0.0",
