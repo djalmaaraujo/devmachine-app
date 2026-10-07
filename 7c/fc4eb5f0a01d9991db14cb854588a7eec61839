@@ -1,0 +1,42 @@
+Tests/DevmachineCoreTests/Widgets/SourceResolutionTests.swift
+  s_c1c985d7f57ab9::t_e523c1601cde78 218-329
+Tests/DevmachineCoreTests/Widgets/WidgetApprovalsTests.swift
+  s_c1c985d7f57ab9::t_7279bce67ce478 232-234
+  s_c1c985d7f57ab9::t_9441a59379ee32 222-231,235-239,241-251
+  s_c1c985d7f57ab9::t_7d99fdf83d5dca 195-221
+  s_c1c985d7f57ab9::t_0941c98b6b1014 240
+Tests/DevmachineCoreTests/Widgets/StackResolutionTests.swift
+  s_c1c985d7f57ab9::t_a5867f986928ee 142-170,172-177
+  s_c1c985d7f57ab9::t_b963cd44ad7469 171
+Sources/DevmachineCore/Widgets/StackResolution.swift
+  s_c1c985d7f57ab9::t_20cc0cf4a6b65f 56-57
+  s_c1c985d7f57ab9::t_9f18b9f02030fe 75
+Sources/DevmachineCore/Widgets/WidgetResolution.swift
+  s_c1c985d7f57ab9::t_6639c89a3d6da0 189,195-197
+  s_c1c985d7f57ab9::t_2dccceff3e65ea 90-94,99-100,110-112
+  s_c1c985d7f57ab9::t_0d3b9d0b4ba86a 243-249,258-259,263-284
+  s_c1c985d7f57ab9::t_ff03834692c20b 161
+  s_c1c985d7f57ab9::t_30530322502960 212,217-221,224-230
+  s_c1c985d7f57ab9::t_e4b169f12bdc56 171-172
+  s_c1c985d7f57ab9::t_486935e6c83a2a 285-286
+Sources/DevmachineCore/Widgets/WidgetApprovals.swift
+  s_c1c985d7f57ab9::t_0b3ddee2cf4a27 27-28
+  s_c1c985d7f57ab9::t_23903d9fd6a480 246
+  s_c1c985d7f57ab9::t_6b1c4978317c64 234-236
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "7cfc4eb5f0a01d9991db14cb854588a7eec61839",
+  "prompts": {},
+  "sessions": {
+    "s_c1c985d7f57ab9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b5256304-4a81-480d-a568-f8cf11d8ddcc",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
