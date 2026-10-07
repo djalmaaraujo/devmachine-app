@@ -1,0 +1,55 @@
+Tests/DevmachineCoreTests/Widgets/StackResolutionTests.swift
+  s_c1c985d7f57ab9::t_97fdb736977635 166
+Sources/DevmachineCore/Widgets/PackageProvider.swift
+  s_c1c985d7f57ab9::t_0ce35d26602f5e 77-79
+  s_c1c985d7f57ab9::t_b033ca3aa712b1 95,97
+Tests/DevmachineCoreTests/Widgets/PackageProviderTests.swift
+  s_c1c985d7f57ab9::t_dfbed3346a2f10 37-53
+Tests/DevmachineCoreTests/Widgets/SourceResolutionTests.swift
+  s_c1c985d7f57ab9::t_c62e27afcce9f3 450-455
+  s_c1c985d7f57ab9::t_7646ca2b40f013 362
+  s_c1c985d7f57ab9::t_2b8c93318b676b 301-304,309-327,344-357,360-361,363-368,370-374,383,385,388-389,396-397,407,415-430,434,456-457
+Tests/DevmachineAppTests/HomeBoardControllerTests.swift
+  s_c1c985d7f57ab9::t_2025b42081d1c6 116,118-130,136-154
+  s_c1c985d7f57ab9::t_e7495476bc6da6 117
+  s_c1c985d7f57ab9::t_62100a469c8b13 131-135
+Tests/DevmachineCoreTests/Widgets/WidgetCatalogTests.swift
+  s_c1c985d7f57ab9::t_14749222fbf3b3 309-317
+  s_e3cda9ce9eed49::t_b9479bf28293b0 319,362
+Sources/DevmachineApp/Widgets/WidgetCatalogStore.swift
+  s_c1c985d7f57ab9::t_28dc23eaa9e032 5,67
+Sources/DevmachineCore/Widgets/StackResolution.swift
+  s_c1c985d7f57ab9::t_3ea5fed567eeb4 54,58-59
+Sources/DevmachineCore/Widgets/WidgetCatalog.swift
+  s_c1c985d7f57ab9::t_e2a465dff8fe05 14-16,55,58-64
+Sources/DevmachineCore/Widgets/WidgetResolution.swift
+  s_c1c985d7f57ab9::t_e76a8b541f1428 157-160,176,193,207,223,237-238,255-256,267,338,353-354
+Tests/DevmachineAppTests/WidgetCatalogStoreTests.swift
+  s_c1c985d7f57ab9::t_7b37c7fda20eab 77-78,80-83
+Tests/DevmachineCoreTests/Fixtures/widgets-list-engine-1.3.json
+  s_c1c985d7f57ab9::t_d584568391e1db 8
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "0bb90b5c8318b74057fcfd81f3272721fbabba95",
+  "prompts": {},
+  "sessions": {
+    "s_c1c985d7f57ab9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b5256304-4a81-480d-a568-f8cf11d8ddcc",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    },
+    "s_e3cda9ce9eed49": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "agent-a128366ca998a5260",
+        "model": "unknown"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
