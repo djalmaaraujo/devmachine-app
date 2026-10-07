@@ -1,0 +1,39 @@
+Sources/DevmachineApp/Widgets/ValueWidgetViews.swift
+  s_c1c985d7f57ab9::t_93ea4fc7ae7d8f 31-32
+Sources/DevmachineCore/Widgets/WidgetContract.swift
+  s_c1c985d7f57ab9::t_60e12187c7e8ae 141-162,195-197,213-215,238-245,272,277-279,285-289,306-307,338-342,363-365,370,375
+Sources/DevmachineCore/Widgets/WidgetView.swift
+  s_c1c985d7f57ab9::t_2debdc2311b45a 83,149-152
+Tests/DevmachineAppTests/StackBoardLiveTests.swift
+  s_c1c985d7f57ab9::t_59914e069e123b 64
+Tests/DevmachineCoreTests/Fixtures/widget-contract-1.4.json
+  s_c1c985d7f57ab9::t_8f69c6a4e7c937 2-3,9-11,22-24,43-47,75-77,81,84-85
+Tests/DevmachineCoreTests/Widgets/BoardCodecStackTests.swift
+  s_c1c985d7f57ab9::t_4e07373ed0776e 177-178,254
+Tests/DevmachineCoreTests/Widgets/BoardCodecTests.swift
+  s_c1c985d7f57ab9::t_3a789306c1b7d7 545
+Tests/DevmachineCoreTests/Widgets/WidgetCatalogTests.swift
+  s_c1c985d7f57ab9::t_6a288b2041f823 146,157
+Tests/DevmachineCoreTests/Widgets/WidgetContractTests.swift
+  s_c1c985d7f57ab9::t_325e6d517907f0 8,14-60
+Tests/DevmachineCoreTests/Widgets/WidgetSourceReaderTests.swift
+  s_c1c985d7f57ab9::t_3dc8ddf52f3dfa 266-268
+Tests/DevmachineCoreTests/Widgets/WidgetViewReaderTests.swift
+  s_c1c985d7f57ab9::t_c3b48cd78ecb2f 57-66
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "f0f2833b2f0e2d13d742363e936560298fafc5f9",
+  "prompts": {},
+  "sessions": {
+    "s_c1c985d7f57ab9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b5256304-4a81-480d-a568-f8cf11d8ddcc",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
