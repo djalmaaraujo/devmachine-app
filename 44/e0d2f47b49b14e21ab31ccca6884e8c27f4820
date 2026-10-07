@@ -1,0 +1,21 @@
+Sources/DevmachineApp/Widgets/Menubar/MenubarController.swift
+  s_c1c985d7f57ab9::t_4f6e66f4eb7280 1-147
+Tests/DevmachineAppTests/MenubarControllerTests.swift
+  s_c1c985d7f57ab9::t_9b0b785f84b385 1-221
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "44e0d2f47b49b14e21ab31ccca6884e8c27f4820",
+  "prompts": {},
+  "sessions": {
+    "s_c1c985d7f57ab9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b5256304-4a81-480d-a568-f8cf11d8ddcc",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
