@@ -1,0 +1,27 @@
+Sources/DevmachineApp/Widgets/Edit/WidgetEditRequest.swift
+  s_c1c985d7f57ab9::t_1cae26f0da1ef4 15
+Sources/DevmachineApp/Widgets/HomeBoardController.swift
+  s_c1c985d7f57ab9::t_76042b58d891e9 293-301,304
+Sources/DevmachineApp/Widgets/Stack/StackBoardController.swift
+  s_c1c985d7f57ab9::t_b40bb975f84604 344-355,358
+Sources/DevmachineCore/Widgets/EntryEdit.swift
+  s_c1c985d7f57ab9::t_75db9b3e5ac859 33-46,89-90,93
+Tests/DevmachineAppTests/BoardEditingControllerTests.swift
+  s_c1c985d7f57ab9::t_a1c53e8bc3c3de 160,201-285
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "5865439f5d25f340ab32eaf2f40269dbc69e565b",
+  "prompts": {},
+  "sessions": {
+    "s_c1c985d7f57ab9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b5256304-4a81-480d-a568-f8cf11d8ddcc",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
