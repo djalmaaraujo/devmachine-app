@@ -1,0 +1,25 @@
+Tests/DevmachineAppTests/StackRowModelTests.swift
+  s_c1c985d7f57ab9::t_bac494a9315989 50-60
+Sources/DevmachineApp/SidebarView.swift
+  s_c1c985d7f57ab9::t_922db538e2002e 8,13,18-19,23-25
+Sources/DevmachineApp/Widgets/Stack/StackAppWidgetView.swift
+  s_c1c985d7f57ab9::t_ffaffb487b4cf8 12-13
+Sources/DevmachineApp/Widgets/Stack/WorkspacesWidgetView.swift
+  s_c1c985d7f57ab9::t_90340139e5c301 1-423
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "bace6f6d1b0aee4ac6e747d4e78cebf0eb1b3f86",
+  "prompts": {},
+  "sessions": {
+    "s_c1c985d7f57ab9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b5256304-4a81-480d-a568-f8cf11d8ddcc",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
