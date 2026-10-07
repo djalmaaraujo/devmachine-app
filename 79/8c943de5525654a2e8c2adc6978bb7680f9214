@@ -1,0 +1,39 @@
+Sources/DevmachineApp/Widgets/HomeCanvasView.swift
+  s_c1c985d7f57ab9::t_b23ab3d4c960fe 225-227
+  s_c1c985d7f57ab9::t_f497e5dafec470 274-278
+  s_c1c985d7f57ab9::t_6fcb13e13feac5 189
+Tests/DevmachineAppTests/WidgetEditorModelTests.swift
+  s_c1c985d7f57ab9::t_464f0f1cde8137 1-54
+Tests/DevmachineAppTests/MenubarEditRowTests.swift
+  s_c1c985d7f57ab9::t_5a4dcddbf23e9c 22-33
+Sources/DevmachineApp/Widgets/WidgetChromeView.swift
+  s_c1c985d7f57ab9::t_8b19807b1c0fb2 52-54
+  s_c1c985d7f57ab9::t_f6654c42bfeefa 215-221
+Sources/DevmachineApp/Widgets/Edit/WidgetChoiceView.swift
+  s_c1c985d7f57ab9::t_08def745064c95 1-92
+Sources/DevmachineApp/Widgets/Stack/StackHeaderControls.swift
+  s_c1c985d7f57ab9::t_06061bbdcca675 18-20
+  s_c1c985d7f57ab9::t_00d5b9e728fa8c 116-122
+Sources/DevmachineApp/Widgets/Stack/StackBoardView.swift
+  s_c1c985d7f57ab9::t_4033065b5f673e 82-84
+  s_c1c985d7f57ab9::t_a7ece9d97b4556 41
+  s_c1c985d7f57ab9::t_7e9cbaa4a600ff 221-223
+Sources/DevmachineApp/Widgets/Menubar/MenubarEditView.swift
+  s_c1c985d7f57ab9::t_e0af57ac646c0d 10,13-14,26-27,32-36,43,47-50,74-75,92-111
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "798c943de5525654a2e8c2adc6978bb7680f9214",
+  "prompts": {},
+  "sessions": {
+    "s_c1c985d7f57ab9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b5256304-4a81-480d-a568-f8cf11d8ddcc",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
