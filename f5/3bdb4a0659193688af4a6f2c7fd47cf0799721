@@ -1,0 +1,29 @@
+Package.resolved
+  s_c1c985d7f57ab9::t_228d7b07275140 2,65-73
+Package.swift
+  s_c1c985d7f57ab9::t_2a37b4c5da9149 18-19,22-25,39-40
+Sources/DevmachineCore/Widgets/GoDuration.swift
+  s_c1c985d7f57ab9::t_05d0e420a9774b 1-24
+Sources/DevmachineCore/Widgets/WidgetContract.swift
+  s_c1c985d7f57ab9::t_cb45cfa2bd7cef 1-128
+Tests/DevmachineCoreTests/Fixtures/widget-contract-1.0.json
+  s_c1c985d7f57ab9::t_4605fd970c5fd6 1-40
+Tests/DevmachineCoreTests/Widgets/WidgetContractTests.swift
+  s_c1c985d7f57ab9::t_a3c649a2677063 1-50
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "f53bdb4a0659193688af4a6f2c7fd47cf0799721",
+  "prompts": {},
+  "sessions": {
+    "s_c1c985d7f57ab9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b5256304-4a81-480d-a568-f8cf11d8ddcc",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
