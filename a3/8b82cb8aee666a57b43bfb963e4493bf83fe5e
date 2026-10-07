@@ -1,0 +1,23 @@
+Sources/DevmachineApp/Widgets/Stack/StackBoardView.swift
+  s_c1c985d7f57ab9::t_a2d27e236f9012 289-292
+Sources/DevmachineCore/Widgets/StackBoardCopy.swift
+  s_c1c985d7f57ab9::t_8ad8f2605f58fe 6-11
+Tests/DevmachineCoreTests/Widgets/StackBoardCopyTests.swift
+  s_c1c985d7f57ab9::t_4f7aa736315fe4 22-36
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "a38b82cb8aee666a57b43bfb963e4493bf83fe5e",
+  "prompts": {},
+  "sessions": {
+    "s_c1c985d7f57ab9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b5256304-4a81-480d-a568-f8cf11d8ddcc",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
