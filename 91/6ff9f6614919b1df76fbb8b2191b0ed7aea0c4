@@ -1,0 +1,46 @@
+Sources/DevmachineApp/CommandTarget.swift
+  s_c1c985d7f57ab9::t_7b700c9d37f3f3 69-82
+Tests/DevmachineAppTests/ContextPollRuleTests.swift
+  s_c1c985d7f57ab9::t_2e7a34bd0b54f1 1-13
+Tests/DevmachineAppTests/CommandTargetTests.swift
+  s_c1c985d7f57ab9::t_34b49d577bcd91 67-88
+Sources/DevmachineApp/Widgets/Stack/PublishPortWidgetView.swift
+  s_c1c985d7f57ab9::t_a053f4f0ffb15c 1-19
+Sources/DevmachineApp/Widgets/Stack/StackAppWidgetView.swift
+  s_c1c985d7f57ab9::t_e176edbab31675 9,13-18
+Sources/DevmachineApp/Widgets/Stack/ContextGitStatusStore.swift
+  s_c1c985d7f57ab9::t_7784bb09f063e6 1-26,28-37
+  s_c1c985d7f57ab9::t_e06101442821f3 27
+Sources/DevmachineApp/ShortcutsSection.swift
+  s_c1c985d7f57ab9::t_fbbb781613c331 27
+Tests/DevmachineAppTests/ContextBridgeTests.swift
+  s_c1c985d7f57ab9::t_8947b8c10c584d 1-48
+Sources/DevmachineApp/Widgets/Stack/ContextSidebarBridge.swift
+  s_c1c985d7f57ab9::t_36d3aede0cb97d 1-27
+Tests/DevmachineAppTests/ContextGitStatusStoreTests.swift
+  s_c1c985d7f57ab9::t_3bb5aabd3580ed 1-63
+Sources/DevmachineApp/AppModel.swift
+  s_c1c985d7f57ab9::t_4fa453d86f0e81 620-622,2040-2042
+Sources/DevmachineApp/ContextPanel.swift
+  s_c1c985d7f57ab9::t_6b811c6e256750 38-41,110,113-121,125-130,184-187
+Sources/DevmachineApp/ContextStore.swift
+  s_c1c985d7f57ab9::t_a8ac78a361220a 159-166
+Sources/DevmachineApp/Widgets/Stack/ContextSectionWidgets.swift
+  s_c1c985d7f57ab9::t_0df9cb4cfd65f4 1-394
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "916ff9f6614919b1df76fbb8b2191b0ed7aea0c4",
+  "prompts": {},
+  "sessions": {
+    "s_c1c985d7f57ab9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b5256304-4a81-480d-a568-f8cf11d8ddcc",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
