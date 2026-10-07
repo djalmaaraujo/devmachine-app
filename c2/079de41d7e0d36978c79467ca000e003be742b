@@ -1,0 +1,24 @@
+Tests/DevmachineAppTests/WidgetCatalogStoreTests.swift
+  s_c1c985d7f57ab9::t_475e339a4c24be 1-87
+Sources/DevmachineApp/Widgets/WidgetCatalogStore.swift
+  s_c1c985d7f57ab9::t_138b48aa5f1daf 1-67
+Sources/DevmachineApp/DevmachineCLI.swift
+  s_c1c985d7f57ab9::t_46070f9e9a5eba 344-350,352
+  s_c1c985d7f57ab9::t_d7f826c952fc26 647-658
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "c2079de41d7e0d36978c79467ca000e003be742b",
+  "prompts": {},
+  "sessions": {
+    "s_c1c985d7f57ab9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b5256304-4a81-480d-a568-f8cf11d8ddcc",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
