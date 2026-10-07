@@ -1,0 +1,31 @@
+Sources/DevmachineCore/Widgets/WidgetContract.swift
+  s_c1c985d7f57ab9::t_a48ae935136c5a 163-186,230-232,244-246,302,307-308,353-355,396,484-501
+Tests/DevmachineAppTests/StackBoardLiveTests.swift
+  s_c1c985d7f57ab9::t_af067261c66c52 64
+Tests/DevmachineCoreTests/Fixtures/widget-contract-1.5.json
+  s_c1c985d7f57ab9::t_7c39f43203472d 2,12-29,54,94
+Tests/DevmachineCoreTests/Widgets/BoardCodecStackTests.swift
+  s_c1c985d7f57ab9::t_bd9da1bd37d853 179-180
+Tests/DevmachineCoreTests/Widgets/WidgetCatalogTests.swift
+  s_c1c985d7f57ab9::t_1b384e5e5802a7 146,157
+Tests/DevmachineCoreTests/Widgets/WidgetContractTests.swift
+  s_c1c985d7f57ab9::t_1837a731779827 8,14-34,76
+Tests/DevmachineCoreTests/Widgets/WidgetSourceReaderTests.swift
+  s_c1c985d7f57ab9::t_f0e1a35bddbece 266
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "2b6e4c76fd9046c1e7e4a0034eaf1c51c6284c69",
+  "prompts": {},
+  "sessions": {
+    "s_c1c985d7f57ab9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b5256304-4a81-480d-a568-f8cf11d8ddcc",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
