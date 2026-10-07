@@ -1,0 +1,32 @@
+Tests/DevmachineAppTests/MenubarBoardLiveTests.swift
+  s_c1c985d7f57ab9::t_cee75c18dec8b2 99
+  s_c1c985d7f57ab9::t_5648194205d2d8 1-98,100-114
+CLAUDE.md
+  s_c1c985d7f57ab9::t_425776d055022b 67-118
+  s_c1c985d7f57ab9::t_5505fa1e9629a8 1013-1014
+  s_57011e198cf2cc::t_a3aecb2a6409a0 912
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "55b2a4ae623fcf574bbd8e1a7574eced2a0717b0",
+  "prompts": {},
+  "sessions": {
+    "s_57011e198cf2cc": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "agent-a39cf6a3ec2d22066",
+        "model": "unknown"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    },
+    "s_c1c985d7f57ab9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b5256304-4a81-480d-a568-f8cf11d8ddcc",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
