@@ -1,0 +1,24 @@
+Tests/DevmachineAppTests/WidgetSourceControllerTests.swift
+  s_c1c985d7f57ab9::t_ae8b823a31a27a 385-481
+Sources/DevmachineApp/Widgets/WidgetSourceController.swift
+  s_c1c985d7f57ab9::t_efc09f23654246 239-243
+  s_c1c985d7f57ab9::t_4c42d027ea651c 124-142
+  s_c1c985d7f57ab9::t_fbdb42cda9456d 75
+  s_c1c985d7f57ab9::t_d979e7b022783d 56-57
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "f3af085209f2acad11b4017088706869aba436c5",
+  "prompts": {},
+  "sessions": {
+    "s_c1c985d7f57ab9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b5256304-4a81-480d-a568-f8cf11d8ddcc",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
