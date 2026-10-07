@@ -1,0 +1,21 @@
+Sources/DevmachineApp/Widgets/StreamSession.swift
+  s_c1c985d7f57ab9::t_b5f4639193755a 20-33,49,58-64,73,75,80,89,97,108
+Tests/DevmachineAppTests/StreamSessionTests.swift
+  s_c1c985d7f57ab9::t_aabfbbdbcdc175 58-70
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "2eba124f82e3c98e7078e70bce35603c62ec3a5d",
+  "prompts": {},
+  "sessions": {
+    "s_c1c985d7f57ab9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b5256304-4a81-480d-a568-f8cf11d8ddcc",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
