@@ -1,0 +1,45 @@
+Sources/DevmachineApp/DevmachineCLI.swift
+  s_5ccc211ae481bf::t_b0683510f42fa1 61-63,66,81
+Sources/DevmachineApp/GitStore.swift
+  s_5ccc211ae481bf::t_6f87e9ba19a50b 20
+Sources/DevmachineApp/Packages/PackagesSettingsView.swift
+  s_5ccc211ae481bf::t_1e41619fd48ecc 206,399
+Sources/DevmachineApp/Packages/PackagesStore.swift
+  s_5ccc211ae481bf::t_067dbd674ac088 12-13,18-21,41-43,45-46
+Sources/DevmachineApp/WorktreeRemovalSheet.swift
+  s_5ccc211ae481bf::t_2d98d029ba8566 313-314
+Sources/DevmachineCore/Ownership.swift
+  s_5ccc211ae481bf::t_f0ef27dd05d4a5 7-9,11-12
+Sources/DevmachineCore/Packages/PackageAvailability.swift
+  s_5ccc211ae481bf::t_00f2f6eed8ead3 17,27-32,35-37,44-48
+Sources/DevmachineCore/Packages/PackageBatch.swift
+  s_5ccc211ae481bf::t_a6f4fd03c1ca68 41-42,53-54,70,72,84-85
+Sources/DevmachineCore/WorktreeAdminRemoval.swift
+  s_5ccc211ae481bf::t_e8107f33cd9dbc 12-13,15,18,23,31,45,137,139
+Tests/DevmachineAppTests/DevmachineCLITests.swift
+  s_5ccc211ae481bf::t_57c04030e2486a 532-544
+Tests/DevmachineCoreTests/OwnershipTests.swift
+  s_5ccc211ae481bf::t_7c2cc3eed0fd23 8-9
+Tests/DevmachineCoreTests/Packages/PackageAvailabilityTests.swift
+  s_5ccc211ae481bf::t_96366f45d00a85 36-62
+Tests/DevmachineCoreTests/Packages/PackageBatchTests.swift
+  s_5ccc211ae481bf::t_eba61b17993d9f 32-44
+Tests/DevmachineCoreTests/WorktreeOwnershipTests.swift
+  s_5ccc211ae481bf::t_cfeeedb24a11ed 168-182,252,255
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "f19d45f9f316c8df56fcf3185f77ec40f2a1cba5",
+  "prompts": {},
+  "sessions": {
+    "s_5ccc211ae481bf": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "570a9526-d48d-41cd-8528-3a3200e0855a",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
