@@ -1,0 +1,26 @@
+Tests/DevmachineCoreTests/Widgets/BoardStoreTests.swift
+  s_c1c985d7f57ab9::t_fb4ac1e26feff6 217-279
+Sources/DevmachineCore/Widgets/BoardFileStore.swift
+  s_c1c985d7f57ab9::t_a485257ce52d03 160
+  s_c1c985d7f57ab9::t_93e0395c8b16b5 183
+  s_c1c985d7f57ab9::t_10757c49365fd4 121
+  s_c1c985d7f57ab9::t_2e59649f54b7de 76-95
+  s_c1c985d7f57ab9::t_c152f6fd090cd0 8,21,26-27,29-71,101,134,139,148,172,193,202-203
+  s_c1c985d7f57ab9::t_d784bf5bacb4bb 141
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "eaf41dbce86d6c844b0da8f9649fd67a3d47bf92",
+  "prompts": {},
+  "sessions": {
+    "s_c1c985d7f57ab9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b5256304-4a81-480d-a568-f8cf11d8ddcc",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
