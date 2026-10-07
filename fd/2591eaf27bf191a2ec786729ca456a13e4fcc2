@@ -1,0 +1,30 @@
+Tests/DevmachineCoreTests/Widgets/YAMLTreeTests.swift
+  s_c1c985d7f57ab9::t_6570f97724e6eb 70-80,98
+  s_c1c985d7f57ab9::t_cb0b0bb8e8e7a1 56-69,81-97,99
+Sources/DevmachineCore/Widgets/YAMLTree.swift
+  s_c1c985d7f57ab9::t_f3b449a2f5fafc 40,47,93-95,98
+  s_c1c985d7f57ab9::t_a250d3de8e5b83 51,60-61,202-263
+  s_c1c985d7f57ab9::t_c65c75a545a19d 27-39,41-46,48-50,52-59,62,68,71-72,74,88,96-97,106,110-111,123,179-181
+Sources/DevmachineCore/Widgets/BoardCodec.swift
+  s_c1c985d7f57ab9::t_0b648dee3d0195 53,55,65,84,129-130,142-144,147,154-155
+Sources/DevmachineCore/Widgets/YAMLScalarStyle.swift
+  s_c1c985d7f57ab9::t_32fc848bfdecff 66,141-147
+Tests/DevmachineCoreTests/Widgets/BoardCodecTests.swift
+  s_c1c985d7f57ab9::t_43c70cc46a8819 397-414
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "fd2591eaf27bf191a2ec786729ca456a13e4fcc2",
+  "prompts": {},
+  "sessions": {
+    "s_c1c985d7f57ab9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b5256304-4a81-480d-a568-f8cf11d8ddcc",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
