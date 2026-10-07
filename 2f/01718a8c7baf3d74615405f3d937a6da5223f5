@@ -1,0 +1,21 @@
+Sources/DevmachineCore/Widgets/WidgetApprovals.swift
+  s_c1c985d7f57ab9::t_75404edface01f 1-202
+Tests/DevmachineCoreTests/Widgets/WidgetApprovalsTests.swift
+  s_c1c985d7f57ab9::t_8e0201f9d5930b 1-132
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "2f01718a8c7baf3d74615405f3d937a6da5223f5",
+  "prompts": {},
+  "sessions": {
+    "s_c1c985d7f57ab9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b5256304-4a81-480d-a568-f8cf11d8ddcc",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
