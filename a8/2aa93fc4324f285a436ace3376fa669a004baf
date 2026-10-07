@@ -30,6 +30,13 @@ Sources/DevmachineCore/Widgets/WidgetSourceReader.swift
   s_c1c985d7f57ab9::t_a2c34f5bf43163 320,325
   s_c1c985d7f57ab9::t_b8936e84e86536 269,271-272
   s_c1c985d7f57ab9::t_d2321f014dffe7 310
+Sources/DevmachineCore/Widgets/WidgetResolution.swift
+  s_c1c985d7f57ab9::t_ff2e0a4920e9d3 201-208
+  s_c1c985d7f57ab9::t_532400f10c8589 216
+  s_c1c985d7f57ab9::t_25204cb8432540 170-176,183
+  s_c1c985d7f57ab9::t_8c4201a642d0eb 84-86,90,99
+Tests/DevmachineCoreTests/Widgets/SourceResolutionTests.swift
+  s_c1c985d7f57ab9::t_d7cb88ba3398a4 39
 ---
 {
   "schema_version": "authorship/3.0.0",
