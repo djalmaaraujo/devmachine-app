@@ -1,0 +1,25 @@
+Sources/DevmachineCore/Widgets/BoardFileWatcher.swift
+  s_c1c985d7f57ab9::t_6589ca74a0342a 1-59
+Sources/DevmachineCore/Widgets/BoardStore.swift
+  s_c1c985d7f57ab9::t_c6dc7c470e0c7c 1-155
+Tests/DevmachineCoreTests/Widgets/BoardFileWatcherTests.swift
+  s_c1c985d7f57ab9::t_a9111771bcbf2c 1-92
+Tests/DevmachineCoreTests/Widgets/BoardStoreTests.swift
+  s_c1c985d7f57ab9::t_fabd590fe1dfe3 1-189
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "a735a3746b8441948e1058f8c1d63312f142c6aa",
+  "prompts": {},
+  "sessions": {
+    "s_c1c985d7f57ab9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b5256304-4a81-480d-a568-f8cf11d8ddcc",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
