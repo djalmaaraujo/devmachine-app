@@ -1,0 +1,101 @@
+CLAUDE.md
+  s_c1c985d7f57ab9::t_3643b8c2f285fd 910-914,1756-1772
+README.md
+  s_c1c985d7f57ab9::t_23cff817c71dd9 3-7
+Sources/DevmachineApp/AddMachineModel.swift
+  s_c1c985d7f57ab9::t_5e2a9c980108c6 251-252
+Sources/DevmachineApp/AddMachinePage.swift
+  s_c1c985d7f57ab9::t_2ad11557bd14ed 211,310-311,320-321,324-346,863-867,897,911
+Sources/DevmachineApp/AppModel.swift
+  s_c1c985d7f57ab9::t_0644bfa9899f52 549
+Sources/DevmachineApp/DemoMachineReady.swift
+  s_c1c985d7f57ab9::t_d5a091eb8ea736 16-17,26,34,37
+Sources/DevmachineApp/DemoMachines.swift
+  s_c1c985d7f57ab9::t_e172fdf78f1c02 41,225-233
+Sources/DevmachineApp/DemoMachinesMap.swift
+  s_c1c985d7f57ab9::t_e265e34bb0ec8a 26-28,42,47-48,61,88-90,93,100-107
+Sources/DevmachineApp/DemoSnapshots.swift
+  s_c1c985d7f57ab9::t_ef2ece8cf3f2ee 281-282,288,660-664
+Sources/DevmachineApp/DevmachineCLI.swift
+  s_c1c985d7f57ab9::t_c7c1d0a1a18683 61-63,66,81,591-608
+Sources/DevmachineApp/EndSession.swift
+  s_c1c985d7f57ab9::t_e8da4fa0195157 5,38,42-47
+Sources/DevmachineApp/GitStore.swift
+  s_c1c985d7f57ab9::t_85d348481d0fdb 20
+Sources/DevmachineApp/Machines/MachineDetailsStore.swift
+  s_c1c985d7f57ab9::t_af2788546d6104 25-26,44-50,62,71,80-82,116-137,139
+Sources/DevmachineApp/Machines/MachineSettingsRow.swift
+  s_c1c985d7f57ab9::t_716ee442bd5afd 108-110,277,287-290,387-454
+Sources/DevmachineApp/Packages/DemoPackages.swift
+  s_c1c985d7f57ab9::t_5a710bf5d049db 104
+Sources/DevmachineApp/Packages/PackagesSettingsView.swift
+  s_c1c985d7f57ab9::t_09e90f87520b2f 206,399
+Sources/DevmachineApp/Packages/PackagesStore.swift
+  s_c1c985d7f57ab9::t_7dc00b7a536292 12-13,18-21,41-43,45-46
+Sources/DevmachineApp/SessionProblem.swift
+  s_c1c985d7f57ab9::t_f4b1c4e9dfe5bf 51-72
+Sources/DevmachineApp/Widgets/Stack/WorkspacesWidgetView.swift
+  s_c1c985d7f57ab9::t_37f1ac668dcb44 49-53,77-78,110-121,279,338
+Sources/DevmachineApp/WorkspacesSettingsView.swift
+  s_c1c985d7f57ab9::t_e0eac9b62e53cc 196,463,465,782,824,946,949,985
+Sources/DevmachineApp/WorktreeRemovalSheet.swift
+  s_c1c985d7f57ab9::t_24d47e5a0674dc 313-315
+Sources/DevmachineCore/Machines/MachineDraft.swift
+  s_c1c985d7f57ab9::t_400204e96d5795 25-50,53,113-115,127-155,225-227,231-243,273
+Sources/DevmachineCore/Machines/MachinePlan.swift
+  s_c1c985d7f57ab9::t_8f81f4171993c0 191,199,250-253
+Sources/DevmachineCore/Machines/MachineReports.swift
+  s_c1c985d7f57ab9::t_e11be296b81668 86-158
+Sources/DevmachineCore/Machines/MachineWizard.swift
+  s_c1c985d7f57ab9::t_43f19707429cd1 41-48,53,56
+Sources/DevmachineCore/Ownership.swift
+  s_c1c985d7f57ab9::t_b1d0d6975e2b7b 7-9,11-12
+Sources/DevmachineCore/Packages/PackageAvailability.swift
+  s_c1c985d7f57ab9::t_b4b82a71214578 17,27-32,35-37,44-48
+Sources/DevmachineCore/Packages/PackageBatch.swift
+  s_c1c985d7f57ab9::t_bed5de993e6896 41-42,53-54,70,72,84-85
+Sources/DevmachineCore/Workspaces/WorkspaceName.swift
+  s_c1c985d7f57ab9::t_1b2e7caae795b8 28
+Sources/DevmachineCore/WorktreeAdminRemoval.swift
+  s_c1c985d7f57ab9::t_12df4bcfac0fea 12-13,15,18,23,31,45,137,139,143-148
+Tests/DevmachineAppTests/AppModelTests.swift
+  s_c1c985d7f57ab9::t_507feaaffff673 1020,1022-1023,1026,1028,1035-1036
+Tests/DevmachineAppTests/DemoSnapshotsTests.swift
+  s_c1c985d7f57ab9::t_42bcf8b22a4513 312-313,315
+Tests/DevmachineAppTests/DevmachineCLITests.swift
+  s_c1c985d7f57ab9::t_019d2baa17e30d 532-544
+Tests/DevmachineAppTests/EndSessionTests.swift
+  s_c1c985d7f57ab9::t_e018cd182a4982 64-72
+Tests/DevmachineAppTests/MachineDetailsStoreTests.swift
+  s_c1c985d7f57ab9::t_89d49d246da06d 27-35,60-78
+Tests/DevmachineAppTests/MachineReadinessTests.swift
+  s_c1c985d7f57ab9::t_071b85188fb270 492-513
+Tests/DevmachineCoreTests/Machines/MachinePlanTests.swift
+  s_c1c985d7f57ab9::t_540c46137e70bd 38-73,149-151
+Tests/DevmachineCoreTests/Machines/MachineReportsTests.swift
+  s_c1c985d7f57ab9::t_20f342907c47ae 27-63
+Tests/DevmachineCoreTests/OwnershipTests.swift
+  s_c1c985d7f57ab9::t_f26e451507570a 8-9
+Tests/DevmachineCoreTests/Packages/PackageAvailabilityTests.swift
+  s_c1c985d7f57ab9::t_fba48ae0d92efc 36-62
+Tests/DevmachineCoreTests/Packages/PackageBatchTests.swift
+  s_c1c985d7f57ab9::t_5c26220bdbce5e 32-44
+Tests/DevmachineCoreTests/WorktreeOwnershipTests.swift
+  s_c1c985d7f57ab9::t_0a59b8bfc10c42 168-192,262,265
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "dc1aa570d3416cbcf1a391a00357e1eaf15d3136",
+  "prompts": {},
+  "sessions": {
+    "s_c1c985d7f57ab9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b5256304-4a81-480d-a568-f8cf11d8ddcc",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
