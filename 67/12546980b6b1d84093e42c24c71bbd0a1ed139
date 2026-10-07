@@ -1,0 +1,29 @@
+Sources/DevmachineApp/Widgets/Stack/ContextGitStatusStore.swift
+  s_c1c985d7f57ab9::t_48dd8990203237 4-22,24-25,30,34,36-41,43,55,64,67,71,73,75-77
+CLAUDE.md
+  s_c1c985d7f57ab9::t_d76e1f664c386d 1013-1016,1039-1043
+Sources/DevmachineApp/Widgets/Stack/StackHeaderControls.swift
+  s_c1c985d7f57ab9::t_d03ac1e243d23e 134-135,141-142,147
+Sources/DevmachineApp/Widgets/Stack/StackRowModel.swift
+  s_c1c985d7f57ab9::t_1137fa3b552864 87-92
+Tests/DevmachineAppTests/ContextGitStatusStoreTests.swift
+  s_c1c985d7f57ab9::t_6085db24c04d26 80-99,101-102,106,108-111,118-121,125-126,129-130,132,138-139,143,150,152-153,160
+Tests/DevmachineAppTests/StackRowModelTests.swift
+  s_c1c985d7f57ab9::t_09175af48592cf 214-220
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "6712546980b6b1d84093e42c24c71bbd0a1ed139",
+  "prompts": {},
+  "sessions": {
+    "s_c1c985d7f57ab9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b5256304-4a81-480d-a568-f8cf11d8ddcc",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
