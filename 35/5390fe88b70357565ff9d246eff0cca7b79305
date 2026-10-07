@@ -1,0 +1,21 @@
+Sources/DevmachineCore/Widgets/ArgvBuilder.swift
+  s_c1c985d7f57ab9::t_b85df15d0ef494 8,112-130,151-152,176
+Tests/DevmachineCoreTests/Widgets/ArgvBuilderTests.swift
+  s_c1c985d7f57ab9::t_5cc4bc8ea0a660 332-386
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "355390fe88b70357565ff9d246eff0cca7b79305",
+  "prompts": {},
+  "sessions": {
+    "s_c1c985d7f57ab9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b5256304-4a81-480d-a568-f8cf11d8ddcc",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
