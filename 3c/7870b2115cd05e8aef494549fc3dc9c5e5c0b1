@@ -1,0 +1,31 @@
+Sources/DevmachineCore/Widgets/Board.swift
+  s_b21bedf0bf983b::t_832b92bd128645 58-59,103,135-136
+Sources/DevmachineCore/Widgets/CanvasLayout.swift
+  s_b21bedf0bf983b::t_1745dd2ccaa8b6 40-61,84-88,91-165
+Sources/DevmachineCore/Widgets/WidgetContract.swift
+  s_b21bedf0bf983b::t_810eaf9b0f53c7 119,151-157,236,258,328,333-334,341-342,411-413,429,436,449,457,463
+Tests/DevmachineCoreTests/Fixtures/widget-contract-1.7.json
+  s_b21bedf0bf983b::t_ba41ab2799f305 2,9,82-84,99,104,115,121,126
+Tests/DevmachineCoreTests/Widgets/BoardCodecStackTests.swift
+  s_b21bedf0bf983b::t_79073894134a76 177
+Tests/DevmachineCoreTests/Widgets/CanvasAutoHeightTests.swift
+  s_b21bedf0bf983b::t_8b3f9a9754200a 1-149
+Tests/DevmachineCoreTests/Widgets/WidgetContractTests.swift
+  s_b21bedf0bf983b::t_0f5f5982509732 8,14-28,169
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "3c7870b2115cd05e8aef494549fc3dc9c5e5c0b1",
+  "prompts": {},
+  "sessions": {
+    "s_b21bedf0bf983b": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "3c5df531-ee5f-4f68-8500-62616ad94828",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
