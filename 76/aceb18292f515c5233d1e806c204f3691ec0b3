@@ -1,0 +1,27 @@
+Sources/DevmachineApp/Widgets/HomeBoardController.swift
+  s_b21bedf0bf983b::t_e463bc25c2c76d 176-178,180-186,191-197,206-213
+Sources/DevmachineApp/Widgets/HomeCanvasView.swift
+  s_b21bedf0bf983b::t_994b6992ee23b6 211,222,242,244,281,283,289,293,304-305,309-318,339,346-374,376,381,383,386,400,402,404-413,419,456-457
+Sources/DevmachineApp/Widgets/WidgetChromeView.swift
+  s_b21bedf0bf983b::t_4c5756c10d5fa9 51,61,89-94,147,163-194,196,201-202,204,260,275,287
+Tests/DevmachineAppTests/BoardEditingControllerTests.swift
+  s_b21bedf0bf983b::t_31686dc5273bf0 145-149
+Tests/DevmachineAppTests/HomeBoardControllerTests.swift
+  s_b21bedf0bf983b::t_38b5bd28997455 322,335-390
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "76aceb18292f515c5233d1e806c204f3691ec0b3",
+  "prompts": {},
+  "sessions": {
+    "s_b21bedf0bf983b": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "3c5df531-ee5f-4f68-8500-62616ad94828",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
