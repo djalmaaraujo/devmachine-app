@@ -969,8 +969,12 @@ Rules:
   `HomeCanvasView` draws each widget from the sidebar-open width to the real
   one: widgets that touch (8 pt or less apart) move as one group, a group
   within the margin (24 pt) of an edge stays at that edge, any other keeps its
-  centre in proportion. A drop with the sidebar hidden stores the inverse, so
-  the file does not depend on the sidebar. With the sidebar open nothing moves.
+  share of the free space between the margins (a centred group stays centred).
+  The rule is its own inverse when the groups are the same, so a drop with the
+  sidebar hidden aligns back from where the widgets are drawn, before clamping
+  and push-down, and stores the x of the dropped widget's whole group: a widget
+  dropped beside a group joins it, and the group keeps its place on screen.
+  With the sidebar open nothing moves.
   The file format did not change: the CLI rejects unknown keys in a board.
 - **A widget is as tall as what it shows (engine 1.7).** A view with
   `"grows": true` in the contract (summary, machines, harness usage, text,

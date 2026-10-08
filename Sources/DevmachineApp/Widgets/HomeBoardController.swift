@@ -173,6 +173,15 @@ final class HomeBoardController: ObservableObject {
         edit(id) { $0.frame = frame }
     }
 
+    func placeX(_ xs: [String: Int]) {
+        guard !xs.isEmpty else { return }
+        store?.update { board in
+            for index in board.widgets.indices {
+                if let x = xs[board.widgets[index].id] { board.widgets[index].frame.x = x }
+            }
+        }
+    }
+
     func resize(_ id: String, to frame: BoardFrame, auto: Bool, sizes: [String]) {
         edit(id) {
             if auto {

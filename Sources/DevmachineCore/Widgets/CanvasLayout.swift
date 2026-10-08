@@ -260,9 +260,11 @@ public enum CanvasLayout {
     }
 
     /// Each widget's x on a canvas `to` wide, from its place on one `from`
-    /// wide. Widgets that touch move as one group: a group at an edge stays
-    /// at that edge, any other keeps its centre in proportion. Swapping
-    /// `from` and `to` gives the place back.
+    /// wide. Widgets that touch move as one group: a group within the margin
+    /// of an edge stays at that edge, any other keeps its share of the free
+    /// space between the margins, so a centred group stays centred. Swapping
+    /// `from` and `to` gives the places back, as long as the groups are the
+    /// same: moving a group never changes the gaps inside it.
     public static func aligned(_ rects: [String: CGRect], from: Double, to: Double) -> [String: Double] {
         guard from > 0, to > 0, from != to else { return rects.mapValues { Double($0.minX) } }
         var xs: [String: Double] = [:]
@@ -275,10 +277,12 @@ public enum CanvasLayout {
     }
 
     private static func groupShift(minX: Double, maxX: Double, from: Double, to: Double) -> Double {
-        if minX <= Double(margin) { return 0 }
-        if from - maxX <= Double(margin) { return to - from }
-        let centre = (minX + maxX) / 2
-        return centre * to / from - centre
+        let edge = Double(margin)
+        let width = maxX - minX
+        let freeFrom = from - width - 2 * edge, freeTo = to - width - 2 * edge
+        if minX <= edge || freeFrom <= 0 || freeTo <= 0 { return 0 }
+        if minX >= edge + freeFrom { return to - from }
+        return edge + (minX - edge) * freeTo / freeFrom - minX
     }
 
     private static func touchingGroups(_ rects: [String: CGRect]) -> [[String]] {

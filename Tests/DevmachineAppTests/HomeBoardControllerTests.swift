@@ -332,6 +332,17 @@ final class HomeBoardControllerTests: XCTestCase {
         XCTAssertEqual(try BoardCodec.decode(String(contentsOf: boardFile, encoding: .utf8)), board)
     }
 
+    func testPlacingXsMovesOnlyThoseWidgetsSideways() throws {
+        let controller = makeController()
+        let before = Dictionary(uniqueKeysWithValues: (controller.store?.board?.widgets ?? []).map { ($0.id, $0.frame) })
+        controller.placeX(["clock": 512, "summary": 520])
+        let after = Dictionary(uniqueKeysWithValues: (controller.store?.board?.widgets ?? []).map { ($0.id, $0.frame) })
+        XCTAssertEqual(after["clock"]?.x, 512)
+        XCTAssertEqual(after["clock"]?.y, before["clock"]?.y)
+        XCTAssertEqual(after["summary"]?.x, 520)
+        XCTAssertEqual(after["machines"], before["machines"])
+    }
+
     func testAGrowingWidgetResizedToItsContentGoesBackToAuto() throws {
         let controller = makeController()
         controller.resize(

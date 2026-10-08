@@ -360,20 +360,32 @@ private struct BoardCanvasLayer: View {
     /// Each widget's x on the canvas as wide as it is now, from its stored
     /// place on the canvas `referenceWidth` wide.
     private func shownXs(_ board: Board) -> [String: Double] {
-        let rects = Dictionary(uniqueKeysWithValues: board.widgets.map { widget in
+        CanvasLayout.aligned(storedRects(board), from: referenceWidth, to: boardVisible.width)
+    }
+
+    private func storedRects(_ board: Board) -> [String: CGRect] {
+        Dictionary(uniqueKeysWithValues: board.widgets.map { widget in
             let size = drawnSize(widget, resolution: controller.resolution(of: widget))
             return (widget.id, BoardFrame(x: widget.frame.x, y: widget.frame.y, w: size.w, h: size.h).rect)
         })
-        return CanvasLayout.aligned(rects, from: referenceWidth, to: boardVisible.width)
     }
 
-    /// The x to store for a widget drawn at `frame`: what `shownXs` would
-    /// draw there, with the other widgets where they are drawn now.
-    private func storedX(_ id: String, drawn frame: BoardFrame, board: Board) -> Int {
-        var rects = layoutFrames(board).mapValues(\.rect)
+    /// The x to store for each widget once `id` is dropped at `frame`. The
+    /// groups are taken where `shownXs` puts the widgets (before clamping and
+    /// push-down), so aligning back is exact; a widget dropped beside a group
+    /// joins it, and the whole group is stored again to keep it where it is drawn.
+    private func storedXs(dropping id: String, at frame: BoardFrame, board: Board) -> [String: Int] {
+        var rects = storedRects(board)
+        for (other, x) in shownXs(board) { rects[other]?.origin.x = x }
         rects[id] = frame.rect
-        let xs = CanvasLayout.aligned(rects, from: boardVisible.width, to: referenceWidth)
-        return max(0, Int((xs[id] ?? Double(frame.x)).rounded()))
+        let back = CanvasLayout.aligned(rects, from: boardVisible.width, to: referenceWidth)
+        let stored = Dictionary(uniqueKeysWithValues: board.widgets.map { ($0.id, $0.frame.x) })
+        var xs: [String: Int] = [:]
+        for (other, x) in back {
+            let next = max(0, Int(x.rounded()))
+            if other == id || next != stored[other] { xs[other] = next }
+        }
+        return xs
     }
 
     private func drawnHeight(_ widget: BoardWidget, resolution: WidgetResolution?, least: CanvasSize) -> Int {
@@ -423,9 +435,11 @@ private struct BoardCanvasLayer: View {
     /// A move keeps the stored size; only the place and the stacking change.
     private func moveEnded(_ widget: BoardWidget) {
         guard let drag, drag.id == widget.id, let board = store.board else { return }
-        let x = storedX(widget.id, drawn: drag.frame, board: board)
+        var xs = storedXs(dropping: widget.id, at: drag.frame, board: board)
+        let x = xs.removeValue(forKey: widget.id) ?? drag.frame.x
         self.drag = nil
         controller.move(widget.id, to: BoardFrame(x: x, y: drag.frame.y, w: widget.frame.w, h: widget.frame.h))
+        controller.placeX(xs)
         controller.bringToFront(widget.id)
     }
 
@@ -447,10 +461,12 @@ private struct BoardCanvasLayer: View {
 
     private func resizeEnded(_ widget: BoardWidget, resolution: WidgetResolution?) {
         guard let drag, drag.id == widget.id, let board = store.board else { return }
+        var xs = storedXs(dropping: widget.id, at: drag.frame, board: board)
         var frame = drag.frame
-        frame.x = storedX(widget.id, drawn: drag.frame, board: board)
+        frame.x = xs.removeValue(forKey: widget.id) ?? drag.frame.x
         self.drag = nil
         controller.resize(widget.id, to: frame, auto: drag.auto, sizes: sizes(resolution))
+        controller.placeX(xs)
         controller.bringToFront(widget.id)
     }
 
