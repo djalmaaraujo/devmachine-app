@@ -1,0 +1,19 @@
+Sources/DevmachineApp/Widgets/Stack/StackBoardView.swift
+  s_b21bedf0bf983b::t_18cf6d1c170436 28,193-194,203,211,218
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "850e5b856bd21040b73c78361e4ec64220ae8222",
+  "prompts": {},
+  "sessions": {
+    "s_b21bedf0bf983b": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "3c5df531-ee5f-4f68-8500-62616ad94828",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
