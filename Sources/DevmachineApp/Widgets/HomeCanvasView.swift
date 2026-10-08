@@ -44,8 +44,8 @@ struct HomeCanvasView: View {
             ZStack(alignment: .topLeading) {
                 if let store = controller.store {
                     BoardCanvasLayer(
-                        controller: controller, store: store, catalog: catalog, canvasSize: size, clockRect: $clockRect,
-                        editing: $editing)
+                        controller: controller, store: store, catalog: catalog, canvasSize: size,
+                        referenceWidth: referenceWidth(size.width), clockRect: $clockRect, editing: $editing)
                         .offset(y: topInset)
                 }
                 catalogFailure
@@ -88,7 +88,7 @@ struct HomeCanvasView: View {
     /// opens only once the canvas has a width to lay the default out for.
     private func startOnceSized(_ size: CGSize) {
         guard size.width > 0 else { return }
-        controller.canvasWidth = Int(size.width / m.pt(1))
+        controller.canvasWidth = Int(referenceWidth(size.width))
         controller.start()
     }
 
@@ -104,11 +104,21 @@ struct HomeCanvasView: View {
             .popover(isPresented: $showsGallery, arrowEdge: .bottom) {
                 WidgetGalleryPopover(
                     controller: controller, catalog: catalog,
-                    canvasWidth: Int(canvasSize.width / m.pt(1)),
+                    canvasWidth: Int(referenceWidth(canvasSize.width)),
                     onAdded: { showsGallery = false },
                     onNewWidget: NewWidgetHandoff.chooser($newWidget, closing: $showsGallery))
                 .opensNewWidget($newWidget, into: $editing)
             }
+    }
+
+    /// The stored frames are places on the canvas as wide as it is with the
+    /// sidebar open, so hiding the sidebar spreads the widgets out instead of
+    /// leaving them where they were.
+    private func referenceWidth(_ visible: CGFloat) -> Double {
+        let scale = m.pt(1)
+        let board = Double(visible / scale)
+        guard model.sidebarCollapsed else { return board }
+        return board - Double(m.pt(model.sidebarWidth) / scale) - Double(ResizeHandle.width / scale)
     }
 
     /// Moves the canvas down so neither floating button (the one that
@@ -199,6 +209,7 @@ private struct BoardCanvasLayer: View {
     @ObservedObject var store: BoardStore
     @ObservedObject var catalog: WidgetCatalogStore
     let canvasSize: CGSize
+    let referenceWidth: Double
     @Binding var clockRect: CGRect?
     @Binding var editing: WidgetEditRequest?
     @EnvironmentObject private var settingsStore: SettingsStore
@@ -256,7 +267,7 @@ private struct BoardCanvasLayer: View {
             of: PlacesTrigger(release: catalog.catalog?.packagesRelease, status: store.status, harnesses: enabledHarnesses),
             initial: true
         ) { _, _ in
-            controller.applyPlaces(canvasWidth: Int(boardVisible.width), enabledHarnesses: Set(enabledHarnesses))
+            controller.applyPlaces(canvasWidth: Int(referenceWidth), enabledHarnesses: Set(enabledHarnesses))
         }
         .onChange(
             of: HomeJobsTrigger(board: store.board, catalog: catalog.catalog, visible: boardVisible),
@@ -280,7 +291,8 @@ private struct BoardCanvasLayer: View {
 
     private func widgetView(_ widget: BoardWidget, board: Board, frame: BoardFrame?) -> some View {
         let resolution = controller.resolution(of: widget)
-        let display = CanvasLayout.toDisplay((frame ?? displayFrame(widget, resolution: resolution)).rect, scale: scale)
+        let display = CanvasLayout.toDisplay(
+            (frame ?? displayFrame(widget, resolution: resolution, x: Double(widget.frame.x))).rect, scale: scale)
         return WidgetChromeView(
             widget: widget, resolution: resolution, release: catalog.catalog?.packagesRelease ?? "",
             title: title(widget, resolution), size: display.size, editable: store.canEdit,
@@ -326,21 +338,42 @@ private struct BoardCanvasLayer: View {
         return resolved.widget.sizes
     }
 
-    /// Where a widget is drawn, in board points: grown to its minimum, or
-    /// the pill's measured size when minimized, then pulled inside the canvas.
+    /// Where a widget is drawn, in board points: at `x`, grown to its minimum,
+    /// or the pill's measured size when minimized, then pulled inside the canvas.
     /// Drags, guides and resizes start from this, never from the stored size.
-    private func displayFrame(_ widget: BoardWidget, resolution: WidgetResolution?) -> BoardFrame {
-        let size: CanvasSize
+    private func displayFrame(_ widget: BoardWidget, resolution: WidgetResolution?, x: Double) -> BoardFrame {
+        let size = drawnSize(widget, resolution: resolution)
+        let rect = CanvasLayout.clamped(
+            BoardFrame(x: Int(x.rounded()), y: widget.frame.y, w: size.w, h: size.h), in: boardVisible)
+        return BoardFrame(x: Int(rect.minX.rounded()), y: Int(rect.minY.rounded()), w: size.w, h: size.h)
+    }
+
+    private func drawnSize(_ widget: BoardWidget, resolution: WidgetResolution?) -> CanvasSize {
         if widget.minimized {
             let pill = pillSizes[widget.id].map { CanvasLayout.toBoard($0, scale: scale) } ?? Self.pillFallback
-            size = CanvasSize(w: Int(pill.width.rounded(.up)), h: Int(pill.height.rounded(.up)))
-        } else {
-            let least = minimum(resolution)
-            size = CanvasSize(w: max(widget.frame.w, least.w), h: drawnHeight(widget, resolution: resolution, least: least))
+            return CanvasSize(w: Int(pill.width.rounded(.up)), h: Int(pill.height.rounded(.up)))
         }
-        let rect = CanvasLayout.clamped(
-            BoardFrame(x: widget.frame.x, y: widget.frame.y, w: size.w, h: size.h), in: boardVisible)
-        return BoardFrame(x: Int(rect.minX.rounded()), y: Int(rect.minY.rounded()), w: size.w, h: size.h)
+        let least = minimum(resolution)
+        return CanvasSize(w: max(widget.frame.w, least.w), h: drawnHeight(widget, resolution: resolution, least: least))
+    }
+
+    /// Each widget's x on the canvas as wide as it is now, from its stored
+    /// place on the canvas `referenceWidth` wide.
+    private func shownXs(_ board: Board) -> [String: Double] {
+        let rects = Dictionary(uniqueKeysWithValues: board.widgets.map { widget in
+            let size = drawnSize(widget, resolution: controller.resolution(of: widget))
+            return (widget.id, BoardFrame(x: widget.frame.x, y: widget.frame.y, w: size.w, h: size.h).rect)
+        })
+        return CanvasLayout.aligned(rects, from: referenceWidth, to: boardVisible.width)
+    }
+
+    /// The x to store for a widget drawn at `frame`: what `shownXs` would
+    /// draw there, with the other widgets where they are drawn now.
+    private func storedX(_ id: String, drawn frame: BoardFrame, board: Board) -> Int {
+        var rects = layoutFrames(board).mapValues(\.rect)
+        rects[id] = frame.rect
+        let xs = CanvasLayout.aligned(rects, from: boardVisible.width, to: referenceWidth)
+        return max(0, Int((xs[id] ?? Double(frame.x)).rounded()))
     }
 
     private func drawnHeight(_ widget: BoardWidget, resolution: WidgetResolution?, least: CanvasSize) -> Int {
@@ -352,11 +385,13 @@ private struct BoardCanvasLayer: View {
 
     private func layoutFrames(_ board: Board) -> [String: BoardFrame] {
         var frames: [String: BoardFrame] = [:]
+        let xs = shownXs(board)
         for widget in board.widgets {
             if let drag, drag.id == widget.id {
                 frames[widget.id] = drag.frame
             } else {
-                frames[widget.id] = displayFrame(widget, resolution: controller.resolution(of: widget))
+                frames[widget.id] = displayFrame(
+                    widget, resolution: controller.resolution(of: widget), x: xs[widget.id] ?? Double(widget.frame.x))
             }
         }
         let pushed = CanvasLayout.pushedDown(board.widgets.compactMap { widget in
@@ -368,7 +403,8 @@ private struct BoardCanvasLayer: View {
 
     private func dragStart(_ widget: BoardWidget, board: Board) -> BoardFrame {
         if let drag, drag.id == widget.id { return drag.start }
-        return layoutFrames(board)[widget.id] ?? displayFrame(widget, resolution: controller.resolution(of: widget))
+        return layoutFrames(board)[widget.id]
+            ?? displayFrame(widget, resolution: controller.resolution(of: widget), x: Double(widget.frame.x))
     }
 
     private func moveChanged(_ widget: BoardWidget, translation: CGSize, board: Board) {
@@ -386,9 +422,10 @@ private struct BoardCanvasLayer: View {
 
     /// A move keeps the stored size; only the place and the stacking change.
     private func moveEnded(_ widget: BoardWidget) {
-        guard let drag, drag.id == widget.id else { return }
+        guard let drag, drag.id == widget.id, let board = store.board else { return }
+        let x = storedX(widget.id, drawn: drag.frame, board: board)
         self.drag = nil
-        controller.move(widget.id, to: BoardFrame(x: drag.frame.x, y: drag.frame.y, w: widget.frame.w, h: widget.frame.h))
+        controller.move(widget.id, to: BoardFrame(x: x, y: drag.frame.y, w: widget.frame.w, h: widget.frame.h))
         controller.bringToFront(widget.id)
     }
 
@@ -409,9 +446,11 @@ private struct BoardCanvasLayer: View {
     }
 
     private func resizeEnded(_ widget: BoardWidget, resolution: WidgetResolution?) {
-        guard let drag, drag.id == widget.id else { return }
+        guard let drag, drag.id == widget.id, let board = store.board else { return }
+        var frame = drag.frame
+        frame.x = storedX(widget.id, drawn: drag.frame, board: board)
         self.drag = nil
-        controller.resize(widget.id, to: drag.frame, auto: drag.auto, sizes: sizes(resolution))
+        controller.resize(widget.id, to: frame, auto: drag.auto, sizes: sizes(resolution))
         controller.bringToFront(widget.id)
     }
 

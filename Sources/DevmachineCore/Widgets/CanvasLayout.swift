@@ -259,6 +259,54 @@ public enum CanvasLayout {
         widget.id == dragged ? Double(board.topZ + 1) : Double(widget.z)
     }
 
+    /// Each widget's x on a canvas `to` wide, from its place on one `from`
+    /// wide. Widgets that touch move as one group: a group at an edge stays
+    /// at that edge, any other keeps its centre in proportion. Swapping
+    /// `from` and `to` gives the place back.
+    public static func aligned(_ rects: [String: CGRect], from: Double, to: Double) -> [String: Double] {
+        guard from > 0, to > 0, from != to else { return rects.mapValues { Double($0.minX) } }
+        var xs: [String: Double] = [:]
+        for group in touchingGroups(rects) {
+            let span = group.map { rects[$0]! }.reduce(CGRect.null) { $0.union($1) }
+            let shift = groupShift(minX: span.minX, maxX: span.maxX, from: from, to: to)
+            for id in group { xs[id] = rects[id]!.minX + shift }
+        }
+        return xs
+    }
+
+    private static func groupShift(minX: Double, maxX: Double, from: Double, to: Double) -> Double {
+        if minX <= Double(margin) { return 0 }
+        if from - maxX <= Double(margin) { return to - from }
+        let centre = (minX + maxX) / 2
+        return centre * to / from - centre
+    }
+
+    private static func touchingGroups(_ rects: [String: CGRect]) -> [[String]] {
+        let ids = rects.keys.sorted()
+        var groups: [[String]] = []
+        var seen: Set<String> = []
+        for start in ids where !seen.contains(start) {
+            var group: [String] = []
+            var queue = [start]
+            seen.insert(start)
+            while let id = queue.popLast() {
+                group.append(id)
+                for other in ids where !seen.contains(other) && touch(rects[id]!, rects[other]!) {
+                    seen.insert(other)
+                    queue.append(other)
+                }
+            }
+            groups.append(group)
+        }
+        return groups
+    }
+
+    private static func touch(_ a: CGRect, _ b: CGRect) -> Bool {
+        let reach = Double(gap)
+        return a.minX <= b.maxX + reach && b.minX <= a.maxX + reach
+            && a.minY <= b.maxY + reach && b.minY <= a.maxY + reach
+    }
+
     public static func toDisplay(_ rect: CGRect, scale: Double) -> CGRect {
         CGRect(x: rect.minX * scale, y: rect.minY * scale, width: rect.width * scale, height: rect.height * scale)
     }

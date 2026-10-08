@@ -964,6 +964,14 @@ Rules:
   multiplies by the text scale to draw and divides to store, so the file reads
   the same at any setting. A window smaller than the layout moves widgets in on
   screen only.
+- **A stored `x` is a place on Home with the sidebar open**
+  (`CanvasLayout.aligned`). With the sidebar hidden the canvas is wider, and
+  `HomeCanvasView` draws each widget from the sidebar-open width to the real
+  one: widgets that touch (8 pt or less apart) move as one group, a group
+  within the margin (24 pt) of an edge stays at that edge, any other keeps its
+  centre in proportion. A drop with the sidebar hidden stores the inverse, so
+  the file does not depend on the sidebar. With the sidebar open nothing moves.
+  The file format did not change: the CLI rejects unknown keys in a board.
 - **A widget is as tall as what it shows (engine 1.7).** A view with
   `"grows": true` in the contract (summary, machines, harness usage, text,
   number, status, list, markdown) has a natural height; the others (clock,

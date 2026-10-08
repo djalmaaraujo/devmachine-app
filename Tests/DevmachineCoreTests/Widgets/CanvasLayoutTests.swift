@@ -168,4 +168,45 @@ final class CanvasLayoutTests: XCTestCase {
 
         XCTAssertEqual(board.widgets.map { CanvasLayout.stackLevel(of: $0, in: board, lifting: nil) }, [2, 1])
     }
+
+    private func rect(_ x: Double, _ w: Double, y: Double = 0, h: Double = 100) -> CGRect {
+        CGRect(x: x, y: y, width: w, height: h)
+    }
+
+    func testAWidgetKeepsItsCentreInProportionWhenTheCanvasWidens() {
+        let xs = CanvasLayout.aligned(["clock": rect(350, 300)], from: 1000, to: 1200)
+        XCTAssertEqual(xs["clock"], 450)
+    }
+
+    func testAWidgetAtAnEdgeStaysAtThatEdge() {
+        let xs = CanvasLayout.aligned(
+            ["left": rect(24, 200), "right": rect(756, 220)], from: 1000, to: 1200)
+        XCTAssertEqual(xs["left"], 24)
+        XCTAssertEqual(xs["right"], 956)
+    }
+
+    func testWidgetsThatTouchMoveTogetherAndKeepTheirGaps() {
+        let xs = CanvasLayout.aligned(
+            ["a": rect(300, 128), "b": rect(436, 128), "c": rect(572, 128), "far": rect(300, 100, y: 400)],
+            from: 1000, to: 1200)
+        XCTAssertEqual(xs["a"], 400)
+        XCTAssertEqual(xs["b"], 536)
+        XCTAssertEqual(xs["c"], 672)
+        XCTAssertEqual(xs["far"], 370)
+    }
+
+    func testAligningBackReturnsTheStoredPlace() {
+        let stored = ["clock": rect(350, 300), "card": rect(408, 160, y: 300), "usage": rect(756, 220)]
+        let shown = CanvasLayout.aligned(stored, from: 1000, to: 1200)
+        var drawn = stored
+        for (id, x) in shown { drawn[id]?.origin.x = x }
+        let back = CanvasLayout.aligned(drawn, from: 1200, to: 1000)
+        for (id, frame) in stored { XCTAssertEqual(back[id] ?? -1, frame.minX, accuracy: 0.001) }
+    }
+
+    func testTheSameWidthMovesNothing() {
+        let stored = ["a": rect(333, 100)]
+        XCTAssertEqual(CanvasLayout.aligned(stored, from: 1000, to: 1000), ["a": 333])
+        XCTAssertEqual(CanvasLayout.aligned(stored, from: 0, to: 1000), ["a": 333])
+    }
 }

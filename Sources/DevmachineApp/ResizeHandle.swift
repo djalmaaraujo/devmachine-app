@@ -12,9 +12,11 @@ struct ResizeHandle: View {
     let onEnd: () -> Void
     var onDoubleClick: (() -> Void)? = nil
 
+    static let width: CGFloat = 6
+
     var body: some View {
         Color.clear
-            .frame(width: 6)
+            .frame(width: Self.width)
             .frame(maxHeight: .infinity)
             .contentShape(Rectangle())
             .onHover { hovering in
