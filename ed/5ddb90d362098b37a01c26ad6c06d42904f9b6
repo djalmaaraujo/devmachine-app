@@ -1,0 +1,27 @@
+CLAUDE.md
+  s_b21bedf0bf983b::t_28b873b6d302ab 610-621,959,967-1013,1127-1131,1251
+Sources/DevmachineApp/Widgets/WidgetChromeView.swift
+  s_b21bedf0bf983b::t_151967e3d50b00 163-164
+Sources/DevmachineCore/Widgets/EntryEdit.swift
+  s_b21bedf0bf983b::t_7b90830554f7c3 83
+Sources/DevmachineCore/Widgets/WidgetContract.swift
+  s_b21bedf0bf983b::t_da47cb422ceb2e 119
+Sources/DevmachineCore/Widgets/WidgetPlacement.swift
+  s_b21bedf0bf983b::t_485874e982f017 6
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "ed5ddb90d362098b37a01c26ad6c06d42904f9b6",
+  "prompts": {},
+  "sessions": {
+    "s_b21bedf0bf983b": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "3c5df531-ee5f-4f68-8500-62616ad94828",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
