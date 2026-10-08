@@ -1,0 +1,29 @@
+CLAUDE.md
+  s_ab2539e5de1e5c::t_34974aba709f47 972-977
+Sources/DevmachineApp/Widgets/HomeBoardController.swift
+  s_ab2539e5de1e5c::t_bad6dc92dab829 176-184
+Sources/DevmachineApp/Widgets/HomeCanvasView.swift
+  s_ab2539e5de1e5c::t_84b95f4d408417 363-367,373-379,381-388,438-439,442,464,466,469
+Sources/DevmachineCore/Widgets/CanvasLayout.swift
+  s_ab2539e5de1e5c::t_cac70697ddfb87 263-267,280-285
+Tests/DevmachineAppTests/HomeBoardControllerTests.swift
+  s_ab2539e5de1e5c::t_0050f5514aa2e6 335-345
+Tests/DevmachineCoreTests/Widgets/CanvasLayoutTests.swift
+  s_ab2539e5de1e5c::t_62bbbe287ba114 190,195,198-208,210,212-228
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "c3e112f7c9c4796753cc5132710d24169ac47d1e",
+  "prompts": {},
+  "sessions": {
+    "s_ab2539e5de1e5c": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "44b04469-37a6-436b-b7c9-ef63c2d495fc",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
