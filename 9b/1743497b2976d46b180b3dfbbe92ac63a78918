@@ -1,0 +1,37 @@
+Sources/DevmachineCore/Widgets/BoardCodec.swift
+  s_b21bedf0bf983b::t_bf1fb63c4f3d25 201-206,210-216,413-421,429-432,441,557-559
+Sources/DevmachineCore/Widgets/WidgetResolution.swift
+  s_b21bedf0bf983b::t_d4f707d063fd17 147-148,195-200,231-232,269-270,289-290
+Tests/DevmachineCoreTests/Widgets/BoardCodecAutoTests.swift
+  s_b21bedf0bf983b::t_3c343e20e62fa4 1-138
+Tests/DevmachineCoreTests/Widgets/BoardCodecStackTests.swift
+  s_b21bedf0bf983b::t_abdce5e37c5242 156-159,161-162,164-165
+Tests/DevmachineCoreTests/Widgets/CanvasAutoResolutionTests.swift
+  s_b21bedf0bf983b::t_2d6e9cb9bad4d3 1-49
+Tests/DevmachineCoreTests/Widgets/MenubarResolutionTests.swift
+  s_b21bedf0bf983b::t_26e205065150cd 198-201
+Tests/DevmachineCoreTests/Widgets/StackLayoutTests.swift
+  s_b21bedf0bf983b::t_c21a3f71d51a75 22,36
+Tests/DevmachineCoreTests/Widgets/WidgetCatalogTests.swift
+  s_b21bedf0bf983b::t_bd45266f127cf0 130,146,157
+Tests/DevmachineCoreTests/Widgets/WidgetPlacementTests.swift
+  s_b21bedf0bf983b::t_f4efd1f5485f41 142-144,146,151-152,160
+Tests/DevmachineCoreTests/Widgets/WidgetSourceReaderTests.swift
+  s_b21bedf0bf983b::t_fd6ff478059474 267
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "9b1743497b2976d46b180b3dfbbe92ac63a78918",
+  "prompts": {},
+  "sessions": {
+    "s_b21bedf0bf983b": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "3c5df531-ee5f-4f68-8500-62616ad94828",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
