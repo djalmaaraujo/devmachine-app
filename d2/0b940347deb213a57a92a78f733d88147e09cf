@@ -1,0 +1,21 @@
+Sources/DevmachineCore/Widgets/BoardCodec.swift
+  s_c1c985d7f57ab9::t_1e0c975e537e82 158,428,440
+Tests/DevmachineCoreTests/Widgets/BoardCodecEditTests.swift
+  s_c1c985d7f57ab9::t_d6b742997ca706 67-76
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "d20b940347deb213a57a92a78f733d88147e09cf",
+  "prompts": {},
+  "sessions": {
+    "s_c1c985d7f57ab9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b5256304-4a81-480d-a568-f8cf11d8ddcc",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
