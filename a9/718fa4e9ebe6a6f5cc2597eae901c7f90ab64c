@@ -1,0 +1,21 @@
+CLAUDE.md
+  s_b21bedf0bf983b::t_0908e848b112cc 1141-1146
+Sources/DevmachineApp/Widgets/Stack/StackBoardView.swift
+  s_b21bedf0bf983b::t_d331119e3a12de 80-83,94
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "a9718fa4e9ebe6a6f5cc2597eae901c7f90ab64c",
+  "prompts": {},
+  "sessions": {
+    "s_b21bedf0bf983b": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "3c5df531-ee5f-4f68-8500-62616ad94828",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
