@@ -1,0 +1,67 @@
+Tests/DevmachineAppTests/DMComponentsFitTests.swift
+  s_ea347945e8e20d::t_542137e999aabb 163-167
+Sources/DevmachineApp/Components/DMComponents.swift
+  s_ea347945e8e20d::t_3463b3d8aef872 297,301-304
+Tests/DevmachineAppTests/FileTransferStoreTests.swift
+  s_ea347945e8e20d::t_1d6ea7e10c24ae 178
+  s_ea347945e8e20d::t_eb5f96ca76e835 126,131-177,179
+  s_ea347945e8e20d::t_06031ae1e8572b 33-56,59-63,67-70
+  s_ea347945e8e20d::t_32c12309b31677 180
+Sources/DevmachineApp/FileTransferStore.swift
+  s_ea347945e8e20d::t_3b689224a0b24a 47,55-56,62,71,78-101
+  s_ea347945e8e20d::t_0c83936e69e09c 19-33
+  s_ea347945e8e20d::t_82c1e33bbb660b 113
+  s_0f105d87334789::t_19868fcb6473be 102-103
+CLAUDE.md
+  s_ea347945e8e20d::t_8d463865476782 273-275
+Tests/DevmachineAppTests/BGTaskBytesTests.swift
+  s_ea347945e8e20d::t_4903f1ad115d89 1-46
+Tests/DevmachineAppTests/DMComponentsRenderTests.swift
+  s_ea347945e8e20d::t_7ac32a23d5a88b 131-138
+Tests/DevmachineCoreTests/ProcessRunnerTests.swift
+  s_ea347945e8e20d::t_e5d22edb171e13 31-46
+  s_ea347945e8e20d::t_0e115b389a419c 62-78
+Sources/DevmachineCore/FileTransfer.swift
+  s_ea347945e8e20d::t_94de81924c82d2 80-81,83-87
+  s_ea347945e8e20d::t_c65553c7ec243d 109-124
+  s_ea347945e8e20d::t_ec8f081eb9cbac 35-71
+Tests/DevmachineAppTests/DevmachineCLITests.swift
+  s_ea347945e8e20d::t_e661ecc4c21196 739-784
+  s_ea347945e8e20d::t_228afba091de8b 785-824
+Sources/DevmachineApp/DevmachineCLI.swift
+  s_ea347945e8e20d::t_3332ae0600a09c 390-409,414,419-425
+  s_ea347945e8e20d::t_27e2dc9e3c3a00 426-427
+Sources/DevmachineApp/AppModel.swift
+  s_ea347945e8e20d::t_16edca1741483c 20-22
+  s_ea347945e8e20d::t_e9129af65ba059 507-513
+  s_ea347945e8e20d::t_20faeb603ed816 1518,1520
+  s_ea347945e8e20d::t_8ac89556fd3871 17-19,23-37
+Sources/DevmachineCore/CommandRunner.swift
+  s_ea347945e8e20d::t_dd07ff740b4573 19-25,58-67,99-107,111-119,169,184-203
+Tests/DevmachineCoreTests/FileTransferTests.swift
+  s_ea347945e8e20d::t_e7aba50936665c 85-128
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "9ff97e0eaab89f8262b0738b98046bef9472b890",
+  "prompts": {},
+  "sessions": {
+    "s_0f105d87334789": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "3a5d445d-a266-4f47-9d99-dffda990876e",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    },
+    "s_ea347945e8e20d": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "37c61f90-6922-40ff-bd76-1866f944430e",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
