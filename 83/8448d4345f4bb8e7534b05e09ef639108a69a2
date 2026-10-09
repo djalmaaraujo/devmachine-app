@@ -1,0 +1,25 @@
+Sources/DevmachineApp/ContentView.swift
+  s_a78f6d7715c72b::t_e704628be45b15 185,187-192
+Sources/DevmachineApp/SessionShareStore.swift
+  s_a78f6d7715c72b::t_3fc49cbe6bf8e0 32-49
+Sources/DevmachineApp/SessionShareViews.swift
+  s_a78f6d7715c72b::t_b7c0cbd2ae2b1b 59,67,71,104,113-151,160
+Tests/DevmachineAppTests/SessionShareStoreTests.swift
+  s_a78f6d7715c72b::t_864cc54e96750c 40,57,66-76
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "838448d4345f4bb8e7534b05e09ef639108a69a2",
+  "prompts": {},
+  "sessions": {
+    "s_a78f6d7715c72b": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "aabf720b-21d5-420d-ae04-34f4cefa009d",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
