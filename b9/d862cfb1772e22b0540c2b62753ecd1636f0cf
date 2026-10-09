@@ -1,0 +1,23 @@
+Sources/DevmachineApp/AppModel.swift
+  s_0f105d87334789::t_b4101b4ec823d0 143,300-303,348-350,361-362,366
+Sources/DevmachineApp/Services/SessionListSource.swift
+  s_0f105d87334789::t_76cf9e0229a5ca 7,12-14,18-31
+Sources/DevmachineCore/TmuxSession.swift
+  s_0f105d87334789::t_3c42997bf670b3 7,10-12,16-36
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "b9d862cfb1772e22b0540c2b62753ecd1636f0cf",
+  "prompts": {},
+  "sessions": {
+    "s_0f105d87334789": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "3a5d445d-a266-4f47-9d99-dffda990876e",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
