@@ -1,0 +1,21 @@
+Sources/DevmachineApp/Components/DMComponents.swift
+  s_0f105d87334789::t_624bb32fb02be3 31,54-71
+Sources/DevmachineApp/Widgets/Stack/WorkspacesWidgetView.swift
+  s_0f105d87334789::t_cc8d6ff3d12379 268-269,312-313,369-370,373,379-404,407,409,412-414
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "76e5c9f3995aaab2d55b8800782a91c74e0a9caf",
+  "prompts": {},
+  "sessions": {
+    "s_0f105d87334789": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "3a5d445d-a266-4f47-9d99-dffda990876e",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
