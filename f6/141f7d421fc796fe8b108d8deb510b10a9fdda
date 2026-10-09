@@ -1,0 +1,25 @@
+Tests/DevmachineCoreTests/GitHeadTests.swift
+  s_0f105d87334789::t_d772cf6f4a158e 1-26
+Tests/DevmachineCoreTests/ElapsedTimeTests.swift
+  s_0f105d87334789::t_ad953dc2314bc2 1-44
+Sources/DevmachineCore/ElapsedTime.swift
+  s_0f105d87334789::t_53c8b50c789b95 1-40
+Sources/DevmachineCore/GitHead.swift
+  s_0f105d87334789::t_79ff893c311bbd 1-17
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "f6141f7d421fc796fe8b108d8deb510b10a9fdda",
+  "prompts": {},
+  "sessions": {
+    "s_0f105d87334789": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "3a5d445d-a266-4f47-9d99-dffda990876e",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
