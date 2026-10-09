@@ -1,0 +1,21 @@
+Sources/DevmachineApp/AppModel.swift
+  s_0f105d87334789::t_4890ca703ad9db 660,664-671,694-695,706-710
+Tests/DevmachineAppTests/AppModelTests.swift
+  s_0f105d87334789::t_ace34e7a0efbe9 1671-1701
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "3ba706d4f6240883fb23209e9c98f6eb11446967",
+  "prompts": {},
+  "sessions": {
+    "s_0f105d87334789": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "3a5d445d-a266-4f47-9d99-dffda990876e",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
