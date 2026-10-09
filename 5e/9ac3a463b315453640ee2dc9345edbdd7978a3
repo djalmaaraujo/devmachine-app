@@ -1,0 +1,19 @@
+Sources/DevmachineApp/Widgets/Stack/WorkspacesWidgetView.swift
+  s_0f105d87334789::t_074046c9532cf2 384-385,389-390
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "5e9ac3a463b315453640ee2dc9345edbdd7978a3",
+  "prompts": {},
+  "sessions": {
+    "s_0f105d87334789": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "3a5d445d-a266-4f47-9d99-dffda990876e",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
