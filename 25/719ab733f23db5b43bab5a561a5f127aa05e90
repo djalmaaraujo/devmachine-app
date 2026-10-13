@@ -1,0 +1,27 @@
+Tests/DevmachineCoreTests/ClaudeTaskListTests.swift
+  s_0f105d87334789::t_4176c35742e28a 1-51
+Sources/DevmachineCore/Context/ClaudeTaskList.swift
+  s_0f105d87334789::t_bbd19731d35d3c 1-31
+Sources/DevmachineCore/Context/ClaudeHarness.swift
+  s_0f105d87334789::t_1e676d6cf4e56c 203
+Sources/DevmachineCore/Context/NativeContextEngine.swift
+  s_0f105d87334789::t_b0b61aeb2b1df2 14,24-25,33,76-96
+Tests/DevmachineCoreTests/NativeContextEngineTests.swift
+  s_0f105d87334789::t_a50ec529a1eb3b 95-167
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "25719ab733f23db5b43bab5a561a5f127aa05e90",
+  "prompts": {},
+  "sessions": {
+    "s_0f105d87334789": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "3a5d445d-a266-4f47-9d99-dffda990876e",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
