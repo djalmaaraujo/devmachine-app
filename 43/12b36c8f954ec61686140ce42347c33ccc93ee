@@ -1,0 +1,24 @@
+Sources/DevmachineCore/AutoConnect.swift
+  s_0f105d87334789::t_f4fc10b89d05ff 1-122
+  s_0f105d87334789::t_80e29cfa9a09b0 123-126
+Tests/DevmachineCoreTests/AutoConnectTests.swift
+  s_0f105d87334789::t_86b3979c982249 1-190
+Sources/DevmachineCore/AppSettings.swift
+  s_0f105d87334789::t_7e089a91ce4bff 115-117,190,221,246,288,347
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "4312b36c8f954ec61686140ce42347c33ccc93ee",
+  "prompts": {},
+  "sessions": {
+    "s_0f105d87334789": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "3a5d445d-a266-4f47-9d99-dffda990876e",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
