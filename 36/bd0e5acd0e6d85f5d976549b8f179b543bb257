@@ -1,0 +1,29 @@
+Sources/DevmachineApp/AppModel.swift
+  s_0f105d87334789::t_adb4e0f0de2fe0 1418-1421,1439-1440
+Sources/DevmachineApp/TerminalRegistry.swift
+  s_0f105d87334789::t_7f2f5721a2f83e 39,274-278,306-318,321-331,633,801,818,892,942-957,978
+Sources/DevmachineCore/AutoConnect.swift
+  s_0f105d87334789::t_c07db7c04a5041 56-61,67,70,75-76,80-81,85-86,89,94,98,105,114-117,121-130
+Tests/DevmachineAppTests/AppModelTests.swift
+  s_0f105d87334789::t_87cbf880703e76 1741,1749,1764,1766,1768-1770,1772-1773,1775,1969-1971,1973,1988,2003
+Tests/DevmachineAppTests/TerminalWarmHostTests.swift
+  s_0f105d87334789::t_824874e370be69 34-65
+Tests/DevmachineCoreTests/AutoConnectTests.swift
+  s_0f105d87334789::t_3da14b0f22304b 91,95,98,103-105,107-108,112-113,116-119,122,125-138,144,148,152,155,158-167,171,173,178,185,188-194,199,201-203,207,216-218
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "36bd0e5acd0e6d85f5d976549b8f179b543bb257",
+  "prompts": {},
+  "sessions": {
+    "s_0f105d87334789": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "3a5d445d-a266-4f47-9d99-dffda990876e",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
