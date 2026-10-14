@@ -1,0 +1,40 @@
+Sources/DevmachineApp/DemoPointer.swift
+  s_0f105d87334789::t_51bbce7cf3f6aa 1-78
+  s_0f105d87334789::t_73741d4ccb250c 79
+CLAUDE.md
+  s_0f105d87334789::t_6e40a5f5b85e16 1499-1504
+Sources/DevmachineApp/DemoClickTargets.swift
+  s_0f105d87334789::t_bf799be12cd0d2 1-25
+Sources/DevmachineApp/Components/DMTabStrip.swift
+  s_0f105d87334789::t_98cbbd09d8e08b 48
+Sources/DevmachineApp/DemoSiteWalk.swift
+  s_0f105d87334789::t_87e2fb99bd7ce3 11-13,16-22,27,32-36,43-45,50-51,54-57,59-70,72-81,84-86,90-91,95,109-110,112,114,116-117,135-199,202,204,209,216-221,223,225-229,233,235-240,250,252,254,256,258,262-265,269-271,287-289
+Sources/DevmachineApp/DemoSnapshots.swift
+  s_0f105d87334789::t_f903decd9b3303 469-471,473,967,1004,1019-1022,1025-1029,1031-1033,1039,1046,1069,1081
+Sources/DevmachineApp/SessionShareViews.swift
+  s_0f105d87334789::t_9bbc0f4d311ee2 115,217
+Sources/DevmachineApp/SidebarView.swift
+  s_0f105d87334789::t_a13d0034754486 35,43
+Sources/DevmachineApp/Widgets/Stack/WorkspacesWidgetView.swift
+  s_0f105d87334789::t_a153c3484d56b1 183,273,318
+Tests/DevmachineAppTests/DemoSiteWalkTests.swift
+  s_0f105d87334789::t_12dabc9ca62a8c 18,24,31,34,36-39,44-75,89,128-134
+scripts/site_demo_videos.sh
+  s_0f105d87334789::t_a8168a666ce4b2 34
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "ae0d790d92dd5028e291cb0f907c51411682c69a",
+  "prompts": {},
+  "sessions": {
+    "s_0f105d87334789": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "3a5d445d-a266-4f47-9d99-dffda990876e",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
