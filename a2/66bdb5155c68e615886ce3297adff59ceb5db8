@@ -1,0 +1,89 @@
+Tests/DevmachineAppTests/CommandRegistryTests.swift
+  s_0f105d87334789::t_2dc9ba0a3d2e21 186-194
+Sources/DevmachineApp/AddMachineModel.swift
+  s_0f105d87334789::t_e179ce6fb64be6 116
+Sources/DevmachineApp/AddSubdomainSheet.swift
+  s_0f105d87334789::t_3632d087049138 167
+Sources/DevmachineApp/AppModel.swift
+  s_0f105d87334789::t_91f18ba9d996fa 1613,1729
+Sources/DevmachineApp/ContentView.swift
+  s_0f105d87334789::t_ecb173f5398d05 213,220,525,537,576
+Sources/DevmachineApp/ContextPanel.swift
+  s_0f105d87334789::t_ccf9351b988c28 215,266
+Sources/DevmachineApp/DemoSnapshots.swift
+  s_0f105d87334789::t_0edd8d891a9809 189,199
+Sources/DevmachineApp/DevmachineApp.swift
+  s_0f105d87334789::t_7b59913adcabec 207
+Sources/DevmachineApp/EndSession.swift
+  s_0f105d87334789::t_bc6b7954a10ffa 72
+Sources/DevmachineApp/Machines/MachineSettingsRow.swift
+  s_0f105d87334789::t_870eb97cac0036 147
+Sources/DevmachineApp/Machines/NetworkMapView.swift
+  s_0f105d87334789::t_b2592cc75eaee2 337
+Sources/DevmachineApp/MenuBarPanel.swift
+  s_0f105d87334789::t_ad5c85692ac35f 210
+Sources/DevmachineApp/OperatorChooserPage.swift
+  s_0f105d87334789::t_0c2aa04d2a921b 39
+Sources/DevmachineApp/Palette/CommandRegistry.swift
+  s_0f105d87334789::t_2fe60b0925d852 24,41,108,127,129,131,133,152,232,234,249,304,308
+Sources/DevmachineApp/SessionShareViews.swift
+  s_0f105d87334789::t_3ec563e0e2f772 105
+Sources/DevmachineApp/SetupPage.swift
+  s_0f105d87334789::t_041e9f6d8ce3ad 16,33,439,693,720,722,730,774,932,977,983
+Sources/DevmachineApp/ShortcutsSheet.swift
+  s_0f105d87334789::t_50c799a1bef38f 29,34,40-41,43
+Sources/DevmachineApp/SidebarView.swift
+  s_0f105d87334789::t_2ffb0cfd375667 34
+Sources/DevmachineApp/SubdomainsView.swift
+  s_0f105d87334789::t_3a2ea60f0598dd 99,103,117,307-308
+Sources/DevmachineApp/Widgets/AppWidgetViews.swift
+  s_0f105d87334789::t_5eaf898cca5b5a 67,267
+Sources/DevmachineApp/Widgets/DemoWidgets.swift
+  s_0f105d87334789::t_551153d2c383a0 13,22-23,37
+Sources/DevmachineApp/Widgets/Edit/WidgetEditorView.swift
+  s_0f105d87334789::t_a08a390871f8d8 132,237
+Sources/DevmachineApp/Widgets/Menubar/MenuBarUsageColumns.swift
+  s_0f105d87334789::t_30295a2b664602 14
+Sources/DevmachineApp/Widgets/Stack/ContextSectionWidgets.swift
+  s_0f105d87334789::t_a1f7612634edce 170,357
+Sources/DevmachineApp/Widgets/Stack/WorkspacesWidgetView.swift
+  s_0f105d87334789::t_7fa8e6e80bf9fe 182,188,197-198,329,332,354,363
+Sources/DevmachineApp/WorkspacesSettingsView.swift
+  s_0f105d87334789::t_685e6bf2f7e0d9 731,994,999
+Sources/DevmachineApp/WorkspacesStore.swift
+  s_0f105d87334789::t_9130e70d061b45 129
+Sources/DevmachineCore/Widgets/InlineWidgetForm.swift
+  s_0f105d87334789::t_62144679ccd277 28
+Sources/DevmachineCore/Widgets/MenubarWidgets.swift
+  s_0f105d87334789::t_5fa6619a4a0622 37
+Sources/DevmachineCore/Widgets/StackBoardCopy.swift
+  s_0f105d87334789::t_299bf70a5fa0f5 33-38
+Sources/DevmachineCore/Widgets/StackResolution.swift
+  s_0f105d87334789::t_0c6ac19a732a7c 16
+Tests/DevmachineAppTests/AppModelTests.swift
+  s_0f105d87334789::t_88e8f3154ce353 970
+Tests/DevmachineAppTests/DefaultHomeBoardFitTests.swift
+  s_0f105d87334789::t_b5ea713a74354b 129
+Tests/DevmachineAppTests/EndSessionTests.swift
+  s_0f105d87334789::t_c6124a83bf9bc3 55,61
+Tests/DevmachineAppTests/SetupPageTests.swift
+  s_0f105d87334789::t_c747a1fdfd91b3 140,197
+Tests/DevmachineCoreTests/Widgets/StackBoardCopyTests.swift
+  s_0f105d87334789::t_75754244c05315 7,10,18-19
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "a266bdb5155c68e615886ce3297adff59ceb5db8",
+  "prompts": {},
+  "sessions": {
+    "s_0f105d87334789": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "3a5d445d-a266-4f47-9d99-dffda990876e",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
