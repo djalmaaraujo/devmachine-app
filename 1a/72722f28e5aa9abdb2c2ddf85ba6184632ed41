@@ -1,0 +1,21 @@
+Sources/DevmachineApp/SetupPage.swift
+  s_0f105d87334789::t_eeb14ffd733a64 1118-1120
+  s_0f105d87334789::t_7e9a9e5ddbe494 1106
+  s_0f105d87334789::t_7a13af582e95a5 1128,1131-1134
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "1a72722f28e5aa9abdb2c2ddf85ba6184632ed41",
+  "prompts": {},
+  "sessions": {
+    "s_0f105d87334789": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "3a5d445d-a266-4f47-9d99-dffda990876e",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
