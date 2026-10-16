@@ -207,6 +207,10 @@ struct MenuBarPanel: View {
                 openWindow(id: "main")
                 model.showPage(.stats)
             }
+            footerButton("clock", help: "Scheduled") {
+                openWindow(id: "main")
+                model.showPage(.scheduled)
+            }
             footerButton("globe", help: "Published apps") {
                 openWindow(id: "main")
                 model.showPage(.subdomains)

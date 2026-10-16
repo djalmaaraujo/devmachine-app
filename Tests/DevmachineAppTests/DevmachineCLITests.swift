@@ -873,3 +873,50 @@ private final class ScriptedCLIRunner: CommandRunner, @unchecked Sendable {
         try runCapturing(executable: executable, args: args, environment: environment)
     }
 }
+
+final class DevmachineCLIScheduledTests: XCTestCase {
+    func testListAsksForJSONAndDecodesTheWorkspaces() throws {
+        let body = #"{"workspaces":[{"name":"alice","machine":"main","installed":false,"tasks":[]}]}"#
+        let runner = CLIRecordingRunner(result: (body, "", 0))
+
+        let workspaces = try DevmachineCLI(executable: "/x", runner: runner).scheduledList()
+
+        XCTAssertEqual(runner.calls.first?.args, ["--format", "json", "scheduled", "list"])
+        XCTAssertEqual(workspaces.map(\.name), ["alice"])
+    }
+
+    func testAnOlderCLIAsksForAnUpdate() {
+        let runner = CLIRecordingRunner(result: ("", "error: unknown command \"scheduled\" for \"devmachine\"", 1))
+        XCTAssertThrowsError(try DevmachineCLI(executable: "/x", runner: runner).scheduledList()) { error in
+            XCTAssertEqual(error as? DevmachineCLIError, .needsNewerCLI("scheduled"))
+        }
+    }
+
+    func testAFailureCarriesTheCLIsLineWithoutItsPrefix() {
+        let runner = CLIRecordingRunner(result: ("", "error: alice has no task t_000009\n", 1))
+        XCTAssertThrowsError(try DevmachineCLI(executable: "/x", runner: runner).scheduledPause("t_000009", workspace: "alice")) { error in
+            XCTAssertEqual(error.localizedDescription, "alice has no task t_000009")
+        }
+    }
+
+    func testRemoveSkipsTheCLIsOwnPrompt() throws {
+        let runner = CLIRecordingRunner(result: (#"{"workspace":"alice","removed":"t_000001"}"#, "", 0))
+        try DevmachineCLI(executable: "/x", runner: runner).scheduledRemove("t_000001", workspace: "alice")
+        XCTAssertEqual(runner.calls.first?.args,
+                       ["--format", "json", "scheduled", "rm", "t_000001", "--workspace", "alice", "--yes"])
+    }
+
+    func testRunNowReturnsTheRunID() throws {
+        let runner = CLIRecordingRunner(result: (#"{"workspace":"alice","task":"t_000001","run_id":"20261015T120000Z-ab12"}"#, "", 0))
+        let id = try DevmachineCLI(executable: "/x", runner: runner).scheduledRunNow("t_000001", workspace: "alice")
+        XCTAssertEqual(id, "20261015T120000Z-ab12")
+    }
+
+    func testLogIsTheRawOutput() throws {
+        let runner = CLIRecordingRunner(result: ("hi\n", "", 0))
+        let log = try DevmachineCLI(executable: "/x", runner: runner).scheduledLog("t_000001", run: "20261015T120000Z-ab12", workspace: "alice")
+        XCTAssertEqual(log, "hi\n")
+        XCTAssertEqual(runner.calls.first?.args,
+                       ["scheduled", "log", "t_000001", "20261015T120000Z-ab12", "--workspace", "alice"])
+    }
+}

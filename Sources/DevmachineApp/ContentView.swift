@@ -338,6 +338,7 @@ private struct PageHost: View {
         // `DemoSnapshots.subdomainsInitialTab` only ever differs from `.sites`
         // while the website's screenshot walk owns the window.
         case .subdomains: SubdomainsView(initialTab: DemoSnapshots.subdomainsInitialTab)
+        case .scheduled: ScheduledView()
         case .sessionGrid(let refs): SessionGridView(refs: refs).ignoresSafeArea(edges: .top)
         case .addMachine: AddMachinePage()
         case let .operatorChooser(harnesses, last): OperatorChooserPage(harnesses: harnesses, last: last)

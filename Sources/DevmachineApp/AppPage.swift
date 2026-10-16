@@ -3,6 +3,7 @@ enum AppPage: Hashable {
     case setup
     case stats
     case subdomains
+    case scheduled
     case sessionGrid([SessionRef])
     /// The Add machine wizard.
     case addMachine

@@ -1924,6 +1924,25 @@ once may fail there.
   corner at each moment (every machine, `main` with two ticks, the confirm,
   the sync pending, running, done, failed); nothing runs.
 
+## Scheduled page
+- `AppPage.scheduled`, from the clock in the sidebar footer, the menu bar
+  footer and the palette ("Scheduled"). It reads `scheduled list` (every
+  workspace at once; one that is not set up is `installed: false` and is not
+  asked) and `scheduled harnesses`.
+- The agent, permission-mode and model pickers come from `scheduled
+  harnesses`, never from a list in the app: a new agent in the CLI needs no
+  app release. A mode in `dangerous` needs the sheet's "I understand" and goes
+  as `--allow-dangerous`.
+- Create on a workspace without the package asks first ("Set up and
+  create"), then runs `scheduled add --yes`, which adds the package and syncs
+  the machine before saving; it can take a minute or two.
+- Edit sends every field (`ScheduledDraft.arguments`), so an empty model
+  clears it. Run now starts the run and polls `scheduled runs` every 2 s until
+  it ends (10 min at most). A `missed`/`skipped` run has no output; its
+  message is shown instead.
+- Go writes times with nine fraction digits; `ScheduledJSON.parseDate` cuts
+  them to milliseconds before Foundation reads them.
+
 ## Settings → Workspaces
 - **Settings → Workspaces lists every workspace under its machine**
   (`WorkspacesSettingsView`, `WorkspacesStore`: `workspaces list --format

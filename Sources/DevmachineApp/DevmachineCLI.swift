@@ -963,7 +963,7 @@ struct DevmachineCLI: Sendable {
         return environment
     }
 
-    private func requireSuccess(
+    func requireSuccess(
         _ result: (stdout: String, stderr: String, exitCode: Int32),
         reportingAs package: (machine: String?, workspace: String?)? = nil
     ) throws {

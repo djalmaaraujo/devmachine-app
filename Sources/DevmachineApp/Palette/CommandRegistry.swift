@@ -36,6 +36,10 @@ enum CommandRegistry {
             Entry(command: PaletteCommand(
                 id: "go.stats", title: "Stats", subtitle: "", category: .goTo,
                 systemImage: "chart.bar", keywords: statsKeywords, action: .showPage(.stats))),
+            Entry(command: PaletteCommand(
+                id: "go.scheduled", title: "Scheduled", subtitle: "", category: .goTo,
+                systemImage: "clock", keywords: ["schedule", "cron", "timer", "routine", "tasks", "recurring"],
+                action: .showPage(.scheduled))),
             Entry(
                 command: PaletteCommand(
                     id: "go.subdomains", title: "Published apps", subtitle: "", category: .goTo,

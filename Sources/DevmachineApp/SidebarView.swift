@@ -29,6 +29,8 @@ struct SidebarView: View {
         HStack(spacing: 0) {
             footerButton("chart.bar") { model.showPage(.stats) }
                 .help("Stats")
+            footerButton("clock") { model.showPage(.scheduled) }
+                .help("Scheduled")
             if model.hasCaddyMachine {
                 footerButton("globe") { model.showPage(.subdomains) }
                     .help("Published apps")
