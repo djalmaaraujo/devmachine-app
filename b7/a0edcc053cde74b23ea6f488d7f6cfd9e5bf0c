@@ -1,0 +1,33 @@
+CLAUDE.md
+  s_46e69727c17321::t_dfd8d5f9a6f988 1605-1608
+Sources/DevmachineApp/Chats/DemoChats.swift
+  s_46e69727c17321::t_45f80ac41fb9d9 183,245-247,257,360-429
+Sources/DevmachineApp/ContentView.swift
+  s_46e69727c17321::t_ccbf27162fda78 319
+Sources/DevmachineApp/DemoCamera.swift
+  s_46e69727c17321::t_1e8fcfa85943c4 19-29
+Sources/DevmachineApp/DemoSiteWalk.swift
+  s_46e69727c17321::t_42d867216b4f21 356
+Sources/DevmachineApp/DemoSiteWalkChats.swift
+  s_46e69727c17321::t_0d59f731c1c3be 217,234
+Sources/DevmachineApp/DemoSnapshots.swift
+  s_46e69727c17321::t_ed66e54696a680 127-128,156,498-502,1049-1051,1083-1089,1094-1102
+Tests/DevmachineAppTests/DemoSnapshotsTests.swift
+  s_46e69727c17321::t_3ade616c7e0195 96-108
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "b7a0edcc053cde74b23ea6f488d7f6cfd9e5bf0c",
+  "prompts": {},
+  "sessions": {
+    "s_46e69727c17321": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "057eb95b-b600-40da-9c82-ac29c62bf791",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
