@@ -1,0 +1,37 @@
+CLAUDE.md
+  s_46e69727c17321::t_382ed4d8b4fa2d 789-803
+Sources/DevmachineApp/Chats/AskWidgetView.swift
+  s_46e69727c17321::t_6ab15cd262fa22 27-38,42-48,61-62
+Sources/DevmachineApp/Chats/ChatPane.swift
+  s_46e69727c17321::t_352e0b8d095f7b 59-60,172-173
+Sources/DevmachineApp/Chats/ChatSessions.swift
+  s_46e69727c17321::t_477db1d1bf56d0 1-124
+Sources/DevmachineApp/Chats/ChatStore.swift
+  s_46e69727c17321::t_20b8061c76f419 1,18-31,43-52,137-143,177,217-221,367-377,386-394,415-422,462-466,498-499,563-567,572-715
+Sources/DevmachineApp/Chats/QuickChatPanel.swift
+  s_46e69727c17321::t_b7827802241e98 13-14,53-63,107,116,188
+Sources/DevmachineCore/Chats/ChatCommand.swift
+  s_46e69727c17321::t_d73bd9969bfd15 54-76
+Sources/DevmachineCore/Chats/ChatSession.swift
+  s_46e69727c17321::t_c1692a05414c47 1-62
+Tests/DevmachineAppTests/ChatSessionStoreTests.swift
+  s_46e69727c17321::t_b363c39d05f452 1-173
+Tests/DevmachineCoreTests/Chats/ChatSessionTests.swift
+  s_46e69727c17321::t_51043e62b0a4cb 1-42
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "c63e50126877615d1d963c313987d1a292accc19",
+  "prompts": {},
+  "sessions": {
+    "s_46e69727c17321": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "057eb95b-b600-40da-9c82-ac29c62bf791",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
