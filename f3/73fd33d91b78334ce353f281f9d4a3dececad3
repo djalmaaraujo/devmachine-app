@@ -1,0 +1,25 @@
+Sources/DevmachineApp/Scheduled/ScheduledTaskSheet.swift
+  s_be9ca8cef925d9::t_f95d8a5a450a0e 10
+  s_be9ca8cef925d9::t_c0e9fe94409f50 316-318,323,327
+Sources/DevmachineApp/Scheduled/ScheduledView.swift
+  s_be9ca8cef925d9::t_d970852833d644 9
+  s_be9ca8cef925d9::t_f1ffff76a58f69 27
+CLAUDE.md
+  s_be9ca8cef925d9::t_58e99457b31194 1938-1939
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "f373fd33d91b78334ce353f281f9d4a3dececad3",
+  "prompts": {},
+  "sessions": {
+    "s_be9ca8cef925d9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d9f277d6-7db0-48b4-8122-c76a3ca3c439",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
