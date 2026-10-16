@@ -1,0 +1,23 @@
+Sources/DevmachineApp/Scheduled/ScheduledTaskSheet.swift
+  s_46e69727c17321::t_ac3719c6284bd9 324,327
+Sources/DevmachineCore/Scheduled/ScheduledTask.swift
+  s_46e69727c17321::t_c52d679251c673 164-167
+Tests/DevmachineCoreTests/ScheduledSetupFailureTests.swift
+  s_46e69727c17321::t_27f0a6ab0cbaa5 40
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "0a612122f7656ca1adb57e9f237ca7633a6acc3d",
+  "prompts": {},
+  "sessions": {
+    "s_46e69727c17321": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "057eb95b-b600-40da-9c82-ac29c62bf791",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
