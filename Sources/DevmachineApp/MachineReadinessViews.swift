@@ -225,3 +225,24 @@ struct SessionProblemView: View {
         .padding(m.space.md)
     }
 }
+
+/// One quiet line under a workspace's name while its first sync is on its
+/// way: the sync takes minutes, and the card that asks for it would only
+/// ask for what is already running.
+struct FirstSyncActivityRow: View {
+    @Environment(\.dmMetrics) private var m
+    let activity: FirstSyncActivity
+
+    var body: some View {
+        HStack(spacing: m.space.xs) {
+            ProgressView().controlSize(.mini)
+            Text(activity.label)
+                .font(.dm(11))
+                .foregroundStyle(Color.dmMuted)
+        }
+        .padding(EdgeInsets(top: 2, leading: 10, bottom: 6, trailing: 10))
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .help("The workspace gets its account when the sync finishes, and its sessions show up then.")
+        .accessibilityElement(children: .combine)
+    }
+}

@@ -116,6 +116,22 @@ enum SessionProblem: Equatable {
     }
 }
 
+/// A sync on its way for a workspace that waits for its first one: the
+/// sidebar shows one quiet line under the workspace's name instead of a card
+/// that asks for the sync already running.
+enum FirstSyncActivity: Equatable {
+    case operatorWorking
+    case localSync
+    case appSync
+
+    var label: String {
+        switch self {
+        case .operatorWorking: return "Operator is working…"
+        case .localSync, .appSync: return "Setting up…"
+        }
+    }
+}
+
 struct SessionProblemPresentation: Equatable {
     let title: String
     let cause: String?

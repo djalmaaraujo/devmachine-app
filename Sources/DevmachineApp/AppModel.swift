@@ -377,6 +377,53 @@ final class AppModel: ObservableObject {
 
     private var localScanInFlight = false
 
+    /// When each sync was last seen. The dry run and the apply are two runs,
+    /// and the gap between them is not long enough to ask for a sync again,
+    /// so a sync that ended stays in `localSyncs` for a short while.
+    private var localSyncSeen: [Int: (sync: LocalSync, at: Date)] = [:]
+    private var localSyncScanInFlight = false
+    static let localSyncGrace: TimeInterval = 60
+
+    /// One `ps`, only while a workspace waits for its first sync.
+    func scanLocalSyncs() {
+        guard !localSyncScanInFlight, !DemoMode.isActive,
+              visibleWorkspaces.contains(where: { sessionProblems[$0.alias]?.isAwaitingSync == true })
+        else {
+            localSyncSeen = [:]
+            if !localSyncs.isEmpty { localSyncs = [] }
+            return
+        }
+        localSyncScanInFlight = true
+        let operatorPID = liveLocalSessions.first { $0.name == Workspace.operatorSession }?.pid
+        Task.detached {
+            let output = (try? ProcessRunner().run(
+                executable: "/bin/ps", args: LocalSyncs.psArguments, environment: nil)) ?? ""
+            let running = LocalSyncs.parse(output, operatorPID: operatorPID)
+            await MainActor.run {
+                self.localSyncScanInFlight = false
+                self.applyLocalSyncs(running, at: Date())
+            }
+        }
+    }
+
+    func applyLocalSyncs(_ running: [LocalSync], at now: Date) {
+        for sync in running { localSyncSeen[sync.pid] = (sync, now) }
+        localSyncSeen = localSyncSeen.filter { now.timeIntervalSince($0.value.at) < Self.localSyncGrace }
+        let syncs = localSyncSeen.values.map(\.sync).sorted { $0.pid < $1.pid }
+        if localSyncs != syncs { localSyncs = syncs }
+    }
+
+    /// What the sidebar says in place of the first-sync card while a sync
+    /// that covers the workspace's machine runs: the app's own, or one run
+    /// on this Mac.
+    func firstSyncActivity(alias: String, machine: String?) -> FirstSyncActivity? {
+        guard sessionProblems[alias]?.isAwaitingSync == true, let machine else { return nil }
+        if activeJobMachines.contains(machine) { return .appSync }
+        let covering = localSyncs.filter { $0.covers(machine: machine) }
+        if covering.contains(where: \.byOperator) { return .operatorWorking }
+        return covering.isEmpty ? nil : .localSync
+    }
+
     /// Fills what a scan would have found, for tests that must not run `zmx`.
     func acceptLocalScanForTesting(
         sessions: [ZmxSession], harnesses: [String: Set<HarnessID>],
@@ -570,6 +617,11 @@ final class AppModel: ObservableObject {
     /// Why a workspace's session list could not be read, shown in its place
     /// instead of an empty list. Cleared by the next list that answers.
     @Published private(set) var sessionProblems: [String: SessionProblem] = [:]
+    /// Syncs running on this Mac outside the app, read only while a
+    /// workspace waits for its first sync.
+    @Published private(set) var localSyncs: [LocalSync] = []
+    /// Machines with an app job started and not yet finished.
+    @Published private(set) var activeJobMachines: Set<String> = []
     /// Whether the sidebar's Subdomains icon has anything to show for: at
     /// least one configured machine has Caddy. Starts `true` so the icon does
     /// not flash away before the first check answers.
@@ -675,6 +727,7 @@ final class AppModel: ObservableObject {
     // fail2ban counts against this Mac.
     private var syncLock: PackagesLock?
     private var syncLockWatch: AnyCancellable?
+    private var jobsWatch: AnyCancellable?
     // Listed their sessions at least once: the account exists, whatever the
     // lock says.
     private var loggedInAliases: Set<String> = []
@@ -760,6 +813,12 @@ final class AppModel: ObservableObject {
         observeWake()
         TerminalRegistry.shared.onSessionEnded = { [weak self] kind in
             self?.sessionEnded(kind)
+        }
+        jobsWatch = jobs.$jobs.receive(on: DispatchQueue.main).sink { [weak self] jobs in
+            MainActor.assumeIsolated {
+                let machines = Set(jobs.filter(\.phase.isUnderway).map(\.plan.machine))
+                if self?.activeJobMachines != machines { self?.activeJobMachines = machines }
+            }
         }
     }
 
@@ -1958,7 +2017,10 @@ final class AppModel: ObservableObject {
         scanLocalSessions()
         localScanTimer?.invalidate()
         localScanTimer = Timer.scheduledTimer(withTimeInterval: 5, repeats: true) { [weak self] _ in
-            Task { @MainActor in self?.scanLocalSessions() }
+            Task { @MainActor in
+                self?.scanLocalSessions()
+                self?.scanLocalSyncs()
+            }
         }
     }
 

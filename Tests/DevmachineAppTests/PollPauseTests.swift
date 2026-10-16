@@ -350,6 +350,42 @@ final class PollPauseTests: XCTestCase {
         XCTAssertFalse(model.isPollingPaused(alias: beta.alias))
     }
 
+    func testASyncOnItsWayReplacesTheFirstSyncCard() async throws {
+        let model = makeModel(ScriptedSessionSource(), machines: ["acme": "main", "beta": "main", "gamma": "edge"])
+        model.applySyncLock(PackagesLock(machines: [:], workspaces: ["beta": [], "gamma": []]))
+        let start = Date()
+
+        XCTAssertNil(model.firstSyncActivity(alias: acme.alias, machine: "main"))
+        XCTAssertNil(model.firstSyncActivity(alias: beta.alias, machine: "main"), "beta is synced")
+
+        model.applyLocalSyncs([LocalSync(pid: 7, machine: "edge", byOperator: true)], at: start)
+        XCTAssertNil(model.firstSyncActivity(alias: acme.alias, machine: "main"), "another machine's sync")
+
+        model.applyLocalSyncs([LocalSync(pid: 8, machine: nil, byOperator: true)], at: start)
+        XCTAssertEqual(model.firstSyncActivity(alias: acme.alias, machine: "main"), .operatorWorking)
+
+        model.applyLocalSyncs([], at: start.addingTimeInterval(AppModel.localSyncGrace - 1))
+        XCTAssertEqual(model.firstSyncActivity(alias: acme.alias, machine: "main"), .operatorWorking,
+                       "the gap between the dry run and the apply")
+
+        model.applyLocalSyncs([], at: start.addingTimeInterval(AppModel.localSyncGrace + 1))
+        XCTAssertNil(model.firstSyncActivity(alias: acme.alias, machine: "main"))
+
+        model.applyLocalSyncs([LocalSync(pid: 9, machine: "main", byOperator: false)], at: start)
+        XCTAssertEqual(model.firstSyncActivity(alias: acme.alias, machine: "main"), .localSync)
+    }
+
+    func testASyncWaitingToBeStartedLeavesTheFirstSyncCard() async throws {
+        let model = makeModel(ScriptedSessionSource(), machines: ["acme": "main", "beta": "main", "gamma": "edge"])
+        model.applySyncLock(PackagesLock(machines: [:], workspaces: ["beta": [], "gamma": []]))
+
+        model.jobs.requestSync(SyncRequest(machine: "main"))
+        try await settle()
+
+        XCTAssertTrue(model.activeJobMachines.isEmpty)
+        XCTAssertNil(model.firstSyncActivity(alias: acme.alias, machine: "main"))
+    }
+
     func testALockThatNamesNoWorkspaceHoldsNothingBack() async throws {
         let source = ScriptedSessionSource()
         let model = makeModel(source, machines: ["acme": "main", "beta": "main", "gamma": "edge"])

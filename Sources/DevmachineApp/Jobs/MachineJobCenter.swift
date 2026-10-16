@@ -17,6 +17,17 @@ enum MachineJobPhase: Equatable {
     case cancelled
 }
 
+extension MachineJobPhase {
+    /// Started: running, or waiting for the machine's job before it. A
+    /// pending job still waits for the person to start it.
+    var isUnderway: Bool {
+        switch self {
+        case .queued, .running: return true
+        case .pending, .succeeded, .failed, .cancelled: return false
+        }
+    }
+}
+
 enum MachineJobOutcome: Equatable {
     case succeeded
     case failed

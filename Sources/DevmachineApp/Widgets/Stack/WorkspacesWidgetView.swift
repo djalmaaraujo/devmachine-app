@@ -38,16 +38,21 @@ struct WorkspacesWidgetView: View {
                         .padding(.horizontal, m.space.md)
                         .padding(.top, m.space.sm)
                 }
+                let activity = firstSyncActivity(for: ws)
                 groupHeader(
                     ws.name,
                     alias: ws.alias,
                     offline: !ws.isLocal && model.offlineAliases.contains(ws.alias),
                     action: ws.isLocal ? pickLocalFolder : { model.newSession(alias: ws.alias) },
                     filesButton: !ws.isLocal,
-                    extraTopSpacing: index > 0
+                    extraTopSpacing: index > 0,
+                    disabled: activity != nil
                 )
                 .sidebarDraggable(.workspace(ws.alias), dragging: $dragging, model: model)
-                if let machine = firstSyncMachine(for: ws), let problem = model.sessionProblems[ws.alias] {
+                if let activity {
+                    FirstSyncActivityRow(activity: activity)
+                        .transition(.opacity)
+                } else if let machine = firstSyncMachine(for: ws), let problem = model.sessionProblems[ws.alias] {
                     SessionProblemView(
                         presentation: problem.firstSyncPresentation(workspace: ws.name, machine: machine),
                         retry: { model.retry(alias: ws.alias) })
@@ -75,7 +80,7 @@ struct WorkspacesWidgetView: View {
                     ForEach(model.localSessions) { s in
                         localSessionRow(session: s)
                     }
-                } else if firstSyncMachine(for: ws) != nil {
+                } else if activity != nil || firstSyncMachine(for: ws) != nil {
                     EmptyView()
                 } else if let problem = model.sessionProblems[ws.alias], model.pollPauses[ws.alias] == nil,
                           !(problem.isHostKeyRejected && hostKeyMachine(for: ws) != nil),
@@ -96,6 +101,13 @@ struct WorkspacesWidgetView: View {
             }
         }
         .padding(.vertical, m.space.sm)
+    }
+
+    /// A sync on its way for a workspace that waits for its first one.
+    private func firstSyncActivity(for workspace: Workspace) -> FirstSyncActivity? {
+        guard !workspace.isLocal else { return nil }
+        return model.firstSyncActivity(
+            alias: workspace.alias, machine: readiness.machine(forWorkspace: workspace.name))
     }
 
     /// A machine that needs Prepare gets its card once, under the first of
@@ -157,7 +169,8 @@ struct WorkspacesWidgetView: View {
         offline: Bool,
         action: (() -> Void)?,
         filesButton: Bool = true,
-        extraTopSpacing: Bool
+        extraTopSpacing: Bool,
+        disabled: Bool = false
     ) -> some View {
         DMSection(
             padding: EdgeInsets(top: extraTopSpacing ? 16 : 4, leading: 10, bottom: 4, trailing: 10),
@@ -165,6 +178,7 @@ struct WorkspacesWidgetView: View {
                 Text(title)
                     .font(.dm(11, weight: .semibold))
                     .foregroundStyle(Color.dmMuted)
+                    .opacity(disabled ? 0.5 : 1)
                 if offline {
                     Circle()
                         .fill(Color.red)
@@ -173,25 +187,29 @@ struct WorkspacesWidgetView: View {
                 }
             },
             trailing: {
-                DMIconButton(
-                    systemImage: model.isWorkspaceInSessionGrid(alias) ? "rectangle.grid.2x2.fill" : "rectangle.grid.2x2",
-                    size: 11,
-                    tint: model.isWorkspaceInSessionGrid(alias) ? Color.accentColor : Color.dmMuted,
-                    hitSize: DMHitSize.header
-                ) { model.openSessionGrid(alias) }
-                .help("Session grid")
-                .demoClickTarget("grid:\(alias)")
+                Group {
+                    DMIconButton(
+                        systemImage: model.isWorkspaceInSessionGrid(alias) ? "rectangle.grid.2x2.fill" : "rectangle.grid.2x2",
+                        size: 11,
+                        tint: model.isWorkspaceInSessionGrid(alias) ? Color.accentColor : Color.dmMuted,
+                        hitSize: DMHitSize.header
+                    ) { model.openSessionGrid(alias) }
+                    .help("Session grid")
+                    .demoClickTarget("grid:\(alias)")
 
-                if filesButton {
-                    DMIconButton(systemImage: "folder", size: 11, hitSize: DMHitSize.header) {
-                        openFiles(alias: alias)
+                    if filesButton {
+                        DMIconButton(systemImage: "folder", size: 11, hitSize: DMHitSize.header) {
+                            openFiles(alias: alias)
+                        }
+                        .help("Browse files…")
                     }
-                    .help("Browse files…")
-                }
 
-                if let action {
-                    newSessionButton(alias: alias, action: action)
+                    if let action {
+                        newSessionButton(alias: alias, action: action)
+                    }
                 }
+                .disabled(disabled)
+                .opacity(disabled ? 0.4 : 1)
             }
         )
         .contextMenu {
