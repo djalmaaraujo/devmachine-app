@@ -1,0 +1,50 @@
+Sources/DevmachineCore/Scheduled/ScheduledSetupProgress.swift
+  s_46e69727c17321::t_64e168f745afb5 1-107
+  s_46e69727c17321::t_ca162840e073f4 108-110
+Tests/DevmachineCoreTests/ScheduledProgressTests.swift
+  s_46e69727c17321::t_979e83421c61be 1-108
+Tests/DevmachineAppTests/ScheduledStoreTests.swift
+  s_46e69727c17321::t_98a6015c3d8f87 1-147
+CLAUDE.md
+  s_46e69727c17321::t_dfd1df028f7152 282-285
+Sources/DevmachineApp/AppModel.swift
+  s_46e69727c17321::t_3b496b7784ca77 594-596
+Sources/DevmachineApp/ContentView.swift
+  s_46e69727c17321::t_ec9d67d41a593b 24,132-133,139
+Sources/DevmachineApp/DemoScheduled.swift
+  s_46e69727c17321::t_5872a4342eaf1f 13-20,24,26,31-56
+Sources/DevmachineApp/DemoSnapshots.swift
+  s_46e69727c17321::t_1df662a54f4e92 69,327-335,434,577-582,609,706-715
+Sources/DevmachineApp/DevmachineCLI+Scheduled.swift
+  s_46e69727c17321::t_5d4e30987a2d71 20-24,57-62
+Sources/DevmachineApp/Jobs/ProgressCards.swift
+  s_46e69727c17321::t_67cbeea06ae054 1-49
+Sources/DevmachineApp/Scheduled/ScheduleModeView.swift
+  s_46e69727c17321::t_d9f4dd6e5ef5b7 101
+Sources/DevmachineApp/Scheduled/ScheduledSetupCard.swift
+  s_46e69727c17321::t_c4ff18f9911c9e 1-34
+Sources/DevmachineApp/Scheduled/ScheduledStore.swift
+  s_46e69727c17321::t_e8a6da161c4c90 35-36,43,47-50,52,73-78,105-109,111-123,192,207,228-231
+Sources/DevmachineApp/Scheduled/ScheduledTaskSheet.swift
+  s_46e69727c17321::t_b15aff59cdfbab 90,108,334,338-340
+Sources/DevmachineApp/Scheduled/ScheduledView.swift
+  s_46e69727c17321::t_f39b97e3b68198 157-158,231,273,302-303,308,329-333
+Tests/DevmachineAppTests/DevmachineCLITests.swift
+  s_46e69727c17321::t_f5347957a6f5f8 915-928,937-953
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "0b22942cda31e4b424391ac602ffa8e89ef1d747",
+  "prompts": {},
+  "sessions": {
+    "s_46e69727c17321": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "057eb95b-b600-40da-9c82-ac29c62bf791",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
