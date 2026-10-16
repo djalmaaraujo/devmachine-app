@@ -35,19 +35,19 @@ struct ScheduledDetailView: View {
     private var titleBar: some View {
         VStack(alignment: .leading, spacing: m.space.sm) {
             Text(verbatim: task.name)
-                .font(.dm(14, weight: .semibold))
+                .font(.dm(16, weight: .semibold))
                 .foregroundStyle(Color.dmRowText)
             HStack(spacing: m.space.sm) {
-                DMButton("Run now", systemImage: "play.fill", size: .small, isLoading: store.busy.contains(row.id)) {
+                DMButton("Run now", systemImage: "play.fill", isLoading: store.busy.contains(row.id)) {
                     store.runNow(row)
                 }
-                DMButton("Edit", systemImage: "pencil", variant: .outline, size: .small, action: onEdit)
+                DMButton("Edit", systemImage: "pencil", variant: .outline, action: onEdit)
                 if task.paused {
-                    DMButton("Resume", systemImage: "play", variant: .outline, size: .small) { store.setPaused(row, false) }
+                    DMButton("Resume", systemImage: "play", variant: .outline) { store.setPaused(row, false) }
                 } else if !task.done {
-                    DMButton("Pause", systemImage: "pause", variant: .outline, size: .small) { store.setPaused(row, true) }
+                    DMButton("Pause", systemImage: "pause", variant: .outline) { store.setPaused(row, true) }
                 }
-                DMButton(icon: "trash", label: "Delete", variant: .ghostDanger, size: .small, action: onDelete)
+                DMButton(icon: "trash", label: "Delete", variant: .ghostDanger, action: onDelete)
             }
         }
     }
@@ -63,6 +63,9 @@ struct ScheduledDetailView: View {
             }
             fact("Stops after", task.timeout ?? "30m")
         }
+        .padding(m.space.lg)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .dmSurface(Color.dmBand, radius: DMRadius.tile)
     }
 
     private func fact(_ label: String, _ value: String) -> some View {

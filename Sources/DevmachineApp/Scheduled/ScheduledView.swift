@@ -66,12 +66,12 @@ struct ScheduledView: View {
             DMAgeLabel(since: store.refreshedAt, staleAfter: 60, isRefreshing: store.isLoading)
             DMIconButton(systemImage: "arrow.clockwise", size: DMMetrics.baseFontSize, tint: nil) { store.refresh() }
                 .help("Refresh")
-            DMButton("New task", systemImage: "plus", size: .small) { sheet = .new }
+            DMButton("New task", systemImage: "plus") { sheet = .new }
                 .disabled(store.workspaces.isEmpty)
         }
-        .padding(.horizontal, m.pt(14))
-        .padding(.top, m.pt(10))
-        .padding(.bottom, m.space.sm)
+        .padding(.horizontal, m.pt(18))
+        .padding(.top, m.pt(12))
+        .padding(.bottom, m.space.md)
     }
 
     private var searchedRows: [ScheduledRow] {
@@ -119,20 +119,54 @@ struct ScheduledView: View {
         }
     }
 
+    /// The rows by workspace, a workspace placed where its next task falls.
+    private var groups: [(workspace: ScheduledWorkspace, rows: [ScheduledRow])] {
+        var order: [String] = []
+        var byName: [String: (ScheduledWorkspace, [ScheduledRow])] = [:]
+        for row in searchedRows {
+            if byName[row.workspace.name] == nil {
+                order.append(row.workspace.name)
+                byName[row.workspace.name] = (row.workspace, [])
+            }
+            byName[row.workspace.name]?.1.append(row)
+        }
+        return order.compactMap { byName[$0].map { (workspace: $0.0, rows: $0.1) } }
+    }
+
     private var list: some View {
         ScrollView {
-            LazyVStack(spacing: 0) {
-                ForEach(Array(searchedRows.enumerated()), id: \.element.id) { index, row in
-                    DMTableRow(index: index) {
-                        ScheduledRowView(row: row, isSelected: selected == row.id, isBusy: store.busy.contains(row.id),
-                                         menu: { rowMenu(row) })
+            LazyVStack(alignment: .leading, spacing: m.space.xl) {
+                ForEach(groups, id: \.workspace.name) { group in
+                    VStack(alignment: .leading, spacing: m.space.sm) {
+                        HStack(spacing: m.space.sm) {
+                            Image(systemName: "server.rack")
+                                .font(.dm(10))
+                            Text(verbatim: group.workspace.name.uppercased())
+                                .font(.dm(11, weight: .semibold))
+                                .kerning(0.8)
+                            Text(verbatim: "· \(group.workspace.machine)")
+                                .font(.dm(11))
+                        }
+                        .foregroundStyle(Color.dmMuted)
+                        .padding(.leading, m.space.xs)
+                        ForEach(group.rows) { row in
+                            ScheduledCard(
+                                row: row, isSelected: selected == row.id, isBusy: store.busy.contains(row.id),
+                                menu: { rowMenu(row) })
+                                .contentShape(Rectangle())
+                                .onTapGesture { selected = selected == row.id ? nil : row.id }
+                                .contextMenu { rowMenu(row) }
+                        }
                     }
-                    .contentShape(Rectangle())
-                    .onTapGesture { selected = selected == row.id ? nil : row.id }
-                    .contextMenu { rowMenu(row) }
+                }
+                if groups.isEmpty {
+                    Text(verbatim: "No task matches \u{201C}\(searchText)\u{201D}.")
+                        .font(.dm(12))
+                        .foregroundStyle(Color.dmMuted)
                 }
             }
-            .padding(.horizontal, m.pt(6))
+            .padding(.horizontal, m.pt(18))
+            .padding(.vertical, m.space.md)
         }
         .frame(maxWidth: .infinity)
     }
@@ -180,56 +214,98 @@ private struct ScheduledEmptyState: View {
                 .foregroundStyle(Color.dmMuted)
                 .multilineTextAlignment(.center)
                 .frame(maxWidth: m.pt(380))
-            DMButton("New task", systemImage: "plus", size: .small, action: onNew)
+            DMButton("New task", systemImage: "plus", action: onNew)
         }
         .frame(maxWidth: .infinity)
     }
 }
 
-private struct ScheduledRowView<Menu: View>: View {
+private struct ScheduledCard<Menu: View>: View {
     @Environment(\.dmMetrics) private var m
     let row: ScheduledRow
     let isSelected: Bool
     let isBusy: Bool
     @ViewBuilder let menu: () -> Menu
+    @State private var hovering = false
+
+    private var task: ScheduledTask { row.task }
+    private var resting: Bool { task.paused || task.done }
+    private var tint: Color { task.action.isPrompt ? .accentColor : Color.dmRowText }
 
     var body: some View {
-        HStack(spacing: m.pt(10)) {
-            Circle()
-                .fill(ScheduledStyle.color(row.task.lastRun?.status))
-                .frame(width: m.pt(7), height: m.pt(7))
-                .help(row.task.lastRun.map { "Last run \($0.status.text)" } ?? "Not run yet")
-            VStack(alignment: .leading, spacing: m.space.xxs) {
-                Text(verbatim: row.task.name)
-                    .font(.dm(12, weight: .semibold))
-                    .foregroundStyle(Color.dmRowText)
-                    .lineLimit(1)
-                Text(verbatim: "\(row.task.schedule.describe) · \(row.workspace.name) · \(row.task.folder)")
-                    .font(.dm(11))
-                    .foregroundStyle(Color.dmMuted)
-                    .lineLimit(1)
+        HStack(spacing: m.space.lg) {
+            Image(systemName: task.action.isPrompt ? "sparkles" : "terminal")
+                .font(.dm(14, weight: .medium))
+                .foregroundStyle(tint)
+                .frame(width: m.pt(34), height: m.pt(34))
+                .background(tint.opacity(0.12), in: RoundedRectangle(cornerRadius: m.pt(DMRadius.tile), style: .continuous))
+            VStack(alignment: .leading, spacing: m.space.xs) {
+                HStack(spacing: m.space.sm) {
+                    Text(verbatim: task.name)
+                        .font(.dm(13, weight: .semibold))
+                        .foregroundStyle(Color.dmRowText)
+                        .lineLimit(1)
+                    DMKindLabel(text: task.actionLabel.uppercased())
+                    if task.paused { DMKindLabel(text: "PAUSED") }
+                    if task.done { DMKindLabel(text: "DONE") }
+                }
+                HStack(spacing: m.space.xs) {
+                    Image(systemName: "clock").font(.dm(10))
+                    Text(verbatim: task.schedule.describe)
+                    Text(verbatim: "·")
+                    Image(systemName: "folder").font(.dm(10))
+                    Text(verbatim: task.folder).lineLimit(1).truncationMode(.middle)
+                }
+                .font(.dm(11.5))
+                .foregroundStyle(Color.dmMuted)
             }
             Spacer(minLength: m.space.md)
-            DMPill(text: row.task.actionLabel, color: row.task.action.isPrompt ? .purple : Color.dmRowText)
-            Text(verbatim: ScheduledStyle.next(row.task))
-                .font(.dm(11))
-                .foregroundStyle(row.task.paused || row.task.done ? Color.dmMuted : Color.dmRowText)
-                .frame(width: m.pt(120), alignment: .trailing)
+            VStack(alignment: .trailing, spacing: m.space.xs) {
+                Text(verbatim: ScheduledStyle.next(task))
+                    .font(.dm(12, weight: .medium))
+                    .foregroundStyle(resting ? Color.dmMuted : Color.dmRowText)
+                lastRun
+            }
             if isBusy {
                 ProgressView().controlSize(.small)
             }
             SwiftUI.Menu { menu() } label: {
                 Image(systemName: "ellipsis")
+                    .font(.dm(13, weight: .semibold))
                     .foregroundStyle(Color.dmMuted)
+                    .frame(width: m.pt(28), height: m.pt(28))
+                    .contentShape(Rectangle())
             }
             .menuStyle(.borderlessButton)
             .menuIndicator(.hidden)
             .fixedSize()
+            .help("More")
         }
-        .padding(.horizontal, m.pt(8))
-        .padding(.vertical, m.pt(8))
-        .background(isSelected ? Color.dmSelection : Color.clear, in: RoundedRectangle(cornerRadius: m.radius.control))
-        .opacity(row.task.paused || row.task.done ? 0.6 : 1)
+        .padding(.horizontal, m.space.lg)
+        .padding(.vertical, m.pt(10))
+        .dmSurface(
+            isSelected ? Color.dmSelection : (hovering ? Color.dmHover : Color.dmBand),
+            radius: DMRadius.tile,
+            stroke: isSelected ? Color.accentColor.opacity(0.55) : .dmStroke,
+            lineWidth: isSelected ? 1 : 0.5)
+        .opacity(resting ? 0.7 : 1)
+        .onHover { hovering = $0 }
+    }
+
+    @ViewBuilder
+    private var lastRun: some View {
+        if let run = task.lastRun {
+            HStack(spacing: m.space.xs) {
+                Circle()
+                    .fill(ScheduledStyle.color(run.status))
+                    .frame(width: m.pt(DMIconSize.dot) - 1, height: m.pt(DMIconSize.dot) - 1)
+                Text(verbatim: "\(run.status.text.capitalized) \(ScheduledStyle.relative(run.startedAt))")
+            }
+            .font(.dm(11))
+            .foregroundStyle(Color.dmMuted)
+        } else {
+            Text("Not run yet").font(.dm(11)).foregroundStyle(Color.dmMuted)
+        }
     }
 }
 

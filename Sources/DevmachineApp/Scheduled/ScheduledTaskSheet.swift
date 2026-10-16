@@ -53,7 +53,7 @@ struct ScheduledTaskSheet: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             Text(editingID == nil ? "New scheduled task" : "Edit scheduled task")
-                .font(.dm(15, weight: .semibold))
+                .font(.dm(17, weight: .semibold))
                 .padding([.horizontal, .top], m.pt(18))
                 .padding(.bottom, m.space.md)
             ScrollView {
@@ -63,11 +63,12 @@ struct ScheduledTaskSheet: View {
                     }
                     HStack(alignment: .top, spacing: m.space.md) {
                         field("Workspace") {
-                            Picker(selection: $draft.workspace) {
-                                ForEach(store.workspaces) { w in
-                                    Text(verbatim: w.installed ? w.name : "\(w.name) (not set up)").tag(w.name)
-                                }
-                            } label: { EmptyView() }
+                            DMDropdown(
+                                label: "",
+                                options: store.workspaces.map {
+                                    .init(value: $0.name, title: $0.installed ? $0.name : "\($0.name) · not set up")
+                                },
+                                selection: $draft.workspace)
                             .disabled(editingID != nil)
                         }
                         field("Folder") {
@@ -108,11 +109,11 @@ struct ScheduledTaskSheet: View {
 
     private var actionBox: some View {
         VStack(alignment: .leading, spacing: 0) {
-            Picker(selection: $draft.kind) {
-                Text("Prompt").tag(ScheduledDraft.Kind.prompt)
-                Text("Command").tag(ScheduledDraft.Kind.command)
-            } label: { EmptyView() }
-            .pickerStyle(.segmented)
+            DMTabStrip(
+                tabs: ScheduledDraft.Kind.allCases, selection: $draft.kind,
+                title: { $0 == .prompt ? "Prompt" : "Command" },
+                systemImage: { $0 == .prompt ? "sparkles" : "terminal" },
+                fontSize: 12, grouped: true)
             .fixedSize()
             .padding(m.space.md)
 
@@ -123,7 +124,7 @@ struct ScheduledTaskSheet: View {
                 editor($draft.command, placeholder: "make report && git push", monospaced: true)
             }
         }
-        .background(Color.dmBand, in: RoundedRectangle(cornerRadius: m.radius.card, style: .continuous))
+        .dmSurface(Color.dmBand, radius: DMRadius.tile)
     }
 
     private func editor(_ text: Binding<String>, placeholder: String, monospaced: Bool) -> some View {
@@ -145,45 +146,48 @@ struct ScheduledTaskSheet: View {
     }
 
     private var agentBar: some View {
-        HStack(spacing: m.space.md) {
-            Picker(selection: $draft.harness) {
-                ForEach(store.harnesses) { Text(verbatim: $0.name.capitalized).tag($0.name) }
-                if store.harness(draft.harness) == nil { Text(verbatim: draft.harness).tag(draft.harness) }
-            } label: { EmptyView() }
-            .fixedSize()
+        HStack(spacing: m.space.sm) {
+            DMDropdown(
+                label: "",
+                options: harnessOptions,
+                selection: $draft.harness)
             .help("Coding agent")
-
-            Picker(selection: $draft.permissionMode) {
-                Text("Agent default").tag("")
-                ForEach(harness?.permissionModes ?? [], id: \.self) { mode in
-                    Text(verbatim: harness?.isDangerous(mode) == true ? "\(mode) (no approvals)" : mode).tag(mode)
-                }
-            } label: { EmptyView() }
-            .fixedSize()
+            DMDropdown(
+                label: "",
+                options: [.init(value: "", title: "Agent default")] + (harness?.permissionModes ?? []).map {
+                    .init(value: $0, title: harness?.isDangerous($0) == true ? "\($0) · no approvals" : $0)
+                },
+                selection: $draft.permissionMode)
             .help("Permission mode")
-
             Spacer()
-
-            TextField("Default model", text: $draft.model)
-                .dmField()
-                .frame(width: m.pt(130))
             if let models = harness?.models, !models.isEmpty {
-                Menu {
-                    Button("Default model") { draft.model = "" }
-                    ForEach(models, id: \.self) { model in
-                        Button(model.capitalized) { draft.model = model }
-                    }
-                } label: {
-                    Image(systemName: "chevron.down")
-                }
-                .menuStyle(.borderlessButton)
-                .menuIndicator(.hidden)
-                .fixedSize()
-                .help("Models")
+                DMDropdown(label: "", options: modelOptions(models), selection: $draft.model)
+                    .help("Model")
+            } else {
+                TextField("Default model", text: $draft.model)
+                    .dmField()
+                    .frame(width: m.pt(140))
             }
         }
         .padding(m.space.md)
-        .background(Color.dmContentBg.opacity(0.6))
+        .overlay(alignment: .top) { DMHairline() }
+    }
+
+    private var harnessOptions: [DMDropdown<String>.Option] {
+        var options = store.harnesses.map { DMDropdown<String>.Option(value: $0.name, title: $0.name.capitalized) }
+        if store.harness(draft.harness) == nil {
+            options.append(.init(value: draft.harness, title: draft.harness.capitalized))
+        }
+        return options
+    }
+
+    private func modelOptions(_ models: [String]) -> [DMDropdown<String>.Option] {
+        var options = [DMDropdown<String>.Option(value: "", title: "Default model")]
+            + models.map { .init(value: $0, title: $0.capitalized) }
+        if !draft.model.isEmpty, !models.contains(draft.model) {
+            options.append(.init(value: draft.model, title: draft.model))
+        }
+        return options
     }
 
     private var dangerBanner: some View {
@@ -206,10 +210,10 @@ struct ScheduledTaskSheet: View {
         VStack(alignment: .leading, spacing: m.space.xs) {
             HStack(spacing: m.space.md) {
                 Label("Schedule", systemImage: "clock").font(.dm(12, weight: .semibold))
-                Picker(selection: $draft.every) {
-                    ForEach(ScheduledDraft.everyChoices, id: \.value) { Text(verbatim: $0.title).tag($0.value) }
-                } label: { EmptyView() }
-                .fixedSize()
+                DMDropdown(
+                    label: "",
+                    options: ScheduledDraft.everyChoices.map { .init(value: $0.value, title: $0.title) },
+                    selection: $draft.every)
                 whenFields
                 Spacer()
             }
@@ -218,7 +222,7 @@ struct ScheduledTaskSheet: View {
                 .foregroundStyle(Color.dmMuted)
         }
         .padding(m.space.md)
-        .background(Color.dmBand, in: RoundedRectangle(cornerRadius: m.radius.card, style: .continuous))
+        .dmSurface(Color.dmBand, radius: DMRadius.tile)
     }
 
     @ViewBuilder
@@ -226,24 +230,23 @@ struct ScheduledTaskSheet: View {
         switch draft.every {
         case "hourly":
             Text("at minute").font(.dm(12)).foregroundStyle(Color.dmMuted)
-            Picker(selection: $draft.minute) {
-                ForEach(0..<60, id: \.self) { Text(verbatim: String(format: ":%02d", $0)).tag($0) }
-            } label: { EmptyView() }
-            .fixedSize()
+            DMDropdown(
+                label: "",
+                options: stride(from: 0, to: 60, by: 5).map { .init(value: $0, title: String(format: ":%02d", $0)) }
+                    + (draft.minute % 5 == 0 ? [] : [.init(value: draft.minute, title: String(format: ":%02d", draft.minute))]),
+                selection: $draft.minute)
         case "weekly":
-            Picker(selection: $draft.weekday) {
-                ForEach(ScheduledDraft.weekdays, id: \.self) {
-                    Text(verbatim: ScheduledSchedule.weekdayNames[$0] ?? $0).tag($0)
-                }
-            } label: { EmptyView() }
-            .fixedSize()
+            DMDropdown(
+                label: "",
+                options: ScheduledDraft.weekdays.map { .init(value: $0, title: ScheduledSchedule.weekdayNames[$0] ?? $0) },
+                selection: $draft.weekday)
             timeField
         case "monthly":
             Text("on day").font(.dm(12)).foregroundStyle(Color.dmMuted)
-            Picker(selection: $draft.day) {
-                ForEach(1...31, id: \.self) { Text(verbatim: String($0)).tag($0) }
-            } label: { EmptyView() }
-            .fixedSize()
+            DMDropdown(
+                label: "",
+                options: (1...31).map { .init(value: $0, title: String($0)) },
+                selection: $draft.day)
             timeField
         case "once":
             DatePicker("", selection: dateBinding, displayedComponents: .date)
@@ -256,29 +259,42 @@ struct ScheduledTaskSheet: View {
     }
 
     private var timeField: some View {
-        DatePicker("", selection: timeBinding, displayedComponents: .hourAndMinute)
-            .labelsHidden()
-            .fixedSize()
+        HStack(spacing: m.space.xxs) {
+            Text("at").font(.dm(12)).foregroundStyle(Color.dmMuted)
+            DMDropdown(
+                label: "",
+                options: (0..<24).map { .init(value: $0, title: String(format: "%02d", $0)) },
+                selection: clockPart(0))
+            Text(verbatim: ":").font(.dm(12, weight: .semibold)).foregroundStyle(Color.dmMuted)
+            DMDropdown(
+                label: "",
+                options: minuteChoices.map { .init(value: $0, title: String(format: "%02d", $0)) },
+                selection: clockPart(1))
+        }
+    }
+
+    /// Every five minutes, plus the minute the task already has.
+    private var minuteChoices: [Int] {
+        let current = clock.minute
+        let steps = Array(stride(from: 0, to: 60, by: 5))
+        return steps.contains(current) ? steps : (steps + [current]).sorted()
+    }
+
+    private var clock: (hour: Int, minute: Int) {
+        let parts = draft.at.split(separator: ":").compactMap { Int($0) }
+        return (parts.first ?? 9, parts.count > 1 ? parts[1] : 0)
+    }
+
+    private func clockPart(_ index: Int) -> Binding<Int> {
+        Binding(
+            get: { index == 0 ? clock.hour : clock.minute },
+            set: { value in
+                let (hour, minute) = index == 0 ? (value, clock.minute) : (clock.hour, value)
+                draft.at = String(format: "%02d:%02d", hour, minute)
+            })
     }
 
     private var zone: TimeZone { TimeZone(identifier: draft.timezone) ?? .current }
-
-    private var timeBinding: Binding<Date> {
-        Binding(
-            get: {
-                let parts = draft.at.split(separator: ":").compactMap { Int($0) }
-                var c = Calendar.current
-                c.timeZone = zone
-                let minute = parts.count > 1 ? parts[1] : 0
-                return c.date(bySettingHour: parts.first ?? 9, minute: minute, second: 0, of: Date()) ?? Date()
-            },
-            set: { date in
-                var c = Calendar.current
-                c.timeZone = zone
-                let parts = c.dateComponents([.hour, .minute], from: date)
-                draft.at = String(format: "%02d:%02d", parts.hour ?? 9, parts.minute ?? 0)
-            })
-    }
 
     private var dateBinding: Binding<Date> {
         let f = DateFormatter()
@@ -301,8 +317,8 @@ struct ScheduledTaskSheet: View {
                 Text(verbatim: problem).font(.dm(11)).foregroundStyle(Color.dmMuted)
             }
             Spacer()
-            DMButton("Cancel", variant: .outline, size: .small) { dismiss() }
-            DMButton(editingID == nil ? "Create" : "Save", size: .small, isLoading: isSaving) {
+            DMButton("Cancel", variant: .outline) { dismiss() }
+            DMButton(editingID == nil ? "Create" : "Save", isLoading: isSaving) {
                 if needsSetup { confirmSetup = true } else { save() }
             }
             .disabled(problem != nil || isSaving)

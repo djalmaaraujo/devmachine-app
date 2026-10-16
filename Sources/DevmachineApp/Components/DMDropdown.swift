@@ -22,8 +22,10 @@ struct DMDropdown<Value: Hashable>: View {
     var body: some View {
         Button { open.toggle() } label: {
             HStack(spacing: m.space.sm) {
-                Text(verbatim: label)
-                    .foregroundStyle(Color.dmMuted)
+                if !label.isEmpty {
+                    Text(verbatim: label)
+                        .foregroundStyle(Color.dmMuted)
+                }
                 Text(verbatim: current)
                     .foregroundStyle(Color.dmRowText)
                     .fontWeight(.semibold)
