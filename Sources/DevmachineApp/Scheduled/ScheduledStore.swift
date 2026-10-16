@@ -147,9 +147,10 @@ final class ScheduledStore: ObservableObject {
         }
     }
 
-    /// Reads a task's runs every two seconds until `runID` is there and has
-    /// ended, for at most ten minutes, so Run now shows its end without a
-    /// refresh. The run may not be listed yet on the first read.
+    /// Reads a task's runs every two seconds until `runID` is listed and no
+    /// run is still going, for at most ten minutes, so Run now shows the end
+    /// without a refresh. A Run now that lands on a running one is skipped at
+    /// once, and the run it met is the one to wait for.
     private func poll(_ row: ScheduledRow, until runID: String) {
         guard polling.insert(row.id).inserted else { return }
         Task {
@@ -160,7 +161,8 @@ final class ScheduledStore: ObservableObject {
                 guard let found = try? await cli({ try $0.scheduledRuns(row.task.id, workspace: row.workspace.name) })
                 else { return }
                 runs[row.id] = found
-                if let run = found.first(where: { $0.id == runID }), run.status != .running { break }
+                let listed = found.contains { $0.id == runID }
+                if listed && !found.contains(where: { $0.status == .running }) { break }
                 try? await Task.sleep(for: .seconds(2))
             }
             refresh()
