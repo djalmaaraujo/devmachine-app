@@ -1,0 +1,28 @@
+Sources/DevmachineCore/Chats/ChatRecord.swift
+  s_46e69727c17321::t_1a2d3bf02fdbf5 103-105
+  s_46e69727c17321::t_cc045b58a3f412 1-102,106-202
+Sources/DevmachineCore/Chats/ChatCommand.swift
+  s_46e69727c17321::t_fc93fe08d5c565 1-51
+Sources/DevmachineCore/Chats/ChatEvent.swift
+  s_46e69727c17321::t_3cd3832c6ecb21 1-96
+Tests/DevmachineCoreTests/Chats/ChatCommandTests.swift
+  s_46e69727c17321::t_9eba37ec37777c 1-35
+Tests/DevmachineCoreTests/Chats/ChatEventDecoderTests.swift
+  s_46e69727c17321::t_c0855d3ea0787a 1-100
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "ab3c161aed4d8acaed60a556de83791ad6807ab6",
+  "prompts": {},
+  "sessions": {
+    "s_46e69727c17321": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "057eb95b-b600-40da-9c82-ac29c62bf791",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
