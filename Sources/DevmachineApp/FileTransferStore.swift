@@ -131,14 +131,21 @@ final class FileTransferStore: ObservableObject {
             show(refusal)
             return []
         }
-        busy.insert(folder)
-        defer { busy.remove(folder) }
         let cli = self.cli
         let paths = files.map(\.path)
+        // The card a drop on a pane shows, so a drop on the tree is seen
+        // while it runs and not only once the notice says it is done. The CLI
+        // reports no bytes for an upload, so the bar stays empty until then.
+        // It goes before the notice, which takes its place.
+        let card = cards.begin("Uploading \(Self.names(paths))")
+        busy.insert(folder)
+        defer { busy.remove(folder) }
+        let outcome = await Task.detached {
+            Result { try cli().upload(files: paths, workspace: workspace, directory: folder) }
+        }.value
+        if let card { cards.end(card) }
         do {
-            let uploaded = try await Task.detached {
-                try cli().upload(files: paths, workspace: workspace, directory: folder)
-            }.value
+            let uploaded = try outcome.get()
             show(Self.notice(forUploads: uploaded, into: folder))
             return uploaded.compactMap(\.remote)
         } catch {

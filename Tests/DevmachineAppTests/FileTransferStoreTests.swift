@@ -238,6 +238,41 @@ final class FileTransferStoreTests: XCTestCase {
             files: [file.path], workspace: "acme", directory: "/home/acme/proj/assets"))
     }
 
+    func testAnUploadShowsACardUntilItsNoticeTakesOver() async throws {
+        let runner = CannedRunner(#"[{"local":"/x","remote":"/home/acme/proj/x-20260930-143012.png","bytes":1}]"#)
+        let cards = CardLog()
+        let transfers = store(runner, cards: cards)
+        let file = try folder().appendingPathComponent("x.png")
+        try Data("x".utf8).write(to: file)
+
+        _ = await transfers.upload([file], into: "/home/acme/proj", workspace: "acme")
+
+        XCTAssertEqual(cards.events, [.begin("Uploading x.png"), .end(noticeShown: false)])
+        XCTAssertEqual(transfers.notice?.title, "Uploaded x-20260930-143012.png to proj")
+    }
+
+    func testAFailedUploadClosesItsCardAndSaysWhy() async throws {
+        let runner = CannedRunner("", stderr: "Error: no workspace named acme\n", exitCode: 1)
+        let cards = CardLog()
+        let transfers = store(runner, cards: cards)
+        let file = try folder().appendingPathComponent("x.png")
+        try Data("x".utf8).write(to: file)
+
+        _ = await transfers.upload([file], into: "/home/acme/proj", workspace: "acme")
+
+        XCTAssertEqual(cards.events, [.begin("Uploading x.png"), .end(noticeShown: false)])
+        XCTAssertEqual(transfers.notice?.title, "Could not upload x.png")
+    }
+
+    func testARefusedUploadShowsNoCard() async throws {
+        let cards = CardLog()
+        let transfers = store(CannedRunner("[]"), cards: cards)
+
+        _ = await transfers.upload([try folder()], into: "/home/acme/proj", workspace: "acme")
+
+        XCTAssertEqual(cards.events, [])
+    }
+
     func testALocalDropCopiesWithoutOverwriting() async throws {
         let source = try folder().appendingPathComponent("relatório final.txt")
         try Data("new".utf8).write(to: source)
