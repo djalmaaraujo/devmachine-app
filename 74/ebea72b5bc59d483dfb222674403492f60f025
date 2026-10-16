@@ -1,0 +1,33 @@
+Tests/DevmachineAppTests/OverlayScrollersTests.swift
+  s_46e69727c17321::t_c1db64d98dd154 1-55
+Sources/DevmachineApp/OverlayScrollers.swift
+  s_46e69727c17321::t_79337af62b97d9 1-52
+CLAUDE.md
+  s_46e69727c17321::t_a33b8405b811ee 759-769
+Sources/DevmachineApp/Chats/ChatsView.swift
+  s_46e69727c17321::t_13220e521a69e6 112
+Sources/DevmachineApp/DemoSnapshots.swift
+  s_46e69727c17321::t_81ead9b51b2f38 61-65,73
+Sources/DevmachineApp/Scheduled/ScheduleModeView.swift
+  s_46e69727c17321::t_452a810cc9d3af 78
+Sources/DevmachineApp/Widgets/Stack/StackBoardView.swift
+  s_46e69727c17321::t_1937f1ffcae127 87
+Tests/DevmachineAppTests/DemoSnapshotsTests.swift
+  s_46e69727c17321::t_0f49e8c49cc29a 196-201
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "74ebea72b5bc59d483dfb222674403492f60f025",
+  "prompts": {},
+  "sessions": {
+    "s_46e69727c17321": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "057eb95b-b600-40da-9c82-ac29c62bf791",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
