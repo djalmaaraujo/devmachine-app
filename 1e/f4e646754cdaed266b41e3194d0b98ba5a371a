@@ -1,0 +1,40 @@
+Sources/DevmachineApp/Scheduled/ScheduledStore.swift
+  s_be9ca8cef925d9::t_4f17327b5308d1 28-31
+  s_be9ca8cef925d9::t_42119fca79c8af 179-195
+  s_be9ca8cef925d9::t_dd34d3ea4d068a 35,121,132
+Sources/DevmachineApp/DemoScheduled.swift
+  s_be9ca8cef925d9::t_ea831a3c023ebf 1-139
+  s_be9ca8cef925d9::t_68d9660551755f 140-143
+Sources/DevmachineApp/DemoSiteWalk.swift
+  s_be9ca8cef925d9::t_9a57576eb3f074 78,111,184-204,387,390,522-535,634,636-639
+Sources/DevmachineApp/DemoSnapshots.swift
+  s_be9ca8cef925d9::t_df2ee1e4ec5eaf 141,652-657
+Sources/DevmachineApp/Scheduled/ScheduledDetailView.swift
+  s_be9ca8cef925d9::t_2d1ba617eebd1e 28,111,114,116,125,158-159,162
+Sources/DevmachineApp/Scheduled/ScheduledTaskSheet.swift
+  s_be9ca8cef925d9::t_95415c27848582 20-21,28
+Sources/DevmachineApp/Scheduled/ScheduledView.swift
+  s_be9ca8cef925d9::t_c1a560bfc8d7b1 24,36,70,101,154,156,158,177
+Tests/DevmachineAppTests/DemoSiteWalkTests.swift
+  s_be9ca8cef925d9::t_f1d7647c8c392a 17,58,60,116,244-258
+Tests/DevmachineAppTests/DemoSnapshotsTests.swift
+  s_be9ca8cef925d9::t_8a90793a2b8eaa 62,83,87-89
+scripts/site_demo_videos.sh
+  s_be9ca8cef925d9::t_cdcdfa7fc8e796 23
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "1ef4e646754cdaed266b41e3194d0b98ba5a371a",
+  "prompts": {},
+  "sessions": {
+    "s_be9ca8cef925d9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d9f277d6-7db0-48b4-8122-c76a3ca3c439",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
