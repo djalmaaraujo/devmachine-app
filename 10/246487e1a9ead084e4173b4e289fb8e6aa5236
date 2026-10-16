@@ -1,0 +1,25 @@
+Sources/DevmachineApp/Chats/ChatStore.swift
+  s_46e69727c17321::t_ae32afd2245c4d 24-25
+  s_46e69727c17321::t_024075193729cd 1-23,26-37,81-309,315,318,320-481
+  s_46e69727c17321::t_9a7ede38c986ed 38-80
+  s_46e69727c17321::t_4ec4faae6e5a3f 310-314,316-317,319
+Tests/DevmachineAppTests/ChatStoreTests.swift
+  s_46e69727c17321::t_5d35c498714a18 1-250
+  s_46e69727c17321::t_5ec34c2337ac36 251-277
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "10246487e1a9ead084e4173b4e289fb8e6aa5236",
+  "prompts": {},
+  "sessions": {
+    "s_46e69727c17321": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "057eb95b-b600-40da-9c82-ac29c62bf791",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
