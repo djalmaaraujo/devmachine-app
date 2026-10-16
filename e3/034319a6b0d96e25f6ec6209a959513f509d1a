@@ -1,0 +1,39 @@
+Sources/DevmachineApp/Chats/SidebarModeHeader.swift
+  s_46e69727c17321::t_3749f8b845bf7f 1-134
+CLAUDE.md
+  s_46e69727c17321::t_888ccbe570c0ef 757-762
+Sources/DevmachineApp/AppModel.swift
+  s_46e69727c17321::t_bf08e18a15063e 620,629-631
+Sources/DevmachineApp/Chats/ChatsView.swift
+  s_46e69727c17321::t_01f3dea130c25e 75-82,90
+Sources/DevmachineApp/Chats/DemoChats.swift
+  s_46e69727c17321::t_58ea314e85210e 151,180-182
+Sources/DevmachineApp/ContentView.swift
+  s_46e69727c17321::t_e6356145339260 56
+Sources/DevmachineApp/DevmachineApp.swift
+  s_46e69727c17321::t_e9c99b26a9206b 213-214
+Sources/DevmachineApp/Palette/CommandRegistry.swift
+  s_46e69727c17321::t_2284aefd6d3b64 61,65
+Sources/DevmachineApp/SidebarView.swift
+  s_46e69727c17321::t_91045477a3aa8b 52-55,57-59
+Tests/DevmachineAppTests/ChatsModeTests.swift
+  s_46e69727c17321::t_fcd700b584fc8b 63-77
+Tests/DevmachineAppTests/ChatsPaletteAndDemoTests.swift
+  s_46e69727c17321::t_dae5c8b65f9008 50,56
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "e3034319a6b0d96e25f6ec6209a959513f509d1a",
+  "prompts": {},
+  "sessions": {
+    "s_46e69727c17321": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "057eb95b-b600-40da-9c82-ac29c62bf791",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
