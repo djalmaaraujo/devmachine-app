@@ -1,0 +1,25 @@
+Sources/DevmachineApp/Chats/DemoChats.swift
+  s_46e69727c17321::t_0d779f920fca3d 106
+Sources/DevmachineCore/Chats/AskThread.swift
+  s_46e69727c17321::t_2465562fc05c77 3-4,6,10-13,19,25-26,31
+Tests/DevmachineAppTests/AskStoreTests.swift
+  s_46e69727c17321::t_e9c2bf37313bb9 18,24,64,92-100
+Tests/DevmachineCoreTests/Chats/AskThreadTests.swift
+  s_46e69727c17321::t_4efc941388475f 15-16,18-19
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "645b9d357137cf6174d25a4707553db5b0afc453",
+  "prompts": {},
+  "sessions": {
+    "s_46e69727c17321": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "057eb95b-b600-40da-9c82-ac29c62bf791",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
