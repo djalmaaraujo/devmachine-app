@@ -1,0 +1,43 @@
+Sources/DevmachineApp/ChatsMockup/ChatsMockupState.swift
+  s_46e69727c17321::t_b128d8a853e970 1-88
+Sources/DevmachineApp/ChatsMockup/AskSectionMockup.swift
+  s_46e69727c17321::t_aee3f440d40d8c 1-85
+  s_46e69727c17321::t_e8be5c92e4258a 86-89
+Sources/DevmachineApp/ChatsMockup/ChatsWindowMockup.swift
+  s_46e69727c17321::t_a9904822b409fb 1-550
+  s_46e69727c17321::t_16cc016844ad47 551-552
+Sources/DevmachineApp/ChatsMockup/ChatsMockupParts.swift
+  s_46e69727c17321::t_54d38854a4e41e 1-263
+  s_46e69727c17321::t_6f345bce5ffd17 264
+Sources/DevmachineApp/ChatsMockup/DemoChats.swift
+  s_46e69727c17321::t_4473460874c17b 1-95
+  s_46e69727c17321::t_617d737b22717e 96-121
+Sources/DevmachineApp/ChatsMockup/QuickPanelMockup.swift
+  s_46e69727c17321::t_4d71b6f48c3736 1-128
+  s_46e69727c17321::t_17558fc5c3d3b7 129-136
+Sources/DevmachineApp/ChatsMockup/ChatsSettingsMockup.swift
+  s_46e69727c17321::t_1c9d806080d22c 1-204
+  s_46e69727c17321::t_00526dea0ba754 205-218
+Sources/DevmachineApp/ContentView.swift
+  s_46e69727c17321::t_73cbaccbb0969a 36,229-237
+Sources/DevmachineApp/DemoSnapshots.swift
+  s_46e69727c17321::t_9c679f0c242a7d 90-93,415,546-547,572,617-620,753
+Sources/DevmachineApp/Widgets/Stack/ContextSectionWidgets.swift
+  s_46e69727c17321::t_8d5bbaf6b68b9d 67-71
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "30a5af78b433cf7e7bc78590f1e3dcc01553e12c",
+  "prompts": {},
+  "sessions": {
+    "s_46e69727c17321": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "057eb95b-b600-40da-9c82-ac29c62bf791",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
