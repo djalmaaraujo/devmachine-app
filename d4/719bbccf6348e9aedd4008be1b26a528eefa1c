@@ -1,0 +1,21 @@
+Sources/DevmachineApp/Chats/DemoChats.swift
+  s_46e69727c17321::t_b3e6d8ba025820 154-155,176-185
+Tests/DevmachineAppTests/ChatsPaletteAndDemoTests.swift
+  s_46e69727c17321::t_2ff97e908611ac 94-95
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "d4719bbccf6348e9aedd4008be1b26a528eefa1c",
+  "prompts": {},
+  "sessions": {
+    "s_46e69727c17321": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "057eb95b-b600-40da-9c82-ac29c62bf791",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
