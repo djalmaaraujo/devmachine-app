@@ -1,0 +1,21 @@
+docs/RELEASING.md
+  s_46e69727c17321::t_a56d3e03c14af0 160-164
+scripts/notarize.sh
+  s_46e69727c17321::t_6174e8db8300d6 58-74
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "b4210311eae66116ef07e52ace8f9ae76f91f1dd",
+  "prompts": {},
+  "sessions": {
+    "s_46e69727c17321": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "057eb95b-b600-40da-9c82-ac29c62bf791",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
