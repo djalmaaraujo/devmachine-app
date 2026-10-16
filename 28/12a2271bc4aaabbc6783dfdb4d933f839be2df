@@ -1,0 +1,27 @@
+Sources/DevmachineApp/Chats/QuickChatPanel.swift
+  s_46e69727c17321::t_b5c4c2e4aa00ae 369
+  s_46e69727c17321::t_7b70e5b6d2a780 261-273,276-279
+  s_46e69727c17321::t_3e53f4d253a752 250
+  s_46e69727c17321::t_896de2ca614c50 332,335
+  s_46e69727c17321::t_07d9a8f4fc0d1a 194
+  s_46e69727c17321::t_ebc09fcbe44354 289,291,297-298
+  s_46e69727c17321::t_e2023d5683b265 141-151
+Tests/DevmachineAppTests/QuickChatTests.swift
+  s_46e69727c17321::t_5aff4ad44d2367 173-182
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "2812a2271bc4aaabbc6783dfdb4d933f839be2df",
+  "prompts": {},
+  "sessions": {
+    "s_46e69727c17321": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "057eb95b-b600-40da-9c82-ac29c62bf791",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
