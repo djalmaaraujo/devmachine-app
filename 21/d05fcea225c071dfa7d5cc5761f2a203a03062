@@ -1,0 +1,21 @@
+Sources/DevmachineApp/Chats/ChatStore.swift
+  s_46e69727c17321::t_685248a03d5c4d 214-217,383,399
+Tests/DevmachineAppTests/ChatStoreTests.swift
+  s_46e69727c17321::t_f0f6992f0fe7a6 332-341
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "21d05fcea225c071dfa7d5cc5761f2a203a03062",
+  "prompts": {},
+  "sessions": {
+    "s_46e69727c17321": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "057eb95b-b600-40da-9c82-ac29c62bf791",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
