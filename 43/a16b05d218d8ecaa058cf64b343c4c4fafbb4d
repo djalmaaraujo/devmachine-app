@@ -1,0 +1,48 @@
+Sources/DevmachineApp/Chats/ChatPane.swift
+  s_46e69727c17321::t_604771f14d265f 1-177
+Sources/DevmachineApp/Chats/ChatMessageViews.swift
+  s_46e69727c17321::t_4d570f3bbf2520 1-219
+  s_46e69727c17321::t_a0adc2f2a9b18e 220
+Tests/DevmachineCoreTests/Chats/ChatFailurePresentationTests.swift
+  s_46e69727c17321::t_60aded126666e8 1-40
+Sources/DevmachineApp/Chats/ChatsView.swift
+  s_46e69727c17321::t_7a223031e3a271 1-220
+Sources/DevmachineApp/Chats/ChatParts.swift
+  s_46e69727c17321::t_f3146d67758dfb 1-243
+Sources/DevmachineCore/Chats/ChatFailurePresentation.swift
+  s_46e69727c17321::t_357d8f1270b5d8 1-109
+Sources/DevmachineApp/Chats/ChatErrorCard.swift
+  s_46e69727c17321::t_0b80bdc938b7aa 1-121
+Sources/DevmachineApp/Chats/ChatComposer.swift
+  s_46e69727c17321::t_a6ccbb6932aaf6 1-128
+Tests/DevmachineAppTests/ChatsModeTests.swift
+  s_46e69727c17321::t_2ae4e3cedd72af 1-62
+Sources/DevmachineApp/AppModel.swift
+  s_46e69727c17321::t_e62a4b852e0160 531,616-627,1068,1337,1387-1412,1414
+Sources/DevmachineApp/AppPage.swift
+  s_46e69727c17321::t_d576ec77b1d3d0 1,14-30
+Sources/DevmachineApp/Chats/ChatStore.swift
+  s_46e69727c17321::t_b728a4ed8b7830 129-131,280-281,326-335
+Sources/DevmachineApp/ContentView.swift
+  s_46e69727c17321::t_96d975244184fd 24,37-43,46,129-139,328-341
+Sources/DevmachineApp/DevmachineApp.swift
+  s_46e69727c17321::t_277d7552f74754 172-175,209-213
+Sources/DevmachineApp/SetupPage.swift
+  s_46e69727c17321::t_05d2ab55076658 8,17,32,47,316
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "43a16b05d218d8ecaa058cf64b343c4c4fafbb4d",
+  "prompts": {},
+  "sessions": {
+    "s_46e69727c17321": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "057eb95b-b600-40da-9c82-ac29c62bf791",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}

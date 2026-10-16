@@ -1,0 +1,43 @@
+Sources/DevmachineApp/Chats/AskWidgetView.swift
+  s_46e69727c17321::t_94bc4124604de9 48,98-99,112
+Sources/DevmachineApp/Chats/ChatComposer.swift
+  s_46e69727c17321::t_bfc3e93b69e1d9 17,35-36,53-59,66,76-121,135,157-163
+Sources/DevmachineApp/Chats/ChatPane.swift
+  s_46e69727c17321::t_649759b9c47161 84-85,128-132,142-152,197-200
+Sources/DevmachineApp/Chats/ChatParts.swift
+  s_46e69727c17321::t_8084b55c562edc 125-127,130-134,139-141,201-296,350-357
+Sources/DevmachineApp/Chats/ChatStore.swift
+  s_46e69727c17321::t_0890ed68e3264e 98
+Sources/DevmachineApp/Chats/ChatsView.swift
+  s_46e69727c17321::t_258ea7823812f5 114-119,125-131,156-161
+Sources/DevmachineApp/Chats/MenubarChatsSection.swift
+  s_46e69727c17321::t_d6822cc3aefffd 34-38,64-67
+Sources/DevmachineApp/Chats/QuickChatPanel.swift
+  s_46e69727c17321::t_39c21f037ec97e 321-326,337,351-352,363,400-409
+Sources/DevmachineApp/Chats/SidebarModeHeader.swift
+  s_46e69727c17321::t_94b3c14d0e4914 17-21,24-29,51,56,72,86-94,113,129-131,147
+Sources/DevmachineApp/Palette/CommandRegistry.swift
+  s_46e69727c17321::t_47d59478963ecf 61-62,67
+Sources/DevmachineCore/Chats/ChatGrouping.swift
+  s_46e69727c17321::t_4409d144166edb 62-73
+Tests/DevmachineAppTests/ChatsPaletteAndDemoTests.swift
+  s_46e69727c17321::t_eb500c18772cb0 2,42-77
+Tests/DevmachineCoreTests/Chats/ChatGroupingTests.swift
+  s_46e69727c17321::t_fd82a886c15245 51-66
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "a9ae3459fdb6a96016e82acade2657505ec7c2d5",
+  "prompts": {},
+  "sessions": {
+    "s_46e69727c17321": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "057eb95b-b600-40da-9c82-ac29c62bf791",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
