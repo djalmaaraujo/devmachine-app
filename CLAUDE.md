@@ -1935,7 +1935,8 @@ once may fail there.
   as `--allow-dangerous`.
 - Create on a workspace without the package asks first ("Set up and
   create"), then runs `scheduled add --yes`, which adds the package and syncs
-  the machine before saving; it can take a minute or two.
+  the machine before saving; it can take a minute or two. That setup is a
+  global job card (`beginTask`, no count) while the Create button spins.
 - Edit sends every field (`ScheduledDraft.arguments`), so an empty model
   clears it. Run now starts the run and polls `scheduled runs` every 2 s until
   it ends (10 min at most). A `missed`/`skipped` run has no output; its

@@ -6,6 +6,7 @@ import DevmachineCore
 struct ScheduledView: View {
     @Environment(\.dmMetrics) private var m
     @ObservedObject private var store = ScheduledStore.shared
+    @EnvironmentObject private var model: AppModel
     @State private var searchText = ""
     @State private var selected: String?
     @State private var sheet: ScheduledSheetRequest?
@@ -23,6 +24,7 @@ struct ScheduledView: View {
             ScheduledTaskSheet(request: request) { saved in
                 selected = saved
             }
+            .environmentObject(model)
         }
         .confirmationDialog(
             confirmDelete.map { "Delete \u{201C}\($0.task.name)\u{201D}?" } ?? "",

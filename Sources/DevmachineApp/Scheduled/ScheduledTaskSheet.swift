@@ -7,6 +7,7 @@ struct ScheduledTaskSheet: View {
     @Environment(\.dmMetrics) private var m
     @Environment(\.dismiss) private var dismiss
     @ObservedObject private var store = ScheduledStore.shared
+    @EnvironmentObject private var model: AppModel
     let request: ScheduledSheetRequest
     let onSaved: (String) -> Void
 
@@ -296,10 +297,6 @@ struct ScheduledTaskSheet: View {
                     .foregroundStyle(Color.red)
                     .lineLimit(3)
                     .textSelection(.enabled)
-            } else if isSaving && needsSetup {
-                Text(verbatim: "Setting up scheduled on \(draft.workspace)…")
-                    .font(.dm(11))
-                    .foregroundStyle(Color.dmMuted)
             } else if let problem {
                 Text(verbatim: problem).font(.dm(11)).foregroundStyle(Color.dmMuted)
             }
@@ -316,13 +313,18 @@ struct ScheduledTaskSheet: View {
     private func save() {
         isSaving = true
         saveError = nil
+        let job = needsSetup
+            ? model.beginTask(label: "Setting up scheduled on \(draft.workspace)", total: 0, showsCount: false)
+            : nil
         Task {
             defer { isSaving = false }
             do {
                 let task = try await store.save(draft, editing: editingID, allowDangerous: isDangerous && allowDangerous)
+                if let job { model.finishTask(job) }
                 onSaved("\(draft.workspace)/\(task.id)")
                 dismiss()
             } catch {
+                if let job { model.dropTask(job) }
                 saveError = error.localizedDescription
             }
         }
