@@ -1,0 +1,27 @@
+CLAUDE.md
+  s_46e69727c17321::t_5775735403508d 771-777
+Sources/DevmachineApp/Chats/SidebarModeHeader.swift
+  s_46e69727c17321::t_d5625fa9389ac6 258-261,263-269,287-291
+Sources/DevmachineApp/ContentView.swift
+  s_46e69727c17321::t_68e6961e1fc659 52,341,351,354
+Sources/DevmachineApp/ContextPanel.swift
+  s_46e69727c17321::t_2d1c35c34119a7 36,219,237,263
+Tests/DevmachineAppTests/ChatsModeTests.swift
+  s_46e69727c17321::t_5c1c7539b202fc 149-153
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "3eb9e1496542c3781c132363dd53a0a7b36b54de",
+  "prompts": {},
+  "sessions": {
+    "s_46e69727c17321": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "057eb95b-b600-40da-9c82-ac29c62bf791",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
