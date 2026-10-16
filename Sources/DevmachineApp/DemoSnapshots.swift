@@ -138,6 +138,7 @@ enum DemoSnapshots {
         Screen(id: "command-palette", fileName: "21-command-palette.png", settleNanoseconds: 600_000_000),
         Screen(id: "drop-files", fileName: "22-drop-files.png", settleNanoseconds: 900_000_000),
         Screen(id: "preview", fileName: "23-preview.png", settleNanoseconds: 1_500_000_000),
+        Screen(id: "scheduled", fileName: "24-scheduled.png", settleNanoseconds: 700_000_000),
     ]
 
     /// The preview screen: acme's dev server session with its landing page
@@ -648,6 +649,12 @@ enum DemoSnapshots {
             setupInitialSection = .harnesses
             model.showPage(.setup)
         #if DEBUG
+        case "scheduled":
+            DemoScheduled.seed(ScheduledStore.shared)
+            ScheduledStore.shared.selectedID = DemoScheduled.briefingID
+            ScheduledStore.shared.openRunID = DemoScheduled.briefingRun
+            model.contextCollapsed = true
+            model.showPage(.scheduled)
         case "settings-connection", "settings-needs-setup", "settings-cli-missing", "settings-no-machine":
             settingsIssueRemedy = screen.id == "settings-needs-setup"
                 ? .runSetup : (screen.id == "settings-cli-missing" ? .installCLI : nil)

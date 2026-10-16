@@ -14,7 +14,7 @@ final class DemoSiteWalkTests: XCTestCase {
     func testTheSiteWalkIsSixScenesOfNumberedFramesEachInItsOwnFolder() {
         let screens = DemoSnapshots.walk(environment: ["DEVMACHINE_DEMO_WALK": "site"])
         XCTAssertEqual(
-            DemoSiteWalk.scenes.map(\.id), ["operator", "sessions", "cli", "context", "publish", "share", "home"])
+            DemoSiteWalk.scenes.map(\.id), ["operator", "sessions", "cli", "context", "publish", "scheduled", "share", "home"])
         XCTAssertEqual(screens.count, DemoSiteWalk.scenes.reduce(0) { $0 + $1.frames.count })
         XCTAssertEqual(screens.first?.fileName, "operator/001.png")
         XCTAssertEqual(Set(screens.map(\.id)).count, screens.count)
@@ -55,9 +55,9 @@ final class DemoSiteWalkTests: XCTestCase {
     }
 
     func testEverySceneOpensOnItsSubjectWithoutAClick() {
-        XCTAssertEqual(DemoSiteWalk.scenes.map { $0.frames.first?.pointer }, Array(repeating: nil, count: 7))
+        XCTAssertEqual(DemoSiteWalk.scenes.map { $0.frames.first?.pointer }, Array(repeating: nil, count: 8))
         XCTAssertEqual(DemoSiteWalk.scenes.map { $0.frames.first?.step }, [
-            .operatorChooser, .sidebar, .cli(0), .context(0), .publishedApps, .shareStart, .homeStart,
+            .operatorChooser, .sidebar, .cli(0), .context(0), .publishedApps, .scheduledList, .shareStart, .homeStart,
         ])
     }
 
@@ -113,6 +113,7 @@ final class DemoSiteWalkTests: XCTestCase {
             "sheet:share-link", "sheet:share-password",
             "widget:\(DemoSiteWalk.codexUsage)", "widget:\(DemoSiteWalk.claudeUsage)", "home:add",
             "sheet:gallery:\(DemoSiteWalk.summaryType)",
+            "scheduled:\(DemoScheduled.briefingID)", "scheduled:run:\(DemoScheduled.briefingRun)", "scheduled:new",
         ])
     }
 
@@ -240,10 +241,21 @@ final class DemoSiteWalkTests: XCTestCase {
     }
 
     func testSheetsAndThePopoverAreDrawnOverTheWindow() {
-        XCTAssertNotNil(DemoSiteWalk.sheet(for: .shareSheet))
-        XCTAssertNotNil(DemoSiteWalk.sheet(for: .shareLink))
-        XCTAssertEqual(DemoSiteWalk.sheet(for: .homeGallery)?.below, "home:add")
-        XCTAssertNil(DemoSiteWalk.sheet(for: .shared))
+        let model = AppModel()
+        XCTAssertNotNil(DemoSiteWalk.sheet(for: .shareSheet, model: model))
+        XCTAssertNotNil(DemoSiteWalk.sheet(for: .shareLink, model: model))
+        XCTAssertNotNil(DemoSiteWalk.sheet(for: .scheduledNew, model: model))
+        XCTAssertEqual(DemoSiteWalk.sheet(for: .homeGallery, model: model)?.below, "home:add")
+        XCTAssertNil(DemoSiteWalk.sheet(for: .shared, model: model))
+    }
+
+    func testTheScheduledDemoReadsThroughTheCLIsJSON() {
+        let store = ScheduledStore(makeCLI: { throw DevmachineCLIError.commandFailed("no CLI in a demo") })
+        DemoScheduled.seed(store)
+        XCTAssertEqual(store.rows.count, 5)
+        XCTAssertNotNil(store.row(DemoScheduled.briefingID))
+        XCTAssertEqual(store.runs[DemoScheduled.briefingID]?.first?.id, DemoScheduled.briefingRun)
+        XCTAssertNil(DemoScheduled.weeklyDraft.problem)
     }
 
     func testClickTargetsAreRecordedOnlyWhileAWalkCaptures() {

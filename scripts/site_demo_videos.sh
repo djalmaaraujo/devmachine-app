@@ -20,7 +20,7 @@ OUT="$1"
 mkdir -p "$OUT"
 WIDTH=2520
 HEIGHT=1620
-SCENES="${SITE_DEMO_SCENES:-operator sessions cli context publish share home}"
+SCENES="${SITE_DEMO_SCENES:-operator sessions cli context publish scheduled share home}"
 
 if [ -n "${SITE_DEMO_FRAMES:-}" ]; then
   FRAMES="$SITE_DEMO_FRAMES"

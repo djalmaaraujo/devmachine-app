@@ -17,14 +17,15 @@ struct ScheduledTaskSheet: View {
     @State private var saveError: String?
     @State private var confirmSetup = false
 
-    init(request: ScheduledSheetRequest, onSaved: @escaping (String) -> Void) {
+    /// `draft` starts a new task already filled in, as the demo walk shows it.
+    init(request: ScheduledSheetRequest, draft: ScheduledDraft? = nil, onSaved: @escaping (String) -> Void) {
         self.request = request
         self.onSaved = onSaved
         switch request {
         case .new:
             let first = ScheduledStore.shared.workspaces.first { $0.installed && $0.error == nil }
                 ?? ScheduledStore.shared.workspaces.first
-            _draft = State(initialValue: ScheduledDraft(workspace: first?.name ?? ""))
+            _draft = State(initialValue: draft ?? ScheduledDraft(workspace: first?.name ?? ""))
         case .edit(let row):
             _draft = State(initialValue: ScheduledDraft(task: row.task, workspace: row.workspace.name))
             let saved = row.task.action

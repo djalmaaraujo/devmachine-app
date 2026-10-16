@@ -25,9 +25,14 @@ final class ScheduledStore: ObservableObject {
     @Published private(set) var busy: Set<String> = []
     @Published private(set) var runs: [String: [ScheduledRun]] = [:]
     @Published private(set) var logs: [String: String] = [:]
+    /// The task shown beside the list, and the run whose output is open;
+    /// kept here so the page shows them again when it comes back.
+    @Published var selectedID: String?
+    @Published var openRunID: String?
 
     private let makeCLI: @Sendable () throws -> DevmachineCLI
     private var polling: Set<String> = []
+    private var isDemo = false
 
     init(makeCLI: @escaping @Sendable () throws -> DevmachineCLI = { try DevmachineCLI.resolve() }) {
         self.makeCLI = makeCLI
@@ -113,6 +118,7 @@ final class ScheduledStore: ObservableObject {
     }
 
     func loadRuns(_ row: ScheduledRow) {
+        guard !isDemo else { return }
         Task {
             do {
                 runs[row.id] = try await cli { try $0.scheduledRuns(row.task.id, workspace: row.workspace.name) }
@@ -123,6 +129,7 @@ final class ScheduledStore: ObservableObject {
     }
 
     func loadLog(_ row: ScheduledRow, run: ScheduledRun) {
+        guard !isDemo else { return }
         Task {
             do {
                 logs[run.id] = try await cli {
@@ -168,6 +175,23 @@ final class ScheduledStore: ObservableObject {
             refresh()
         }
     }
+
+    #if DEBUG
+    /// Demo walks only: what the page shows, with no CLI behind it.
+    func seedDemo(
+        workspaces: [ScheduledWorkspace], harnesses: [ScheduledHarness],
+        runs: [String: [ScheduledRun]], logs: [String: String]
+    ) {
+        self.workspaces = workspaces
+        self.harnesses = harnesses
+        self.runs = runs
+        self.logs = logs
+        hasLoaded = true
+        loadError = nil
+        refreshedAt = Date()
+        isDemo = true
+    }
+    #endif
 
     private func cli<T: Sendable>(_ body: @escaping @Sendable (DevmachineCLI) throws -> T) async throws -> T {
         let make = makeCLI

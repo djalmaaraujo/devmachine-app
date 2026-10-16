@@ -59,7 +59,7 @@ final class DemoSnapshotsTests: XCTestCase {
         }
         XCTAssertEqual(numbers, numbers.sorted())
         XCTAssertEqual(numbers.first, "01")
-        XCTAssertEqual(numbers.last, "23")
+        XCTAssertEqual(numbers.last, "24")
     }
 
     func testEveryScreenHasAUniqueID() {
@@ -80,13 +80,13 @@ final class DemoSnapshotsTests: XCTestCase {
             "07-settings-health.png", "08-session-defaults.png", "09-onboarding.png",
             "10-publish-port.png", "18-operator.png", "19-home.png",
             "20-menubar-usage.png", "21-command-palette.png", "22-drop-files.png",
-            "23-preview.png",
+            "23-preview.png", "24-scheduled.png",
         ])
     }
 
-    func testTheLastScreenShowsAPreviewTab() {
-        XCTAssertEqual(DemoSnapshots.screens.last?.id, "preview")
-        XCTAssertEqual(DemoSnapshots.screens.last?.fileName, "23-preview.png")
+    func testThePreviewAndScheduledScreensCloseTheWalk() {
+        XCTAssertEqual(DemoSnapshots.screens.suffix(2).map(\.id), ["preview", "scheduled"])
+        XCTAssertEqual(DemoSnapshots.screens.last?.fileName, "24-scheduled.png")
     }
 
     func testThePreviewScreenOpensAnAcmeDevServerSession() {

@@ -75,6 +75,7 @@ enum DemoSiteWalk {
         case cli(Int)
         case context(Int)
         case publishedApps, publishing, published
+        case scheduledList, scheduledDetail, scheduledOutput, scheduledNew
         case shareStart, shareSheet, shareLink, shared, chat, guestReply, ownerReply
         case homeStart, homeDrag(Int), homeResize(Int), homeGallery, homeAdded
     }
@@ -107,7 +108,7 @@ enum DemoSiteWalk {
     static let homeResizeFrames = 6
 
     static let scenes: [Scene] = [
-        operatorScene, sessionsScene, cliScene, contextScene, publishScene, shareScene, homeScene,
+        operatorScene, sessionsScene, cliScene, contextScene, publishScene, scheduledScene, shareScene, homeScene,
     ]
 
     private static let pickLabel = Label(text: "Pick your coding agent", at: CGPoint(x: 295, y: 340))
@@ -178,6 +179,27 @@ enum DemoSiteWalk {
         Frame(step: .publishedApps, hold: 2.4),
         Frame(step: .publishing, hold: 2.6, label: publishLabel),
         Frame(step: .published, hold: 3.2, pointer: .hover(Spot(target: "site:shop.acme.example.com")), label: publishLabel),
+    ])
+
+    private static let briefingCard = "scheduled:\(DemoScheduled.briefingID)"
+    private static let newTaskLabel = Label(
+        text: "A command, or a prompt for Claude or Codex", endingAt: CGPoint(x: 480, y: 300))
+
+    private static let scheduledScene = Scene(id: "scheduled", frames: [
+        Frame(
+            step: .scheduledList, hold: 2.4,
+            label: Label(text: "Tasks that run on their own, on a schedule", near: "scheduled:new")),
+        Frame(
+            step: .scheduledDetail, hold: 2.0, pointer: .click(Spot(target: briefingCard)),
+            label: Label(text: "Every month, Claude writes the briefing", near: briefingCard, below: true)),
+        Frame(
+            step: .scheduledOutput, hold: 0.6,
+            pointer: .click(Spot(target: "scheduled:run:\(DemoScheduled.briefingRun)"))),
+        Frame(
+            step: .scheduledOutput, hold: 2.8,
+            label: Label(text: "Each run's output, kept", near: "scheduled:output"), zoom: "scheduled:output"),
+        Frame(step: .scheduledNew, hold: 2.6, pointer: .click(Spot(target: "scheduled:new")), label: newTaskLabel),
+        Frame(step: .scheduledNew, hold: 1.6, label: newTaskLabel),
     ])
 
     private static let shareLabel = Label(text: "Share a session with a link and a password", at: CGPoint(x: 572, y: 420))
@@ -362,10 +384,10 @@ enum DemoSiteWalk {
                 else { continue }
                 scale = CGFloat(shot.pixelsWide) / content.bounds.width
                 var state = Overlay(image: DemoSnapshots.flattenTransparency(shot))
-                if let sheet = sheet(for: frame.step) {
+                if let sheet = sheet(for: frame.step, model: environment.model) {
                     let hosting = DemoSnapshots.standaloneView(sheet.view, fittingSize: NSSize(width: 480, height: 400))
                     try? await Task.sleep(nanoseconds: 300_000_000)
-                    if let sheetShot = DemoSnapshots.bitmap(of: hosting) {
+                    if let sheetShot = DemoSnapshots.bitmap(of: hosting, scale: captureScale) {
                         let origin = sheet.below.flatMap { popoverOrigin(below: $0, width: hosting.bounds.width) }
                         let drawn = DemoSnapshots.drawSheet(sheetShot, over: state.image, scale: scale, origin: origin)
                         state = Overlay(image: drawn.image, sheetOrigin: drawn.origin)
@@ -497,6 +519,20 @@ enum DemoSiteWalk {
             showSites(environment.caddyStore, extra: .pending)
         case .published:
             showSites(environment.caddyStore, extra: .published)
+        case .scheduledList:
+            reset(model)
+            model.sessionsByAlias = sessions(busy: true, attention: true)
+            model.contextCollapsed = true
+            model.goHome()
+            DemoScheduled.seed(ScheduledStore.shared)
+            model.showPage(.scheduled)
+            try? await Task.sleep(nanoseconds: 400_000_000)
+        case .scheduledDetail:
+            ScheduledStore.shared.selectedID = DemoScheduled.briefingID
+        case .scheduledOutput:
+            ScheduledStore.shared.openRunID = DemoScheduled.briefingRun
+        case .scheduledNew:
+            break
         case .shareStart:
             reset(model)
             model.sessionsByAlias = sessions(busy: true, attention: true)
@@ -595,8 +631,12 @@ enum DemoSiteWalk {
 
     /// A sheet or popover drawn over the window for this state, where macOS
     /// shows it.
-    static func sheet(for step: Step) -> Sheet? {
+    static func sheet(for step: Step, model: AppModel) -> Sheet? {
         switch step {
+        case .scheduledNew:
+            return Sheet(view: AnyView(
+                ScheduledTaskSheet(request: .new, draft: DemoScheduled.weeklyDraft) { _ in }
+                    .environmentObject(model)))
         case .shareSheet:
             return Sheet(view: AnyView(ShareSessionSheet(
                 request: SessionShareRequest(alias: acme, workspace: "acme", session: shareSession.name),

@@ -8,7 +8,6 @@ struct ScheduledView: View {
     @ObservedObject private var store = ScheduledStore.shared
     @EnvironmentObject private var model: AppModel
     @State private var searchText = ""
-    @State private var selected: String?
     @State private var sheet: ScheduledSheetRequest?
     @State private var confirmDelete: ScheduledRow?
 
@@ -22,7 +21,7 @@ struct ScheduledView: View {
         .onAppear { store.appear() }
         .sheet(item: $sheet) { request in
             ScheduledTaskSheet(request: request) { saved in
-                selected = saved
+                store.selectedID = saved
             }
             .environmentObject(model)
         }
@@ -34,7 +33,7 @@ struct ScheduledView: View {
             Button("Delete", role: .destructive) {
                 if let row = confirmDelete {
                     store.delete(row)
-                    if selected == row.id { selected = nil }
+                    if store.selectedID == row.id { store.selectedID = nil }
                 }
                 confirmDelete = nil
             }
@@ -68,6 +67,7 @@ struct ScheduledView: View {
                 .help("Refresh")
             DMButton("New task", systemImage: "plus") { sheet = .new }
                 .disabled(store.workspaces.isEmpty)
+                .demoClickTarget("scheduled:new")
         }
         .padding(.horizontal, m.pt(18))
         .padding(.top, m.pt(12))
@@ -98,7 +98,7 @@ struct ScheduledView: View {
                 workspaceErrors
                 HStack(spacing: 0) {
                     list
-                    if let id = selected, let row = store.row(id) {
+                    if let id = store.selectedID, let row = store.row(id) {
                         ScheduledDetailView(
                             row: row,
                             onEdit: { sheet = .edit(row) },
@@ -151,10 +151,11 @@ struct ScheduledView: View {
                         .padding(.leading, m.space.xs)
                         ForEach(group.rows) { row in
                             ScheduledCard(
-                                row: row, isSelected: selected == row.id, isBusy: store.busy.contains(row.id),
+                                row: row, isSelected: store.selectedID == row.id, isBusy: store.busy.contains(row.id),
                                 menu: { rowMenu(row) })
+                                .demoClickTarget("scheduled:\(row.id)")
                                 .contentShape(Rectangle())
-                                .onTapGesture { selected = selected == row.id ? nil : row.id }
+                                .onTapGesture { store.selectedID = store.selectedID == row.id ? nil : row.id }
                                 .contextMenu { rowMenu(row) }
                         }
                     }
@@ -173,7 +174,7 @@ struct ScheduledView: View {
 
     @ViewBuilder
     private func rowMenu(_ row: ScheduledRow) -> some View {
-        Button("Run now") { store.runNow(row); selected = row.id }
+        Button("Run now") { store.runNow(row); store.selectedID = row.id }
         Button("Edit…") { sheet = .edit(row) }
         if row.task.paused {
             Button("Resume") { store.setPaused(row, false) }

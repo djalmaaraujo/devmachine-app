@@ -9,7 +9,6 @@ struct ScheduledDetailView: View {
     let row: ScheduledRow
     let onEdit: () -> Void
     let onDelete: () -> Void
-    @State private var openRun: String?
 
     private var task: ScheduledTask { row.task }
     private var runs: [ScheduledRun] { store.runs[row.id] ?? [] }
@@ -26,7 +25,7 @@ struct ScheduledDetailView: View {
         }
         .onAppear { store.loadRuns(row) }
         .onChange(of: row.id) { _, _ in
-            openRun = nil
+            store.openRunID = nil
             store.loadRuns(row)
         }
         .onChange(of: task.lastRun?.id) { _, _ in store.loadRuns(row) }
@@ -109,10 +108,12 @@ struct ScheduledDetailView: View {
             ForEach(runs) { run in
                 VStack(alignment: .leading, spacing: m.space.xs) {
                     runLine(run)
+                        .demoClickTarget("scheduled:run:\(run.id)")
                         .contentShape(Rectangle())
                         .onTapGesture { toggle(run) }
-                    if openRun == run.id {
+                    if store.openRunID == run.id {
                         DMLogView(lines: outputLines(run), title: "Output")
+                            .demoClickTarget("scheduled:output")
                     }
                 }
             }
@@ -121,7 +122,7 @@ struct ScheduledDetailView: View {
 
     private func runLine(_ run: ScheduledRun) -> some View {
         HStack(spacing: m.space.sm) {
-            Image(systemName: openRun == run.id ? "chevron.down" : "chevron.right")
+            Image(systemName: store.openRunID == run.id ? "chevron.down" : "chevron.right")
                 .font(.dm(9))
                 .foregroundStyle(Color.dmMuted)
             DMPill(text: run.status.text, color: ScheduledStyle.color(run.status))
@@ -154,11 +155,11 @@ struct ScheduledDetailView: View {
     }
 
     private func toggle(_ run: ScheduledRun) {
-        if openRun == run.id {
-            openRun = nil
+        if store.openRunID == run.id {
+            store.openRunID = nil
             return
         }
-        openRun = run.id
+        store.openRunID = run.id
         if hasOutput(run) { store.loadLog(row, run: run) }
     }
 }
