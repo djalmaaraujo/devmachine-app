@@ -1,0 +1,41 @@
+Sources/DevmachineApp/Scheduled/ScheduleModeView.swift
+  s_46e69727c17321::t_1c6768885ba197 1-151
+CLAUDE.md
+  s_46e69727c17321::t_be98f002a2fb65 759-761,1972-1976
+Sources/DevmachineApp/AppModel.swift
+  s_46e69727c17321::t_98c7659cdf4c05 1071,1073-1077
+Sources/DevmachineApp/AppPage.swift
+  s_46e69727c17321::t_df2da83a5b80b0 18
+Sources/DevmachineApp/Chats/SidebarModeHeader.swift
+  s_46e69727c17321::t_ed975292ca0421 14-26,30-31,39-40,48,139,153-156
+Sources/DevmachineApp/ContentView.swift
+  s_46e69727c17321::t_40afc162d14c24 39-42
+Sources/DevmachineApp/DevmachineApp.swift
+  s_46e69727c17321::t_7b86ee0b50b252 69-76,183-188,228-229
+Sources/DevmachineApp/Palette/CommandRegistry.swift
+  s_46e69727c17321::t_0d2198c4b1fdef 87-89
+Sources/DevmachineApp/Scheduled/ScheduledStore.swift
+  s_46e69727c17321::t_1fd01c13c1d785 32-38
+Sources/DevmachineApp/Scheduled/ScheduledView.swift
+  s_46e69727c17321::t_216cea48b6b4d9 22-24
+Sources/DevmachineApp/ShortcutsSheet.swift
+  s_46e69727c17321::t_637339aa7d7329 26-37,40
+Tests/DevmachineAppTests/ChatsModeTests.swift
+  s_46e69727c17321::t_1f1a1a9b51eda5 78-119
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "8fb717c62b2bf0ca293afd29f53d8841d22df264",
+  "prompts": {},
+  "sessions": {
+    "s_46e69727c17321": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "057eb95b-b600-40da-9c82-ac29c62bf791",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
