@@ -26,7 +26,10 @@ struct ScheduledTaskSheet: View {
             _draft = State(initialValue: ScheduledDraft(workspace: first?.name ?? ""))
         case .edit(let row):
             _draft = State(initialValue: ScheduledDraft(task: row.task, workspace: row.workspace.name))
-            _allowDangerous = State(initialValue: true)
+            let saved = row.task.action
+            let alreadyDangerous = saved.isPrompt && ScheduledStore.shared.harness(saved.harness ?? "")?
+                .isDangerous(saved.permissionMode ?? "") == true
+            _allowDangerous = State(initialValue: alreadyDangerous)
         }
     }
 
@@ -265,7 +268,8 @@ struct ScheduledTaskSheet: View {
                 let parts = draft.at.split(separator: ":").compactMap { Int($0) }
                 var c = Calendar.current
                 c.timeZone = zone
-                return c.date(bySettingHour: parts.first ?? 9, minute: parts.last ?? 0, second: 0, of: Date()) ?? Date()
+                let minute = parts.count > 1 ? parts[1] : 0
+                return c.date(bySettingHour: parts.first ?? 9, minute: minute, second: 0, of: Date()) ?? Date()
             },
             set: { date in
                 var c = Calendar.current

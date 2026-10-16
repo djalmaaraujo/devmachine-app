@@ -86,8 +86,15 @@ final class ScheduledStore: ObservableObject {
     }
 
     func runNow(_ row: ScheduledRow) {
-        perform(row, then: { self.poll(row) }) { cli in
-            _ = try cli.scheduledRunNow(row.task.id, workspace: row.workspace.name)
+        busy.insert(row.id)
+        Task {
+            defer { busy.remove(row.id) }
+            do {
+                let runID = try await cli { try $0.scheduledRunNow(row.task.id, workspace: row.workspace.name) }
+                poll(row, until: runID)
+            } catch {
+                actionError = error.localizedDescription
+            }
         }
     }
 
@@ -127,16 +134,12 @@ final class ScheduledStore: ObservableObject {
         }
     }
 
-    private func perform(
-        _ row: ScheduledRow, then: (@MainActor () -> Void)? = nil,
-        _ body: @escaping @Sendable (DevmachineCLI) throws -> Void
-    ) {
+    private func perform(_ row: ScheduledRow, _ body: @escaping @Sendable (DevmachineCLI) throws -> Void) {
         busy.insert(row.id)
         Task {
             defer { busy.remove(row.id) }
             do {
                 try await cli(body)
-                then?()
                 refresh()
             } catch {
                 actionError = error.localizedDescription
@@ -144,9 +147,10 @@ final class ScheduledStore: ObservableObject {
         }
     }
 
-    /// Reads a task's runs every two seconds while one is going, for at
-    /// most ten minutes, so Run now shows its end without a refresh.
-    private func poll(_ row: ScheduledRow) {
+    /// Reads a task's runs every two seconds until `runID` is there and has
+    /// ended, for at most ten minutes, so Run now shows its end without a
+    /// refresh. The run may not be listed yet on the first read.
+    private func poll(_ row: ScheduledRow, until runID: String) {
         guard polling.insert(row.id).inserted else { return }
         Task {
             defer { polling.remove(row.id) }
@@ -156,7 +160,7 @@ final class ScheduledStore: ObservableObject {
                 guard let found = try? await cli({ try $0.scheduledRuns(row.task.id, workspace: row.workspace.name) })
                 else { return }
                 runs[row.id] = found
-                if found.first?.status != .running { break }
+                if let run = found.first(where: { $0.id == runID }), run.status != .running { break }
                 try? await Task.sleep(for: .seconds(2))
             }
             refresh()
