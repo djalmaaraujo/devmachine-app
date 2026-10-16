@@ -64,7 +64,7 @@ struct SidebarView: View {
                     .kerning(0.8)
             },
             trailing: {
-                DMIconButton(systemImage: "arrow.clockwise", size: DMMetrics.baseFontSize) { model.refreshAll() }
+                DMIconButton(systemImage: "arrow.clockwise", size: DMMetrics.baseFontSize) { model.refreshAllNow() }
                     .help("Refresh")
 
                 Menu {

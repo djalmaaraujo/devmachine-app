@@ -2136,6 +2136,16 @@ final class AppModel: ObservableObject {
         }
     }
 
+    /// The sidebar's refresh button. An unreachable machine costs nothing to
+    /// ask, so its pause is lifted and it is asked now; a refused login keeps
+    /// its pause, since each one counts toward a ban.
+    func refreshAllNow() {
+        for (alias, pause) in pollPauses where pause.reason == .unreachable {
+            pollPauses[alias] = nil
+        }
+        refreshAll()
+    }
+
     /// When the last sweep started is measured against this; tests move it.
     var sweepClock: @MainActor () -> Date = { Date() }
 

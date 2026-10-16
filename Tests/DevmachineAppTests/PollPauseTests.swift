@@ -116,6 +116,38 @@ final class PollPauseTests: XCTestCase {
         XCTAssertFalse(model.offlineAliases.contains(gamma.alias))
     }
 
+    func testTheRefreshButtonAsksAnUnreachableMachineAgainAtOnce() async throws {
+        let source = ScriptedSessionSource()
+        source.fail(acme.alias, with: .unreachable)
+        let model = makeModel(source, machines: ["acme": "main", "beta": "main", "gamma": "edge"])
+        try await sweep(model)
+        source.fail(acme.alias, with: nil)
+
+        model.refreshAllNow()
+        try await waitFor { !model.isSweeping }
+
+        XCTAssertEqual(source.calls(acme.alias), 2)
+        XCTAssertEqual(source.calls(beta.alias), 1)
+        XCTAssertFalse(model.isPollingPaused(alias: acme.alias))
+        XCTAssertFalse(model.isPollingPaused(alias: beta.alias))
+        XCTAssertEqual(model.sessionsByAlias[beta.alias]?.map(\.name), ["dash"])
+        XCTAssertFalse(model.offlineAliases.contains(acme.alias))
+    }
+
+    func testTheRefreshButtonLeavesARefusedLoginPaused() async throws {
+        let source = ScriptedSessionSource()
+        source.fail(acme.alias, with: .authDenied)
+        let model = makeModel(source, machines: ["acme": "main", "beta": "main", "gamma": "edge"])
+        try await sweep(model)
+
+        model.refreshAllNow()
+        try await waitFor { !model.isSweeping }
+
+        XCTAssertEqual(source.calls(acme.alias), 1, "each refused login counts toward a ban")
+        XCTAssertTrue(model.isPollingPaused(alias: acme.alias))
+        XCTAssertEqual(source.calls(beta.alias), 2)
+    }
+
     func testAnUnreachableWorkspaceWithNoKnownMachinePausesOnlyItself() async throws {
         let source = ScriptedSessionSource()
         source.fail(acme.alias, with: .unreachable)

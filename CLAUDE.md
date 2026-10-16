@@ -792,7 +792,9 @@ coding agent icon…", the widget field "Coding agent"). Code and JSON keep
   1 min (only that workspace when the machine is unknown), a refused host key pauses
   nothing. A paused
   workspace gets no automatic login at all: sweep, selection poll, context, Git, copy
-  mode check, the mosh watchdog's ssh. Try again and opening a session try once; a
+  mode check, the mosh watchdog's ssh. Try again and opening a session try once; the
+  sidebar's refresh button (`refreshAllNow`) lifts every unreachable pause and sweeps,
+  but leaves refused logins paused; a
   refusal pauses again (a refused mosh-server login skips the ssh fallback, which would
   be a second refusal). The sidebar shows each pause under the workspace
   (`PollPauseSidebarCard`, one per machine when the machine is paused) and it clears on
