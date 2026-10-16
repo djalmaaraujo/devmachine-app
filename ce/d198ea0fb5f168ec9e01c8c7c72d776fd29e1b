@@ -1,0 +1,19 @@
+Sources/DevmachineApp/Chats/ChatParts.swift
+  s_46e69727c17321::t_b3f555a3fb2086 163-164
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "ced198ea0fb5f168ec9e01c8c7c72d776fd29e1b",
+  "prompts": {},
+  "sessions": {
+    "s_46e69727c17321": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "057eb95b-b600-40da-9c82-ac29c62bf791",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
