@@ -1,0 +1,31 @@
+CLAUDE.md
+  s_46e69727c17321::t_de78b8a1a55e90 738-775
+Sources/DevmachineApp/Chats/ChatStore.swift
+  s_46e69727c17321::t_392e0c42d81762 136-138,425-426,438,446-448,453,456,466,468-469,486
+Sources/DevmachineApp/Chats/DemoChats.swift
+  s_46e69727c17321::t_515d736efe85d6 28
+Sources/DevmachineApp/Palette/PaletteRanker.swift
+  s_46e69727c17321::t_f435aefca66fbe 31-32,72-76
+Tests/DevmachineAppTests/ChatCLILiveTests.swift
+  s_46e69727c17321::t_7d89c1a7637197 1-54
+Tests/DevmachineAppTests/ChatStoreTests.swift
+  s_46e69727c17321::t_eb71dc85479bf0 10,31,316-331
+Tests/DevmachineAppTests/ChatsPaletteAndDemoTests.swift
+  s_46e69727c17321::t_884ba3b3137c06 44-47
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "ac3dd77c1546c7eadcb33bae9fb639a063715bf8",
+  "prompts": {},
+  "sessions": {
+    "s_46e69727c17321": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "057eb95b-b600-40da-9c82-ac29c62bf791",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
