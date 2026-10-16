@@ -1,0 +1,20 @@
+Sources/DevmachineApp/Scheduled/ScheduledStore.swift
+  s_be9ca8cef925d9::t_b41e1899c64561 150-153
+  s_be9ca8cef925d9::t_6c98d45e93678c 164-165
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "36d68b4e6765e73963d9812937766b203e34b773",
+  "prompts": {},
+  "sessions": {
+    "s_be9ca8cef925d9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d9f277d6-7db0-48b4-8122-c76a3ca3c439",
+        "model": "unknown"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
