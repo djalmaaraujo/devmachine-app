@@ -18,7 +18,9 @@ public struct ScheduledDraft: Equatable, Sendable {
     public var prompt = ""
     public var command = ""
     public var model = ""
-    public var permissionMode = "acceptEdits"
+    /// `auto` because a scheduled run has nobody to approve a tool, and
+    /// `acceptEdits` approves file edits only: a connector call is refused.
+    public var permissionMode = "auto"
     public var every = "daily"
     public var at = "09:00"
     public var minute = 0

@@ -196,7 +196,7 @@ struct ScheduledTaskSheet: View {
     }
 
     private var promptNote: some View {
-        Text(verbatim: "Runs as \(draft.workspace)'s account, with its own \(draft.harness) login and connectors. Nobody is there to approve a tool, so a mode that asks first stops at the first one.")
+        Text(verbatim: "Runs as \(draft.workspace)'s account, with its own \(draft.harness) login and connectors. Nobody is there to approve a tool: acceptEdits approves file edits only, so a connector such as Linear or email needs auto.")
             .font(.dm(11))
             .foregroundStyle(Color.dmMuted)
             .fixedSize(horizontal: false, vertical: true)
