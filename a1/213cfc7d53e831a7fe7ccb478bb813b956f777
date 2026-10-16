@@ -1,0 +1,55 @@
+Sources/DevmachineCore/Scheduled/ScheduledTask.swift
+  s_be9ca8cef925d9::t_e7ba8d66706fbd 1-238
+Sources/DevmachineApp/MenuBarPanel.swift
+  s_be9ca8cef925d9::t_38e59e91f28a2c 210-213
+CLAUDE.md
+  s_be9ca8cef925d9::t_b7b1f2412f18a7 1927-1945
+Sources/DevmachineCore/Scheduled/ScheduledDraft.swift
+  s_be9ca8cef925d9::t_3f6ac4a353e59a 1-63,71-80,83-113
+  s_be9ca8cef925d9::t_309251d7ff54a1 64-70
+  s_be9ca8cef925d9::t_fc3842dc0559ea 81-82
+Tests/DevmachineCoreTests/ScheduledTests.swift
+  s_be9ca8cef925d9::t_d7304e35764f64 1-55,57-162
+  s_be9ca8cef925d9::t_77dfac4d8f4606 56
+Sources/DevmachineApp/Scheduled/ScheduledStore.swift
+  s_be9ca8cef925d9::t_7e2dcdb3a84dfc 1-170
+Sources/DevmachineApp/Scheduled/ScheduledView.swift
+  s_be9ca8cef925d9::t_13f147e8896e7d 1-264
+Sources/DevmachineApp/Scheduled/ScheduledTaskSheet.swift
+  s_be9ca8cef925d9::t_1485c760883b71 1-333
+Sources/DevmachineApp/Scheduled/ScheduledDetailView.swift
+  s_be9ca8cef925d9::t_b210cecfa04704 142-152
+  s_be9ca8cef925d9::t_263a837461f4d6 112
+  s_be9ca8cef925d9::t_9591aaff174cf3 159
+  s_be9ca8cef925d9::t_241651a1cba0f6 1-111,113-141,153-158,160-161
+Sources/DevmachineApp/DevmachineCLI+Scheduled.swift
+  s_be9ca8cef925d9::t_463c7973434161 1-67
+Sources/DevmachineApp/ContentView.swift
+  s_be9ca8cef925d9::t_29597207863854 341
+Sources/DevmachineApp/SidebarView.swift
+  s_be9ca8cef925d9::t_22b4619af2a2ea 32-33
+Sources/DevmachineApp/AppPage.swift
+  s_be9ca8cef925d9::t_169966fae03bf0 6
+Sources/DevmachineApp/Palette/CommandRegistry.swift
+  s_be9ca8cef925d9::t_08982deb371cc0 39-42
+Sources/DevmachineApp/DevmachineCLI.swift
+  s_be9ca8cef925d9::t_b3820ebed751e9 966
+Tests/DevmachineAppTests/DevmachineCLITests.swift
+  s_be9ca8cef925d9::t_1127715121b924 876-922
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "a1213cfc7d53e831a7fe7ccb478bb813b956f777",
+  "prompts": {},
+  "sessions": {
+    "s_be9ca8cef925d9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d9f277d6-7db0-48b4-8122-c76a3ca3c439",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
