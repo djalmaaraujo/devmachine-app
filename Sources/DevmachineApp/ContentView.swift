@@ -24,7 +24,6 @@ struct ContentView: View {
     @ObservedObject private var scheduled = ScheduledStore.shared
     @State private var windowButtons = CGRect.zero
     @State private var toggleFrame: CGRect?
-    @State private var titlebarHeight: CGFloat = 0
     @Environment(\.openWindow) private var openWindow
 
     var body: some View {
@@ -75,7 +74,6 @@ struct ContentView: View {
             }
         }
         .toolbarBackground(.hidden, for: .windowToolbar)
-        .onGeometryChange(for: CGFloat.self) { $0.safeAreaInsets.top } action: { titlebarHeight = $0 }
         .coordinateSpace(.named(Self.windowSpace))
         .modifier(SidebarModeMenuOverlay(model: model))
         .background(Color.dmSidebarBg)
@@ -312,12 +310,11 @@ struct ContentView: View {
     @ViewBuilder
     private var centerPane: some View {
         ZStack {
-            // Under the hidden title bar too: the wallpaper and the cards reach
-            // the window's top edge, no content-colored band above them.
-            MainPane(terminalTopInset: model.sidebarCollapsed ? titlebarHeight : 0)
+            // Under the hidden title bar too: the wallpaper and Home reach the
+            // window's top edge, no content-colored band above them.
+            MainPane()
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background(Color.dmContentBg)
-                .ignoresSafeArea(edges: .top)
                 .demoClickTarget("pane:main")
             if let page = model.activePage {
                 PageHost(page: page)
@@ -375,7 +372,7 @@ private struct PageHost: View {
         // while the website's screenshot walk owns the window.
         case .subdomains: SubdomainsView(initialTab: DemoSnapshots.subdomainsInitialTab)
         case .scheduled: ScheduledView()
-        case .sessionGrid(let refs): SessionGridView(refs: refs).ignoresSafeArea(edges: .top)
+        case .sessionGrid(let refs): SessionGridView(refs: refs)
         case .addMachine: AddMachinePage()
         case let .operatorChooser(harnesses, last): OperatorChooserPage(harnesses: harnesses, last: last)
         }
@@ -384,26 +381,25 @@ private struct PageHost: View {
 
 private struct MainPane: View {
     @EnvironmentObject var model: AppModel
-    /// The title bar's height while the sidebar is closed: the window buttons
-    /// and the sidebar toggle sit over the pane then, so the terminal starts
-    /// below them. Home keeps running under them, edge to edge.
-    var terminalTopInset: CGFloat = 0
-
+    /// The terminal starts below the title bar; Home keeps running under it,
+    /// edge to edge.
     var body: some View {
-        ZStack {
-            WallpaperBackground(style: .ambient)
-
+        BelowTitlebarPane {
+            ZStack {
+                WallpaperBackground(style: .ambient)
+                if MainPaneVisibility.showsHome(
+                    hasSelection: model.selection != nil, activePage: model.activePage) {
+                    HomeView()
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                }
+            }
+        } content: {
             // Only the selected terminal is mounted: the registry owns the process,
             // so an unmounted one keeps running and re-attaches on the next select.
             // A session in the session grid is mounted by the grid instead — mounting it here as
             // well would pull the shared view out of its grid cell.
             if let selected = model.selection, !isInSessionGrid(selected) {
                 terminal(for: selected)
-            }
-            if MainPaneVisibility.showsHome(
-                hasSelection: model.selection != nil, activePage: model.activePage) {
-                HomeView()
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
             }
         }
     }
@@ -434,7 +430,6 @@ private struct MainPane: View {
         .floatingCard()
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .padding(FloatingCardLayout.margin)
-        .padding(.top, terminalTopInset)
     }
 
     private func key(_ item: SidebarItem) -> String {

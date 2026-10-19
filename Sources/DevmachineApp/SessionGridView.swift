@@ -11,14 +11,20 @@ struct SessionGridView: View {
     private let pad = FloatingCardLayout.margin - FloatingCardLayout.gap / 2
 
     var body: some View {
+        BelowTitlebarPane {
+            WallpaperBackground(style: .ambient)
+        } content: {
+            cells
+        }
+    }
+
+    private var cells: some View {
         GeometryReader { geo in
             let innerWidth = max(0, geo.size.width - pad * 2)
             let innerHeight = max(0, geo.size.height - pad * 2)
             let rects = SessionGrid.layout(refs.map { model.sessionGridCellSize($0) })
 
             ZStack {
-                WallpaperBackground(style: .ambient)
-
                 ForEach(refs, id: \.self) { ref in
                     if let index = refs.firstIndex(of: ref),
                        let rect = rects.first(where: { $0.index == index }) {
