@@ -1,0 +1,53 @@
+CLAUDE.md
+  s_96c406e8f457e9::t_c82312190453f1 840-845
+Sources/DevmachineApp/Chats/AskWidgetView.swift
+  s_96c406e8f457e9::t_71fa9a6f5db42d 68,137
+Sources/DevmachineApp/Chats/ChatComposer.swift
+  s_96c406e8f457e9::t_89e0c7636a2562 70,100
+Sources/DevmachineApp/Chats/ChatMessageViews.swift
+  s_96c406e8f457e9::t_78d2bafc8a90b1 52,75
+Sources/DevmachineApp/Chats/ChatPane.swift
+  s_96c406e8f457e9::t_d289204d63e68b 76,88
+Sources/DevmachineApp/Chats/ChatParts.swift
+  s_96c406e8f457e9::t_fce36c9a4f5495 71,90,261
+Sources/DevmachineApp/Chats/ChatsSettingsView.swift
+  s_96c406e8f457e9::t_95720e8f20ca72 182
+Sources/DevmachineApp/Chats/ChatsView.swift
+  s_96c406e8f457e9::t_c5dada0bc0dcd9 166,169,172
+Sources/DevmachineApp/Chats/QuickChatPanel.swift
+  s_96c406e8f457e9::t_4120eadc0c959d 274-283,443
+Sources/DevmachineApp/Chats/SidebarModeHeader.swift
+  s_96c406e8f457e9::t_4b63c2d4392ea3 52,62,98,176
+Sources/DevmachineApp/Components/DMButton.swift
+  s_96c406e8f457e9::t_bb6510963f674e 262
+Sources/DevmachineApp/Components/DMChoiceCard.swift
+  s_96c406e8f457e9::t_5991c9cbf021ed 68
+Sources/DevmachineApp/Components/DMHelp.swift
+  s_96c406e8f457e9::t_9337836ddc7757 1-36
+Sources/DevmachineApp/Components/DMJobCard.swift
+  s_96c406e8f457e9::t_90e08a86446d4d 63
+Sources/DevmachineApp/Components/DMReportBugButton.swift
+  s_96c406e8f457e9::t_ff35dcabbfa6c6 16
+Sources/DevmachineApp/Components/DMStatus.swift
+  s_96c406e8f457e9::t_1adf4515c9340b 71
+Sources/DevmachineApp/Components/MachineJobToast.swift
+  s_96c406e8f457e9::t_2d0acf9c07a1dc 65
+Tests/DevmachineAppTests/QuickChatTooltipTests.swift
+  s_96c406e8f457e9::t_fb28c035d88af2 1-119
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "5a9a600bf44b43f2b25ffb8489eb8c93070514fd",
+  "prompts": {},
+  "sessions": {
+    "s_96c406e8f457e9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ebe388aa-5f63-4bab-934d-828376f16c2a",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
