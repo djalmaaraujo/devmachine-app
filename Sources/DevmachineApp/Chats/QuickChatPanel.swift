@@ -271,8 +271,16 @@ final class QuickChatPanelController: NSObject, NSWindowDelegate {
 
     private func installContent(in panel: QuickChatWindow) {
         metrics = DMMetrics(scale: SettingsStore.shared.effectiveUIFontScale)
-        let root = QuickChatPanelView(model: model) { [weak self] height in self?.resize(to: height) }
-        panel.contentView = NSHostingView(rootView: root.environment(\.dmMetrics, metrics))
+        let root = Self.content(model: model, metrics: metrics) { [weak self] height in self?.resize(to: height) }
+        panel.contentView = NSHostingView(rootView: root)
+    }
+
+    static func content(
+        model: QuickChatModel, metrics: DMMetrics, resize: @escaping (CGFloat) -> Void
+    ) -> some View {
+        QuickChatPanelView(model: model, resize: resize)
+            .environment(\.dmMetrics, metrics)
+            .environment(\.dmShowsHelp, false)
     }
 
     private func width(for screen: NSScreen?) -> CGFloat {
@@ -432,7 +440,7 @@ struct QuickChatCard: View {
             ) {
                 if model.isStreaming { model.stop() } else { model.send() }
             }
-            .help(model.isStreaming ? "Stop" : "Send (Return)")
+            .dmHelp(model.isStreaming ? "Stop" : "Send (Return)")
         }
         .padding(.horizontal, m.pt(14))
         .padding(.vertical, m.pt(12))

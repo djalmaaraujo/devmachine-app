@@ -62,7 +62,7 @@ struct MachineJobToast: View {
             Spacer(minLength: m.space.xs)
             if isOver {
                 DMIconButton(systemImage: "xmark", size: 10, tint: nil, action: actions.dismiss)
-                    .help("Dismiss")
+                    .dmHelp("Dismiss")
             }
         }
     }

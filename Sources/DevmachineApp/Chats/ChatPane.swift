@@ -73,7 +73,7 @@ struct ChatPane: View {
                 ChatChip(systemImage: "folder", title: folder)
             }
             ChatChip(systemImage: "eye", title: "Read only", tint: Color.dmMuted)
-                .help("Chats can read files and run read-only commands. They never edit files.")
+                .dmHelp("Chats can read files and run read-only commands. They never edit files.")
             Spacer()
             Menu {
                 Button("Rename…") { rename(chatID) }
@@ -85,7 +85,7 @@ struct ChatPane: View {
             .menuIndicator(.hidden)
             .fixedSize()
             .disabled(chatID.hasPrefix(ChatStore.pendingPrefix))
-            .help("Rename or delete this chat")
+            .dmHelp("Rename or delete this chat")
             .accessibilityLabel("Chat actions")
         }
         .padding(.horizontal, m.pt(20))

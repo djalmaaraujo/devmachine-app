@@ -65,7 +65,7 @@ struct AskWidgetView: View {
                     }
                     .disabled(conversation?.isStreaming == true)
                     .demoClickTarget("ask:clear")
-                    .help("Delete this Ask thread and start a new one")
+                    .dmHelp("Delete this Ask thread and start a new one")
                     .accessibilityLabel("Clear the Ask thread")
                     .accessibilityHint("Deletes this Ask thread and starts a new one")
                 }
@@ -134,7 +134,7 @@ struct AskWidgetView: View {
             ) {
                 if streaming, let threadID { store.stop(threadID) } else { send(key) }
             }
-            .help(streaming ? "Stop (Esc)" : "Ask (Return)")
+            .dmHelp(streaming ? "Stop (Esc)" : "Ask (Return)")
         }
         .padding(.leading, m.pt(10))
         .padding(.trailing, m.pt(5))

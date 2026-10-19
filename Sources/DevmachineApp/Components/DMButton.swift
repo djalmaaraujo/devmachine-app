@@ -259,7 +259,7 @@ struct DMButton: View {
 
     var body: some View {
         if isIconOnly {
-            button.help(Text(verbatim: accessibilityText))
+            button.dmHelp(accessibilityText)
         } else {
             button
         }

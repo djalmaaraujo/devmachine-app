@@ -67,7 +67,7 @@ struct ChatComposer: View {
                 ChatSendButton(enabled: canSend, stops: streaming) {
                     if streaming { stop() } else if canSend { send() }
                 }
-                .help(streaming ? "Stop (Esc)" : "Send (Return)")
+                .dmHelp(streaming ? "Stop (Esc)" : "Send (Return)")
             }
         }
         .padding(m.pt(14))
@@ -97,7 +97,7 @@ struct ChatPickerChip: View {
         Group {
             if locked {
                 chip
-                    .help(picker == .harness ? "A chat keeps its coding agent." : "A chat keeps its workspace.")
+                    .dmHelp(picker == .harness ? "A chat keeps its coding agent." : "A chat keeps its workspace.")
                     .accessibilityElement(children: .ignore)
                     .accessibilityLabel(name)
                     .accessibilityValue(value)

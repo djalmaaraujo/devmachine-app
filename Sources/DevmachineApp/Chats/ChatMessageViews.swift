@@ -49,7 +49,7 @@ struct ChatToolLine: View {
         .padding(.horizontal, m.pt(9))
         .padding(.vertical, m.pt(5))
         .background(Color.white.opacity(0.035), in: RoundedRectangle(cornerRadius: m.pt(DMRadius.row)))
-        .help(tool.line)
+        .dmHelp(tool.line)
     }
 }
 
@@ -72,7 +72,7 @@ struct ChatDeniedLine: View {
         .padding(.horizontal, m.pt(9))
         .padding(.vertical, m.pt(5))
         .background(Color.orange.opacity(0.08), in: RoundedRectangle(cornerRadius: m.pt(DMRadius.row)))
-        .help(tool.summary.isEmpty ? Self.text(tool) : "\(tool.name) \(tool.summary)")
+        .dmHelp(tool.summary.isEmpty ? Self.text(tool) : "\(tool.name) \(tool.summary)")
     }
 }
 

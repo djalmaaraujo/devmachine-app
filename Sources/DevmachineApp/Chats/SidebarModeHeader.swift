@@ -49,7 +49,7 @@ struct SidebarModeHeader: View {
                         Circle()
                             .fill(Color(hex: 0x3B82F6))
                             .frame(width: m.pt(6), height: m.pt(6))
-                            .help("A session in Code is waiting for you")
+                            .dmHelp("A session in Code is waiting for you")
                     }
                 }
                 .foregroundStyle(model.showsModeMenu ? Color.dmRowText : Color.dmMuted)
@@ -59,7 +59,7 @@ struct SidebarModeHeader: View {
             .demoClickTarget("sidebar:mode")
             Spacer(minLength: m.space.sm)
             DMIconButton(systemImage: "arrow.clockwise", size: DMMetrics.baseFontSize, action: refresh)
-                .help("Refresh")
+                .dmHelp("Refresh")
                 .accessibilityLabel("Refresh")
         }
         .padding(.horizontal, m.pt(12))
@@ -95,7 +95,7 @@ struct SidebarNewRow: View {
         Button(action: action) { row }
             .buttonStyle(.plain)
             .padding(.horizontal, m.pt(10))
-            .help(shortcut.map { "\(title) (\($0))" } ?? title)
+            .dmHelp(shortcut.map { "\(title) (\($0))" } ?? title)
             .accessibilityLabel(title)
             .accessibilityHint(shortcut.map { "Shortcut \($0)" } ?? "")
     }
@@ -173,7 +173,7 @@ struct SidebarToggleButton: View {
         DMIconButton(systemImage: "sidebar.left", size: 13, hitSize: CGSize(width: 24, height: 24)) {
             withAnimation(.easeInOut(duration: 0.18)) { model.sidebarCollapsed.toggle() }
         }
-        .help(Self.label(collapsed: model.sidebarCollapsed) + " (⌘B)")
+        .dmHelp(Self.label(collapsed: model.sidebarCollapsed) + " (⌘B)")
         .accessibilityLabel(Self.label(collapsed: model.sidebarCollapsed))
         .demoClickTarget("footer:close-sidebar")
     }
