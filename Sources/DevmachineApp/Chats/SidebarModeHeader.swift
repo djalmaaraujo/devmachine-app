@@ -226,6 +226,11 @@ struct WindowButtonsReader: NSViewRepresentable {
                 NotificationCenter.default.addObserver(
                     self, selector: #selector(windowChanged), name: name, object: window)
             }
+            for name in [NSWindow.willEnterFullScreenNotification, NSWindow.willExitFullScreenNotification] {
+                NotificationCenter.default.addObserver(
+                    self, selector: #selector(fullScreenWillChange(_:)), name: name, object: window)
+            }
+            window.toolbar?.isVisible = !window.styleMask.contains(.fullScreen)
             windowChanged()
         }
 
@@ -234,8 +239,22 @@ struct WindowButtonsReader: NSViewRepresentable {
             windowChanged()
         }
 
+        /// Full screen hides the toolbar: macOS keeps a visible toolbar on
+        /// screen there as an opaque band that pushes every column down. The
+        /// window buttons still slide in with the menu bar without it.
+        @objc private func fullScreenWillChange(_ notification: Notification) {
+            window?.toolbar?.isVisible = notification.name == NSWindow.willExitFullScreenNotification
+        }
+
         @objc private func windowChanged() {
             guard let window, let frameView = window.contentView?.superview else { return }
+            // In full screen the buttons live in the title bar's own window, so
+            // converting them to this one gives a point far down the screen.
+            // The layout keeps the windowed place instead.
+            if window.styleMask.contains(.fullScreen) {
+                report(last == .zero ? SidebarHeaderSpacing.fallbackButtons : last)
+                return
+            }
             let rects = [NSWindow.ButtonType.closeButton, .miniaturizeButton, .zoomButton].compactMap { type -> CGRect? in
                 guard let button = window.standardWindowButton(type), !button.isHidden else { return nil }
                 let rect = button.convert(button.bounds, to: frameView)
@@ -243,7 +262,10 @@ struct WindowButtonsReader: NSViewRepresentable {
                 return CGRect(x: rect.minX, y: top, width: rect.width, height: rect.height)
             }
             guard let first = rects.first else { return }
-            let union = rects.dropFirst().reduce(first) { $0.union($1) }
+            report(rects.dropFirst().reduce(first) { $0.union($1) })
+        }
+
+        private func report(_ union: CGRect) {
             guard union != last else { return }
             last = union
             DispatchQueue.main.async { [onChange] in onChange(union) }
@@ -285,6 +307,9 @@ enum SidebarHeaderSpacing {
     static let textAlignment: CGFloat = 9.5
     static let fallback: CGFloat = 52
     static let fallbackLine: CGFloat = 22
+    /// The window buttons' place when there is none to read (a window that
+    /// opens in full screen), matching the fallbacks above.
+    static let fallbackButtons = CGRect(x: 20, y: fallbackLine - 7, width: 52, height: 14)
 
     static func line(buttons: CGRect) -> CGFloat {
         buttons == .zero ? fallbackLine : buttons.midY

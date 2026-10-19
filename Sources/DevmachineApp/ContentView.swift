@@ -314,7 +314,10 @@ struct ContentView: View {
         ZStack {
             // Under the hidden title bar too: the wallpaper and the cards reach
             // the window's top edge, no content-colored band above them.
-            MainPane(terminalTopInset: model.sidebarCollapsed ? titlebarHeight : 0)
+            // Full screen has no title bar to inset from, yet the sidebar toggle
+            // still sits on the buttons' line: the band around it stays clear.
+            MainPane(terminalTopInset: model.sidebarCollapsed
+                ? max(titlebarHeight, windowButtons.minY + windowButtons.maxY) : 0)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background(Color.dmContentBg)
                 .ignoresSafeArea(edges: .top)

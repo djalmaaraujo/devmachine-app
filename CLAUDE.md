@@ -756,6 +756,13 @@ coding agent icon…", the widget field "Coding agent"). Code and JSON keep
   `SidebarUnderTitlebar` outside the clip, or the header is cut off. A
   terminal starts below the band only while the sidebar is closed; Home always
   runs under it.
+- **Full screen hides the toolbar** (`WindowButtonsReader`, on will-enter;
+  shown again on will-exit). A visible toolbar stays on screen there as an
+  opaque grey band that pushes every column down. The window buttons then live
+  in the title bar's own window, so their converted place means nothing: the
+  reader keeps the windowed place (`SidebarHeaderSpacing.fallbackButtons` when
+  the window opened in full screen), or the sidebar header, its list and the
+  context tabs drop to the middle of the screen.
 - Demo frames capture the window's frame view (`SnapshotChrome.capturedView`);
   the window buttons come out grey (the window is never key) and are painted
   again where the window put them (`SnapshotChrome.measure`).
