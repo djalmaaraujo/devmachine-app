@@ -753,13 +753,9 @@ coding agent icon…", the widget field "Coding agent"). Code and JSON keep
 - The sidebars run under the band. Their title row keeps the same space under
   the window buttons as the New row keeps before the list
   (`SidebarHeaderSpacing.blockGap`; change that one constant and both move). The `.clipped()` sidebar takes
-  `SidebarUnderTitlebar` outside the clip, or the header is cut off. Home
-  always runs under the band.
-- A terminal (single session or session grid) always starts below the band,
-  sidebar open or closed (`BelowTitlebarPane`: the background runs under it,
-  the content keeps the top safe area). The toolbar band takes every click
-  across the window's whole width, even where it draws nothing, so a terminal
-  line under it could not be selected: the click dragged the window.
+  `SidebarUnderTitlebar` outside the clip, or the header is cut off. A
+  terminal starts below the band only while the sidebar is closed; Home always
+  runs under it.
 - Demo frames capture the window's frame view (`SnapshotChrome.capturedView`);
   the window buttons come out grey (the window is never key) and are painted
   again where the window put them (`SnapshotChrome.measure`).
