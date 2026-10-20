@@ -1,0 +1,19 @@
+Tests/DevmachineAppTests/QuickChatTooltipTests.swift
+  s_96c406e8f457e9::t_7e800ccf1d3023 53-57
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "467bca3e84fc1621f45079fdda38e60cea604d19",
+  "prompts": {},
+  "sessions": {
+    "s_96c406e8f457e9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ebe388aa-5f63-4bab-934d-828376f16c2a",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
