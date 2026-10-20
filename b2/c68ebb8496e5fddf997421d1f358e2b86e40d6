@@ -1,0 +1,34 @@
+Tests/DevmachineCoreTests/Widgets/CanvasBoundsTests.swift
+  s_70e932a9e81148::t_00ae17160e0326 1-155
+CLAUDE.md
+  s_70e932a9e81148::t_b2f47aa13b1d31 1169-1182
+Sources/DevmachineCore/Widgets/CanvasBounds.swift
+  s_70e932a9e81148::t_c65569cec08db2 1-61
+  s_70e932a9e81148::t_005eb0f2ac35ee 62-64
+Sources/DevmachineApp/Widgets/HomeCanvasView.swift
+  s_70e932a9e81148::t_7f9559e90f9f38 361-362,386-387,439,458-459,482-483,486-488
+Sources/DevmachineApp/Widgets/WidgetChromeView.swift
+  s_70e932a9e81148::t_98ab4c1851c146 9-13,15-21,75-78,97-101,122-137,182-188,279-284
+Sources/DevmachineCore/Widgets/CanvasLayout.swift
+  s_70e932a9e81148::t_9c1a36cf58861b 165
+Tests/DevmachineAppTests/AppWidgetViewsTests.swift
+  s_70e932a9e81148::t_21a116df4f493f 77-97
+Tests/DevmachineAppTests/WidgetChromeMoveTests.swift
+  s_70e932a9e81148::t_56373f32e0e0b4 1-74
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "b2c68ebb8496e5fddf997421d1f358e2b86e40d6",
+  "prompts": {},
+  "sessions": {
+    "s_70e932a9e81148": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d778f438-4d84-4cdd-9b5b-0bfbc5cc6fc3",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
