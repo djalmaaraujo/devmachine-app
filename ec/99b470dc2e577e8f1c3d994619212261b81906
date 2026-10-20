@@ -1,0 +1,62 @@
+Sources/DevmachineApp/LoginHoldCenter.swift
+  s_70e932a9e81148::t_1630aa479da1aa 1-83
+  s_70e932a9e81148::t_4bbf36cba8664c 84-88
+Tests/DevmachineCoreTests/LoginHoldTests.swift
+  s_70e932a9e81148::t_4f40acd5378f97 1-183
+Sources/DevmachineCore/LoginHold.swift
+  s_70e932a9e81148::t_eef2ca55ed4e77 1-148
+CLAUDE.md
+  s_70e932a9e81148::t_63eff96eeaa417 921-938
+Sources/DevmachineApp/AppModel.swift
+  s_70e932a9e81148::t_fb3dd3b2fc4c8a 542,751,806-807,810,836-838,2160-2163,2314-2315,2379-2388,2393,2400,2404-2411,2477-2480,2485-2531,2550-2553,2645-2649
+Sources/DevmachineApp/CaddyStore.swift
+  s_70e932a9e81148::t_d8a449e6bd3ab8 109-110,354-361,373
+Sources/DevmachineApp/DevmachineApp.swift
+  s_70e932a9e81148::t_9fba42c3f0e9c6 114-115
+Sources/DevmachineApp/DevmachineCLI.swift
+  s_70e932a9e81148::t_f31b37b279773a 64-66,69,71,86-87
+Sources/DevmachineApp/FileTreeStore.swift
+  s_70e932a9e81148::t_e085037accf871 34-36,162-165
+Sources/DevmachineApp/HealthCheckStore.swift
+  s_70e932a9e81148::t_d98cef49ac7cb1 27,30-33,35,63-79
+Sources/DevmachineApp/MachineReadiness.swift
+  s_70e932a9e81148::t_698880138464b7 16-18,49-54
+Sources/DevmachineApp/MachineReadinessViews.swift
+  s_70e932a9e81148::t_7ea572efd89616 210,240-255
+Sources/DevmachineApp/PollPause.swift
+  s_70e932a9e81148::t_f1825c6fc6ac8b 4-7
+Sources/DevmachineApp/StatsStore.swift
+  s_70e932a9e81148::t_82689ef9ca50e3 1,82-83,92-93,96,103-113,186-188,191,232-233,330-331,333
+Sources/DevmachineApp/StatsView.swift
+  s_70e932a9e81148::t_30890102138d15 117-121
+Sources/DevmachineApp/Widgets/Stack/WorkspacesWidgetView.swift
+  s_70e932a9e81148::t_002b99b0947aac 65-68,94-97,162-171
+Sources/DevmachineApp/Widgets/WidgetSourceController.swift
+  s_70e932a9e81148::t_e2fedd791eb1f2 67,75-76,79,298-323,326,371,377,408,462
+Tests/DevmachineAppTests/HealthCheckStoreTests.swift
+  s_70e932a9e81148::t_5756c4442643c1 53-74
+Tests/DevmachineAppTests/MachineReadinessTests.swift
+  s_70e932a9e81148::t_c362b9607faf1c 90-101
+Tests/DevmachineAppTests/PollPauseTests.swift
+  s_70e932a9e81148::t_0816e8e87e5398 12,15-21,38,40-42,96,100-101,106,108-109,111-112,114-117,120-121,169,199-200,214,216,219,222-223,226,229,232,237,240,262,278-279,286,302,323-325,332,472,480,486,488-489,494-498,501,505,507-509,512-516,519,523,527-534,542-543
+Tests/DevmachineAppTests/StatsStoreTests.swift
+  s_70e932a9e81148::t_999412b5492c89 555-599
+Tests/DevmachineAppTests/WidgetSourceControllerTests.swift
+  s_70e932a9e81148::t_9e5d2fd4a1d2fd 34-35,47-48,227-252
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "ec99b470dc2e577e8f1c3d994619212261b81906",
+  "prompts": {},
+  "sessions": {
+    "s_70e932a9e81148": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d778f438-4d84-4cdd-9b5b-0bfbc5cc6fc3",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
