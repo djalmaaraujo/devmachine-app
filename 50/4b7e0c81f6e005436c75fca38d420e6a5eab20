@@ -1,0 +1,49 @@
+Tests/DevmachineAppTests/AddMachineRenderTests.swift
+  s_70e932a9e81148::t_2b82c3e54ad43a 1-102
+  s_70e932a9e81148::t_351c4add790ed1 103-109
+Sources/DevmachineCore/Machines/MachinePlan.swift
+  s_70e932a9e81148::t_2cefb01f56653a 48-50
+  s_70e932a9e81148::t_7b7ea4aa0fe9df 55,179-180,190-192
+Sources/DevmachineCore/Machines/MachineAddHelp.swift
+  s_70e932a9e81148::t_da2dfc76f18947 1-105
+Tests/DevmachineCoreTests/Machines/MachineAddHelpTests.swift
+  s_70e932a9e81148::t_fa47273624c4ad 1-142
+CLAUDE.md
+  s_70e932a9e81148::t_c3492dc6fd6539 1884-1908
+Sources/DevmachineApp/AddMachineModel.swift
+  s_70e932a9e81148::t_731436d11ec8a7 20-23,46-48,62-63,78-79,227,279-304,306-307,309-310,312-313,315,318-320,322-323,327-335,363-376,378-382,390
+Sources/DevmachineApp/AddMachinePage.swift
+  s_70e932a9e81148::t_50a0351252314e 266-267,297,299-300,307,313,426,431-441,444-447,449-456,458,572,640,681,684,686-688,693,739-765,899-902,904,906,910-911,936,939,941
+Sources/DevmachineApp/AddMachineTrustViews.swift
+  s_70e932a9e81148::t_8b58daf96f8125 4-7,11-12,17-18,20-31,34,37-44,47-48,50-57,59-74,79-96,129
+Sources/DevmachineApp/MachineStepRunner.swift
+  s_70e932a9e81148::t_f512bfad3f5fd4 222
+Sources/DevmachineApp/SetupFailurePanel.swift
+  s_70e932a9e81148::t_f8c418c6151c09 45,47-48,52
+Sources/DevmachineCore/Machines/MachineDraft.swift
+  s_70e932a9e81148::t_408f30dacaa600 92-93,184-187,191,204
+Sources/DevmachineCore/Machines/SetupFailureAdvice.swift
+  s_70e932a9e81148::t_7d4f0767623f7a 15,34,43,45,47,49,51,53-55,57,95,128,141-142,148-155
+Tests/DevmachineAppTests/AddMachineTests.swift
+  s_70e932a9e81148::t_b63bd769d18e7c 452,469-470,473,479-481,484-631,1079-1102
+Tests/DevmachineCoreTests/Machines/MachineUnattendedTests.swift
+  s_70e932a9e81148::t_ea25aeb5a1470c 168,176-215,244,249
+Tests/DevmachineCoreTests/Machines/SetupFailureAdviceTests.swift
+  s_70e932a9e81148::t_0606bbf04fdcd2 93,97-109
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "504b7e0c81f6e005436c75fca38d420e6a5eab20",
+  "prompts": {},
+  "sessions": {
+    "s_70e932a9e81148": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d778f438-4d84-4cdd-9b5b-0bfbc5cc6fc3",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
