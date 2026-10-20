@@ -1,0 +1,21 @@
+Sources/DevmachineApp/AppModel.swift
+  s_70e932a9e81148::t_acd716efbb28c2 2314-2316,2318,2322,2325,2332,2347,2529-2530
+Tests/DevmachineAppTests/PollPauseTests.swift
+  s_70e932a9e81148::t_2083db7b0b1538 519-536
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "421f3c3af60b34623b9b092368f597bf8d021207",
+  "prompts": {},
+  "sessions": {
+    "s_70e932a9e81148": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d778f438-4d84-4cdd-9b5b-0bfbc5cc6fc3",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
