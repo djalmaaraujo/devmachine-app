@@ -68,7 +68,7 @@ struct DMBanner<Trailing: View>: View {
                 .foregroundStyle(Color.dmRowText)
                 .lineLimit(lineLimit)
                 .fixedSize(horizontal: false, vertical: true)
-                .help(message)
+                .dmHelp(message)
             Spacer()
             trailing()
         }

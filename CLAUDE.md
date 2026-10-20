@@ -762,6 +762,13 @@ coding agent icon…", the widget field "Coding agent"). Code and JSON keep
   bounds through AppKit's private `_opaqueRectForWindowMoveWhenInTitlebar`
   (NSButton does the same; there is no public API). Moving the terminal
   below the band instead left an empty strip and was rejected.
+- **Full screen hides the toolbar** (`WindowButtonsReader`, on will-enter;
+  shown again on will-exit). A visible toolbar stays on screen there as an
+  opaque grey band that pushes every column down. The window buttons then live
+  in the title bar's own window, so their converted place means nothing: the
+  reader keeps the windowed place (`SidebarHeaderSpacing.fallbackButtons` when
+  the window opened in full screen), or the sidebar header, its list and the
+  context tabs drop to the middle of the screen.
 - Demo frames capture the window's frame view (`SnapshotChrome.capturedView`);
   the window buttons come out grey (the window is never key) and are painted
   again where the window put them (`SnapshotChrome.measure`).
@@ -843,7 +850,12 @@ coding agent icon…", the widget field "Coding agent"). Code and JSON keep
   opened by a Carbon `RegisterEventHotKey` (no Accessibility permission),
   default ⌃⌥Space. Tests hand `QuickChatHotkeyController` a fake registrar;
   nothing registers a real hotkey under XCTest or in demo mode. Recording a
-  new shortcut in Settings suspends the old one.
+  new shortcut in Settings suspends the old one. The panel has no SwiftUI
+  `.help`: AppKit asked SwiftUI's tooltip bridge for a tooltip while the
+  panel resized under a streaming answer, and the bridge read a view that was
+  already gone (EXC_BAD_ACCESS in `TooltipResponder.text`, App v0.7.3). Views
+  in `Chats/` and `Components/` use `.dmHelp(_:)`, which the panel turns off
+  with `dmShowsHelp`; `DMHelpGuardTests` fails on a plain `.help` there.
 - **Ask** (`app.ask`, provider `app/session-ask`, engine 1.8, after Links in
   the default Context tab): `AskStore` keeps one thread per session
   (`AskSessionKey`); a session on this Mac passes its folder. "Clear" (shown once a

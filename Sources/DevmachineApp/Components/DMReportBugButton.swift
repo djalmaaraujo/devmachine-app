@@ -13,7 +13,7 @@ struct DMReportBugButton: View {
             guard let url = report().url(context: BugReportEnvironment.context()) else { return }
             NSWorkspace.shared.open(url)
         }
-        .help("Opens a new GitHub issue in your browser, filled in and with personal data taken out. "
+        .dmHelp("Opens a new GitHub issue in your browser, filled in and with personal data taken out. "
             + "Nothing is sent until you submit it there.")
     }
 }

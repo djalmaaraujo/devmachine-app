@@ -179,7 +179,7 @@ struct ChatShortcutRecorder: View {
         .contentShape(Rectangle())
         .onTapGesture { recording ? stop() : start() }
         .onDisappear { stop() }
-        .help("Click and press a new shortcut")
+        .dmHelp("Click and press a new shortcut")
     }
 
     private func start() {

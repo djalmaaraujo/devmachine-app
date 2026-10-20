@@ -65,7 +65,7 @@ struct DMChoiceCard: View {
         .buttonStyle(.plain)
         .onHover { hovering = $0 }
         .accessibilityAddTraits(selected ? .isSelected : [])
-        .help(locked ? "Always installed" : "")
+        .dmHelp(locked ? "Always installed" : "")
     }
 
     private var mark: String {
