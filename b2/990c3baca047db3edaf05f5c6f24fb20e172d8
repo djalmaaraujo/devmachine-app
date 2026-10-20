@@ -1,0 +1,45 @@
+Tests/DevmachineAppTests/CLIFirstSessionSourceTests.swift
+  s_96c406e8f457e9::t_a29587f2c4b7f0 174-185
+CLAUDE.md
+  s_96c406e8f457e9::t_f057e39a80cb8a 932-946
+Sources/DevmachineApp/AppModel.swift
+  s_96c406e8f457e9::t_324d5f40bd262d 2256-2268,2287-2292,2404-2413,2419,2426,2475-2478,2484-2539,2549-2556,2559-2560,2565,2569,2586,2588-2589,2593
+Sources/DevmachineApp/MachineReadinessViews.swift
+  s_96c406e8f457e9::t_41a91ec421220c 193-194,205-237
+Sources/DevmachineApp/NetworkReturnWatch.swift
+  s_96c406e8f457e9::t_c642d00a228bb2 1-51
+Sources/DevmachineApp/PollPause.swift
+  s_96c406e8f457e9::t_2c08b355560066 16-20,32-35,55,59-63,65-68,87-88
+Sources/DevmachineApp/Services/CLIFirstSessionSource.swift
+  s_96c406e8f457e9::t_0ae612f5445543 101-102
+Sources/DevmachineApp/SessionProblem.swift
+  s_96c406e8f457e9::t_d27fa97d54e50b 13,29,44-48,117-123
+Sources/DevmachineApp/TerminalActivity.swift
+  s_96c406e8f457e9::t_4893f15407436c 1-21
+Sources/DevmachineApp/TerminalRegistry.swift
+  s_96c406e8f457e9::t_7d53d98ad62f8e 245,249-254,283,285,317,527
+Sources/DevmachineApp/Widgets/Stack/WorkspacesWidgetView.swift
+  s_96c406e8f457e9::t_3fc60d9bb2bf83 73-78,93,164-178
+Sources/DevmachineCore/SessionStore.swift
+  s_96c406e8f457e9::t_4168ae418616ce 55-59
+Tests/DevmachineAppTests/NetworkReturnWatchTests.swift
+  s_96c406e8f457e9::t_8582d264c8c141 1-37
+Tests/DevmachineAppTests/PollPauseTests.swift
+  s_96c406e8f457e9::t_b4ad2ee54da13c 9,38-39,591-742
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "b2990c3baca047db3edaf05f5c6f24fb20e172d8",
+  "prompts": {},
+  "sessions": {
+    "s_96c406e8f457e9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ebe388aa-5f63-4bab-934d-828376f16c2a",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
