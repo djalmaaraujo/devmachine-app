@@ -756,6 +756,12 @@ coding agent icon…", the widget field "Coding agent"). Code and JSON keep
   `SidebarUnderTitlebar` outside the clip, or the header is cut off. A
   terminal starts below the band only while the sidebar is closed; Home always
   runs under it.
+- The window server drags the window from any part of the band that no view
+  claims, before the app sees the click, so a terminal line under the band
+  moved the window instead of selecting. `SelectingTerminalView` claims its
+  bounds through AppKit's private `_opaqueRectForWindowMoveWhenInTitlebar`
+  (NSButton does the same; there is no public API). Moving the terminal
+  below the band instead left an empty strip and was rejected.
 - Demo frames capture the window's frame view (`SnapshotChrome.capturedView`);
   the window buttons come out grey (the window is never key) and are painted
   again where the window put them (`SnapshotChrome.measure`).

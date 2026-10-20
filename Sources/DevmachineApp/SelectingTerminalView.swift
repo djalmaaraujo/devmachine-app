@@ -37,6 +37,14 @@ class SelectingTerminalView: LocalProcessTerminalView {
         super.init(coder: coder)
     }
 
+    /// The terminal runs up under the see-through toolbar band, and the window
+    /// server drags the window from any part of the band no view claims,
+    /// before the app sees the click. AppKit has no public way to claim it;
+    /// NSButton claims its bounds through this same private method.
+    @objc func _opaqueRectForWindowMoveWhenInTitlebar() -> NSRect {
+        bounds
+    }
+
     override func mouseDown(with event: NSEvent) {
         press = event
         dragged = false
