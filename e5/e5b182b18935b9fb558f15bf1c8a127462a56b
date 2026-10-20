@@ -1,0 +1,55 @@
+CLAUDE.md
+  s_78e27a7432feff::t_a9010704157272 765-771,853-858
+Sources/DevmachineApp/Chats/AskWidgetView.swift
+  s_78e27a7432feff::t_057f1d933b6104 68,137
+Sources/DevmachineApp/Chats/ChatComposer.swift
+  s_78e27a7432feff::t_16f0d5c90417f4 70,100
+Sources/DevmachineApp/Chats/ChatMessageViews.swift
+  s_78e27a7432feff::t_11bb1810509ccf 52,75
+Sources/DevmachineApp/Chats/ChatPane.swift
+  s_78e27a7432feff::t_a72dcf1c5b0a20 76,88
+Sources/DevmachineApp/Chats/ChatParts.swift
+  s_78e27a7432feff::t_3d449f9f75249b 71,90,261
+Sources/DevmachineApp/Chats/ChatsSettingsView.swift
+  s_78e27a7432feff::t_56e144c6d2e89c 182
+Sources/DevmachineApp/Chats/ChatsView.swift
+  s_78e27a7432feff::t_12b224e4cd6c7a 166,169,172
+Sources/DevmachineApp/Chats/QuickChatPanel.swift
+  s_78e27a7432feff::t_8b536368347906 274-283,443
+Sources/DevmachineApp/Chats/SidebarModeHeader.swift
+  s_78e27a7432feff::t_518e58c42d672b 52,62,98,176,229-233,242-248,251-257,265-268,310-312
+Sources/DevmachineApp/Components/DMButton.swift
+  s_78e27a7432feff::t_82fb74d782b6d5 262
+Sources/DevmachineApp/Components/DMChoiceCard.swift
+  s_78e27a7432feff::t_f9c448554a1978 68
+Sources/DevmachineApp/Components/DMHelp.swift
+  s_78e27a7432feff::t_efd34ceac54ba7 1-36
+Sources/DevmachineApp/Components/DMJobCard.swift
+  s_78e27a7432feff::t_e4878eee007741 63
+Sources/DevmachineApp/Components/DMReportBugButton.swift
+  s_78e27a7432feff::t_f82496394f9d7a 16
+Sources/DevmachineApp/Components/DMStatus.swift
+  s_78e27a7432feff::t_2d05ea4c917750 71
+Sources/DevmachineApp/Components/MachineJobToast.swift
+  s_78e27a7432feff::t_1c08be29c7954c 65
+Sources/DevmachineApp/ContentView.swift
+  s_78e27a7432feff::t_f92405989569e4 317-320
+Tests/DevmachineAppTests/QuickChatTooltipTests.swift
+  s_78e27a7432feff::t_5eb0cb5fa9900f 1-123
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "e5e5b182b18935b9fb558f15bf1c8a127462a56b",
+  "prompts": {},
+  "sessions": {
+    "s_78e27a7432feff": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "3b13396d-98ee-4090-ab2c-08e35a746038",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
