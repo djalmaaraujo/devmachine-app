@@ -10,6 +10,7 @@ enum SessionProblem: Equatable {
     case awaitingSync(detail: String)
     case unreachable(detail: String)
     case hostKeyRejected(detail: String)
+    case loginWaiting(detail: String)
     case failed(detail: String)
 
     init(_ error: Error) {
@@ -25,6 +26,7 @@ enum SessionProblem: Equatable {
             case .authDenied: self = .loginRefused(detail: store.stderr)
             case .unreachable: self = .unreachable(detail: store.stderr)
             case .hostKeyRejected: self = .hostKeyRejected(detail: store.stderr)
+            case .loginWaiting: self = .loginWaiting(detail: store.stderr)
             }
             return
         }
@@ -36,6 +38,11 @@ enum SessionProblem: Equatable {
 
     var isHostKeyRejected: Bool {
         if case .hostKeyRejected = self { return true }
+        return false
+    }
+
+    var isLoginWaiting: Bool {
+        if case .loginWaiting = self { return true }
         return false
     }
 
@@ -106,6 +113,13 @@ enum SessionProblem: Equatable {
             return SessionProblemPresentation(
                 title: "Couldn't connect to \(workspace)",
                 cause: Self.hostKeyCause,
+                commands: [], details: detail)
+        case let .loginWaiting(detail):
+            return SessionProblemPresentation(
+                title: "Approve your SSH key to see \(workspace)'s sessions",
+                cause: "The machine answered and accepted your key. Your SSH agent hasn't signed with it yet: "
+                    + "1Password asks for Touch ID, or to be unlocked, after the Mac wakes. "
+                    + "The sessions show as soon as you approve.",
                 commands: [], details: detail)
         case let .failed(detail):
             return SessionProblemPresentation(

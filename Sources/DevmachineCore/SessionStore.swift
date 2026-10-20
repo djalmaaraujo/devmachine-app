@@ -52,6 +52,11 @@ public enum SSHFailure: Equatable, Sendable {
     /// The server answered with a key this Mac does not trust. No login was
     /// tried, so it counts toward no ban, and the host is up.
     case hostKeyRejected
+    /// The server accepted the key and the SSH agent has not signed with it
+    /// yet: 1Password waits for Touch ID after a wake. The CLI keeps that one
+    /// login open and asks nothing more of the server while it waits, so it
+    /// counts toward no ban and the host is up.
+    case loginWaiting
 
     public static func classify(exitCode: Int32, stderr: String) -> SSHFailure? {
         guard exitCode == 255 else { return nil }

@@ -98,6 +98,8 @@ struct CLIFirstSessionSource: SessionListSource {
             return .failure(SessionStoreError(failure: .hostKeyRejected, stderr: error.message))
         case "login-refused":
             return .failure(SessionStoreError(failure: .authDenied, stderr: error.message))
+        case "login-waiting":
+            return .failure(SessionStoreError(failure: .loginWaiting, stderr: error.message))
         default:
             return .failure(SessionStoreError(failure: .unreachable, stderr: error.message))
         }

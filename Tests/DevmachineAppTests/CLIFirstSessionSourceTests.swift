@@ -171,6 +171,18 @@ final class CLIFirstSessionSourceTests: XCTestCase {
         XCTAssertEqual(try results[beta.alias]?.get().map(\.name), ["web"])
     }
 
+    func testALoginTheAgentHasNotApprovedIsWaitingNotUnreachable() {
+        let message = "the SSH agent has not approved the key yet: machine \\\"main\\\" answered on 203.0.113.10"
+        let runner = SessionsCLIRunner(result: (output(
+            workspace("acme", error: #"{"kind":"login-waiting","message":"\#(message)"}"#)), "", 0))
+
+        let results = source(runner).sessions(for: [acme], settings: .empty)
+
+        XCTAssertThrowsError(try results[acme.alias]?.get()) { error in
+            XCTAssertEqual((error as? SessionStoreError)?.failure, .loginWaiting)
+        }
+    }
+
     func testAWorkspaceTheCLIDidNotReportIsUnreachable() {
         let runner = SessionsCLIRunner(result: (output(workspace("acme")), "", 0))
 

@@ -70,6 +70,12 @@ struct WorkspacesWidgetView: View {
                         .padding(.horizontal, m.space.md)
                         .padding(.vertical, m.space.xs)
                 }
+                if let machine = loginWaitingCardMachine(for: ws) {
+                    LoginWaitingSidebarCard(machine: machine)
+                        .dmSurface(Color.dmBand, radius: DMRadius.panel)
+                        .padding(.horizontal, m.space.md)
+                        .padding(.vertical, m.space.xs)
+                }
                 if let machine = hostKeyCardMachine(for: ws) {
                     HostKeySidebarCard(machine: machine)
                         .dmSurface(Color.dmBand, radius: DMRadius.panel)
@@ -84,6 +90,7 @@ struct WorkspacesWidgetView: View {
                     EmptyView()
                 } else if let problem = model.sessionProblems[ws.alias], model.pollPauses[ws.alias] == nil,
                           !(problem.isHostKeyRejected && hostKeyMachine(for: ws) != nil),
+                          !(problem.isLoginWaiting && loginWaitingMachine(for: ws) != nil),
                           (model.sessionsByAlias[ws.alias] ?? []).isEmpty {
                     // A refused host key with no machine to review it under
                     // (the configuration unread) still says why.
@@ -152,6 +159,21 @@ struct WorkspacesWidgetView: View {
         guard let machine = hostKeyMachine(for: workspace) else { return nil }
         let first = model.visibleWorkspaces.first { readiness.machine(forWorkspace: $0.name) == machine }
         return first?.alias == workspace.alias ? machine : nil
+    }
+
+    /// A machine waiting for the SSH agent to approve the key gets one card,
+    /// under the first of its workspaces the sidebar shows, even while older
+    /// sessions are still listed: it is the one thing to do.
+    private func loginWaitingCardMachine(for workspace: Workspace) -> String? {
+        guard let machine = loginWaitingMachine(for: workspace) else { return nil }
+        let first = model.visibleWorkspaces.first { readiness.machine(forWorkspace: $0.name) == machine }
+        return first?.alias == workspace.alias ? machine : nil
+    }
+
+    private func loginWaitingMachine(for workspace: Workspace) -> String? {
+        guard !workspace.isLocal, let machine = readiness.machine(forWorkspace: workspace.name) else { return nil }
+        let onMachine = model.visibleWorkspaces.filter { readiness.machine(forWorkspace: $0.name) == machine }
+        return onMachine.contains { model.sessionProblems[$0.alias]?.isLoginWaiting == true } ? machine : nil
     }
 
     /// The machine of `workspace` when any workspace on it has a refused

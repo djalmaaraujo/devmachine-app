@@ -190,8 +190,8 @@ struct PollPauseSidebarCard: View {
 
     var body: some View {
         HStack(spacing: m.space.sm) {
-            Image(systemName: reason == .unreachable ? "wifi.exclamationmark" : "pause.circle")
-                .foregroundStyle(.orange)
+            Image(systemName: Self.symbol(for: reason))
+                .foregroundStyle(reason == .reconnecting ? Color.dmMuted : .orange)
             Text(verbatim: notice)
                 .font(.dm(11.5, weight: .semibold))
                 .foregroundStyle(Color.dmRowText)
@@ -201,6 +201,39 @@ struct PollPauseSidebarCard: View {
         }
         .padding(m.space.md)
         .frame(maxWidth: .infinity, alignment: .leading)
+    }
+
+    static func symbol(for reason: PollPause.Reason) -> String {
+        switch reason {
+        case .unreachable: return "wifi.exclamationmark"
+        case .reconnecting: return "arrow.triangle.2.circlepath"
+        case .loginRefused, .machineLoginsRefused: return "pause.circle"
+        }
+    }
+}
+
+/// A machine that accepted the key while the SSH agent has not signed with
+/// it yet. Its sessions keep running; the list fills in once someone approves.
+struct LoginWaitingSidebarCard: View {
+    @Environment(\.dmMetrics) private var m
+    let machine: String
+
+    static func line(machine: String) -> String {
+        "Approve your SSH key in 1Password to see the sessions on \(machine)."
+    }
+
+    var body: some View {
+        HStack(spacing: m.space.sm) {
+            Image(systemName: "touchid").foregroundStyle(.orange)
+            Text(verbatim: Self.line(machine: machine))
+                .font(.dm(11.5, weight: .semibold))
+                .foregroundStyle(Color.dmRowText)
+                .fixedSize(horizontal: false, vertical: true)
+            Spacer(minLength: 0)
+        }
+        .padding(m.space.md)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .accessibilityElement(children: .combine)
     }
 }
 

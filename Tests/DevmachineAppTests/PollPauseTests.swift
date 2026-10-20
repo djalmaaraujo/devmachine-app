@@ -6,6 +6,7 @@ import DevmachineCore
 /// Answers each workspace's session list from a script and counts every
 /// login, so a test can prove which workspaces a sweep touched.
 private final class ScriptedSessionSource: SessionListSource, @unchecked Sendable {
+    var asksAllAtOnce = false
     private let lock = NSLock()
     private var failures: [String: SSHFailure] = [:]
     private var logins: [String] = []
@@ -34,6 +35,8 @@ private final class ScriptedSessionSource: SessionListSource, @unchecked Sendabl
             throw SessionStoreError(failure: .unreachable, stderr: "ssh: connect to host 203.0.113.7 port 22: Operation timed out")
         case .hostKeyRejected?:
             throw SessionStoreError(failure: .hostKeyRejected, stderr: "Host key verification failed.")
+        case .loginWaiting?:
+            throw SessionStoreError(failure: .loginWaiting, stderr: "the SSH agent has not approved the key yet")
         case nil:
             return [TmuxSession(name: "dash", windows: 1, harnesses: [])]
         }
@@ -584,5 +587,157 @@ final class PollPauseTests: XCTestCase {
 
         store.retry()
         try await waitFor { source.calls == [target] }
+    }
+
+    private func wakeModel(_ source: ScriptedSessionSource) -> AppModel {
+        let model = makeModel(source, machines: ["acme": "main", "beta": "main", "gamma": "edge"])
+        model.wakeSweepDelay = 60
+        model.networkSweepDelay = 0
+        return model
+    }
+
+    func testWaitingForTheAgentIsNotOfflineAndPausesNothing() async throws {
+        let source = ScriptedSessionSource()
+        source.fail(acme.alias, with: .loginWaiting)
+        let model = wakeModel(source)
+
+        try await sweep(model)
+
+        XCTAssertEqual(model.sessionProblems[acme.alias]?.isLoginWaiting, true)
+        XCTAssertFalse(model.offlineAliases.contains(acme.alias))
+        XCTAssertFalse(model.isPollingPaused(alias: acme.alias))
+        XCTAssertFalse(model.isPollingPaused(alias: beta.alias))
+
+        source.fail(acme.alias, with: nil)
+        try await sweep(model)
+        XCTAssertNil(model.sessionProblems[acme.alias])
+    }
+
+    func testWakingWaitsForTheNetworkBeforeItSweeps() async throws {
+        let source = ScriptedSessionSource()
+        let model = wakeModel(source)
+
+        model.resumePollingAfterWake()
+        try await settle()
+        XCTAssertEqual(source.calls(acme.alias), 0)
+
+        model.networkReturned()
+        try await waitFor { source.calls(self.acme.alias) == 1 }
+    }
+
+    func testAMachineThatDoesNotAnswerRightAfterAWakeIsReconnectingNotOffline() async throws {
+        let source = ScriptedSessionSource()
+        source.fail(acme.alias, with: .unreachable)
+        let model = wakeModel(source)
+        model.resumePollingAfterWake()
+
+        try await sweep(model)
+
+        XCTAssertEqual(model.pollPauses[acme.alias]?.reason, .reconnecting)
+        XCTAssertEqual(model.pollPauses[acme.alias]?.seconds, PollPause.reconnectingSeconds)
+        XCTAssertEqual(model.pollPauses[beta.alias]?.reason, .reconnecting)
+        XCTAssertFalse(model.offlineAliases.contains(acme.alias))
+        XCTAssertFalse(model.offlineAliases.contains(beta.alias))
+    }
+
+    func testAfterTheGraceAMachineThatDoesNotAnswerIsOffline() async throws {
+        let source = ScriptedSessionSource()
+        source.fail(acme.alias, with: .unreachable)
+        let model = wakeModel(source)
+        var now = Date()
+        model.pauseClock = { now }
+        model.resumePollingAfterWake()
+        now = now.addingTimeInterval(AppModel.reconnectGraceSeconds + 1)
+
+        try await sweep(model)
+
+        XCTAssertEqual(model.pollPauses[acme.alias]?.reason, .unreachable)
+        XCTAssertTrue(model.offlineAliases.contains(acme.alias))
+    }
+
+    func testTheNetworkComingBackLiftsAnUnreachablePause() async throws {
+        let source = ScriptedSessionSource()
+        source.fail(acme.alias, with: .unreachable)
+        let model = wakeModel(source)
+        try await sweep(model)
+        XCTAssertTrue(model.isPollingPaused(alias: acme.alias))
+
+        source.fail(acme.alias, with: nil)
+        model.networkReturned()
+
+        try await waitFor { model.sessionsByAlias[self.acme.alias] != nil && !model.isSweeping }
+        XCTAssertFalse(model.offlineAliases.contains(acme.alias))
+    }
+
+    func testTheNetworkComingBackKeepsARefusedLoginPaused() async throws {
+        let source = ScriptedSessionSource()
+        source.fail(acme.alias, with: .authDenied)
+        let model = wakeModel(source)
+        try await sweep(model)
+
+        model.networkReturned()
+        try await settle()
+
+        XCTAssertEqual(source.calls(acme.alias), 1)
+        XCTAssertTrue(model.isPollingPaused(alias: acme.alias))
+    }
+
+    func testAnOpenTerminalThatJustSpokeKeepsItsMachineFromTurningRed() async throws {
+        let source = ScriptedSessionSource()
+        source.fail(acme.alias, with: .unreachable)
+        let model = wakeModel(source)
+        model.terminalHeardFrom = { $0 == self.beta.alias ? Date() : nil }
+
+        try await sweep(model)
+
+        XCTAssertEqual(model.pollPauses[acme.alias]?.reason, .reconnecting)
+        XCTAssertFalse(model.offlineAliases.contains(acme.alias))
+    }
+
+    func testATerminalSilentForLongProvesNothing() async throws {
+        let source = ScriptedSessionSource()
+        source.fail(acme.alias, with: .unreachable)
+        let model = wakeModel(source)
+        model.terminalHeardFrom = { $0 == self.beta.alias ? Date().addingTimeInterval(-600) : nil }
+
+        try await sweep(model)
+
+        XCTAssertEqual(model.pollPauses[acme.alias]?.reason, .unreachable)
+        XCTAssertTrue(model.offlineAliases.contains(acme.alias))
+    }
+
+    func testInTheBackgroundTheSweepRunsLessOften() async throws {
+        let source = ScriptedSessionSource()
+        source.asksAllAtOnce = true
+        let model = wakeModel(source)
+        var now = Date()
+        model.sweepClock = { now }
+        model.appIsActive = { false }
+        try await sweep(model)
+
+        now = now.addingTimeInterval(10)
+        model.tick()
+        try await settle()
+        XCTAssertEqual(source.calls(acme.alias), 1)
+
+        now = now.addingTimeInterval(AppModel.backgroundSweepSeconds)
+        model.tick()
+        try await waitFor { source.calls(self.acme.alias) == 2 }
+    }
+
+    func testComingBackToTheAppSweepsAtOnce() async throws {
+        let source = ScriptedSessionSource()
+        source.asksAllAtOnce = true
+        let model = wakeModel(source)
+        var now = Date()
+        model.sweepClock = { now }
+        model.appIsActive = { false }
+        try await sweep(model)
+
+        now = now.addingTimeInterval(10)
+        model.appIsActive = { true }
+        model.appBecameActive()
+
+        try await waitFor { source.calls(self.acme.alias) == 2 }
     }
 }

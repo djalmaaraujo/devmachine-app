@@ -2253,6 +2253,19 @@ final class AppModel: ObservableObject {
         }
     }
 
+    static let backgroundSweepSeconds: TimeInterval = 30
+
+    /// Whether the app is in front; tests stand in. A test runner is never
+    /// in front, and the tick tests expect the app that is.
+    var appIsActive: @MainActor () -> Bool = { AppModel.isRunningTests || NSApp.isActive }
+
+    /// Coming back to the app: what it shows is read again at once, rather
+    /// than at the next background tick.
+    func appBecameActive() {
+        if let lastSweepAt, sweepClock().timeIntervalSince(lastSweepAt) < 5 { return }
+        refreshAll()
+    }
+
     /// The sidebar's refresh button. An unreachable machine costs nothing to
     /// ask, so its pause is lifted and it is asked now; a refused login keeps
     /// its pause, since each one counts toward a ban.
@@ -2271,6 +2284,12 @@ final class AppModel: ObservableObject {
     /// workspace every 5 s, and every workspace once a minute, one at a time,
     /// so an offline one comes back on its own.
     func tick() {
+        // Every sweep is a CLI process and, on the ssh path, a login: in the
+        // background nobody reads the sidebar, so it is kept fresh less often.
+        if !appIsActive(), let lastSweepAt,
+           sweepClock().timeIntervalSince(lastSweepAt) < Self.backgroundSweepSeconds {
+            return
+        }
         if services.sessionSource.asksAllAtOnce {
             refreshAll()
             return
@@ -2382,19 +2401,29 @@ final class AppModel: ObservableObject {
                 syncContext()
                 return
             }
+            // The host answered and accepted the key; only the agent's
+            // approval is missing. The CLI keeps that login open and asks the
+            // host nothing more while it waits, so nothing is paused and the
+            // next sweep shows the sessions once someone approves.
+            if failure == .loginWaiting {
+                offlineAliases.remove(alias)
+                syncContext()
+                return
+            }
+            let reconnecting = failure == .unreachable && looksLikeReconnecting(alias: alias)
             // Red means the host does not answer. A login this Mac cannot sign
             // — a locked agent after waking — says nothing about the host, and
             // the sessions on it keep running: the bar already says polling is
             // paused, and a red dot on top of that is a lie that stays on
             // screen until the next successful sweep.
-            if failure == .authDenied {
+            if failure == .authDenied || reconnecting {
                 offlineAliases.remove(alias)
             } else if !offlineAliases.contains(alias) {
                 offlineAliases.insert(alias)
             }
             if let failure, failure != .hostKeyRejected {
                 pausesAgain = true
-                pausePolling(alias: alias, after: failure)
+                pausePolling(alias: alias, after: failure, reconnecting: reconnecting)
             }
             syncContext()
         }
@@ -2443,14 +2472,71 @@ final class AppModel: ObservableObject {
 
     /// Sleeping made every ssh fail at once, which paused the sweep and turned
     /// the whole sidebar red. Waking is the evidence that the pause no longer
-    /// applies, so it is lifted and the sweep runs at once instead of leaving
-    /// the sidebar wrong for up to two minutes.
+    /// applies, so it is lifted. The sweep waits for the network to come back
+    /// (`networkReturned`), or `wakeSweepDelay` at most: asked at the moment of
+    /// waking, before Wi-Fi and Tailscale are up, every machine failed and
+    /// turned red.
     func resumePollingAfterWake() {
         if !pollPauses.isEmpty { pollPauses = [:] }
         loginRefusals = [:]
         sweepInFlight = false
         refreshingAliases.removeAll()
-        refreshAll()
+        reconnectingSince = pauseClock()
+        scheduleSweep(after: wakeSweepDelay)
+    }
+
+    /// The network path came back or changed: a machine that did not answer
+    /// before may answer now, so its pause is lifted and it is asked again. A
+    /// refused login keeps its pause: each one counts toward a ban.
+    func networkReturned() {
+        reconnectingSince = pauseClock()
+        for (alias, pause) in pollPauses where pause.reason == .unreachable || pause.reason == .reconnecting {
+            pollPauses[alias] = nil
+        }
+        scheduleSweep(after: networkSweepDelay)
+    }
+
+    /// After a wake or a network change, a machine that does not answer is
+    /// most likely the network still coming up: grey and asked again soon,
+    /// not red, for this long.
+    static let reconnectGraceSeconds: TimeInterval = 120
+    /// A terminal that printed something this recently proves its machine
+    /// answers, whatever a sweep says.
+    static let terminalProofSeconds: TimeInterval = 120
+
+    private var reconnectingSince: Date?
+    private var scheduledSweep: Task<Void, Never>?
+    var wakeSweepDelay: TimeInterval = 8
+    /// Path updates come in bursts while interfaces come up.
+    var networkSweepDelay: TimeInterval = 2
+
+    /// When a terminal to a workspace last printed something; tests stand in.
+    var terminalHeardFrom: @MainActor (String) -> Date? = { TerminalActivity.shared.lastOutput(alias: $0) }
+
+    private func scheduleSweep(after delay: TimeInterval) {
+        scheduledSweep?.cancel()
+        guard delay > 0 else {
+            scheduledSweep = nil
+            refreshAll()
+            return
+        }
+        scheduledSweep = Task { [weak self] in
+            try? await Task.sleep(nanoseconds: UInt64(delay * 1_000_000_000))
+            guard !Task.isCancelled else { return }
+            self?.refreshAll()
+        }
+    }
+
+    private func looksLikeReconnecting(alias: String) -> Bool {
+        let now = pauseClock()
+        if let reconnectingSince, now.timeIntervalSince(reconnectingSince) < Self.reconnectGraceSeconds {
+            return true
+        }
+        let siblings = machine(forAlias: alias).map { workspaces(onMachine: $0).map(\.alias) } ?? []
+        return (siblings + [alias]).contains { other in
+            guard let heard = terminalHeardFrom(other) else { return false }
+            return now.timeIntervalSince(heard) < Self.terminalProofSeconds
+        }
     }
 
     private func observeWake() {
@@ -2460,17 +2546,27 @@ final class AppModel: ObservableObject {
                 MainActor.assumeIsolated { AppModel.shared?.resumePollingAfterWake() }
             }
         }
+        NotificationCenter.default.addObserver(
+            forName: NSApplication.didBecomeActiveNotification, object: nil, queue: .main
+        ) { _ in
+            MainActor.assumeIsolated { AppModel.shared?.appBecameActive() }
+        }
+        if !Self.isRunningTests {
+            networkWatch.start { AppModel.shared?.networkReturned() }
+        }
     }
+
+    private let networkWatch = NetworkReturnWatch()
 
     /// A refused login pauses that workspace alone: fail2ban counts each
     /// account's failed logins against this Mac's IP, and another account's
     /// working login adds nothing. A machine that does not answer pauses
     /// every workspace on it; with no known machine, only this one.
-    private func pausePolling(alias: String, after failure: SSHFailure) {
+    private func pausePolling(alias: String, after failure: SSHFailure, reconnecting: Bool = false) {
         let machine = machine(forAlias: alias)
         let entering = pollPauses[alias] == nil
         switch failure {
-        case .hostKeyRejected:
+        case .hostKeyRejected, .loginWaiting:
             return
         case .authDenied:
             if let machine, workspaces(onMachine: machine).contains(where: {
@@ -2487,13 +2583,14 @@ final class AppModel: ObservableObject {
             setPause(pause, alias: alias)
             if entering { announce(pause, alias: alias) }
         case .unreachable:
-            let pause = PollPause(.unreachable, machine: machine, from: pauseClock())
+            let pause = PollPause(reconnecting ? .reconnecting : .unreachable, machine: machine, from: pauseClock())
             setPause(pause, alias: alias)
-            if entering { announce(pause, alias: alias) }
+            // Reconnecting is the sidebar's quiet grey card, not news.
+            if entering, !reconnecting { announce(pause, alias: alias) }
             guard let machine else { return }
             for ws in workspaces(onMachine: machine) where ws.alias != alias {
                 setPause(pause, alias: ws.alias)
-                if !offlineAliases.contains(ws.alias) { offlineAliases.insert(ws.alias) }
+                if !reconnecting, !offlineAliases.contains(ws.alias) { offlineAliases.insert(ws.alias) }
                 if sessionProblems[ws.alias] == nil {
                     sessionProblems[ws.alias] = .unreachable(
                         detail: "Not asked: another workspace on \(machine) could not be reached.")

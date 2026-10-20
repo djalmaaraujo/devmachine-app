@@ -242,7 +242,14 @@ final class TerminalRegistry: NSObject {
         // is left to match.
         term.linkReporting = .implicit
         term.setAccessibilityHelp(Self.dropHint(for: kind))
+        term.setProcessOutputHandler(Self.activityHandler(kind))
         return term
+    }
+
+    /// Records each chunk of a remote terminal's output in `TerminalActivity`.
+    private static func activityHandler(_ kind: TerminalKind) -> (@Sendable () -> Void)? {
+        guard case let .remote(alias, _) = kind else { return nil }
+        return { TerminalActivity.shared.record(alias: alias) }
     }
 
     func autoConnectState() -> (open: Set<AutoConnectTarget>, room: Int) {
@@ -273,7 +280,9 @@ final class TerminalRegistry: NSObject {
         warmHosts[kind] = host
         warmSettled[kind] = PendingWarm(settled: settled, since: Date())
         let view = ObjectIdentifier(term)
+        let activity = Self.activityHandler(kind)
         term.setProcessOutputHandler {
+            activity?()
             Task { @MainActor in TerminalRegistry.shared.processDidSpeak(kind, view: view) }
         }
         reattached.insert(kind)
@@ -305,7 +314,7 @@ final class TerminalRegistry: NSObject {
 
     private func settleWarm(_ kind: TerminalKind, running: Bool, via cause: WarmSettleCause) {
         guard let pending = warmSettled.removeValue(forKey: kind) else { return }
-        terminals[kind]?.setProcessOutputHandler(nil)
+        terminals[kind]?.setProcessOutputHandler(Self.activityHandler(kind))
         PaneLog.log(Self.warmSettledLine(
             kind, running: running, after: Date().timeIntervalSince(pending.since), via: cause))
         pending.settled(running)
@@ -515,7 +524,7 @@ final class TerminalRegistry: NSObject {
                     switch run(check.alias, check.command) {
                     case nil:
                         continue
-                    case .hostKeyRejected?:
+                    case .hostKeyRejected?, .loginWaiting?:
                         skipped.insert(check.machine)
                     case .authDenied?:
                         failures.append((check.alias, .authDenied))

@@ -929,6 +929,21 @@ coding agent icon…", the widget field "Coding agent"). Code and JSON keep
   (`PollPauseSidebarCard`, one per machine when the machine is paused) and it clears on
   the next answer; a corner toast says it once, when the pause starts, not again while
   it only goes on.
+- **Waking and the SSH agent.** Waking lifts every pause but does not sweep at once:
+  Wi-Fi and Tailscale are not up yet, and every machine failed and turned red. The
+  sweep waits for `NetworkReturnWatch` (system path updates, no polling) or
+  `wakeSweepDelay` at most; a path that comes back or gains an interface lifts
+  unreachable pauses and sweeps (`networkReturned`), never refused ones. For 2 min
+  after a wake or a network change, and whenever a remote terminal on that machine
+  printed in the last 2 min (`TerminalActivity`, fed by SwiftTerm's output handler;
+  a mosh pane redraws as soon as it reaches its machine), an unreachable machine is
+  `PollPause.Reason.reconnecting`: grey card, no red dot, no toast, 30 s pause (not
+  less: an older CLI counts a login waiting for the agent as unreachable after 30 s).
+  The CLI answers `login-waiting` (`SSHFailure.loginWaiting`) when the machine
+  accepted the key and only the agent's signature is missing; it keeps that one login
+  open and touches the network no more while it waits, so the app pauses nothing,
+  shows no red dot, and puts one `LoginWaitingSidebarCard` per machine. In the
+  background the sweep runs every 30 s, not 5 s; coming back to the app sweeps at once.
 - **A workspace no sync has created is never asked.** `packages.lock` names every
   workspace a sync applied; one it does not name has no account yet, and every login
   to it is a failed one (`AppModel.awaitsFirstSync`). It shows "isn't set up on its
