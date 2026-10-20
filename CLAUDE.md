@@ -844,7 +844,12 @@ coding agent icon…", the widget field "Coding agent"). Code and JSON keep
   opened by a Carbon `RegisterEventHotKey` (no Accessibility permission),
   default ⌃⌥Space. Tests hand `QuickChatHotkeyController` a fake registrar;
   nothing registers a real hotkey under XCTest or in demo mode. Recording a
-  new shortcut in Settings suspends the old one.
+  new shortcut in Settings suspends the old one. The panel has no SwiftUI
+  `.help`: AppKit asked SwiftUI's tooltip bridge for a tooltip while the
+  panel resized under a streaming answer, and the bridge read a view that was
+  already gone (EXC_BAD_ACCESS in `TooltipResponder.text`, App v0.7.3). Views
+  in `Chats/` and `Components/` use `.dmHelp(_:)`, which the panel turns off
+  with `dmShowsHelp`; `DMHelpGuardTests` fails on a plain `.help` there.
 - **Ask** (`app.ask`, provider `app/session-ask`, engine 1.8, after Links in
   the default Context tab): `AskStore` keeps one thread per session
   (`AskSessionKey`); a session on this Mac passes its folder. "Clear" (shown once a

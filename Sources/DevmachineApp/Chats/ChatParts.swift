@@ -68,7 +68,7 @@ struct ChatMCPChip: View {
                 tint: isOn ? .accentColor : .dmMuted, open: isOn, height: height, fontSize: fontSize)
         }
         .buttonStyle(.plain)
-        .help("Load this workspace's MCP servers (slower start)")
+        .dmHelp("Load this workspace's MCP servers (slower start)")
         .accessibilityLabel("MCP servers")
         .accessibilityValue(isOn ? "On" : "Off")
         .accessibilityAddTraits(.isToggle)
@@ -87,7 +87,7 @@ struct ChatReadOnlyLabel: View {
             Text(verbatim: "Read only").font(.dm(fontSize))
         }
         .foregroundStyle(Color.dmMuted)
-        .help("Chats can read files and run read-only commands. They never edit files.")
+        .dmHelp("Chats can read files and run read-only commands. They never edit files.")
     }
 }
 
@@ -258,7 +258,7 @@ struct ChatDropdown<Trigger: View>: View {
                 .fixedSize()
             }
         }
-        .help(help.isEmpty ? accessibilityLabel : help)
+        .dmHelp(help.isEmpty ? accessibilityLabel : help)
         .accessibilityLabel(accessibilityLabel)
         .accessibilityValue(accessibilityValue)
         .accessibilityHint(accessibilityHint)

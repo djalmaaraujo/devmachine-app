@@ -60,7 +60,7 @@ struct DMJobCard<Footer: View>: View {
                 Spacer(minLength: m.space.xs)
                 if let onClose, status != .running {
                     DMIconButton(systemImage: "xmark", size: 10, tint: nil, action: onClose)
-                        .help("Dismiss")
+                        .dmHelp("Dismiss")
                 }
             }
             if !steps.isEmpty {

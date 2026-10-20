@@ -163,13 +163,13 @@ struct ChatsSidebar: View {
     private var footer: some View {
         HStack(spacing: 0) {
             footerButton("chart.bar") { model.showPage(.stats) }
-                .help("Stats")
+                .dmHelp("Stats")
             if model.hasCaddyMachine {
                 footerButton("globe") { model.showPage(.subdomains) }
-                    .help("Published apps")
+                    .dmHelp("Published apps")
             }
             footerButton("gearshape") { model.openSettings(.chats) }
-                .help("Settings (⌘,)")
+                .dmHelp("Settings (⌘,)")
         }
         .padding(.horizontal, m.space.lg)
         .padding(.vertical, m.space.md)
