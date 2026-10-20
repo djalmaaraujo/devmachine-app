@@ -1,0 +1,90 @@
+Sources/DevmachineCore/AppLogger.swift
+  s_70e932a9e81148::t_417aef3e18f4f3 1-220
+  s_70e932a9e81148::t_c48b2670b971d9 221-228
+Sources/DevmachineCore/LogBundle.swift
+  s_70e932a9e81148::t_6054142fc2b79f 1-108
+Sources/DevmachineApp/LogsMenu.swift
+  s_70e932a9e81148::t_73f24176d12310 1-180,182,185,188-189,195,197-198
+  s_70e932a9e81148::t_b1ed02cffe03a0 181,183-184,186-187,190-194,196,199-207
+Sources/DevmachineApp/AppLog.swift
+  s_70e932a9e81148::t_e7142d6c0a01b4 1-79
+Tests/DevmachineAppTests/LogsMenuTests.swift
+  s_70e932a9e81148::t_71239071cebc06 1-149
+Sources/DevmachineCore/LoggingCommandRunner.swift
+  s_70e932a9e81148::t_3c5d4ef10858c1 1-74
+  s_70e932a9e81148::t_9beb3cd4a9792b 75-84
+Sources/DevmachineCore/LogRedactor.swift
+  s_70e932a9e81148::t_f4ef101f0cb200 1-114
+CLAUDE.md
+  s_70e932a9e81148::t_715a74978806af 1610-1629
+Sources/DevmachineApp/CommandPaletteView.swift
+  s_70e932a9e81148::t_dd1693ea53c803 44-45
+Sources/DevmachineApp/Components/DMErrorState.swift
+  s_70e932a9e81148::t_e542eed8659e9d 99-105
+Sources/DevmachineApp/Components/DMReportBugButton.swift
+  s_70e932a9e81148::t_1db005a11d6871 17-18
+Sources/DevmachineApp/DevmachineApp.swift
+  s_70e932a9e81148::t_b4a6c1d3b774c8 27-29,222
+Sources/DevmachineApp/DevmachineCLI.swift
+  s_70e932a9e81148::t_f048a9979ba529 375
+Sources/DevmachineApp/MachineStepRunner.swift
+  s_70e932a9e81148::t_c13d9ea4136e2a 72,82,124,131,140,156-159,161-172,203,244,249,265,309-313
+Sources/DevmachineApp/Palette/CommandRegistry.swift
+  s_70e932a9e81148::t_888b5e7040fe2c 22,26-44
+Sources/DevmachineApp/Palette/PaletteCommand.swift
+  s_70e932a9e81148::t_94694cdc693661 63,113-114
+Sources/DevmachineApp/Palette/PaletteDispatcher.swift
+  s_70e932a9e81148::t_4f516c84d352b1 34-45,82,140
+Sources/DevmachineApp/PaneLog.swift
+  s_70e932a9e81148::t_3dd34927ca7e22 7,37
+Sources/DevmachineApp/SettingsStore.swift
+  s_70e932a9e81148::t_91fcb1cd2b9121 74,109-114
+Sources/DevmachineApp/SetupPage.swift
+  s_70e932a9e81148::t_bb837d63e0f65a 1100-1104
+Sources/DevmachineApp/Updates/UpdateController.swift
+  s_70e932a9e81148::t_b8839b748838f1 150,232-233,237,331,393,472,491,558
+Sources/DevmachineApp/Widgets/HomeBoardController.swift
+  s_70e932a9e81148::t_9f4f7e183e5520 40,267,310
+Sources/DevmachineApp/Widgets/Menubar/MenubarController.swift
+  s_70e932a9e81148::t_4a3261cbd818cd 39,88
+Sources/DevmachineApp/Widgets/Stack/StackBoardController.swift
+  s_70e932a9e81148::t_851f17ff83066a 60,323,330
+Sources/DevmachineApp/Widgets/WidgetCatalogStore.swift
+  s_70e932a9e81148::t_b4243d29dac4b0 98
+Sources/DevmachineApp/Widgets/WidgetSourceController.swift
+  s_70e932a9e81148::t_d85a5fcf491c82 66,248,342,345,362,428
+Sources/DevmachineCore/BugReport.swift
+  s_70e932a9e81148::t_00ef754d39c6fc 11-14,81-82
+Tests/DevmachineAppTests/AddMachineTests.swift
+  s_70e932a9e81148::t_adbf4d8d198ab0 268-283
+Tests/DevmachineAppTests/DevmachineCLITests.swift
+  s_70e932a9e81148::t_98fc04d9edc5a9 278-290
+Tests/DevmachineAppTests/PaletteDispatcherTests.swift
+  s_70e932a9e81148::t_f6499ca9e9fe1e 60-65,112-118
+Tests/DevmachineCoreTests/AppLoggerTests.swift
+  s_70e932a9e81148::t_1971c73d02e027 1-133
+Tests/DevmachineCoreTests/BugReportTests.swift
+  s_70e932a9e81148::t_314d11db14977c 103-108
+Tests/DevmachineCoreTests/LogBundleTests.swift
+  s_70e932a9e81148::t_eb4b94a3c2ace3 1-83
+Tests/DevmachineCoreTests/LogRedactorTests.swift
+  s_70e932a9e81148::t_9ddb22695f6517 1-113
+Tests/DevmachineCoreTests/LoggingCommandRunnerTests.swift
+  s_70e932a9e81148::t_999f2c76543af6 1-161
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "07ddbe2710a809687331e29348be20db77604668",
+  "prompts": {},
+  "sessions": {
+    "s_70e932a9e81148": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d778f438-4d84-4cdd-9b5b-0bfbc5cc6fc3",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
