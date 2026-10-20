@@ -50,7 +50,11 @@ final class QuickChatTooltipTests: XCTestCase {
     private func streamAnswerWithTools(into model: QuickChatModel) {
         model.text = "what is in this folder?"
         model.send()
-        RunLoop.main.run(until: Date().addingTimeInterval(0.6))
+        let deadline = Date().addingTimeInterval(10)
+        while (model.chatID != "q1" || model.isStreaming), Date() < deadline {
+            RunLoop.main.run(until: Date().addingTimeInterval(0.05))
+        }
+        RunLoop.main.run(until: Date().addingTimeInterval(0.1))
     }
 
     private func makeModel(failing: Bool = false) -> QuickChatModel {
