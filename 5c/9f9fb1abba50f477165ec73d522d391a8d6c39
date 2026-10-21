@@ -1,0 +1,31 @@
+Sources/DevmachineApp/CaddyService.swift
+  s_08256a181d4c43::t_a576d07a3371fc 118-125
+Sources/DevmachineApp/DNSSetupStore.swift
+  s_08256a181d4c43::t_bd36ec2ecc017b 42,202-232,255-256,259-263,277-291
+Sources/DevmachineApp/DevmachineCLI.swift
+  s_08256a181d4c43::t_3482102f56d6bc 545-565
+Sources/DevmachineCore/DNSProviderSetup.swift
+  s_08256a181d4c43::t_75effc89227119 209-222
+Tests/DevmachineAppTests/DNSSetupStoreTests.swift
+  s_08256a181d4c43::t_cb45faecf005ef 23,54,90-95,457-506
+Tests/DevmachineAppTests/DemoRefusalTests.swift
+  s_08256a181d4c43::t_bf13c21f5391da 121-142
+Tests/DevmachineCoreTests/DNSProviderSetupTests.swift
+  s_08256a181d4c43::t_2f4479373fa6f6 225-232
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "5c9f9fb1abba50f477165ec73d522d391a8d6c39",
+  "prompts": {},
+  "sessions": {
+    "s_08256a181d4c43": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "0abb1ab7-5e13-4a53-ba0a-2b4348618d74",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+Sources/DevmachineApp/DNSSetupStore.swift
+  s_08256a181d4c43::t_649143b6ba76d0 249,257,307,342
+Tests/DevmachineAppTests/DNSSetupStoreTests.swift
+  s_08256a181d4c43::t_a74db9a5cc233f 112,120,122-127,513-535
+Tests/DevmachineAppTests/DemoRefusalTests.swift
+  s_08256a181d4c43::t_4a5243c1f722af 122
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "8c5fa07f1394a42be3637eab9a164db6ba6af800",
+  "prompts": {},
+  "sessions": {
+    "s_08256a181d4c43": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "0abb1ab7-5e13-4a53-ba0a-2b4348618d74",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}

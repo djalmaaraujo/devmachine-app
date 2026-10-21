@@ -1,0 +1,25 @@
+Sources/DevmachineApp/DemoDNSSetup.swift
+  s_08256a181d4c43::t_64c8b72a00128b 55-56,60-66,86-87
+Sources/DevmachineApp/DemoData.swift
+  s_08256a181d4c43::t_c1f950596d72fe 257-268,270,275,288-292,302,304-305,309,321-323
+Sources/DevmachineApp/DemoSnapshots.swift
+  s_08256a181d4c43::t_a781bc30c34ccf 311-312,773-774
+Tests/DevmachineAppTests/DemoSnapshotsTests.swift
+  s_08256a181d4c43::t_8b1388358b4677 410-431
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "b495d08743c9dc2bbd382bc7e51b07f0d8d14b97",
+  "prompts": {},
+  "sessions": {
+    "s_08256a181d4c43": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "0abb1ab7-5e13-4a53-ba0a-2b4348618d74",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}

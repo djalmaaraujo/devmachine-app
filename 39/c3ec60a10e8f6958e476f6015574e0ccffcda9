@@ -1,0 +1,27 @@
+Sources/DevmachineApp/DNSProviderSetupCard.swift
+  s_08256a181d4c43::t_09c9cdddf83efe 28-29,38-39
+Sources/DevmachineApp/DNSSetupStore.swift
+  s_08256a181d4c43::t_71fcb759533769 41,66-70,121,154,168,186,282,285
+Sources/DevmachineCore/DNSProviderSetup.swift
+  s_08256a181d4c43::t_1a1d260741cccc 34,71-101,165-179
+Tests/DevmachineAppTests/DNSSetupStoreTests.swift
+  s_08256a181d4c43::t_d35f5bab68db75 149-163
+Tests/DevmachineCoreTests/DNSProviderSetupTests.swift
+  s_08256a181d4c43::t_461d8dc708e939 192-224
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "39c3ec60a10e8f6958e476f6015574e0ccffcda9",
+  "prompts": {},
+  "sessions": {
+    "s_08256a181d4c43": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "0abb1ab7-5e13-4a53-ba0a-2b4348618d74",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
