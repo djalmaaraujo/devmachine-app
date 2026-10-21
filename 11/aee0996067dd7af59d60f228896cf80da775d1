@@ -1,0 +1,27 @@
+Sources/DevmachineApp/DNSProvidersSettingsView.swift
+  s_08256a181d4c43::t_2760a5b770ee6b 1-80
+Sources/DevmachineApp/SetupPage.swift
+  s_08256a181d4c43::t_31efa0469ea420 319
+Tests/DevmachineAppTests/AppModelTests.swift
+  s_08256a181d4c43::t_4e12fa20b58932 822-828
+Tests/DevmachineAppTests/DNSProvidersSettingsViewTests.swift
+  s_08256a181d4c43::t_ecd5ae45aed44e 1-65
+Tests/DevmachineAppTests/SetupPageTests.swift
+  s_08256a181d4c43::t_38f7412327c8cf 24-31
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "11aee0996067dd7af59d60f228896cf80da775d1",
+  "prompts": {},
+  "sessions": {
+    "s_08256a181d4c43": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "0abb1ab7-5e13-4a53-ba0a-2b4348618d74",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}

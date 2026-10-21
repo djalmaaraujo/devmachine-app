@@ -1,0 +1,21 @@
+Sources/DevmachineApp/Palette/CommandRegistry.swift
+  s_08256a181d4c43::t_c0b0d415398b2a 393-402,406,408
+Tests/DevmachineAppTests/CommandRegistryTests.swift
+  s_08256a181d4c43::t_dee99e09e75b86 227-229
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "a7161e23c7f7fb3588c8f43f66eda622dfbb6186",
+  "prompts": {},
+  "sessions": {
+    "s_08256a181d4c43": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "0abb1ab7-5e13-4a53-ba0a-2b4348618d74",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
