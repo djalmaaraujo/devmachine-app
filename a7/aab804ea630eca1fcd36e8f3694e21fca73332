@@ -1,0 +1,29 @@
+CLAUDE.md
+  s_08256a181d4c43::t_6bb7a6e6b23012 1871-1874
+Sources/DevmachineApp/CaddyStore.swift
+  s_08256a181d4c43::t_fc5added19a3cc 134,465-476
+Sources/DevmachineApp/DNSSetupStore.swift
+  s_08256a181d4c43::t_91a01017faef74 130-133,136,138-141,145-146,154-155,161-162,164,168,171-173,175-177
+Sources/DevmachineCore/LocalFirst/DataCache.swift
+  s_08256a181d4c43::t_0c081785608c14 195-203
+Tests/DevmachineAppTests/DNSSetupStoreTests.swift
+  s_08256a181d4c43::t_0951556ebe0685 393-405
+Tests/DevmachineCoreTests/DataCacheTests.swift
+  s_08256a181d4c43::t_5aef1144a7bf52 218-231
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "a7aab804ea630eca1fcd36e8f3694e21fca73332",
+  "prompts": {},
+  "sessions": {
+    "s_08256a181d4c43": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "0abb1ab7-5e13-4a53-ba0a-2b4348618d74",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
