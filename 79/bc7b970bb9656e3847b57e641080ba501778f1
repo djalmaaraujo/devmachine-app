@@ -1,0 +1,45 @@
+CLAUDE.md
+  s_70e932a9e81148::t_6993ef0915ebbf 1003-1018
+Sources/DevmachineApp/AppModel.swift
+  s_70e932a9e81148::t_1f4c0d57e7989c 611,1937-1939,1941-1945,1955,1957,1984
+Sources/DevmachineApp/Components/DMErrorState.swift
+  s_70e932a9e81148::t_871ee9a9dd963c 44-45,50,56-57,121
+Sources/DevmachineApp/ContentView.swift
+  s_70e932a9e81148::t_354200d439fd37 32-33,37
+Sources/DevmachineApp/OnboardingPage.swift
+  s_70e932a9e81148::t_7389a37562d76b 5-6,21
+Sources/DevmachineApp/Widgets/HomeBoardController.swift
+  s_70e932a9e81148::t_43d3756c06b7a0 26-27,103-104,128
+Sources/DevmachineApp/Widgets/HomeCanvasView.swift
+  s_70e932a9e81148::t_b989594871a52b 137-138,154-162,183-185,190,193-196,198-202,204-214,240
+Sources/DevmachineApp/Widgets/Menubar/MenubarEditView.swift
+  s_70e932a9e81148::t_2ea8867b5f30a7 64
+Sources/DevmachineApp/Widgets/Stack/StackBoardView.swift
+  s_70e932a9e81148::t_fdd824b1bdf04f 301
+Sources/DevmachineApp/Widgets/WidgetCatalogStore.swift
+  s_70e932a9e81148::t_e4faa61f0234be 18-19,25-31,119,128-132,166
+Tests/DevmachineAppTests/CLIGateTests.swift
+  s_70e932a9e81148::t_b2432a64a17791 61-91,145,166-171
+Tests/DevmachineAppTests/DMComponentsRenderTests.swift
+  s_70e932a9e81148::t_3eafb3909eef49 154-159
+Tests/DevmachineAppTests/HomeBoardControllerTests.swift
+  s_70e932a9e81148::t_6c882ffefcc615 607-625
+Tests/DevmachineAppTests/WidgetCatalogStoreTests.swift
+  s_70e932a9e81148::t_c03f534be9e4a2 309-345
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "79bc7b970bb9656e3847b57e641080ba501778f1",
+  "prompts": {},
+  "sessions": {
+    "s_70e932a9e81148": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d778f438-4d84-4cdd-9b5b-0bfbc5cc6fc3",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
