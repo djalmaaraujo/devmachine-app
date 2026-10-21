@@ -1,0 +1,21 @@
+Sources/DevmachineApp/Palette/PaletteRanker.swift
+  s_08256a181d4c43::t_1bd89832488fbc 30-31,60,66
+Tests/DevmachineAppTests/CommandRegistryTests.swift
+  s_08256a181d4c43::t_a2bcb1cd2b4f91 230-232
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "a040066ef304449e65c80dddee881b61dcaee065",
+  "prompts": {},
+  "sessions": {
+    "s_08256a181d4c43": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "0abb1ab7-5e13-4a53-ba0a-2b4348618d74",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
