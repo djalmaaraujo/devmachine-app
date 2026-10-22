@@ -1,0 +1,29 @@
+Sources/DevmachineCore/WorkspaceCollapse.swift
+  s_a6e94695f4c517::t_acd37834855528 1-48
+Sources/DevmachineApp/AppModel.swift
+  s_a6e94695f4c517::t_e6b6c5186f4c01 686-706
+Sources/DevmachineApp/Widgets/Stack/WorkspacesWidgetView.swift
+  s_a6e94695f4c517::t_887b6f72dc4592 42,47-48
+  s_a6e94695f4c517::t_e759befb968937 262-263
+  s_a6e94695f4c517::t_d9703e586016ca 214-215,224-227
+  s_a6e94695f4c517::t_1ddf2059657f65 91-93
+  s_a6e94695f4c517::t_c63c7dad229131 504-545
+Tests/DevmachineCoreTests/WorkspaceCollapseTests.swift
+  s_a6e94695f4c517::t_ab853b076f26c5 1-49
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "fab393170d7124b239ba545509abe50e7c1db88c",
+  "prompts": {},
+  "sessions": {
+    "s_a6e94695f4c517": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c62592e0-b414-4bc1-b56f-ef4a5a550b9a",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
