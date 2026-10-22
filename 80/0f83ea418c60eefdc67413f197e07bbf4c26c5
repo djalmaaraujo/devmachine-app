@@ -1,0 +1,25 @@
+Sources/DevmachineApp/CenterTabStrip.swift
+  s_a6e94695f4c517::t_0845921ca25383 1-99
+Sources/DevmachineApp/ContentView.swift
+  s_a6e94695f4c517::t_03fd4951a26653 283-295,297,324,339-345
+Sources/DevmachineApp/DocumentPane.swift
+  s_a6e94695f4c517::t_543be4a52be875 82-85,97,121-137
+Tests/DevmachineAppTests/CenterTabStripRenderTests.swift
+  s_a6e94695f4c517::t_11fb44360558d0 1-58
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "800f83ea418c60eefdc67413f197e07bbf4c26c5",
+  "prompts": {},
+  "sessions": {
+    "s_a6e94695f4c517": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c62592e0-b414-4bc1-b56f-ef4a5a550b9a",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
