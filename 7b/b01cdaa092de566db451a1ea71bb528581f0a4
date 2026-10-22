@@ -1,0 +1,27 @@
+Sources/DevmachineApp/CenterTabs.swift
+  s_a6e94695f4c517::t_5bd292e79c0f4d 1-116
+Sources/DevmachineApp/AppModel.swift
+  s_a6e94695f4c517::t_7a253507456879 499,580,689-694,929,1794,1805,1875
+Sources/DevmachineApp/ContentView.swift
+  s_a6e94695f4c517::t_14470e4445287b 149-150
+Sources/DevmachineApp/FileViewerStore.swift
+  s_a6e94695f4c517::t_3c8b059213653c 17-20,36
+Tests/DevmachineAppTests/CenterTabsTests.swift
+  s_a6e94695f4c517::t_a765ced8065ef3 1-118
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "7bb01cdaa092de566db451a1ea71bb528581f0a4",
+  "prompts": {},
+  "sessions": {
+    "s_a6e94695f4c517": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c62592e0-b414-4bc1-b56f-ef4a5a550b9a",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
