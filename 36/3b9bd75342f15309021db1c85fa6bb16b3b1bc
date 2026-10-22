@@ -1,0 +1,41 @@
+Sources/DevmachineApp/Scheduled/ScheduleModeView.swift
+  s_a6e94695f4c517::t_519ee3c12b6036 49-51
+Sources/DevmachineApp/Chats/ChatsView.swift
+  s_a6e94695f4c517::t_89f4ca3d734f3b 76-78
+Sources/DevmachineApp/SidebarNav.swift
+  s_a6e94695f4c517::t_34301c08e70b29 1-162
+Sources/DevmachineApp/SidebarView.swift
+  s_a6e94695f4c517::t_851a489d19d72c 52-67,69-73
+Sources/DevmachineApp/Chats/DemoChats.swift
+  s_a6e94695f4c517::t_7a5e859e1fabc0 166,235
+Sources/DevmachineApp/Components/DMTokens.swift
+  s_a6e94695f4c517::t_cd4ac5b6e17751 54-55
+Sources/DevmachineApp/DemoSiteWalkChats.swift
+  s_a6e94695f4c517::t_54f07158b72a5c 116-118,141
+Sources/DevmachineApp/DemoSnapshots.swift
+  s_a6e94695f4c517::t_e8e46fb17e1e2f 143
+Tests/DevmachineAppTests/ChatsModeTests.swift
+  s_a6e94695f4c517::t_d461ea92c59576 65-69,72,75-81,97,99-101
+Tests/DevmachineAppTests/ChatsPaletteAndDemoTests.swift
+  s_a6e94695f4c517::t_338720c805f00d 60,62,68,70-74,76-78,90,96
+Tests/DevmachineAppTests/DemoSiteWalkTests.swift
+  s_a6e94695f4c517::t_ab327f80a1cca8 121
+Tests/DevmachineAppTests/DemoSnapshotsTests.swift
+  s_a6e94695f4c517::t_c25fafbde8ccc2 84,94
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "363b9bd75342f15309021db1c85fa6bb16b3b1bc",
+  "prompts": {},
+  "sessions": {
+    "s_a6e94695f4c517": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c62592e0-b414-4bc1-b56f-ef4a5a550b9a",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
