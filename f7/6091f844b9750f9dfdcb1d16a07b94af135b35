@@ -1,0 +1,29 @@
+Sources/DevmachineCore/TabList.swift
+  s_a6e94695f4c517::t_72f167edf84ed2 1-45
+Tests/DevmachineCoreTests/TabListTests.swift
+  s_a6e94695f4c517::t_b871895b9c99da 1-48
+Sources/DevmachineApp/SettingsPageDraft.swift
+  s_a6e94695f4c517::t_958821271d508c 41
+Sources/DevmachineApp/SetupPage.swift
+  s_a6e94695f4c517::t_b31a993fffd671 134,1012-1020,1384
+Sources/DevmachineCore/AppSettings.swift
+  s_a6e94695f4c517::t_d6769f4fc3d21b 110-112,191,224,250,289,354
+Tests/DevmachineCoreTests/AppSettingsTests.swift
+  s_a6e94695f4c517::t_e99d07df38e491 21-33
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "f76091f844b9750f9dfdcb1d16a07b94af135b35",
+  "prompts": {},
+  "sessions": {
+    "s_a6e94695f4c517": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c62592e0-b414-4bc1-b56f-ef4a5a550b9a",
+        "model": "unknown"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
