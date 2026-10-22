@@ -1,0 +1,25 @@
+Sources/DevmachineApp/Chats/SidebarChrome.swift
+  s_a6e94695f4c517::t_3ef5193b28ed18 124-127,136-142
+Sources/DevmachineApp/ContentView.swift
+  s_a6e94695f4c517::t_a1283edf383d03 52
+Sources/DevmachineApp/ContextPanel.swift
+  s_a6e94695f4c517::t_35b9821f1fcac0 37,221-224,229-234
+Tests/DevmachineAppTests/ContextPanelHeaderTests.swift
+  s_a6e94695f4c517::t_029b5a78d7cec2 1-10
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "f983c1672dd03b581ff63cb215f12c2ae70b9c4e",
+  "prompts": {},
+  "sessions": {
+    "s_a6e94695f4c517": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c62592e0-b414-4bc1-b56f-ef4a5a550b9a",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
