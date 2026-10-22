@@ -1,0 +1,45 @@
+CLAUDE.md
+  s_a6e94695f4c517::t_3ee5680a27c294 1136-1147
+Sources/DevmachineApp/AppModel.swift
+  s_a6e94695f4c517::t_9f13d4929ce7c9 2296,2301-2308,2313,2445-2454,2549,2620,2699-2706
+Sources/DevmachineApp/MachineReadinessViews.swift
+  s_a6e94695f4c517::t_67a4f85d000993 194,211
+Sources/DevmachineApp/PollPause.swift
+  s_a6e94695f4c517::t_1d275d832ecd0a 17-22,26-29,42-45,77,95-97
+Sources/DevmachineApp/Services/CLIFirstSessionSource.swift
+  s_a6e94695f4c517::t_ac41e347a65b3d 100-101
+Sources/DevmachineApp/SessionProblem.swift
+  s_a6e94695f4c517::t_0fbdfbd209c4e3 14,31,126-131
+Sources/DevmachineApp/TerminalRegistry.swift
+  s_a6e94695f4c517::t_37b283a3225fce 529-531
+Sources/DevmachineApp/Widgets/Stack/WorkspacesWidgetView.swift
+  s_a6e94695f4c517::t_b1c34445184237 159-162
+Sources/DevmachineCore/FailureCause.swift
+  s_a6e94695f4c517::t_cff12145c0f883 56-67
+Sources/DevmachineCore/LoginHold.swift
+  s_a6e94695f4c517::t_916d41c68e5ae7 13-15
+Sources/DevmachineCore/SessionStore.swift
+  s_a6e94695f4c517::t_1d7670bf0c78c1 60-64,68
+Tests/DevmachineAppTests/CLIFirstSessionSourceTests.swift
+  s_a6e94695f4c517::t_a66d269a6d1fab 174-187
+Tests/DevmachineAppTests/PollPauseTests.swift
+  s_a6e94695f4c517::t_87a27997cd653e 52-56,651-705
+Tests/DevmachineCoreTests/FailureCauseTests.swift
+  s_a6e94695f4c517::t_25a51f3c515149 42-54
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "9e6527cc567de22f6c95a587deb9eca42734853d",
+  "prompts": {},
+  "sessions": {
+    "s_a6e94695f4c517": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c62592e0-b414-4bc1-b56f-ef4a5a550b9a",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
