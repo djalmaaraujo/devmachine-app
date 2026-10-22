@@ -1,0 +1,27 @@
+Sources/DevmachineApp/CenterTabStrip.swift
+  s_a6e94695f4c517::t_8c6ad6ac53586a 16-17,25-26,32-38,49-51,63,65-66
+Sources/DevmachineApp/ContentView.swift
+  s_a6e94695f4c517::t_9f58a541bfc16c 283-286,288-291,318-321,336,401-405,411-428
+Sources/DevmachineApp/DemoSnapshots.swift
+  s_a6e94695f4c517::t_9f525d2895a0b8 211-219,431,695-703
+Tests/DevmachineAppTests/CenterTabStripRenderTests.swift
+  s_a6e94695f4c517::t_da44ca9c0bb9ac 16,19-22
+Tests/DevmachineAppTests/DemoSnapshotsTests.swift
+  s_a6e94695f4c517::t_bfe178c4bae4db 291-293
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "746a13b2dc9f794ddd0bf8bdc542695ebd04d73e",
+  "prompts": {},
+  "sessions": {
+    "s_a6e94695f4c517": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c62592e0-b414-4bc1-b56f-ef4a5a550b9a",
+        "model": "unknown"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
