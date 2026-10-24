@@ -1,0 +1,37 @@
+Sources/DevmachineApp/TerminalRegistry.swift
+  s_dbc408ce2229e3::t_71c482a01f7584 1032
+Sources/DevmachineCore/TerminalSelection.swift
+  s_dbc408ce2229e3::t_9ff1cbe6cfed96 53-56,61-63,65-66
+  s_dbc408ce2229e3::t_9d405397d635d3 57-60,64
+Tests/DevmachineAppTests/SelectingTerminalViewTests.swift
+  s_dbc408ce2229e3::t_36c2455158141f 9,14-17,136-162,171-173,175-179
+  s_dbc408ce2229e3::t_b2622f3df192d9 174
+  s_dbc408ce2229e3::t_53f1e79b603618 163-170,180
+  s_dbc408ce2229e3::t_ea96f880b73584 181
+Sources/DevmachineApp/SelectingTerminalView.swift
+  s_dbc408ce2229e3::t_b2622f3df192d9 34-40
+  s_dbc408ce2229e3::t_b98b1027442b6f 28,96,135
+  s_dbc408ce2229e3::t_28dc1a8c014b88 170-174,177-182
+  s_dbc408ce2229e3::t_53f1e79b603618 98-104
+  s_dbc408ce2229e3::t_b35e5f1b6e3909 27,29,60,62,66-72,95,97,113,124-128,132-134,136
+  s_dbc408ce2229e3::t_71c482a01f7584 131,140-144
+  s_dbc408ce2229e3::t_91467e6973f6b1 145-146
+Tests/DevmachineCoreTests/TerminalSelectionTests.swift
+  s_dbc408ce2229e3::t_bf422d3a8ec579 82-112
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "bf826f33b538bcc91ae550767a41881f7afbeeb3",
+  "prompts": {},
+  "sessions": {
+    "s_dbc408ce2229e3": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "3f4cb136-1bdb-458d-8d2f-7c9d3fbc18d7",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
