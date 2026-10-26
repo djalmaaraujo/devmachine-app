@@ -1,0 +1,41 @@
+Tests/DevmachineAppTests/EndSessionTests.swift
+  s_191cf4c3cb8558::t_54909546bd058b 47,50-59,64,68,121,125,129,143,156,158,163,175,187
+Tests/DevmachineCoreTests/TabListTests.swift
+  s_191cf4c3cb8558::t_12a11ccde20669 25-33
+Sources/DevmachineApp/SetupPage.swift
+  s_191cf4c3cb8558::t_51d78dad3bf494 966-968
+Sources/DevmachineApp/EndSession.swift
+  s_191cf4c3cb8558::t_9e89bfb9bd5e98 5,13,27-30,33-35,90
+Sources/DevmachineApp/DemoSnapshots.swift
+  s_191cf4c3cb8558::t_331210865d2bb0 215-217,221,702,710-712
+Sources/DevmachineApp/CenterTabs.swift
+  s_191cf4c3cb8558::t_9e89bfb9bd5e98 18-20,24-32,35-40,43-44,92-93,102
+  s_191cf4c3cb8558::t_5497543a64e303 33-34,41-42
+Sources/DevmachineApp/DevmachineApp.swift
+  s_191cf4c3cb8558::t_9e89bfb9bd5e98 185-187,204
+CLAUDE.md
+  s_191cf4c3cb8558::t_331210865d2bb0 531-550
+Tests/DevmachineAppTests/CenterTabsTests.swift
+  s_191cf4c3cb8558::t_54909546bd058b 111-165,172-173
+  s_191cf4c3cb8558::t_5497543a64e303 166-171
+Sources/DevmachineApp/CenterTabStrip.swift
+  s_191cf4c3cb8558::t_9e89bfb9bd5e98 5-9,55,84
+Sources/DevmachineCore/TabList.swift
+  s_191cf4c3cb8558::t_12a11ccde20669 21-22,24,28-29
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "741f23a45449d4a8a98f334f4507be3859dfb5c8",
+  "prompts": {},
+  "sessions": {
+    "s_191cf4c3cb8558": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "51e80e49-eb4a-4c3b-b661-bb92338985c3",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
