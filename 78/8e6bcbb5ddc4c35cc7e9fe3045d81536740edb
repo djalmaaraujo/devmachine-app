@@ -1,0 +1,41 @@
+docs/claude/testing.md
+  s_4668e3ef36a5d9::t_bfe0cd35a4d55b 1-73
+docs/claude/polling.md
+  s_4668e3ef36a5d9::t_bfe0cd35a4d55b 1-144
+docs/claude/previews.md
+  s_4668e3ef36a5d9::t_bfe0cd35a4d55b 1-82
+docs/claude/coding-agents.md
+  s_4668e3ef36a5d9::t_bfe0cd35a4d55b 1-220
+docs/claude/terminals.md
+  s_4668e3ef36a5d9::t_bfe0cd35a4d55b 1-252
+docs/claude/onboarding-updates.md
+  s_4668e3ef36a5d9::t_bfe0cd35a4d55b 1-209
+docs/claude/home.md
+  s_4668e3ef36a5d9::t_bfe0cd35a4d55b 1-263
+docs/claude/ui.md
+  s_4668e3ef36a5d9::t_bfe0cd35a4d55b 1-259
+docs/claude/machines.md
+  s_4668e3ef36a5d9::t_bfe0cd35a4d55b 1-457
+docs/claude/publishing.md
+  s_4668e3ef36a5d9::t_bfe0cd35a4d55b 1-83
+docs/claude/widgets.md
+  s_4668e3ef36a5d9::t_bfe0cd35a4d55b 1-356
+CLAUDE.md
+  s_4668e3ef36a5d9::t_955471a655cdae 8-13,38-86,108-112
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "788e6bcbb5ddc4c35cc7e9fe3045d81536740edb",
+  "prompts": {},
+  "sessions": {
+    "s_4668e3ef36a5d9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c9ed1588-ceb8-4846-ab00-41a72653df82",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
