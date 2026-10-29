@@ -97,6 +97,15 @@ struct CenterTabStrip: View {
                 select: { model.select(tab: tab) },
                 close: { model.close(tab: tab) })
                 .dmHelp(path)
+        case let .schema(_, folder):
+            DocumentTabChip(
+                systemImage: "cylinder.split.1x2",
+                title: model.title(for: tab),
+                selected: selected,
+                closeHelp: "Close the schema tab",
+                select: { model.select(tab: tab) },
+                close: { model.close(tab: tab) })
+                .dmHelp(folder ?? "Database schema of the session's folder")
         }
     }
 

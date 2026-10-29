@@ -68,6 +68,7 @@ enum PaletteAction: Equatable {
     case openChat(id: String)
     case showChats
     case showCode
+    case openSchema
     case quit
 }
 

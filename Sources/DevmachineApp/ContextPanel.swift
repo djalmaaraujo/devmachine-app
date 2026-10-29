@@ -211,6 +211,12 @@ struct ContextPanel: View {
                 if let session {
                     TerminalTransportBadge(kind: .remote(alias: session.alias, session: session.name))
                 }
+                if let commandTarget {
+                    DMIconButton(systemImage: "cylinder.split.1x2", size: 12) {
+                        model.openSchema()
+                    }
+                    .help("Database schema")
+                }
                 DMIconButton(systemImage: "sidebar.right", size: 13, weight: .semibold) {
                     withAnimation(.easeInOut(duration: 0.18)) { model.contextCollapsed = true }
                 }

@@ -4,7 +4,7 @@ import DevmachineCore
 /// Where a panel's commands run. A remote session is read over ssh, in the
 /// folder its tmux pane is in; a local one runs here, in the folder the
 /// multiplexer reports.
-enum CommandTarget: Equatable, Sendable {
+enum CommandTarget: Hashable, Sendable {
     case remote(alias: String, session: String)
     case local(session: String, path: String)
 

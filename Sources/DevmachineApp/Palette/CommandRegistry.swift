@@ -103,6 +103,14 @@ enum CommandRegistry {
             Entry(command: PaletteCommand(
                 id: "go.stats", title: "Stats", subtitle: "", category: .goTo,
                 systemImage: "chart.bar", keywords: statsKeywords, action: .showPage(.stats))),
+            Entry(
+                command: PaletteCommand(
+                    id: "go.schema", title: "Database schema", subtitle: "current session's folder", category: .goTo,
+                    systemImage: "cylinder.split.1x2",
+                    keywords: ["database", "db", "schema", "erd", "diagram", "prisma", "sql", "migrations", "tables",
+                               "mongo", "mongoose", "dbml", "model"],
+                    action: .openSchema),
+                isAvailable: { $0.currentTerminal != nil }),
             Entry(command: PaletteCommand(
                 id: "go.scheduled", title: "Schedule", subtitle: "switch to Schedule", category: .goTo,
                 systemImage: "clock", shortcut: "⌘3",

@@ -52,7 +52,7 @@ enum FileTreeDrag {
             && providers.contains { $0.hasItemConformingToTypeIdentifier(UTType.fileURL.identifier) }
     }
 
-    static func fileURLs(from providers: [NSItemProvider]) async -> [URL] {
+    @MainActor static func fileURLs(from providers: [NSItemProvider]) async -> [URL] {
         var urls: [URL] = []
         for provider in providers where provider.hasItemConformingToTypeIdentifier(UTType.fileURL.identifier) {
             if let url = await fileURL(from: provider) { urls.append(url) }
@@ -60,7 +60,7 @@ enum FileTreeDrag {
         return urls
     }
 
-    private static func fileURL(from provider: NSItemProvider) async -> URL? {
+    @MainActor private static func fileURL(from provider: NSItemProvider) async -> URL? {
         await withCheckedContinuation { continuation in
             _ = provider.loadObject(ofClass: URL.self) { url, _ in
                 continuation.resume(returning: url?.isFileURL == true ? url : nil)

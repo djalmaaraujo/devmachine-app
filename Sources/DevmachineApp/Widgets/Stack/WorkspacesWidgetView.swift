@@ -348,6 +348,7 @@ struct WorkspacesWidgetView: View {
                 Button("Rename…") {
                     model.pendingLocalRename = (handle: s.handle, current: s.name)
                 }
+                Button("Open schema") { model.openSchema(owner: item) }
                 if s.handle != Workspace.operatorSession {
                     Button("Remove", role: .destructive) {
                         model.askToEndSession(.localSession(name: s.handle, path: s.path))
@@ -412,6 +413,7 @@ struct WorkspacesWidgetView: View {
                 Button("Rename…") {
                     model.pendingRename = (alias: alias, old: s.name)
                 }
+                Button("Open schema") { model.openSchema(owner: .session(alias: alias, name: s.name)) }
                 Divider()
                 if let shared {
                     Button("Open chat") { model.openChat(ref) }

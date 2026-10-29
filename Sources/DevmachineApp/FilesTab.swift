@@ -194,7 +194,8 @@ struct FilesTab: View {
                             },
                             openInFilesWindow: row.isDirectory ? nil : { openInFilesWindow(row) },
                             openInViewer: row.isDirectory ? nil : { openInViewer(row) },
-                            transfer: transferActions(for: row)
+                            transfer: transferActions(for: row),
+                            openSchema: row.isDirectory ? { model.openSchema(folder: row.path) } : nil
                         )
                     }
                 }
@@ -352,6 +353,7 @@ struct FileTreeRowView: View {
     let openInFilesWindow: (() -> Void)?
     let openInViewer: (() -> Void)?
     let transfer: Transfer
+    var openSchema: (() -> Void)?
     @State private var hovering = false
     @State private var targeted = false
 
@@ -400,6 +402,10 @@ struct FileTreeRowView: View {
             Button("Copy relative path") { copyRelativePath() }
             if let openInFilesWindow {
                 Button("Open in Files window") { openInFilesWindow() }
+            }
+            if let openSchema {
+                Divider()
+                Button("Open schema") { openSchema() }
             }
             if let download = transfer.download, let title = transfer.downloadTitle {
                 Divider()

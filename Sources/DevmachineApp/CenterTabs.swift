@@ -8,11 +8,12 @@ import DevmachineCore
 enum CenterTab: Hashable {
     case session(SidebarItem)
     case file(owner: SidebarItem, path: String)
+    case schema(owner: SidebarItem, folder: String?)
 
     var owner: SidebarItem {
         switch self {
         case let .session(item): return item
-        case let .file(owner, _): return owner
+        case let .file(owner, _), let .schema(owner, _): return owner
         }
     }
 
@@ -34,6 +35,7 @@ extension AppModel {
     /// Home, a page, the session grid, or a session whose tab was dropped.
     var tabOnScreen: CenterTab? {
         guard activePage == nil, let selection else { return nil }
+        if let schemaOnScreen { return schemaOnScreen }
         if fileViewer?.isOpen == true, let path = fileViewer?.path {
             let fileTab = CenterTab.file(owner: selection, path: path)
             if openTabs.contains(fileTab) { return fileTab }
@@ -50,7 +52,25 @@ extension AppModel {
             return localSessions.first { $0.handle == handle }?.name ?? handle
         case let .file(_, path):
             return (path as NSString).lastPathComponent
+        case let .schema(owner, folder):
+            guard let folder, !folder.isEmpty else { return "Schema · " + title(for: .session(owner)) }
+            return "Schema · " + (folder as NSString).lastPathComponent
         }
+    }
+
+    var schemaOnScreen: CenterTab? {
+        guard activePage == nil, let shownSchema, shownSchema.owner == selection else { return nil }
+        return shownSchema
+    }
+
+    func openSchema(owner: SidebarItem? = nil, folder: String? = nil) {
+        guard let owner = owner ?? selection else { return }
+        let tab = CenterTab.schema(owner: owner, folder: folder)
+        if selection != owner { selection = owner }
+        activePage = nil
+        appMode = .code
+        openTabs.open(tab)
+        shownSchema = tab
     }
 
     /// The session tab of what is on screen; a file tab as well while the
@@ -59,9 +79,11 @@ extension AppModel {
         guard activePage == nil, selection == tab.owner else { return false }
         switch tab {
         case .session:
-            return true
+            return shownSchema == nil
         case let .file(_, path):
-            return fileViewer?.isOpen == true && fileViewer?.path == path
+            return shownSchema == nil && fileViewer?.isOpen == true && fileViewer?.path == path
+        case .schema:
+            return shownSchema == tab
         }
     }
 
@@ -82,6 +104,11 @@ extension AppModel {
         } else if appMode != .code {
             appMode = .code
         }
+        if case .schema = tab {
+            shownSchema = tab
+            return
+        }
+        shownSchema = nil
         guard case let .file(owner, path) = tab else { return }
         guard fileViewer?.isOpen != true || fileViewer?.path != path, let target = commandTarget(for: owner) else { return }
         fileViewer?.open(target, path: path)
@@ -93,6 +120,9 @@ extension AppModel {
     /// when it was the workspace's last.
     func close(tab: CenterTab) {
         switch tab {
+        case .schema:
+            openTabs.close(tab, selected: nil)
+            if shownSchema == tab { shownSchema = nil }
         case let .file(_, path):
             openTabs.close(tab, selected: nil)
             if fileViewer?.isOpen == true, fileViewer?.path == path { fileViewer?.close() }
@@ -116,6 +146,7 @@ extension AppModel {
 
     func dropTabs(of item: SidebarItem) {
         openTabs.removeAll { $0.owner == item }
+        if shownSchema?.owner == item { shownSchema = nil }
     }
 
     func moveTabs(from old: SidebarItem, to new: SidebarItem) {
@@ -125,6 +156,10 @@ extension AppModel {
                 openTabs.replace(tab, with: .session(new))
             case let .file(_, path):
                 openTabs.replace(tab, with: .file(owner: new, path: path))
+            case let .schema(_, folder):
+                let moved = CenterTab.schema(owner: new, folder: folder)
+                openTabs.replace(tab, with: moved)
+                if shownSchema == tab { shownSchema = moved }
             }
         }
     }

@@ -418,7 +418,15 @@ private struct MainPane: View {
                     // so an unmounted one keeps running and re-attaches on the next select.
                     // A session in the session grid is mounted by the grid instead — mounting it here as
                     // well would pull the shared view out of its grid cell.
-                    if let selected = model.selection, !isInSessionGrid(selected) {
+                    if let tab = model.schemaOnScreen, case let .schema(owner, folder) = tab,
+                       let target = model.commandTarget(for: owner) {
+                        SchemaPage(target: target, folder: folder) { model.close(tab: tab) }
+                            .id(tab)
+                            .floatingCard()
+                            .frame(maxWidth: .infinity, maxHeight: .infinity)
+                            .padding(FloatingCardLayout.margin)
+                            .padding(.top, terminalTopInset)
+                    } else if let selected = model.selection, !isInSessionGrid(selected) {
                         terminal(for: selected)
                     }
                     if MainPaneVisibility.showsHome(

@@ -586,11 +586,13 @@ final class AppModel: ObservableObject {
                 selectedSessions = []
                 selectionAnchor = nil
             }
+            if shownSchema?.owner != selection { shownSchema = nil }
             PreviewStore.shared.setOwner(selection?.sessionRef)
             syncContext()
             recordNavigation()
         }
     }
+    @Published var shownSchema: CenterTab? = nil
     @Published var activePage: AppPage? = nil {
         didSet {
             if activePage == .addMachine, oldValue != .addMachine {
@@ -1414,6 +1416,10 @@ final class AppModel: ObservableObject {
             showHostKey(machine)
             return
         }
+        if shownSchema != nil, selection == .session(alias: ref.alias, name: ref.name), activePage == nil {
+            shownSchema = nil
+            return
+        }
         // re-clicking the open session (no multi-select) goes back home
         if selection == .session(alias: ref.alias, name: ref.name), selectedSessions == [ref], activePage == nil {
             selection = nil
@@ -1428,7 +1434,9 @@ final class AppModel: ObservableObject {
 
     func clickLocalSession(_ item: SidebarItem) {
         guard case let .localSession(name, _) = item else { return }
-        if selection == item, activePage == nil {
+        if shownSchema != nil, selection == item, activePage == nil {
+            shownSchema = nil
+        } else if selection == item, activePage == nil {
             goHome()
         } else if name == Workspace.operatorSession {
             openOperatorSession()
