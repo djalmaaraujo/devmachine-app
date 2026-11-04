@@ -1,6 +1,5 @@
 import SwiftUI
 import AppKit
-import HighlightSwift
 import MarkdownUI
 import DevmachineCore
 
@@ -8,7 +7,6 @@ import DevmachineCore
 /// a file opened from a running session cannot be changed by accident.
 struct FileViewerView: View {
     @EnvironmentObject var store: FileViewerStore
-    @EnvironmentObject var model: AppModel
     /// Off under the strip over the terminal, which already holds the
     /// file's tab; on, the header carries the tab, with its × to close.
     var showsTab = true
@@ -101,30 +99,13 @@ struct FileViewerView: View {
     @ViewBuilder
     private func body(of preview: FilePreview) -> some View {
         switch preview.kind {
-        case let .code(language):
-            scroll { code(preview.text ?? "", language: language) }
+        case .code, .text:
+            lines
         case .markdown:
             if store.showsSource {
-                scroll { code(preview.text ?? "", language: "markdown") }
+                lines
             } else {
-                ScrollView(.vertical) {
-                    Markdown(preview.text ?? "")
-                        .markdownTheme(.gitHub)
-                        .textSelection(.enabled)
-                        .padding(16)
-                        .frame(maxWidth: .infinity, alignment: .topLeading)
-                }
-                .defaultScrollAnchor(.top)
-            }
-        case .text:
-            scroll {
-                numbered(preview.text ?? "") {
-                    Text(preview.text ?? "")
-                        .font(.dm(12, design: .monospaced))
-                        .foregroundStyle(Color.dmRowText)
-                        .textSelection(.enabled)
-                        .fixedSize(horizontal: true, vertical: false)
-                }
+                markdown
             }
         case .image:
             imageBody(preview)
@@ -133,6 +114,86 @@ struct FileViewerView: View {
         case let .tooLarge(bytes):
             message("Too large to open here (\(Self.size(bytes)))")
         }
+    }
+
+    /// The document in pieces (`FileChunks.markdown`), each laid out as it
+    /// comes on screen. One `Markdown` view of the whole file laid out
+    /// thousands of blocks before the first frame: seconds for 200 KB.
+    private var markdown: some View {
+        ScrollView(.vertical) {
+            LazyVStack(alignment: .leading, spacing: 16) {
+                ForEach(Array((store.layout?.markdown ?? []).enumerated()), id: \.offset) { piece in
+                    Markdown(piece.element)
+                        .markdownTheme(.gitHub)
+                        .textSelection(.enabled)
+                }
+            }
+            .padding(16)
+            .frame(maxWidth: .infinity, alignment: .topLeading)
+        }
+        .defaultScrollAnchor(.top)
+    }
+
+    /// The lines in pieces (`FileChunks.lines`), each one `Text` with its
+    /// numbers in one `Text` beside it, laid out as they come on screen. A
+    /// single `Text` of the whole file grows worse than its length (4.5 s at
+    /// 130 KB). The width is the longest line's from the start, so the
+    /// horizontal extent does not jump as pieces are laid out. Numbers in
+    /// their own column, beside the text rather than inside it, so what you
+    /// select and copy is the code alone.
+    private var lines: some View {
+        let layout = store.layout ?? FileLayout(text: "", kind: .text)
+        let digits = String(layout.lines.last?.lastLine ?? 1).count
+        let character = Self.characterWidth
+        let numbers = character * CGFloat(digits)
+        let text = character * CGFloat(layout.longestLine)
+        return GeometryReader { proxy in
+            ScrollView([.horizontal, .vertical]) {
+                LazyVStack(alignment: .leading, spacing: 0) {
+                    ForEach(layout.lines) { chunk in
+                        HStack(alignment: .top, spacing: 0) {
+                            Text(verbatim: chunk.lines.indices.map { String(chunk.firstLine + $0) }.joined(separator: "\n"))
+                                .font(.dm(12, design: .monospaced))
+                                .foregroundStyle(.white.opacity(0.28))
+                                .multilineTextAlignment(.trailing)
+                                .frame(width: numbers, alignment: .trailing)
+                                .padding(.trailing, 10)
+                            Rectangle()
+                                .fill(Color.white.opacity(0.07))
+                                .frame(width: 1)
+                                .padding(.trailing, 12)
+                            self.text(for: chunk)
+                                .font(.dm(12, design: .monospaced))
+                                .textSelection(.enabled)
+                                .fixedSize(horizontal: true, vertical: false)
+                        }
+                    }
+                }
+                .padding(.horizontal, 14)
+                .padding(.vertical, 10)
+                .frame(
+                    minWidth: max(proxy.size.width, numbers + 23 + text + 28),
+                    minHeight: proxy.size.height,
+                    alignment: .topLeading)
+            }
+            .defaultScrollAnchor(.topLeading)
+        }
+    }
+
+    @ViewBuilder
+    private func text(for chunk: LineChunk) -> some View {
+        if let highlighted = store.highlighted?[chunk.id] {
+            Text(highlighted)
+        } else {
+            Text(verbatim: chunk.text)
+                .foregroundStyle(Color.dmRowText)
+        }
+    }
+
+    /// One character of the viewer's monospaced font, at the current scale.
+    static var characterWidth: CGFloat {
+        let font = NSFont.monospacedSystemFont(ofSize: DMFont.size(12), weight: .regular)
+        return ("0" as NSString).size(withAttributes: [.font: font]).width
     }
 
     @ViewBuilder
@@ -147,62 +208,6 @@ struct FileViewerView: View {
             }
         } else {
             message("This image could not be read")
-        }
-    }
-
-    /// Numbers in their own column, beside the text rather than inside it, so
-    /// what you select and copy is the code alone.
-    private func numbered<Content: View>(
-        _ text: String, @ViewBuilder content: () -> Content
-    ) -> some View {
-        let body = text.hasSuffix("\n") ? String(text.dropLast()) : text
-        let count = body.split(separator: "\n", omittingEmptySubsequences: false).count
-        return HStack(alignment: .top, spacing: 0) {
-            VStack(alignment: .trailing, spacing: 0) {
-                ForEach(1...max(count, 1), id: \.self) { number in
-                    Text(verbatim: "\(number)")
-                        .font(.dm(12, design: .monospaced))
-                        .foregroundStyle(.white.opacity(0.28))
-                }
-            }
-            .fixedSize()
-            .padding(.trailing, 10)
-            Rectangle()
-                .fill(Color.white.opacity(0.07))
-                .frame(width: 1)
-                .padding(.trailing, 12)
-            content()
-        }
-    }
-
-    private func code(_ text: String, language: String?) -> some View {
-        let body = text.hasSuffix("\n") ? String(text.dropLast()) : text
-        return numbered(body) {
-            CodeText(body)
-                .highlightLanguage(language.flatMap(HighlightLanguage.init(rawValue:)) ?? .plaintext)
-                .codeTextColors(.theme(.atomOne))
-                .font(.dm(12, design: .monospaced))
-                .textSelection(.enabled)
-                .fixedSize(horizontal: true, vertical: false)
-        }
-    }
-
-    /// The file starts at the top left corner and fills the pane, the way an
-    /// editor shows one. A plain scroll view centres content smaller than its
-    /// viewport, which made a ten-line file float in the middle of the pane.
-    private func scroll<Content: View>(@ViewBuilder _ content: () -> Content) -> some View {
-        let body = content()
-        return GeometryReader { proxy in
-            ScrollView([.horizontal, .vertical]) {
-                body
-                    .padding(.horizontal, 14)
-                    .padding(.vertical, 10)
-                    .frame(
-                        minWidth: proxy.size.width,
-                        minHeight: proxy.size.height,
-                        alignment: .topLeading)
-            }
-            .defaultScrollAnchor(.topLeading)
         }
     }
 

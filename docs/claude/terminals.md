@@ -73,6 +73,22 @@ holds the rules that apply everywhere; this file is binding for its area.
   file is (code, markdown, image, binary, too large) and shows it. Highlighting
   stops above 200 KB, where highlight.js blocks the interface long enough to
   look broken.
+- **Nothing on screen holds the whole file** (`FileChunks`, `FileLayout`,
+  cut off the main thread with the read). SwiftUI lays out everything in a
+  plain stack before the first frame: one `Markdown` view of a 130 KB file
+  took 2.3 s, one `Text` of it 4.6 s, and worse than linear, so a 200 KB
+  markdown froze the app. Lines go in pieces of 200 into a `LazyVStack`,
+  each piece one `Text` with its numbers in one `Text` beside it, and the
+  width is the longest line's from the start so the horizontal extent does
+  not jump; markdown is cut at blank lines outside fenced code into pieces
+  of about 4 KB (reference link definitions repeated in each), and each
+  piece is its own `Markdown` view. 130 KB now lays out in ~100 ms, 1 MB
+  the same. Highlighting asks highlight.js once per file, off the main
+  thread, and slices the result into the same pieces
+  (`AttributedLines.split`); it drops blank lines at the end of a file,
+  which are put back, and any other mismatch leaves the plain text. The
+  viewer does not observe `AppModel`: it has nothing to read there, and
+  every poll would have re-evaluated the file.
 - **A feature that reads `case .session` only is a bug in waiting.** A session
   runs on a host or on this Mac, and every path has to answer for both:
   the context panel was gated on `.session` and never showed for a local
