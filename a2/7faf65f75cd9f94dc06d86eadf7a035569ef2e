@@ -1,0 +1,25 @@
+Sources/DevmachineApp/SelectingTerminalView.swift
+  s_5bc615739612c9::t_957da11ff5acbf 156-158,160,217
+Sources/DevmachineApp/TerminalLineTrim.swift
+  s_5bc615739612c9::t_a2e27e58eac942 1-37
+Tests/DevmachineAppTests/TerminalLineTrimTests.swift
+  s_5bc615739612c9::t_abf5d25b753892 1-46
+docs/claude/terminals.md
+  s_5bc615739612c9::t_344338c37d4187 130-139
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "a27faf65f75cd9f94dc06d86eadf7a035569ef2e",
+  "prompts": {},
+  "sessions": {
+    "s_5bc615739612c9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "2157fc81-9391-4caf-aa65-c678602776dd",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
