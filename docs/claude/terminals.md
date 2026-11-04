@@ -127,6 +127,16 @@ holds the rules that apply everywhere; this file is binding for its area.
   a word or a line on release; ⌘C with nothing selected leaves the clipboard
   alone. No key is intercepted for selection: SwiftTerm clears it on any key,
   and Esc, ⌃C and the rest reach the program unchanged.
+- **A copy never brings cells past the width** (`TerminalLineTrim`). SwiftTerm
+  trims a line's cells on a narrower resize only in a buffer with scrollback;
+  the alternate screen, where tmux draws, keeps the cells past the new width.
+  Nothing draws them, a program's erase-to-end-of-line stops at the width,
+  and `getSelection` reads a line to its last cell, so a copy after the
+  pane had been wider carried text nobody could see ("where it running on
+  …; no PR happened."). Lines are cut to the width when the size changes
+  and again before a copy. The pinned SwiftTerm has no public way from a
+  view to its `Terminal`, so the trim reads the view's stored property by
+  reflection; `TerminalLineTrimTests` fails if a bump renames it.
 - **A copy made by a program on a host arrives as OSC 52** (tmux's keyboard
   copy mode, an editor's yank). `TerminalDelegateGate` stands in as SwiftTerm's
   delegate, because `LocalProcessTerminalView` answers the clipboard itself and
