@@ -99,10 +99,10 @@ extension AppModel {
     /// was the workspace's last.
     func close(tab: CenterTab) {
         switch tab {
-        case let .file(_, path):
+        case let .file(owner, path):
             let wasOnScreen = isSelected(tab: tab)
             let next = openTabs.close(tab, selected: wasOnScreen ? tab : nil) { $0.workspaceAlias == tab.workspaceAlias }
-            fileViewer?.forget(path: path)
+            if let target = commandTarget(for: owner) { fileViewer?.forget(target, path: path) }
             guard wasOnScreen else { return }
             if let next {
                 select(tab: next)

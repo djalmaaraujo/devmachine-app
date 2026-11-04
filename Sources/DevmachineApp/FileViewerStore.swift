@@ -92,13 +92,13 @@ final class FileViewerStore: ObservableObject {
         highlighted = shown?.highlighted
     }
 
-    /// Drops what was read of `path`, on any host: its tab is gone, and the
-    /// next open reads it again.
-    func forget(path: String) {
-        for key in cached.keys where key.path == path {
-            cached[key] = nil
-            shownAt[key] = nil
-        }
+    /// Drops what was read of one file of one session: its tab is gone, and
+    /// the next open reads it again. The same path open from another
+    /// session is another file, and keeps what it read.
+    func forget(_ target: CommandTarget, path: String) {
+        let key = Key(target: target, path: path)
+        cached[key] = nil
+        shownAt[key] = nil
     }
 
     func reload() {

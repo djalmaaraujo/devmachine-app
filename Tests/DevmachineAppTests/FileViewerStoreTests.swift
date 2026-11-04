@@ -125,7 +125,10 @@ final class FileViewerStoreTests: XCTestCase {
         try await waitUntil { !store.isLoading }
         XCTAssertEqual(store.preview?.text, "print(1)\n")
 
-        store.forget(path: "/repo/main.swift")
+        store.forget(.remote(alias: "acme-devmachine", session: "api"), path: "/repo/main.swift")
+        store.open(target, path: "/repo/main.swift")
+        XCTAssertNotNil(store.preview, "another session's file of the same path is another file")
+        store.forget(target, path: "/repo/main.swift")
         store.open(target, path: "/repo/main.swift")
         XCTAssertNil(store.preview, "a forgotten file is read again")
         try await waitUntil { ssh.commandCount == 4 }
