@@ -131,6 +131,24 @@ final class FileViewerStoreTests: XCTestCase {
         try await waitUntil { ssh.commandCount == 4 }
     }
 
+    func testComingBackToACachedFileWhileAnotherIsReadIsNotLoading() async throws {
+        let ssh = ViewerRunner(stdout: payload("print(1)\n"))
+        let store = FileViewerStore(host: HostRunner(remote: RemoteService(runner: ssh)))
+        let target = CommandTarget.remote(alias: "acme-devmachine", session: "dash")
+
+        store.open(target, path: "/repo/main.swift")
+        try await waitUntil { store.preview != nil }
+        store.open(target, path: "/repo/other.swift")
+        XCTAssertTrue(store.isLoading)
+        store.open(target, path: "/repo/main.swift")
+        XCTAssertFalse(store.isLoading)
+        XCTAssertNotNil(store.preview)
+        try await waitUntil { ssh.commandCount == 2 }
+        try await Task.sleep(nanoseconds: 50_000_000)
+        XCTAssertFalse(store.isLoading, "the other file's read answers to nothing now")
+        XCTAssertEqual(store.path, "/repo/main.swift")
+    }
+
     func testClosingTheViewerTellsWhoListens() {
         let store = FileViewerStore(host: HostRunner(remote: RemoteService(runner: ViewerRunner(stdout: ""))))
         var closed = 0

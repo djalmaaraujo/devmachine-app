@@ -65,6 +65,8 @@ final class FileViewerStore: ObservableObject {
     func open(_ target: CommandTarget, path: String) {
         current = (target, path)
         isOpen = true
+        // A read still running for another file answers to nothing now.
+        isLoading = false
         errorText = nil
         showsSource = false
         let key = Key(target: target, path: path)
@@ -78,6 +80,7 @@ final class FileViewerStore: ObservableObject {
         guard isOpen else { return }
         isOpen = false
         current = nil
+        isLoading = false
         show(nil)
         errorText = nil
         onClose?()
