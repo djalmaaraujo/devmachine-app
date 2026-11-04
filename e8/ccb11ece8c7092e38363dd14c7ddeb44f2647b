@@ -1,0 +1,27 @@
+Sources/DevmachineApp/FileViewerStore.swift
+  s_5bc615739612c9::t_08216db9045b3f 3,20-26,28-34,38-40,53,55-57,71,74,81,86-91,114-115,120,122-125,130-131,139-171
+Sources/DevmachineApp/FileViewerView.swift
+  s_5bc615739612c9::t_e523092fee04a4 102-103,106,108,119-129,131-132,134,137-170,172-177,179,183-189,193-201,203-207,209-210
+Sources/DevmachineCore/FileChunks.swift
+  s_5bc615739612c9::t_ee8fb2e0d9bb07 1-174
+Tests/DevmachineCoreTests/FileChunksTests.swift
+  s_5bc615739612c9::t_fdb0e6577d1031 1-103
+docs/claude/terminals.md
+  s_5bc615739612c9::t_c347f88a5cb63e 76-91
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "e8ccb11ece8c7092e38363dd14c7ddeb44f2647b",
+  "prompts": {},
+  "sessions": {
+    "s_5bc615739612c9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "2157fc81-9391-4caf-aa65-c678602776dd",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
