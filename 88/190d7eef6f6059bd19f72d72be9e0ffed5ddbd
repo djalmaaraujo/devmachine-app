@@ -1,0 +1,21 @@
+Sources/DevmachineApp/FileViewerStore.swift
+  s_5bc615739612c9::t_78bd5a3d970a07 68-69,83
+Tests/DevmachineAppTests/FileViewerStoreTests.swift
+  s_5bc615739612c9::t_955dd677961e5a 134-151
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "88190d7eef6f6059bd19f72d72be9e0ffed5ddbd",
+  "prompts": {},
+  "sessions": {
+    "s_5bc615739612c9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "2157fc81-9391-4caf-aa65-c678602776dd",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
