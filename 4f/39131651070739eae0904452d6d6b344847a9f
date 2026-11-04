@@ -1,0 +1,45 @@
+Sources/DevmachineApp/AppModel.swift
+  s_5bc615739612c9::t_b8cfa5b6134a57 692-693
+Sources/DevmachineApp/CenterTabs.swift
+  s_5bc615739612c9::t_762a977c551a99 5-7,56-57,62,79-80,87-93,97-99,103-111,130-138
+Sources/DevmachineApp/CommandTarget.swift
+  s_5bc615739612c9::t_747065ab131d6a 7
+Sources/DevmachineApp/ContentView.swift
+  s_5bc615739612c9::t_2086d2b20638b1 152,343-344,346,398,422-424,426-430,471-481
+Sources/DevmachineApp/DemoSnapshots.swift
+  s_5bc615739612c9::t_e6d25e57d1a7a4 103-111,226-227,232,713,724-727
+Sources/DevmachineApp/DevmachineApp.swift
+  s_5bc615739612c9::t_71c5cdf3e3193f 20,149-150
+Sources/DevmachineApp/DocumentPane.swift
+  s_5bc615739612c9::t_e6a5d2784755fb 5-7,12-13,24-29,34,49
+Sources/DevmachineApp/FileViewerStore.swift
+  s_5bc615739612c9::t_f000f1f732682d 5-8,11-18,30-32,36-37,50-52,54,58,63-72,94,99-107
+Sources/DevmachineApp/FileViewerView.swift
+  s_5bc615739612c9::t_7f61e330574507 12-13
+Tests/DevmachineAppTests/CenterTabsTests.swift
+  s_5bc615739612c9::t_90fda0890a1cd5 66-69,71-72,74-75,103-122
+Tests/DevmachineAppTests/DemoSnapshotsTests.swift
+  s_5bc615739612c9::t_cf14f635deb2dd 292,294
+Tests/DevmachineAppTests/FileViewerStoreTests.swift
+  s_5bc615739612c9::t_48a6f23bdf2e07 31-36,106-143
+docs/claude/previews.md
+  s_5bc615739612c9::t_dfb40821668268 24-26
+docs/claude/terminals.md
+  s_5bc615739612c9::t_cd4ece66ca2493 251-266
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "4f39131651070739eae0904452d6d6b344847a9f",
+  "prompts": {},
+  "sessions": {
+    "s_5bc615739612c9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "2157fc81-9391-4caf-aa65-c678602776dd",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
