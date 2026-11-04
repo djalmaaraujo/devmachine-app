@@ -1,0 +1,23 @@
+Sources/DevmachineApp/CenterTabs.swift
+  s_842bd9795359ff::t_47c78caad11be0 102,105
+Sources/DevmachineApp/FileViewerStore.swift
+  s_842bd9795359ff::t_ce884133bc0364 95-101
+Tests/DevmachineAppTests/FileViewerStoreTests.swift
+  s_842bd9795359ff::t_ec4fd542ac4280 128-131
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "fbed255a47a3807f9f36670aec51278366c56262",
+  "prompts": {},
+  "sessions": {
+    "s_842bd9795359ff": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "fb1891d8-f936-41ae-9281-fc27beadfdfc",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
