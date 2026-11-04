@@ -149,6 +149,7 @@ struct ContentView: View {
             model.settings = settingsStore.settings
             model.fileViewer = viewerStore
             viewerStore.onOpen = { [weak model] path in model?.fileOpened(path: path) }
+            viewerStore.onClose = { [weak model] in model?.fileClosed() }
             model.checkCLIAndProceed(isConfigured: settingsStore.isConfigured)
             Task { await compat.check() }
             StackBoardController.startAll()
@@ -339,11 +340,10 @@ struct ContentView: View {
         CenterTabStrip.shows(enabled: settingsStore.settings?.showsSessionTabs ?? false, mode: model.appMode)
     }
 
-    /// The file pane: it sits beside the terminal, the way an editor puts a
-    /// file next to a shell, instead of taking a window of its own.
+    /// The preview pane: it sits beside the terminal, the way an editor puts
+    /// a browser next to a shell, instead of taking a window of its own.
     private var showsDocumentPane: Bool {
-        model.activePage == nil
-            && DocumentPane.isVisible(fileOpen: viewerStore.isOpen, previewTabs: previews.tabs.count)
+        model.activePage == nil && DocumentPane.isVisible(previewTabs: previews.tabs.count)
     }
 
     @ViewBuilder
@@ -395,6 +395,7 @@ private struct PageHost: View {
 
 private struct MainPane: View {
     @EnvironmentObject var model: AppModel
+    @EnvironmentObject var viewerStore: FileViewerStore
     /// The title bar's height while the sidebar is closed: the window buttons
     /// and the sidebar toggle sit over the pane then, so the terminal starts
     /// below them. Home keeps running under them, edge to edge.
@@ -418,8 +419,15 @@ private struct MainPane: View {
                     // so an unmounted one keeps running and re-attaches on the next select.
                     // A session in the session grid is mounted by the grid instead — mounting it here as
                     // well would pull the shared view out of its grid cell.
+                    // A file tab takes the terminal's place, as another session's
+                    // tab would: the terminal is unmounted, not resized, and comes
+                    // back as it was (`AppModel.fileClosed`).
                     if let selected = model.selection, !isInSessionGrid(selected) {
-                        terminal(for: selected)
+                        if viewerStore.isOpen {
+                            fileViewer
+                        } else {
+                            terminal(for: selected)
+                        }
                     }
                     if MainPaneVisibility.showsHome(
                         hasSelection: model.selection != nil, activePage: model.activePage) {
@@ -458,6 +466,17 @@ private struct MainPane: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .padding(FloatingCardLayout.margin)
         .padding(.top, terminalTopInset)
+    }
+
+    /// The open file, in the terminal's card. Without the strip the header
+    /// carries the file's tab, so the × that puts the terminal back is there.
+    private var fileViewer: some View {
+        FileViewerView(showsTab: !showsTabStrip)
+            .floatingCard()
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .padding(FloatingCardLayout.margin)
+            .padding(.top, terminalTopInset)
+            .demoClickTarget("pane:file")
     }
 
     private func key(_ item: SidebarItem) -> String {

@@ -2,15 +2,15 @@ import SwiftUI
 import AppKit
 import DevmachineCore
 
-/// The pane beside the terminal: the open file and the preview tabs, each a
-/// tab in one strip, the way an editor keeps a file next to a browser.
+/// The pane beside the terminal: the preview tabs, each a tab in one strip,
+/// the way an editor keeps a browser next to a shell. A file is not here:
+/// its tab is in the strip over the terminal and shows in its place.
 struct DocumentPane: View {
     @Environment(\.dmMetrics) private var m
-    @EnvironmentObject private var viewerStore: FileViewerStore
     @ObservedObject private var previews = PreviewStore.shared
 
-    static func isVisible(fileOpen: Bool, previewTabs: Int) -> Bool {
-        fileOpen || previewTabs > 0
+    static func isVisible(previewTabs: Int) -> Bool {
+        previewTabs > 0
     }
 
     var body: some View {
@@ -21,21 +21,19 @@ struct DocumentPane: View {
         }
         .background(Color.dmSidebarBg)
         .environment(\.colorScheme, .dark)
-        .onChange(of: viewerStore.path) { _, path in
-            if path != nil { previews.select(nil) }
-        }
-        .onChange(of: viewerStore.isOpen) { _, open in
-            if !open, previews.selectedTabID == nil { previews.select(previews.tabs.last?.id) }
-        }
+    }
+
+    /// With no tab selected the last one opened shows, so the pane is never
+    /// an empty strip.
+    private var shownTab: PreviewTab? {
+        previews.selectedTab ?? previews.tabs.last
     }
 
     @ViewBuilder
     private var content: some View {
-        if let tab = previews.selectedTab {
+        if let tab = shownTab {
             PreviewPaneView(tab: tab)
                 .id(tab.id)
-        } else if viewerStore.isOpen {
-            FileViewerView(showsTab: false)
         }
     }
 
@@ -44,21 +42,11 @@ struct DocumentPane: View {
     /// clip view and never reached the button. Long titles shorten instead.
     private var strip: some View {
         HStack(spacing: m.space.xxs) {
-            if viewerStore.isOpen {
-                DocumentTabChip(
-                    systemImage: FileViewerView.icon(for: viewerStore.preview?.kind),
-                    title: viewerStore.preview?.name
-                        ?? (viewerStore.path as NSString?)?.lastPathComponent ?? "Viewer",
-                    selected: previews.selectedTabID == nil,
-                    closeHelp: "Close the file",
-                    select: { previews.select(nil) },
-                    close: { viewerStore.close() })
-            }
             ForEach(previews.tabs) { tab in
                 DocumentTabChip(
                     systemImage: "globe",
                     title: tab.title,
-                    selected: previews.selectedTabID == tab.id,
+                    selected: shownTab?.id == tab.id,
                     closeHelp: "Close the preview",
                     select: { previews.select(tab.id) },
                     close: { previews.close(tab.id) })

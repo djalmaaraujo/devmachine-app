@@ -2,10 +2,20 @@ import Foundation
 import Combine
 import DevmachineCore
 
-/// Reads one file for the viewer window, from whichever side the session runs
-/// on. Reading only: nothing here writes a file.
+/// Reads one file for the viewer, from whichever side the session runs on.
+/// Reading only: nothing here writes a file. What a tab showed is kept
+/// (`cached`, the last few), so coming back to its tab is as quick as
+/// coming back to a session; Reload reads again.
 @MainActor
 final class FileViewerStore: ObservableObject {
+    /// One file of one session: the same path on two hosts is two files.
+    struct Key: Hashable {
+        let target: CommandTarget
+        let path: String
+    }
+
+    static let cacheCap = 8
+
     @Published private(set) var preview: FilePreview?
     @Published private(set) var isLoading = false
     @Published private(set) var errorText: String?
@@ -17,9 +27,14 @@ final class FileViewerStore: ObservableObject {
     /// Told the path of every file shown, so the strip over the terminal
     /// can keep a tab for it.
     var onOpen: ((String) -> Void)?
+    /// Told when the file leaves the screen, so the terminal it stood in
+    /// for can be asked to draw again.
+    var onClose: (() -> Void)?
 
     private let host: HostRunner
     private var current: (target: CommandTarget, path: String)?
+    private var cached: [Key: FilePreview] = [:]
+    private var shownAt: [Key: Date] = [:]
 
     init(host: HostRunner = HostRunner()) {
         self.host = host
@@ -30,18 +45,31 @@ final class FileViewerStore: ObservableObject {
     func open(_ target: CommandTarget, path: String) {
         current = (target, path)
         isOpen = true
-        preview = nil
         errorText = nil
         showsSource = false
+        let key = Key(target: target, path: path)
+        preview = cached[key]
+        shownAt[key] = Date()
         onOpen?(path)
-        load()
+        if preview == nil { load() }
     }
 
     func close() {
+        guard isOpen else { return }
         isOpen = false
         current = nil
         preview = nil
         errorText = nil
+        onClose?()
+    }
+
+    /// Drops what was read of `path`, on any host: its tab is gone, and the
+    /// next open reads it again.
+    func forget(path: String) {
+        for key in cached.keys where key.path == path {
+            cached[key] = nil
+            shownAt[key] = nil
+        }
     }
 
     func reload() {
@@ -63,7 +91,17 @@ final class FileViewerStore: ObservableObject {
                 self.isLoading = false
                 self.preview = parsed
                 self.errorText = message
+                if let parsed { self.remember(parsed, for: Key(target: target, path: path)) }
             }
+        }
+    }
+
+    private func remember(_ preview: FilePreview, for key: Key) {
+        cached[key] = preview
+        shownAt[key] = Date()
+        for old in LRUEviction.keysToEvict(detachedAt: shownAt, cap: Self.cacheCap) {
+            cached[old] = nil
+            shownAt[old] = nil
         }
     }
 

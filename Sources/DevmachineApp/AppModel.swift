@@ -574,6 +574,10 @@ final class AppModel: ObservableObject {
     }
     @Published var selection: SidebarItem? = nil {
         didSet {
+            // A file shown belongs to the session it was opened from: another
+            // session, or Home, puts it away (its tab stays), the same as
+            // choosing that session's tab in the strip.
+            if selection != oldValue { fileViewer?.close() }
             if let selection {
                 activePage = nil
                 appMode = .code
@@ -689,7 +693,8 @@ final class AppModel: ObservableObject {
     /// The sessions opened and the files looked at this run, in the order
     /// they were opened; drawn over the terminal when Settings says so.
     @Published var openTabs = TabList<CenterTab>()
-    /// The viewer beside the terminal, for a file tab to open or close it.
+    /// The viewer that stands in the terminal's place while a file tab is
+    /// selected, for a tab to open or close it.
     weak var fileViewer: FileViewerStore?
 
     /// Workspaces whose sessions are folded away in the sidebar.

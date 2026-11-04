@@ -248,5 +248,19 @@ holds the rules that apply everywhere; this file is binding for its area.
   same action as the sidebar's row menu and ⌘K. The owner asked for this
   split: ⌘W opening the End session sheet while × only hid the tab read as
   two different closes.
-- Demo walk `DEVMACHINE_DEMO_WALK=tabs`: `36`–`38`, the last one a globex
-  session with acme's tabs hidden.
+- **A file tab shows its file in the terminal's place**, the way a session
+  tab shows its terminal (`MainPane`): the viewer takes the terminal's card
+  and the terminal is unmounted, never resized, so the program inside comes
+  back as it was; selecting the session tab closes the viewer and asks the
+  pane to draw again (`AppModel.fileClosed`, the same repaint as after a
+  page). The owner asked for this: a file beside the terminal, in a pane
+  with a strip of its own, was a second set of tabs to read. The pane
+  beside the terminal (`DocumentPane`) holds preview tabs only. Closing the
+  file tab on screen moves to its neighbour in the workspace, as closing a
+  session tab does. The viewer keeps what the last few tabs read
+  (`FileViewerStore.cached`, `cacheCap`), so coming back to a tab is as
+  quick as coming back to a session; Reload reads again, and a closed tab
+  is forgotten. Without the strip (Settings → Appearance) the viewer's own
+  header carries the tab and the × that puts the terminal back.
+- Demo walk `DEVMACHINE_DEMO_WALK=tabs`: `36`–`39`: a globex session with
+  acme's tabs hidden, then a file tab on screen.
