@@ -153,7 +153,11 @@ class SelectingTerminalView: LocalProcessTerminalView {
         pasteboard.setString(text, forType: .string)
     }
 
+    /// Lines are cut to the width first: a buffer without scrollback (the
+    /// alternate screen) keeps cells past a narrower width that nothing
+    /// draws, and a copy would bring them along (`TerminalLineTrim`).
     private func copySelection() {
+        TerminalLineTrim.trim(self)
         guard let text = getSelection(), !text.isEmpty else { return }
         writeToClipboard(text)
     }
@@ -210,6 +214,7 @@ final class TerminalDelegateGate: @preconcurrency TerminalViewDelegate {
     }
 
     func sizeChanged(source: TerminalView, newCols: Int, newRows: Int) {
+        TerminalLineTrim.trim(source)
         view.sizeChanged(source: source, newCols: newCols, newRows: newRows)
     }
 
