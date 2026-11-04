@@ -100,6 +100,15 @@ enum DemoSnapshots {
         let wallpaperStore: WallpaperStore
         let harnessSettingsFacade: HarnessSettingsFacade
         let statsStore: StatsStore
+        let viewerStore: FileViewerStore
+    }
+
+    /// The app's file viewer in demo mode: every file read answers with the
+    /// demo Swift file, and nothing is run on a machine.
+    static func demoFileViewerStore() -> FileViewerStore {
+        let data = Data(fileViewerCode.utf8)
+        let runner = DemoFileRunner(stdout: "\(data.count)\u{1e}" + data.base64EncodedString())
+        return FileViewerStore(host: HostRunner(remote: RemoteService(runner: runner), local: DemoMode.runner))
     }
 
     /// One screen: its output file name and the steps to reach it. Kept as
@@ -214,11 +223,13 @@ enum DemoSnapshots {
     /// and a file opened, umbrella folded; then the same with the sidebar
     /// closed, where the strip starts after the window buttons; then a
     /// globex session on screen, whose strip holds only globex's tab while
-    /// acme's four wait.
+    /// acme's four wait; then a file tab selected, the file in the
+    /// terminal's place.
     static let tabsScreens: [Screen] = [
         Screen(id: "tabs-open", fileName: "36-tabs-open.png", settleNanoseconds: 900_000_000),
         Screen(id: "tabs-sidebar-closed", fileName: "37-tabs-sidebar-closed.png", settleNanoseconds: 900_000_000),
         Screen(id: "tabs-other-workspace", fileName: "38-tabs-other-workspace.png", settleNanoseconds: 900_000_000),
+        Screen(id: "tabs-file", fileName: "39-tabs-file.png", settleNanoseconds: 900_000_000),
     ]
 
     /// `DEVMACHINE_DEMO_ICON_STYLE=monochrome` draws that walk's icons in the
@@ -699,7 +710,7 @@ enum DemoSnapshots {
         switch screen.id {
         case "sessions":
             model.openSessionGrid(acmeAlias)
-        case "tabs-open", "tabs-sidebar-closed", "tabs-other-workspace":
+        case "tabs-open", "tabs-sidebar-closed", "tabs-other-workspace", "tabs-file":
             environment.settingsStore.settings?.showsHarnessIcons = true
             environment.settingsStore.settings?.showsSessionTabs = true
             model.workspaceCollapse.set("umbrella-devmachine", collapsed: true)
@@ -709,6 +720,10 @@ enum DemoSnapshots {
             model.clickSession(SessionRef(alias: acmeAlias, name: "claude — payments refactor"))
             if screen.id == "tabs-other-workspace" {
                 model.clickSession(SessionRef(alias: "globex-devmachine", name: "dashboard — tests"))
+            }
+            if screen.id == "tabs-file" {
+                environment.viewerStore.open(
+                    .remote(alias: acmeAlias, session: "claude — payments refactor"), path: fileViewerPath)
             }
             model.sidebarCollapsed = screen.id == "tabs-sidebar-closed"
         case "sidebar-harness-icons":

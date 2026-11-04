@@ -28,6 +28,12 @@ private final class ViewerRunner: CommandRunner, @unchecked Sendable {
         defer { lock.unlock() }
         return commands.last
     }
+
+    var commandCount: Int {
+        lock.lock()
+        defer { lock.unlock() }
+        return commands.count
+    }
 }
 
 @MainActor
@@ -96,5 +102,43 @@ final class FileViewerStoreTests: XCTestCase {
         XCTAssertNil(store.preview)
         XCTAssertFalse(store.showsSource)
         XCTAssertEqual(store.path, "/repo/other.swift")
+    }
+
+    func testAFileShownBeforeComesBackWithoutAnotherRead() async throws {
+        let ssh = ViewerRunner(stdout: payload("print(1)\n"))
+        let store = FileViewerStore(host: HostRunner(remote: RemoteService(runner: ssh)))
+        let target = CommandTarget.remote(alias: "acme-devmachine", session: "dash")
+
+        store.open(target, path: "/repo/main.swift")
+        try await waitUntil { store.preview != nil }
+        store.open(target, path: "/repo/other.swift")
+        try await waitUntil { store.preview != nil }
+        XCTAssertEqual(ssh.commandCount, 2)
+
+        store.open(target, path: "/repo/main.swift")
+        XCTAssertEqual(store.preview?.text, "print(1)\n", "shown at once, from what was read before")
+        XCTAssertFalse(store.isLoading)
+        XCTAssertEqual(ssh.commandCount, 2)
+
+        store.reload()
+        try await waitUntil { ssh.commandCount == 3 }
+        try await waitUntil { !store.isLoading }
+        XCTAssertEqual(store.preview?.text, "print(1)\n")
+
+        store.forget(path: "/repo/main.swift")
+        store.open(target, path: "/repo/main.swift")
+        XCTAssertNil(store.preview, "a forgotten file is read again")
+        try await waitUntil { ssh.commandCount == 4 }
+    }
+
+    func testClosingTheViewerTellsWhoListens() {
+        let store = FileViewerStore(host: HostRunner(remote: RemoteService(runner: ViewerRunner(stdout: ""))))
+        var closed = 0
+        store.onClose = { closed += 1 }
+        store.open(.remote(alias: "acme-devmachine", session: "dash"), path: "/repo/a.md")
+        store.close()
+        XCTAssertEqual(closed, 1)
+        store.close()
+        XCTAssertEqual(closed, 1, "closing a closed viewer says nothing")
     }
 }

@@ -17,7 +17,7 @@ struct DevmachineApp: App {
     @StateObject private var usageStore: HarnessUsageStore
     @StateObject private var settingsStore = SettingsStore.shared
     @StateObject private var wallpaperStore = WallpaperStore()
-    @StateObject private var viewerStore = FileViewerStore()
+    @StateObject private var viewerStore = DemoMode.isActive ? DemoSnapshots.demoFileViewerStore() : FileViewerStore()
     @StateObject private var fileTreeStore = FileTreeStore()
     @StateObject private var fileSearchStore = FileSearchStore()
     @StateObject private var paletteRecents = PaletteRecentsStore()
@@ -146,7 +146,8 @@ struct DevmachineApp: App {
                     DemoSnapshots.runIfNeeded(DemoSnapshots.Environment(
                         model: model, prStore: prStore, usageStore: usageStore, caddyStore: caddyStore,
                         settingsStore: settingsStore, wallpaperStore: wallpaperStore,
-                        harnessSettingsFacade: harnessSettingsFacade, statsStore: statsStore))
+                        harnessSettingsFacade: harnessSettingsFacade, statsStore: statsStore,
+                        viewerStore: viewerStore))
                 }
                 .onChange(of: settingsStore.effectiveUIFontScale) { _, scale in
                     DMFont.scale = scale

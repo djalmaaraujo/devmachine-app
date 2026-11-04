@@ -63,8 +63,16 @@ final class CenterTabsTests: XCTestCase {
         let fileTab = CenterTab.file(owner: dash, path: "/home/alice/dash/README.md")
         XCTAssertEqual(model.openTabs.items, [.session(dash), fileTab])
         XCTAssertTrue(model.isSelected(tab: fileTab))
-        XCTAssertTrue(model.isSelected(tab: .session(dash)))
+        XCTAssertFalse(model.isSelected(tab: .session(dash)), "the file is on screen, not the terminal")
 
+        model.select(tab: .session(dash))
+        XCTAssertFalse(viewer.isOpen, "the session tab puts the terminal back")
+        XCTAssertTrue(model.isSelected(tab: .session(dash)))
+        XCTAssertFalse(model.isSelected(tab: fileTab))
+        XCTAssertEqual(model.openTabs.items, [.session(dash), fileTab], "the file tab stays")
+
+        model.select(tab: fileTab)
+        XCTAssertTrue(viewer.isOpen)
         viewer.close()
         model.selection = api
         XCTAssertFalse(model.isSelected(tab: fileTab))
@@ -90,6 +98,48 @@ final class CenterTabsTests: XCTestCase {
         XCTAssertFalse(viewer.isOpen)
         XCTAssertEqual(model.openTabs.items, [.session(dash)])
         XCTAssertEqual(model.selection, dash)
+    }
+
+    func testAnotherSessionFromTheSidebarPutsTheFileAway() throws {
+        let model = model()
+        let viewer = try XCTUnwrap(viewer)
+        model.selection = dash
+        viewer.open(.remote(alias: "acme-devmachine", session: "dash"), path: "/home/alice/dash/a.md")
+        let fileTab = CenterTab.file(owner: dash, path: "/home/alice/dash/a.md")
+
+        model.selection = api
+        XCTAssertFalse(viewer.isOpen, "dash's file never covers api's terminal")
+        XCTAssertTrue(model.isSelected(tab: .session(api)))
+        XCTAssertTrue(model.openTabs.contains(fileTab), "the tab waits for dash")
+
+        model.selection = dash
+        XCTAssertFalse(viewer.isOpen)
+        XCTAssertTrue(model.isSelected(tab: .session(dash)))
+
+        model.select(tab: fileTab)
+        XCTAssertTrue(viewer.isOpen)
+        model.goHome()
+        XCTAssertFalse(viewer.isOpen, "Home puts the file away too")
+    }
+
+    func testClosingTheFileOnScreenShowsItsNeighbourTab() throws {
+        let model = model()
+        let viewer = try XCTUnwrap(viewer)
+        let target = CommandTarget.remote(alias: "acme-devmachine", session: "dash")
+        model.selection = dash
+        viewer.open(target, path: "/home/alice/dash/a.md")
+        viewer.open(target, path: "/home/alice/dash/b.md")
+        model.select(tab: .file(owner: dash, path: "/home/alice/dash/a.md"))
+        XCTAssertEqual(viewer.path, "/home/alice/dash/a.md")
+
+        model.close(tab: .file(owner: dash, path: "/home/alice/dash/a.md"))
+        XCTAssertEqual(viewer.path, "/home/alice/dash/b.md", "the tab to the right, as a browser does")
+        XCTAssertEqual(model.openTabs.items, [.session(dash), .file(owner: dash, path: "/home/alice/dash/b.md")])
+
+        model.close(tab: .file(owner: dash, path: "/home/alice/dash/b.md"))
+        XCTAssertFalse(viewer.isOpen, "nothing to the right: the session tab to the left")
+        XCTAssertEqual(model.selection, dash)
+        XCTAssertTrue(model.isSelected(tab: .session(dash)))
     }
 
     func testClosingTheSelectedSessionTabGoesToTheNeighbourOrHome() {

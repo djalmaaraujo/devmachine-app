@@ -21,7 +21,9 @@ holds the rules that apply everywhere; this file is binding for its area.
   keeps `target=_blank` in the same tab, and uses one non-persistent data
   store per app run. The address bar shows the web view's real URL.
 - **The terminal and the pane beside it are one split** (`DocumentSplitView`,
-  `DocumentSplit` in Core). The pane's share is a fraction, saved only when a
+  `DocumentSplit` in Core). The pane holds preview tabs only; an open file
+  is a tab over the terminal and shows in its place (see Tab strip over the
+  terminal in `terminals.md`). The pane's share is a fraction, saved only when a
   drag ends (`DocumentSplitState`); each side keeps 320 pt, nothing else caps
   it; a double-click on the divider goes back to half and half. Every
   `ResizeHandle` drag is measured in `.global` coordinates: measured in the

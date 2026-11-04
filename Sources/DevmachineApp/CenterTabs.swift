@@ -2,9 +2,9 @@ import Foundation
 import DevmachineCore
 
 /// One tab in the strip over the terminal: a session opened this run, or a
-/// file looked at from one. A file tab is a way back to that file in that
-/// session; it stays until its own × is pressed, even when the viewer
-/// beside the terminal is closed.
+/// file looked at from one. A file tab shows the file in the terminal's
+/// place, the way a session tab shows its terminal; it stays until its own
+/// × is pressed, even when the viewer is closed from its own header.
 enum CenterTab: Hashable {
     case session(SidebarItem)
     case file(owner: SidebarItem, path: String)
@@ -53,13 +53,13 @@ extension AppModel {
         }
     }
 
-    /// The session tab of what is on screen; a file tab as well while the
-    /// viewer shows that file beside that session.
+    /// The one tab on screen: the file the viewer shows in the session's
+    /// place, else the session's own tab.
     func isSelected(tab: CenterTab) -> Bool {
         guard activePage == nil, selection == tab.owner else { return false }
         switch tab {
         case .session:
-            return true
+            return fileViewer?.isOpen != true
         case let .file(_, path):
             return fileViewer?.isOpen == true && fileViewer?.path == path
         }
@@ -76,26 +76,39 @@ extension AppModel {
         }
     }
 
+    /// A session tab puts its terminal on screen, in place of a file shown
+    /// there; a file tab shows its file in place of the terminal.
     func select(tab: CenterTab) {
         if selection != tab.owner || activePage != nil {
             selection = tab.owner
         } else if appMode != .code {
             appMode = .code
         }
-        guard case let .file(owner, path) = tab else { return }
-        guard fileViewer?.isOpen != true || fileViewer?.path != path, let target = commandTarget(for: owner) else { return }
-        fileViewer?.open(target, path: path)
+        switch tab {
+        case .session:
+            fileViewer?.close()
+        case let .file(owner, path):
+            guard fileViewer?.isOpen != true || fileViewer?.path != path, let target = commandTarget(for: owner) else { return }
+            fileViewer?.open(target, path: path)
+        }
     }
 
     /// Takes the tab off the strip. A session keeps running; a file tab
-    /// also closes the viewer when it shows that file. Closing the session
-    /// on screen moves to the neighbour tab in the same workspace, or Home
-    /// when it was the workspace's last.
+    /// also drops what was read of the file. Closing the tab on screen
+    /// moves to the neighbour tab in the same workspace, or Home when it
+    /// was the workspace's last.
     func close(tab: CenterTab) {
         switch tab {
         case let .file(_, path):
-            openTabs.close(tab, selected: nil)
-            if fileViewer?.isOpen == true, fileViewer?.path == path { fileViewer?.close() }
+            let wasOnScreen = isSelected(tab: tab)
+            let next = openTabs.close(tab, selected: wasOnScreen ? tab : nil) { $0.workspaceAlias == tab.workspaceAlias }
+            fileViewer?.forget(path: path)
+            guard wasOnScreen else { return }
+            if let next {
+                select(tab: next)
+            } else {
+                fileViewer?.close()
+            }
         case let .session(item):
             let wasOnScreen = activePage == nil && selection == item
             openTabs.removeAll { $0.owner == item && $0 != tab }
@@ -112,6 +125,15 @@ extension AppModel {
     func fileOpened(path: String) {
         guard let selection, activePage == nil else { return }
         openTabs.open(.file(owner: selection, path: path))
+    }
+
+    /// The file left the screen and the terminal is back in its place. The
+    /// pane comes back unchanged, so the program inside is asked to draw
+    /// again, as after a page (see `activePage`).
+    func fileClosed() {
+        guard activePage == nil, let selection else { return }
+        TerminalRegistry.shared.requestRepaint(selection.terminalKind)
+        TerminalRegistry.shared.requestFocus(selection.terminalKind)
     }
 
     func dropTabs(of item: SidebarItem) {

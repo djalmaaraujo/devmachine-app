@@ -9,7 +9,8 @@ import DevmachineCore
 struct FileViewerView: View {
     @EnvironmentObject var store: FileViewerStore
     @EnvironmentObject var model: AppModel
-    /// Off inside `DocumentPane`, whose strip already holds the file's tab.
+    /// Off under the strip over the terminal, which already holds the
+    /// file's tab; on, the header carries the tab, with its × to close.
     var showsTab = true
 
     var body: some View {
