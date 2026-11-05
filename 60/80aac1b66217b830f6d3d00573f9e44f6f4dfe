@@ -1,0 +1,31 @@
+Sources/DevmachineApp/FileHighlighter.swift
+  s_5bc615739612c9::t_c1f60706b5757c 1-20
+Sources/DevmachineApp/FileViewerStore.swift
+  s_5bc615739612c9::t_1baf1cad4ea6ce 54,56,58,161
+Tests/DevmachineAppTests/CenterTabsTests.swift
+  s_5bc615739612c9::t_1b84fb7eb313dc 19
+Tests/DevmachineAppTests/FileViewerRenderTests.swift
+  s_5bc615739612c9::t_ae51786753a41e 37
+Tests/DevmachineAppTests/FileViewerStoreTests.swift
+  s_5bc615739612c9::t_bb434fa82f21a1 56,71,83,94,109,139,155-165,167
+Tests/DevmachineAppTests/FilesTabTests.swift
+  s_5bc615739612c9::t_1e306f35e7e533 95
+Tests/DevmachineAppTests/PlainHighlighter.swift
+  s_5bc615739612c9::t_d7c251a767f001 1-9
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "6080aac1b66217b830f6d3d00573f9e44f6f4dfe",
+  "prompts": {},
+  "sessions": {
+    "s_5bc615739612c9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "2157fc81-9391-4caf-aa65-c678602776dd",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
