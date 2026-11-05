@@ -53,7 +53,7 @@ final class FileViewerStoreTests: XCTestCase {
 
     func testReadingAFileFromAHost() async throws {
         let ssh = ViewerRunner(stdout: payload("print(1)\n"))
-        let store = FileViewerStore(host: HostRunner(remote: RemoteService(runner: ssh)))
+        let store = FileViewerStore(host: HostRunner(remote: RemoteService(runner: ssh)), highlighter: PlainHighlighter())
 
         store.open(.remote(alias: "acme-devmachine", session: "dash"), path: "/repo/main.swift")
         try await waitUntil { store.preview != nil }
@@ -68,7 +68,7 @@ final class FileViewerStoreTests: XCTestCase {
         let local = ViewerRunner(stdout: payload("# Title\n"))
         let ssh = ViewerRunner(stdout: "")
         let store = FileViewerStore(
-            host: HostRunner(remote: RemoteService(runner: ssh), local: local))
+            host: HostRunner(remote: RemoteService(runner: ssh), local: local), highlighter: PlainHighlighter())
 
         store.open(.local(session: "acme", path: "/repo"), path: "/repo/README.md")
         try await waitUntil { store.preview != nil }
@@ -80,7 +80,7 @@ final class FileViewerStoreTests: XCTestCase {
 
     func testAFailedReadReportsTheReason() async throws {
         let ssh = ViewerRunner(stdout: "", stderr: "cat: no such file", exitCode: 1)
-        let store = FileViewerStore(host: HostRunner(remote: RemoteService(runner: ssh)))
+        let store = FileViewerStore(host: HostRunner(remote: RemoteService(runner: ssh)), highlighter: PlainHighlighter())
 
         store.open(.remote(alias: "acme-devmachine", session: "dash"), path: "/repo/gone.swift")
         try await waitUntil { store.errorText != nil }
@@ -91,7 +91,7 @@ final class FileViewerStoreTests: XCTestCase {
 
     func testOpeningAnotherFileClearsWhatWasOnScreen() async throws {
         let ssh = ViewerRunner(stdout: payload("print(1)\n"))
-        let store = FileViewerStore(host: HostRunner(remote: RemoteService(runner: ssh)))
+        let store = FileViewerStore(host: HostRunner(remote: RemoteService(runner: ssh)), highlighter: PlainHighlighter())
 
         store.open(.remote(alias: "acme-devmachine", session: "dash"), path: "/repo/main.swift")
         try await waitUntil { store.preview != nil }
@@ -106,7 +106,7 @@ final class FileViewerStoreTests: XCTestCase {
 
     func testAFileShownBeforeComesBackWithoutAnotherRead() async throws {
         let ssh = ViewerRunner(stdout: payload("print(1)\n"))
-        let store = FileViewerStore(host: HostRunner(remote: RemoteService(runner: ssh)))
+        let store = FileViewerStore(host: HostRunner(remote: RemoteService(runner: ssh)), highlighter: PlainHighlighter())
         let target = CommandTarget.remote(alias: "acme-devmachine", session: "dash")
 
         store.open(target, path: "/repo/main.swift")
@@ -136,7 +136,7 @@ final class FileViewerStoreTests: XCTestCase {
 
     func testComingBackToACachedFileWhileAnotherIsReadIsNotLoading() async throws {
         let ssh = ViewerRunner(stdout: payload("print(1)\n"))
-        let store = FileViewerStore(host: HostRunner(remote: RemoteService(runner: ssh)))
+        let store = FileViewerStore(host: HostRunner(remote: RemoteService(runner: ssh)), highlighter: PlainHighlighter())
         let target = CommandTarget.remote(alias: "acme-devmachine", session: "dash")
 
         store.open(target, path: "/repo/main.swift")
@@ -152,8 +152,19 @@ final class FileViewerStoreTests: XCTestCase {
         XCTAssertEqual(store.path, "/repo/main.swift")
     }
 
+    func testCodeIsHighlightedOnceAndCutIntoTheSamePieces() async throws {
+        let text = (1...450).map { "let v\($0) = \($0)" }.joined(separator: "\n") + "\n"
+        let ssh = ViewerRunner(stdout: payload(text))
+        let store = FileViewerStore(host: HostRunner(remote: RemoteService(runner: ssh)), highlighter: PlainHighlighter())
+        store.open(.remote(alias: "acme-devmachine", session: "dash"), path: "/repo/main.swift")
+        try await waitUntil { store.highlighted != nil }
+        XCTAssertEqual(store.layout?.lines.map(\.firstLine), [1, 201, 401])
+        XCTAssertEqual(store.highlighted?.keys.sorted(), [1, 201, 401])
+        XCTAssertEqual(String(store.highlighted![401]!.characters), (401...450).map { "let v\($0) = \($0)" }.joined(separator: "\n"))
+    }
+
     func testClosingTheViewerTellsWhoListens() {
-        let store = FileViewerStore(host: HostRunner(remote: RemoteService(runner: ViewerRunner(stdout: ""))))
+        let store = FileViewerStore(host: HostRunner(remote: RemoteService(runner: ViewerRunner(stdout: ""))), highlighter: PlainHighlighter())
         var closed = 0
         store.onClose = { closed += 1 }
         store.open(.remote(alias: "acme-devmachine", session: "dash"), path: "/repo/a.md")

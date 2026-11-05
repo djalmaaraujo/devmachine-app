@@ -16,7 +16,7 @@ final class CenterTabsTests: XCTestCase {
 
     private func model() -> AppModel {
         let model = AppModel(services: fixtureServices())
-        viewer = FileViewerStore(host: HostRunner(local: QuietRunner()))
+        viewer = FileViewerStore(host: HostRunner(local: QuietRunner()), highlighter: PlainHighlighter())
         model.fileViewer = viewer
         viewer.onOpen = { [weak model] path in model?.fileOpened(path: path) }
         return model

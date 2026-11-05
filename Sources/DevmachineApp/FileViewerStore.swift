@@ -1,6 +1,5 @@
 import Foundation
 import Combine
-import HighlightSwift
 import DevmachineCore
 
 /// Reads one file for the viewer, from whichever side the session runs on.
@@ -52,12 +51,11 @@ final class FileViewerStore: ObservableObject {
     private var current: (target: CommandTarget, path: String)?
     private var cached: [Key: Shown] = [:]
     private var shownAt: [Key: Date] = [:]
-    /// One highlighter for the viewer: highlight.js in its own JavaScript
-    /// context, asked once per file, never per piece.
-    private static let highlighter = Highlight()
+    private let highlighter: any FileHighlighter
 
-    init(host: HostRunner = HostRunner()) {
+    init(host: HostRunner = HostRunner(), highlighter: any FileHighlighter = HighlightJSHighlighter()) {
         self.host = host
+        self.highlighter = highlighter
     }
 
     var path: String? { current?.path }
@@ -160,7 +158,7 @@ final class FileViewerStore: ObservableObject {
         else { return }
         let key = Key(target: target, path: path)
         Task {
-            guard let attributed = try? await Self.highlighter.attributedText(text, language: language, colors: .dark(.atomOne)),
+            guard let attributed = try? await highlighter.attributedText(text, language: language),
                   let pieces = AttributedLines.split(attributed, into: layout.lines)
             else { return }
             if var shown = cached[key] {

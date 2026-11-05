@@ -34,7 +34,7 @@ final class FileViewerRenderTests: XCTestCase {
         let data = Data(code.utf8)
         let payload = "\(data.count)\u{1e}" + data.base64EncodedString()
         let store = FileViewerStore(
-            host: HostRunner(remote: RemoteService(runner: SampleRunner(stdout: payload))))
+            host: HostRunner(remote: RemoteService(runner: SampleRunner(stdout: payload))), highlighter: PlainHighlighter())
         store.open(.remote(alias: "acme-devmachine", session: "dash"), path: "/repo/notes.txt")
 
         let deadline = Date().addingTimeInterval(3)
