@@ -103,6 +103,9 @@ struct DocumentTabChip: View {
                 .padding(.trailing, m.space.xs)
         }
         .background(selected ? Color.dmContentBg : (hovering ? Color.dmHover : Color.clear))
+        // The strip runs under the toolbar band; without the claim a click on
+        // the chip moved the window and never selected the tab.
+        .claimsTitlebarClicks()
         .onHover { hovering = $0 }
         .onMiddleClick(while: hovering, perform: close)
     }
