@@ -1,0 +1,27 @@
+Sources/DevmachineApp/CenterTabStrip.swift
+  s_73dd788b51aede::t_fa86fa9bc04d7e 61
+Sources/DevmachineApp/DocumentPane.swift
+  s_73dd788b51aede::t_b097974d02f88e 106-108
+Sources/DevmachineApp/TitlebarClickClaim.swift
+  s_73dd788b51aede::t_ff7edb19542f6e 1-34
+Tests/DevmachineAppTests/TerminalTitlebarClickTests.swift
+  s_73dd788b51aede::t_97b3932e164d7a 27-43
+docs/claude/ui.md
+  s_73dd788b51aede::t_bc77cc5a48b675 231-235
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "d017aafb369207b750b2c73f127107aecc1b1f1a",
+  "prompts": {},
+  "sessions": {
+    "s_73dd788b51aede": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c2ca68fc-60a5-45b6-96ac-bf352471119a",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Djalma Araújo <3402+djalmaaraujo@users.noreply.github.com>"
+    }
+  }
+}
