@@ -24,3 +24,20 @@ final class TerminalTitlebarClickTests: XCTestCase {
         XCTAssertEqual(claimedRect(view), view.bounds)
     }
 }
+
+/// A tab chip under the band claims its spot too, so its tap selects the tab
+/// instead of moving the window, and still lets the click through to SwiftUI.
+@MainActor
+final class TitlebarClickClaimTests: XCTestCase {
+    private typealias OpaqueRect = @convention(c) (AnyObject, Selector) -> NSRect
+    private let selector = NSSelectorFromString("_opaqueRectForWindowMoveWhenInTitlebar")
+
+    func testTheClaimHoldsAllOfItselfAndTakesNoClick() {
+        let view = TitlebarClaimView(frame: NSRect(x: 0, y: 0, width: 120, height: 30))
+        let claimed = unsafeBitCast(
+            class_getMethodImplementation(type(of: view), selector), to: OpaqueRect.self)(view, selector)
+        XCTAssertEqual(claimed, view.bounds)
+        XCTAssertNil(view.hitTest(NSPoint(x: 10, y: 10)))
+        XCTAssertFalse(view.mouseDownCanMoveWindow)
+    }
+}
