@@ -25,19 +25,61 @@ final class TerminalTitlebarClickTests: XCTestCase {
     }
 }
 
-/// A tab chip under the band claims its spot too, so its tap selects the tab
-/// instead of moving the window, and still lets the click through to SwiftUI.
+/// A control under the band takes its click through an AppKit target that
+/// claims its spot and runs the action itself on release.
 @MainActor
-final class TitlebarClickClaimTests: XCTestCase {
+final class TitlebarClickTargetTests: XCTestCase {
     private typealias OpaqueRect = @convention(c) (AnyObject, Selector) -> NSRect
     private let selector = NSSelectorFromString("_opaqueRectForWindowMoveWhenInTitlebar")
 
-    func testTheClaimHoldsAllOfItselfAndTakesNoClick() {
-        let view = TitlebarClaimView(frame: NSRect(x: 0, y: 0, width: 120, height: 30))
+    func testTheTargetClaimsAllOfItselfAndNeverMovesTheWindow() {
+        let view = TitlebarClickTargetView(frame: NSRect(x: 0, y: 0, width: 120, height: 30))
         let claimed = unsafeBitCast(
             class_getMethodImplementation(type(of: view), selector), to: OpaqueRect.self)(view, selector)
         XCTAssertEqual(claimed, view.bounds)
-        XCTAssertNil(view.hitTest(NSPoint(x: 10, y: 10)))
         XCTAssertFalse(view.mouseDownCanMoveWindow)
+        XCTAssertTrue(view.acceptsFirstMouse(for: nil))
+        XCTAssertTrue(view.hitTest(NSPoint(x: 10, y: 10)) === view)
+    }
+
+    func testARightClickOffersTheMenuItems() {
+        let view = TitlebarClickTargetView(frame: NSRect(x: 0, y: 0, width: 120, height: 30))
+        var closed = false
+        view.menuItems = [("Close", { closed = true })]
+        let event = NSEvent.mouseEvent(
+            with: .rightMouseDown, location: .zero, modifierFlags: [], timestamp: 0,
+            windowNumber: 0, context: nil, eventNumber: 0, clickCount: 1, pressure: 1)!
+        let menu = view.menu(for: event)
+        XCTAssertEqual(menu?.items.map(\.title), ["Close"])
+        _ = menu?.items.first.flatMap { item in (item.target as? NSObject)?.perform(item.action) }
+        XCTAssertTrue(closed)
+    }
+
+    func testTheRouterHandsAPressInsideATargetToItAndRunsTheActionOnRelease() {
+        let window = NSWindow(contentRect: NSRect(x: 0, y: 0, width: 300, height: 100),
+                              styleMask: [.titled], backing: .buffered, defer: false)
+        let chip = TitlebarClickTargetView(frame: NSRect(x: 10, y: 60, width: 120, height: 30))
+        let close = TitlebarClickTargetView(frame: NSRect(x: 100, y: 65, width: 20, height: 20))
+        var ran: [String] = []
+        chip.action = { ran.append("select") }
+        close.action = { ran.append("close") }
+        window.contentView?.addSubview(chip)
+        window.contentView?.addSubview(close)
+
+        func event(_ type: NSEvent.EventType, _ point: NSPoint) -> NSEvent {
+            NSEvent.mouseEvent(with: type, location: point, modifierFlags: [], timestamp: 0,
+                               windowNumber: window.windowNumber, context: nil, eventNumber: 0,
+                               clickCount: 1, pressure: 1)!
+        }
+        let router = TitlebarClickRouter.shared
+        XCTAssertTrue(router.route(event(.leftMouseDown, NSPoint(x: 30, y: 70))))
+        XCTAssertTrue(router.route(event(.leftMouseUp, NSPoint(x: 30, y: 70))))
+        // The close mark sits over the chip's edge: the smaller target wins.
+        XCTAssertTrue(router.route(event(.leftMouseDown, NSPoint(x: 110, y: 75))))
+        XCTAssertTrue(router.route(event(.leftMouseUp, NSPoint(x: 110, y: 75))))
+        // Outside every target the click goes on as usual.
+        XCTAssertFalse(router.route(event(.leftMouseDown, NSPoint(x: 250, y: 20))))
+        XCTAssertFalse(router.route(event(.leftMouseUp, NSPoint(x: 250, y: 20))))
+        XCTAssertEqual(ran, ["select", "close"])
     }
 }
