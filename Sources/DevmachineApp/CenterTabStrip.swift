@@ -58,7 +58,7 @@ struct CenterTabStrip: View {
             DMIconButton(systemImage: "plus", size: 11, hitSize: DMHitSize.compact) { model.requestQuickSession() }
                 .dmHelp("New session (⌘N)")
                 .accessibilityLabel("New session")
-                .claimsTitlebarClicks()
+                .titlebarClick { model.requestQuickSession() }
                 .padding(.leading, m.space.xs)
             Spacer(minLength: 0)
         }

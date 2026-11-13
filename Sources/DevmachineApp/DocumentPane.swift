@@ -92,20 +92,17 @@ struct DocumentTabChip: View {
             .padding(.leading, m.pt(10))
             .padding(.vertical, m.pt(7))
             .contentShape(Rectangle())
-            .onTapGesture(perform: select)
-            .contextMenu {
-                Button(closeHelp, action: close)
-            }
+            // The strip runs under the toolbar band, where a SwiftUI tap never
+            // fires: an AppKit target takes the click (`TitlebarClickTarget`).
+            .titlebarClick(menu: [(closeHelp, close)], perform: select)
             DMIconButton(
                 systemImage: "xmark", size: 9, weight: .semibold, tint: .white.opacity(0.45),
                 hitSize: DMHitSize.compact, action: close)
+                .titlebarClick(perform: close)
                 .help(closeHelp)
                 .padding(.trailing, m.space.xs)
         }
         .background(selected ? Color.dmContentBg : (hovering ? Color.dmHover : Color.clear))
-        // The strip runs under the toolbar band; without the claim a click on
-        // the chip moved the window and never selected the tab.
-        .claimsTitlebarClicks()
         .onHover { hovering = $0 }
         .onMiddleClick(while: hovering, perform: close)
     }

@@ -228,11 +228,18 @@ Rules:
   bounds through AppKit's private `_opaqueRectForWindowMoveWhenInTitlebar`
   (NSButton does the same; there is no public API). Moving the terminal
   below the band instead left an empty strip and was rejected.
-- A SwiftUI view under the band claims nothing either: a click on a tab chip
-  in `CenterTabStrip` moved the window and never selected the tab. A control
-  laid under the band takes `.claimsTitlebarClicks()` (`TitlebarClickClaim`,
-  an invisible view that claims its bounds the same way and passes the click
-  on). Claim the controls, not the whole strip, so its empty part still drags.
+- A SwiftUI control under the band never gets its tap, so the tab strip's
+  chips did nothing. Two things take the click first: the window server
+  (any spot no AppKit view claims drags the window) and, inside the app, the
+  toolbar's `NSToolbarView`, which sits over the content and is what a click
+  in the band hits. It passes a click on only to the claimed spots it knew
+  when it last measured them, so a tab opened later stayed dead until the
+  terminal was touched. A control under the band takes `.titlebarClick`
+  (`TitlebarClickTarget`): an NSView over it that claims its bounds, gets the
+  press from `TitlebarClickRouter` (a local event monitor) and runs the
+  action itself on release, with a right-click menu. Forwarding the press to
+  SwiftUI's hosting view was tried and the tap never fired. Claim the
+  controls, not the whole strip, so its empty part still drags.
 - **Full screen hides the toolbar** (`WindowButtonsReader`, on will-enter;
   shown again on will-exit). A visible toolbar stays on screen there as an
   opaque grey band that pushes every column down. The window buttons then live
